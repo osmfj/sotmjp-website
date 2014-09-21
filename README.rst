@@ -19,17 +19,17 @@ To get running locally
 
 * Create a new virtualenv and activate it::
 
-    $ virtualenv env/pycon
-    $ . env/pycon/bin/activate
+    $ virtualenv env/sotmjp
+    $ . env/sotmjp/bin/activate
 
 * Install the requirements for running and testing locally::
 
-    $ pip install -r requirements/dev.txt
+    $ pip install -r sotmjp/requirements/dev.txt
 
   (For production, install -r requirements/project.txt).
 
-* Copy ``pycon/settings/local.py-example`` to ``pycon/settings/local.py``.
-* Edit ``pycon/settings/local.py`` according to the comments. Note that you
+* Copy ``sotmjp/settings/local.py-example`` to ``sotmjp/settings/local.py``.
+* Edit ``sotmjp/settings/local.py`` according to the comments. Note that you
   `will` have to edit it; by default everything there is commented out.
 
 * Setup the database::
@@ -42,10 +42,10 @@ To get running locally
 
 * If you have ssh access to the staging server, copy the database and media::
 
-    $ fab staging get_db_dump:pycon2014
+    $ fab staging get_db_dump:sotmjp2014
     $ fab staging get_media
 
-  Change ``pycon2014`` in that first command to the name of your local database.
+  Change ``sotmjp2014`` in that first command to the name of your local database.
 
 * Run local server::
 
@@ -59,7 +59,7 @@ For production
   * Install requirements from requirements/project.txt instead of requirements/dev.txt
   * Stop when you get to `Run local server`
 
-* Edit ``pycon/settings/local.py`` to make sure DEBUG=False.
+* Edit ``sotmjp/settings/local.py`` to make sure DEBUG=False.
 * Add an appropriate ALLOWED_HOSTS setting (https://docs.djangoproject.com/en/1.5/ref/settings/#std:setting-ALLOWED_HOSTS)
 * Install ``lessc`` (Go to http://lesscss.org and search for "Server-side usage")
 * Pre-compress everything by running::
