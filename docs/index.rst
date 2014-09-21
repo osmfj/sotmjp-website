@@ -1,8 +1,8 @@
-PyCon web site
+SotM JP web site
 ==============
 
-The PyCon web site is an open-source Django project for the PyCon
-conference, based on Pinax Symposion.
+The SotM JP web site is an open-source Django project for the State of the Map
+Japan 2014 conference, based on Pinax Symposion.
 
 It came out of development done by Eldarion for DjangoCon US and US PyCon
 but has been independently used for a number of other conferences.

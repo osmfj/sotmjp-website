@@ -1,3 +1,8 @@
+State of the Map Japan 2014 website being built by OpenStreetMap Foundation Japan, based on symposion fork that is used for PyCon JP 2014.
+That is because I18N and japanese translation.
+
+PyConJP 2014 website was built by forking PyCon 2014 website code.
+
 PyCon 2014 website being built by Caktus Consulting Group, based on symposion.
 
 Rather than use this as the basis for your conference site directly, you should

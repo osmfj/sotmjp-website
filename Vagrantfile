@@ -25,6 +25,8 @@ APTPREPARE
 $dependency = <<DEPENDENCY
 apt-fast update
 apt-fast install -y devscripts python-virtualenv
+apt-fast install -y postgresql libpq-dev postgresql-server-dev-9.3
+apt-fast install -y python-dev
 DEPENDENCY
 
 $setup = <<SETUP
@@ -59,8 +61,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     aws.ami = "ami-8bb8c0bb"
     override.ssh.username = "ubuntu"
   end
-
-  # make working directory on SSD
 
   config.vm.provision "shell", inline: $aptprepare, privileged: true
   config.vm.provision "shell", inline: $dependency, privileged: true
