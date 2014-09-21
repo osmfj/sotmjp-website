@@ -17,7 +17,7 @@ from symposion.utils.mail import send_email
 
 
 # The benefits we track as individual fields on sponsors
-# Names are the names in the database as defined by PyCon organizers.
+# Names are the names in the database as defined by organizers.
 # Field names are the benefit names, lowercased, with
 # spaces changed to _, and with "_benefit" appended.
 # Column titles are arbitrary.

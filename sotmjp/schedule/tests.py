@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from django.test import TestCase
 
-from pycon.schedule.models import Session
+from sotmjp.schedule.models import Session
 from symposion.conference.models import Section, current_conference, Conference
 from symposion.schedule.models import Day, Schedule
 

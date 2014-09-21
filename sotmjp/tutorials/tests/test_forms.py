@@ -1,22 +1,22 @@
 from django.contrib.auth.models import User
 from django.test import TestCase
 
-from pycon.tests.factories import PyConTutorialProposalFactory
+from sotmjp.tests.factories import SotMTutorialProposalFactory
 
 from ..forms import BulkEmailForm, TutorialMessageForm
-from ..models import PyConTutorialMessage
+from ..models import SotMTutorialMessage
 
 
 class TutorialFormsTest(TestCase):
 
     def test_message_form(self):
         user = User.objects.create_user("Foo")
-        tutorial = PyConTutorialProposalFactory.create()
-        instance = PyConTutorialMessage(tutorial=tutorial, user=user)
+        tutorial = SotMTutorialProposalFactory.create()
+        instance = SotMTutorialMessage(tutorial=tutorial, user=user)
         form = TutorialMessageForm(instance=instance)
         self.assertFalse(form.is_valid())
         data = {'message': 'A Message!', }
-        instance = PyConTutorialMessage(tutorial=tutorial, user=user)
+        instance = SotMTutorialMessage(tutorial=tutorial, user=user)
         form = TutorialMessageForm(data, instance=instance)
         self.assertTrue(form.is_valid(), msg=form.errors)
 

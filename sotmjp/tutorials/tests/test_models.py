@@ -1,23 +1,23 @@
 from django.contrib.auth.models import User
 from django.test import TestCase
 
-from pycon.tests.factories import PyConTutorialProposalFactory
+from sotmjp.tests.factories import SotMTutorialProposalFactory
 
-from ..models import PyConTutorialMessage
+from ..models import SotMTutorialMessage
 
 
-class PyConTutorialMessageModelTest(TestCase):
+class SotMTutorialMessageModelTest(TestCase):
     def test_one(self):
         """Can create the application object"""
-        PyConTutorialMessage()
+        SotMTutorialMessage()
 
     def test_reverse_relation(self):
         user = User.objects.create_user("Foo")
-        tutorial = PyConTutorialProposalFactory.create()
+        tutorial = SotMTutorialProposalFactory.create()
         self.assertFalse(tutorial.tutorial_messages.all())
 
         # Just the minimum required fields
-        x = PyConTutorialMessage.objects.create(
+        x = SotMTutorialMessage.objects.create(
             tutorial=tutorial,
             user=user,
             message="Foo",

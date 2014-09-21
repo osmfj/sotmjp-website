@@ -15,7 +15,7 @@ today = datetime.date.today()
 
 class TestSendEmailMessage(unittest.TestCase):
     @patch('django.core.mail.message.EmailMessage.send')
-    @patch('pycon.tutorials.utils.get_template')
+    @patch('sotmjp.tutorials.utils.get_template')
     def test_send_email_message(self, get_template, send_mail):
         # send_email_message comes up with the expected template names
         # and calls send_mail with the expected arguments

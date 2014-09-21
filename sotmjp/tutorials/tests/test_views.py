@@ -4,14 +4,13 @@ from django.core import mail
 from django.core.urlresolvers import reverse
 from django.test import TestCase
 
-from pycon.finaid.tests.utils import TestMixin
 from symposion.schedule.tests.factories import PresentationFactory
 from symposion.speakers.tests.factories import SpeakerFactory
 
-from ..models import PyConTutorialMessage
+from ..models import SotMTutorialMessage
 
 
-class TestTutorialSchedulePresentationView(TestMixin, TestCase):
+class TestTutorialSchedulePresentationView(TestCase):
     """
         Tests for Schedule Presentation Detail view with enhancements
         for Tutorials
@@ -107,14 +106,14 @@ class TestTutorialSchedulePresentationView(TestMixin, TestCase):
         self.assertIn(email_url, rsp['Location'])
 
 
-class TestTutorialEmailView(TestCase, TestMixin):
+class TestTutorialEmailView(TestCase):
     def setUp(self):
         self.presentation = PresentationFactory()
         self.tutorial_url = reverse(
             'schedule_presentation_detail', args=[self.presentation.pk])
         self.user = self.create_user()
 
-    @patch('pycon.tutorials.views.send_email_message')
+    @patch('sotmjp.tutorials.views.send_email_message')
     def test_email_submit_as_attendee(self, mock_send_mail):
         user = self.create_user('speaker', 'speaker@conf.com')
         speaker = SpeakerFactory(user=user)
@@ -139,7 +138,7 @@ class TestTutorialEmailView(TestCase, TestMixin):
         email = self.presentation.speaker.user.email
         self.assertEqual(kwargs['bcc'][0], email)
 
-    @patch('pycon.tutorials.views.send_email_message')
+    @patch('sotmjp.tutorials.views.send_email_message')
     def test_email_submit_as_speaker(self, mock_send_mail):
         attendee = self.create_user(username='foo', email="foo@bar.com")
         speaker = SpeakerFactory(user=self.user)
@@ -164,7 +163,7 @@ class TestTutorialEmailView(TestCase, TestMixin):
         self.assertEqual(kwargs['bcc'][0], attendee.email)
 
 
-class TestTutorialMessageView(TestCase, TestMixin):
+class TestTutorialMessageView(TestCase):
     def setUp(self):
         self.presentation = PresentationFactory()
         self.tutorial_url = reverse(
@@ -188,7 +187,7 @@ class TestTutorialMessageView(TestCase, TestMixin):
         data = {'message': test_message, }
         rsp = self.client.post(url, data=data)
         self.assertEqual(302, rsp.status_code)
-        msg = PyConTutorialMessage.objects.get(
+        msg = SotMTutorialMessage.objects.get(
             user=self.user,
             tutorial=self.presentation.proposal)
         self.assertEqual(test_message, msg.message)
@@ -216,7 +215,7 @@ class TestTutorialMessageView(TestCase, TestMixin):
         data = {'message': test_message, }
         rsp = self.client.post(url, data=data)
         self.assertEqual(302, rsp.status_code)
-        msg = PyConTutorialMessage.objects.get(
+        msg = SotMTutorialMessage.objects.get(
             user=self.user,
             tutorial=self.presentation.proposal)
         self.assertEqual(test_message, msg.message)
