@@ -17,12 +17,12 @@ python manage.py migrate
 python manage.py loaddata \
   fixtures/auth_user.json \
   fixtures/initial_data.json \
-  fixtures/pycon.json \
   fixtures/conference.json \
   fixtures/initial_boxes.json \
   fixtures/initial_data.json \
   fixtures/proposal_base.json \
   fixtures/sitetree_menu.json \
+  fixtures/sitetree_menu_ja.json \
   fixtures/sponsorship_benefits.json \
   fixtures/sponsorship_levels.json \
   fixtures/tutorials_schedule.json \

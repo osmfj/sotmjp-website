@@ -2142,168 +2142,6 @@
     }
 },
 {
-    "pk": 239, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "add_financialaidapplication", 
-        "name": "Can add financial aid application", 
-        "content_type": 81
-    }
-},
-{
-    "pk": 240, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "change_financialaidapplication", 
-        "name": "Can change financial aid application", 
-        "content_type": 81
-    }
-},
-{
-    "pk": 241, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "delete_financialaidapplication", 
-        "name": "Can delete financial aid application", 
-        "content_type": 81
-    }
-},
-{
-    "pk": 242, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "add_financialaidmessage", 
-        "name": "Can add financial aid message", 
-        "content_type": 82
-    }
-},
-{
-    "pk": 243, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "change_financialaidmessage", 
-        "name": "Can change financial aid message", 
-        "content_type": 82
-    }
-},
-{
-    "pk": 244, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "delete_financialaidmessage", 
-        "name": "Can delete financial aid message", 
-        "content_type": 82
-    }
-},
-{
-    "pk": 245, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "add_financialaidapplicationperiod", 
-        "name": "Can add financial aid application period", 
-        "content_type": 83
-    }
-},
-{
-    "pk": 246, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "change_financialaidapplicationperiod", 
-        "name": "Can change financial aid application period", 
-        "content_type": 83
-    }
-},
-{
-    "pk": 247, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "delete_financialaidapplicationperiod", 
-        "name": "Can delete financial aid application period", 
-        "content_type": 83
-    }
-},
-{
-    "pk": 248, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "add_financialaidreviewdata", 
-        "name": "Can add financial aid review data", 
-        "content_type": 84
-    }
-},
-{
-    "pk": 249, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "change_financialaidreviewdata", 
-        "name": "Can change financial aid review data", 
-        "content_type": 84
-    }
-},
-{
-    "pk": 250, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "delete_financialaidreviewdata", 
-        "name": "Can delete financial aid review data", 
-        "content_type": 84
-    }
-},
-{
-    "pk": 251, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "add_financialaidemailtemplate", 
-        "name": "Can add financial aid email template", 
-        "content_type": 85
-    }
-},
-{
-    "pk": 252, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "change_financialaidemailtemplate", 
-        "name": "Can change financial aid email template", 
-        "content_type": 85
-    }
-},
-{
-    "pk": 253, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "delete_financialaidemailtemplate", 
-        "name": "Can delete financial aid email template", 
-        "content_type": 85
-    }
-},
-{
-    "pk": 254, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "add_apiauth", 
-        "name": "Can add api auth", 
-        "content_type": 86
-    }
-},
-{
-    "pk": 255, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "change_apiauth", 
-        "name": "Can change api auth", 
-        "content_type": 86
-    }
-},
-{
-    "pk": 256, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "delete_apiauth", 
-        "name": "Can delete api auth", 
-        "content_type": 86
-    }
-},
-{
     "pk": 257, 
     "model": "auth.permission", 
     "fields": {
@@ -2331,38 +2169,11 @@
     }
 },
 {
-    "pk": 260, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "add_irclogline", 
-        "name": "Can add irc log line", 
-        "content_type": 88
-    }
-},
-{
-    "pk": 261, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "change_irclogline", 
-        "name": "Can change irc log line", 
-        "content_type": 88
-    }
-},
-{
-    "pk": 262, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "delete_irclogline", 
-        "name": "Can delete irc log line", 
-        "content_type": 88
-    }
-},
-{
     "pk": 263, 
     "model": "auth.permission", 
     "fields": {
-        "codename": "add_pycontutorialmessage", 
-        "name": "Can add py con tutorial message", 
+        "codename": "add_sotmtutorialmessage", 
+        "name": "Can add sotm tutorial message", 
         "content_type": 89
     }
 },
@@ -2370,8 +2181,8 @@
     "pk": 264, 
     "model": "auth.permission", 
     "fields": {
-        "codename": "change_pycontutorialmessage", 
-        "name": "Can change py con tutorial message", 
+        "codename": "change_sotmtutorialmessage", 
+        "name": "Can change sotm tutorial message", 
         "content_type": 89
     }
 },
@@ -2379,8 +2190,8 @@
     "pk": 265, 
     "model": "auth.permission", 
     "fields": {
-        "codename": "delete_pycontutorialmessage", 
-        "name": "Can delete py con tutorial message", 
+        "codename": "delete_sotmtutorialmessage", 
+        "name": "Can delete sotm tutorial message", 
         "content_type": 89
     }
 },
@@ -2477,18 +2288,6 @@
     "content_type": [
       "reviews",
       "review"
-    ]
-  }
-},
-{
-  "pk": 274,
-  "model": "auth.permission",
-  "fields": {
-    "codename": "review_financial_aid",
-    "name": "Can review financial aid applications",
-    "content_type": [
-      "finaid",
-      "financialaidapplication"
     ]
   }
 }

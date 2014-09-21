@@ -64,7 +64,6 @@ urlpatterns = patterns("",
         url(r"^sitemap/", TemplateView.as_view(template_name="static/sitemap.html"), name="sitemap"),
         url(r'^selectable/', include('selectable.urls')),
         url(r"^change_language/", symposion.views.change_language, name="change_language"),
-        url(r"^", include("sotmjp.urls")),
 
         # This should be last, because it will create a new CMS page for
         # any unrecognized URL.
