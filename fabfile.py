@@ -9,7 +9,7 @@ from fabric.utils import abort, error
 
 # Directory structure
 PROJECT_ROOT = os.path.dirname(__file__)
-env.project = 'pycon'
+env.project = 'sotmjp'
 env.project_user = os.environ['LOGNAME']
 env.shell = '/bin/bash -c'
 env.settings = 'symposion.settings'

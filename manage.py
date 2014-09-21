@@ -24,7 +24,7 @@ if __name__ == "__main__":
         # Running tests - use test-specific settings
         settings = "test"
     else:
-        # Try to load pycon.settings.local and fail with a useful message
+        # Try to load sotmjp.settings.local and fail with a useful message
         # if that doesn't work.
         settings = "default"
 

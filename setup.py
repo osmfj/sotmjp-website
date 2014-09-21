@@ -2,7 +2,7 @@ from distutils.core import setup
 
 
 setup(
-    name='pycon',
+    name='sotmjp',
     version='2014',
     packages=['pycon', 'pycon.profile', 'pycon.schedule', 'pycon.sponsorship',
               'pycon.sponsorship.management',

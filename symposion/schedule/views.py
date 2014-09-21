@@ -9,8 +9,8 @@ from django.template import loader, Context
 from django.contrib.sites.models import Site
 from django.contrib.auth.decorators import login_required
 
-from pycon.tutorials.models import PyConTutorialProposal
-from pycon.tutorials.utils import process_tutorial_request
+from sotmjp.tutorials.models import SotMTutorialProposal
+from sotmjp.tutorials.utils import process_tutorial_request
 
 from symposion.schedule.forms import SlotEditForm
 from symposion.schedule.models import Schedule, Day, Slot, Presentation
@@ -157,7 +157,7 @@ def schedule_presentation_detail(request, pk):
 
     # Tutorials allow for communication between instructor/attendee(s).
     # Offload the logic to its utility
-    if isinstance(presentation.proposal, PyConTutorialProposal) and \
+    if isinstance(presentation.proposal, SotMTutorialProposal) and \
             request.method == 'POST':
         return process_tutorial_request(request, presentation)
 

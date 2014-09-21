@@ -24,7 +24,7 @@ BIBLION_SECTIONS = [
 # Add config for Google Analytics
 CONSTANCE_CONFIG["GOOGLE_ANALYTICS_TRACKING_ID"] = ("", "The site's Google Analytics Tracking ID.")
 
-PROPOSAL_FORMS['talk'] = 'sotmjp.forms.SotMJPTalkProposalForm'
+PROPOSAL_FORMS['talk'] = 'sotmjp.forms.SotMTalkProposalForm'
 TEMPLATE_DIRS.insert(0, os.path.join(PROJECT_ROOT, "sotmjp/templates"))
 
 ACCOUNT_DELETION_EXPUNGE_CALLBACK = 'sotmjp.account.callbacks.account_delete_expunge'

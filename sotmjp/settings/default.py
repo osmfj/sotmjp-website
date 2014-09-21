@@ -9,7 +9,7 @@ import sys
 try:
     from .local import *  # NOQA
 except ImportError:
-    print("ERROR: A pycon/settings/local.py file is required but was "
+    print("ERROR: A sotmjp/settings/local.py file is required but was "
           "not found.")
     print("You can copy local.py-example to local.py "
           "and edit it according to the comments.")

@@ -7,8 +7,6 @@ import os
 
 from .base import *  # NOQA
 
-# TODO: 後で PyConJP 風に設定する
-
 BASE_PATH = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 
 DATABASES = {
@@ -69,14 +67,14 @@ LOGGING['formatters'] = {
 
 LOGGING['filters'].update({
     'static_fields': {
-        '()': 'pycon.logfilters.StaticFieldFilter',
+        '()': 'sotmjp.logfilters.StaticFieldFilter',
         'fields': {
-            'deployment': 'pycon',
+            'deployment': 'sotmjp',
             'environment': '?'   # should be overridden
         },
     },
     'django_exc': {
-        '()': 'pycon.logfilters.RequestFilter',
+        '()': 'sotmjp.logfilters.RequestFilter',
     },
 })
 LOGGING['handlers'].update({
@@ -112,7 +110,7 @@ LOGGING['loggers'].update({
         'level': 'ERROR',
         'propagate': True,
     },
-    'pycon': {
+    'sotmjp': {
         # mail_admins will only accept ERROR and higher
         'handlers': ['mail_admins', 'sotmjp_error_log'],
         'level': 'WARNING',
