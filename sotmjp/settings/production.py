@@ -13,5 +13,7 @@ ALLOWED_HOSTS = [
     'stateofthemap.jp',
 ]
 
+LANGUAGE_CODE = "ja-jp"
+
 import logging
 logging.basicConfig(level=logging.DEBUG)
