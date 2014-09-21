@@ -16,3 +16,6 @@ site_media
 program_export/
 venv/
 *~
+credential.rb
+.vagrant
+vagrant.ssh.config
