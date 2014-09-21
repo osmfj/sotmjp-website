@@ -25,8 +25,9 @@ DATABASES = {
 ALLOWED_HOSTS = [
     'stateofthemap.jp',
     '.stateofthemap.jp',
+    '.openstreetmap.jp',
 ]
-USE_X_FORWARDED_HOST = True
+#USE_X_FORWARDED_HOST = True
 
 SECRET_KEY = os.environ['SECRET_KEY']
 
