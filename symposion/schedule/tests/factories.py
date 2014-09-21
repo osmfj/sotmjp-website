@@ -1,6 +1,6 @@
 import factory
 
-from pycon.tests.factories import PyConTutorialProposalFactory
+from sotmjp.tests.factories import SotMTutorialProposalFactory
 from symposion.conference.tests.factories import SectionFactory
 from symposion.speakers.tests.factories import SpeakerFactory
 
@@ -14,5 +14,5 @@ class PresentationFactory(factory.DjangoModelFactory):
     description = 'Description'
     abstract = 'Abstract'
     speaker = factory.SubFactory(SpeakerFactory)
-    proposal_base = factory.SubFactory(PyConTutorialProposalFactory)
+    proposal_base = factory.SubFactory(SotMTutorialProposalFactory)
     section = factory.SubFactory(SectionFactory)
