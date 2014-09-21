@@ -8,20 +8,20 @@ from south.v2 import SchemaMigration
 class Migration(SchemaMigration):
 
     def forwards(self, orm):
-        # Adding model 'PyConTutorialMessage'
-        db.create_table(u'tutorials_pycontutorialmessage', (
+        # Adding model 'SotMTutorialMessage'
+        db.create_table(u'tutorials_sotmtutorialmessage', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('tutorial', self.gf('django.db.models.fields.related.ForeignKey')(related_name='tutorial_messages', to=orm['pycon.PyConTutorialProposal'])),
+            ('tutorial', self.gf('django.db.models.fields.related.ForeignKey')(related_name='tutorial_messages', to=orm['sotmjp.SotMTutorialProposal'])),
             ('user', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['auth.User'])),
             ('message', self.gf('django.db.models.fields.TextField')()),
             ('submitted_at', self.gf('django.db.models.fields.DateTimeField')(default=datetime.datetime.now)),
         ))
-        db.send_create_signal(u'tutorials', ['PyConTutorialMessage'])
+        db.send_create_signal(u'tutorials', ['SotMTutorialMessage'])
 
 
     def backwards(self, orm):
-        # Deleting model 'PyConTutorialMessage'
-        db.delete_table(u'tutorials_pycontutorialmessage')
+        # Deleting model 'SotMTutorialMessage'
+        db.delete_table(u'tutorials_sotmtutorialmessage')
 
 
     models = {
@@ -105,18 +105,18 @@ class Migration(SchemaMigration):
             'section': ('django.db.models.fields.related.ForeignKey', [], {'related_name': "'proposal_kinds'", 'to': u"orm['conference.Section']"}),
             'slug': ('django.db.models.fields.SlugField', [], {'max_length': '50'})
         },
-        u'pycon.pyconproposalcategory': {
-            'Meta': {'object_name': 'PyConProposalCategory'},
+        u'sotmjp.sotmproposalcategory': {
+            'Meta': {'object_name': 'SotMProposalCategory'},
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'name': ('django.db.models.fields.CharField', [], {'max_length': '100'}),
             'slug': ('django.db.models.fields.SlugField', [], {'max_length': '50'})
         },
-        u'pycon.pycontutorialproposal': {
-            'Meta': {'object_name': 'PyConTutorialProposal'},
+        u'sotmjp.sotmtutorialproposal': {
+            'Meta': {'object_name': 'SotMTutorialProposal'},
             'additional_requirements': ('django.db.models.fields.TextField', [], {'blank': 'True'}),
             'audience': ('django.db.models.fields.CharField', [], {'max_length': '150'}),
             'audience_level': ('django.db.models.fields.IntegerField', [], {}),
-            'category': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['pycon.PyConProposalCategory']"}),
+            'category': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['sotm.SotMProposalCategory']"}),
             'damaged_score': ('django.db.models.fields.IntegerField', [], {'null': 'True', 'blank': 'True'}),
             'domain_level': ('django.db.models.fields.IntegerField', [], {}),
             'handout': ('django.db.models.fields.files.FileField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
@@ -156,12 +156,12 @@ class Migration(SchemaMigration):
             'object_id': ('django.db.models.fields.IntegerField', [], {'db_index': 'True'}),
             'tag': ('django.db.models.fields.related.ForeignKey', [], {'related_name': "u'taggit_taggeditem_items'", 'to': u"orm['taggit.Tag']"})
         },
-        u'tutorials.pycontutorialmessage': {
-            'Meta': {'ordering': "['submitted_at']", 'object_name': 'PyConTutorialMessage'},
+        u'tutorials.sotmtutorialmessage': {
+            'Meta': {'ordering': "['submitted_at']", 'object_name': 'SotMTutorialMessage'},
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'message': ('django.db.models.fields.TextField', [], {}),
             'submitted_at': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.datetime.now'}),
-            'tutorial': ('django.db.models.fields.related.ForeignKey', [], {'related_name': "'tutorial_messages'", 'to': u"orm['pycon.PyConTutorialProposal']"}),
+            'tutorial': ('django.db.models.fields.related.ForeignKey', [], {'related_name': "'tutorial_messages'", 'to': u"orm['sotmjp.SotMTutorialProposal']"}),
             'user': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['auth.User']"})
         }
     }

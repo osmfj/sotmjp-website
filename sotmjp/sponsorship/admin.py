@@ -3,9 +3,9 @@ from django.utils.html import escape
 from django.utils.safestring import mark_safe
 from django.utils.translation import ugettext_lazy as _
 
-from pycon.sponsorship.models import SponsorLevel, Sponsor, Benefit, \
+from sotmjp.sponsorship.models import SponsorLevel, Sponsor, Benefit, \
     BenefitLevel, SponsorBenefit, BENEFITS
-from pycon.sponsorship.views import email_selected_sponsors_action
+from sotmjp.sponsorship.views import email_selected_sponsors_action
 
 
 class BenefitLevelInline(admin.TabularInline):

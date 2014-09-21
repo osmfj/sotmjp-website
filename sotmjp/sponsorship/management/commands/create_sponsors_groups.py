@@ -2,7 +2,7 @@ from django.core.management.base import BaseCommand
 
 from django.contrib.auth.models import Group
 
-from pycon.sponsorship import AUTH_GROUPS
+from sotmjp.sponsorship import AUTH_GROUPS
 
 
 class Command(BaseCommand):

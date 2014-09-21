@@ -8,7 +8,7 @@ from contextlib import closing
 from django.core.management.base import BaseCommand, CommandError
 from django.template.defaultfilters import slugify
 
-from pycon.sponsorship.models import Sponsor
+from sotmjp.sponsorship.models import Sponsor
 
 
 def zipdir(basedir, archivename):

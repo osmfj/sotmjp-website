@@ -11,8 +11,8 @@ from django.contrib.auth.models import User
 
 from symposion.conference.models import Conference
 
-from pycon.sponsorship import SPONSOR_COORDINATORS
-from pycon.sponsorship.managers import SponsorManager
+from sotmjp.sponsorship import SPONSOR_COORDINATORS
+from sotmjp.sponsorship.managers import SponsorManager
 from symposion.utils.mail import send_email
 
 

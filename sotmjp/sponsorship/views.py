@@ -19,9 +19,9 @@ from django.shortcuts import get_object_or_404, redirect, render_to_response,\
 from django.template import RequestContext
 from django.utils.translation import ugettext_lazy as _
 
-from pycon.sponsorship.forms import SponsorApplicationForm, \
+from sotmjp.sponsorship.forms import SponsorApplicationForm, \
     SponsorBenefitsFormSet, SponsorDetailsForm, SponsorEmailForm
-from pycon.sponsorship.models import Benefit, Sponsor, SponsorBenefit, \
+from sotmjp.sponsorship.models import Benefit, Sponsor, SponsorBenefit, \
     SponsorLevel
 
 
@@ -167,7 +167,7 @@ def sponsor_zip_logo_files(request):
                             content_type="application/zip")
     prefix = settings.CONFERENCE_URL_PREFIXES[settings.CONFERENCE_ID]
     response['Content-Disposition'] = \
-        'attachment; filename="pycon_%s_sponsorlogos.zip"' % prefix
+        'attachment; filename="sotmjp_%s_sponsorlogos.zip"' % prefix
     return response
 
 

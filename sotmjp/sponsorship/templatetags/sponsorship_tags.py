@@ -2,7 +2,7 @@ from django import template
 from django.template.defaultfilters import linebreaks, urlize
 
 from symposion.conference.models import current_conference
-from pycon.sponsorship.models import Sponsor, SponsorLevel
+from sotmjp.sponsorship.models import Sponsor, SponsorLevel
 
 
 register = template.Library()

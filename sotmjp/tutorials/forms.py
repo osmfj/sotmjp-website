@@ -8,7 +8,7 @@ from sotmjp.tutorials.models import SotMTutorialMessage
 
 class TutorialMessageForm(forms.ModelForm):
     class Meta:
-        model = PyConTutorialMessage
+        model = SotMTutorialMessage
         fields = [
             "message"
         ]

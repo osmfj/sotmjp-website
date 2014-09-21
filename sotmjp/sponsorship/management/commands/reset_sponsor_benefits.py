@@ -2,7 +2,7 @@ from django.core.management.base import BaseCommand
 
 from django.contrib.auth.models import Group
 
-from pycon.sponsorship.models import Sponsor, SponsorBenefit
+from sotmjp.sponsorship.models import Sponsor, SponsorBenefit
 
 
 class Command(BaseCommand):

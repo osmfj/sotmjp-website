@@ -10,7 +10,7 @@ from sitetree.sitetreeapp import register_i18n_trees
 admin.autodiscover()
 
 import symposion.views
-import pycon.profile.views
+import sotmjp.profile.views
 
 # from pinax.apps.account.openid_consumer import PinaxConsumer
 
@@ -24,7 +24,7 @@ urlpatterns = patterns("",
         url(r"^$", TemplateView.as_view(template_name="homepage.html"),
             name="home"),
         url(r"^admin/", include(admin.site.urls)),
-        url(r"^account/signup/$", pycon.profile.views.SignupView.as_view(), name="account_signup"),
+        url(r"^account/signup/$", sotmjp.profile.views.SignupView.as_view(), name="account_signup"),
         url(r"^account/login/$", symposion.views.LoginView.as_view(), name="account_login"),
         url(r"^account/social/", include("social_auth.urls")),
         url(r"^account/associations/", include("symposion.social_auth.urls")),
@@ -33,7 +33,7 @@ urlpatterns = patterns("",
         url(r"^blog/", include("biblion.urls")),
         url(r"^force500/", lambda request: xxx),
 
-        url(r"^registration/", include("pycon.registration.urls")),
+        url(r"^registration/", include("sotmjp.registration.urls")),
 
         #url(r"^venue/$", TemplateView.as_view(template_name="venue/detail.html"), name="venue_detail"),
         #url(r"^venue/traveling/", TemplateView.as_view(template_name="venue/traveling.html"), name="traveling"),
@@ -47,11 +47,9 @@ urlpatterns = patterns("",
         #url(r"^venue/share-room/", TemplateView.as_view(template_name="venue/share_room.html"), name="share_room"),
         #url(r"^venue/hotels/", TemplateView.as_view(template_name="venue/hotels.html"), name="hotels"),
 
-        #url(r"^finaid/", include("pycon.finaid.urls")),
-        #url(r"^pycon_api/", include("pycon.pycon_api.urls")),
-        url(r"^schedule/", include("pycon.schedule.urls")),
-        url(r"^profile/", include("pycon.profile.urls")),
-        url(r"^tutorials/", include("pycon.tutorials.urls")),
+        url(r"^schedule/", include("sotmjp.schedule.urls")),
+        url(r"^profile/", include("sotmjp.profile.urls")),
+        url(r"^tutorials/", include("sotmjp.tutorials.urls")),
 
         url(r"^speaker/", include("symposion.speakers.urls")),
         url(r"^proposals/", include("symposion.proposals.urls")),
@@ -60,13 +58,13 @@ urlpatterns = patterns("",
         url(r"^schedule/", include("symposion.schedule.urls")),
         url(r"^conference/", include("symposion.conference.urls")),
 
-        url(r"^sponsors/", include("pycon.sponsorship.urls")),
+        url(r"^sponsors/", include("sotmjp.sponsorship.urls")),
 
         url(r"^boxes/", include("symposion.boxes.urls")),
         url(r"^sitemap/", TemplateView.as_view(template_name="static/sitemap.html"), name="sitemap"),
         url(r'^selectable/', include('selectable.urls')),
         url(r"^change_language/", symposion.views.change_language, name="change_language"),
-        url(r"^", include("pycon.urls")),
+        url(r"^", include("sotmjp.urls")),
 
         # This should be last, because it will create a new CMS page for
         # any unrecognized URL.
@@ -77,5 +75,5 @@ urlpatterns = patterns("",
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-# pycon site uses "main" sitetree. so the name of internationalized one must_be "main_${lang_code}"
+# site uses "main" sitetree. so the name of internationalized one must_be "main_${lang_code}"
 register_i18n_trees(['main'])

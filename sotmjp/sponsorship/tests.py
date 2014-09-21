@@ -11,7 +11,7 @@ from django.core.urlresolvers import reverse
 from django.test import TestCase
 from django.test.utils import override_settings
 
-from pycon.sponsorship.models import Benefit, Sponsor, SponsorBenefit,\
+from sotmjp.sponsorship.models import Benefit, Sponsor, SponsorBenefit,\
     SponsorLevel
 from symposion.conference.models import current_conference
 
@@ -52,7 +52,7 @@ class TestSponsorZipDownload(TestCase):
         prefix = settings.CONFERENCE_URL_PREFIXES[settings.CONFERENCE_ID]
 
         self.assertEqual(
-            'attachment; filename="pycon_%s_sponsorlogos.zip"' % prefix,
+            'attachment; filename="sotmjp_%s_sponsorlogos.zip"' % prefix,
             rsp['Content-Disposition'])
         zipfile = ZipFile(StringIO(rsp.content), "r")
         # Check out the zip - testzip() returns None if no errors found

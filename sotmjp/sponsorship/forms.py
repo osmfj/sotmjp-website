@@ -3,7 +3,7 @@ from django.contrib.admin.widgets import AdminFileWidget
 from django.forms.models import inlineformset_factory, BaseInlineFormSet
 from django.utils.translation import ugettext_lazy as _
 
-from pycon.sponsorship.models import Sponsor, SponsorBenefit
+from sotmjp.sponsorship.models import Sponsor, SponsorBenefit
 
 
 class SponsorApplicationForm(forms.ModelForm):

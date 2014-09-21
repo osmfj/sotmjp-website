@@ -1,7 +1,7 @@
 # # list filters for the admin
 # from django.contrib.admin import SimpleListFilter
 # from django.db.models import Q
-# from pycon.sponsorship.models import SponsorBenefit, BenefitLevel
+# from sotmjp.sponsorship.models import SponsorBenefit, BenefitLevel
 #
 #
 # class WebLogoFilter(SimpleListFilter):

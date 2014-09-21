@@ -2,7 +2,7 @@ from django.conf import settings
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from django.test import TestCase
-from pycon.profile.models import Profile
+from sotmjp.profile.models import Profile
 from symposion.conference.models import Conference
 
 
