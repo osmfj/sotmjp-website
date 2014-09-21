@@ -23,15 +23,15 @@ DATABASES = {
 }
 
 ALLOWED_HOSTS = [
-    'pycon.jp',
-    '.pycon.jp',
+    'stateofthemap.jp',
+    '.stateofthemap.jp',
 ]
 USE_X_FORWARDED_HOST = True
 
 SECRET_KEY = os.environ['SECRET_KEY']
 
 ADMINS = (
-    ('Ian Lewis', 'ianmlewis@pycon.jp'),
+    ('Hiroshi Miura', 'miurahr@osmf.jp'),
 )
 MANAGERS = ADMINS
 
@@ -85,40 +85,40 @@ LOGGING['handlers'].update({
         'include_html': False,
         'filters': ['require_debug_false'],
     },
-    'pyconjp_log': {
+    'sotmjp_log': {
         'level': 'INFO',
         'formatter': 'verbose',
         'class': 'logging.handlers.WatchedFileHandler',
         'filename': env_or_default('LOG_PATH',
-                                   '/var/log/pyconjp/pyconjp_website.log'),
+                                   '/var/log/sotmjp/sotmjp_website.log'),
     },
-    'pyconjp_error_log': {
+    'sotmjp_error_log': {
         'level': 'ERROR',
         'formatter': 'verbose',
         'class': 'logging.handlers.WatchedFileHandler',
         'filename': env_or_default('ERROR_LOG_PATH',
-                                   '/var/log/pyconjp/pyconjp_website.error.log'),
+                                   '/var/log/sotmjp/sotmjp_website.error.log'),
     },
 })
 LOGGING['loggers'].update({
     '': {
         # mail_admins will only accept ERROR and higher
-        'handlers': ['console', 'pyconjp_log'],
+        'handlers': ['console', 'sotmjp_log'],
         'level': env_or_default('LOG_LEVEL', 'INFO'),
     },
     'django.request': {
-        'handlers': ['mail_admins', 'pyconjp_error_log'],
+        'handlers': ['mail_admins', 'sotmjp_error_log'],
         'level': 'ERROR',
         'propagate': True,
     },
     'pycon': {
         # mail_admins will only accept ERROR and higher
-        'handlers': ['mail_admins', 'pyconjp_error_log'],
+        'handlers': ['mail_admins', 'sotmjp_error_log'],
         'level': 'WARNING',
     },
     'symposion': {
         # mail_admins will only accept ERROR and higher
-        'handlers': ['mail_admins', 'pyconjp_error_log'],
+        'handlers': ['mail_admins', 'sotmjp_error_log'],
         'level': 'WARNING',
     }
 })
