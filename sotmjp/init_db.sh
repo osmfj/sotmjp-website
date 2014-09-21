@@ -11,8 +11,6 @@ case $REPLY in
   ;;
 esac
 
-dropdb sotmjp2014
-createdb sotmjp2014
 python manage.py syncdb --noinput
 python manage.py migrate
 
@@ -20,7 +18,6 @@ python manage.py loaddata \
   fixtures/auth_user.json \
   fixtures/initial_data.json \
   fixtures/pycon.json \
-  fixtures/cms_initial_pages.json \
   fixtures/conference.json \
   fixtures/initial_boxes.json \
   fixtures/initial_data.json \

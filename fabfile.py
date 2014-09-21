@@ -17,25 +17,25 @@ env.settings = 'symposion.settings'
 @task
 def staging():
     env.environment = 'staging'
-    env.hosts = ['virt-nsz0jn.psf.osuosl.org']
-    env.site_hostname = 'staging-pycon.python.org'
-    env.root = '/srv/staging-pycon.python.org'
+    env.hosts = ['sotm.openstreetmap.jp']
+    env.site_hostname = 'staging-sotm.openstreetmap.jp'
+    env.root = '/srv/staging-sotm.openstreetmap.jp'
     env.branch = 'staging'
-    env.db = 'psf-pycon-2014-staging'
-    env.db_host = 'pg1.osuosl.org'
-    env.db_user = 'psf-pycon-2014-staging'
+    env.db = 'sotmjp2014-staging'
+    env.db_host = 'sotm.opensteetmap.jp'
+    env.db_user = 'sotmjp2014-staging'
     setup_path()
 
 @task
 def production():
     env.environment = 'production'
-    env.hosts = ['virt-ak9lsk.psf.osuosl.org']
-    env.site_hostname = 'us.pycon.org'
-    env.root = '/srv/staging-pycon.python.org'
+    env.hosts = ['sotm.openstreetmap.jp']
+    env.site_hostname = 'stateofthemap.jp'
+    env.root = '/srv/staging-sotm.openstreetmap.jp'
     env.branch = 'production'
-    env.db = 'psf_pycon_2014'
-    env.db_host = 'pg1.osuosl.org'
-    env.db_user = 'psf_pycon_2014'
+    env.db = 'sotmjp2014'
+    env.db_host = 'sotm.openstreetmap.jp'
+    env.db_user = 'sotmjp2014'
     setup_path()
 
 
