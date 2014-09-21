@@ -9,7 +9,6 @@ from django.views.decorators.http import require_POST
 import account.views
 import constance
 
-from pycon.finaid.context_processors import financial_aid
 import symposion.forms
 from symposion.forms import LanguageForm
 from symposion.proposals.models import ProposalSection
@@ -53,7 +52,6 @@ def dashboard(request):
         return redirect("speaker_create_token",
                         request.session["pending-token"])
     context = {'proposals_are_open': bool(ProposalSection.available()), }
-    context.update(financial_aid(request))
     if constance.config.SHOW_LANGUAGE_SELECTOR:
         context['language_form'] = LanguageForm(
             initial={'language': request.LANGUAGE_CODE})
