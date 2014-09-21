@@ -35,8 +35,9 @@ cd symposion-jp
 virtualenv env/sotmjp
 . env/sotmjp/bin/activate
 pip install -r requirements/dev.txt
-./load_fixtures.sh
-./manage.py createsuperuser
+pip install -r sotmjp/requirements/projects.txt
+echo please try ./load_fixtures.sh
+echo then ./manage.py createsuperuser
 SETUP
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
