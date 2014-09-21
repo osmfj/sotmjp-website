@@ -7,7 +7,7 @@ from django.template import Context, Template
 from django.views.decorators.http import require_POST
 from taggit.utils import edit_string_for_tags
 
-from pycon.models import PyConProposal
+from sotmjp.models import SotMProposal
 
 from symposion.conf import settings
 from symposion.conference.models import Section
@@ -94,7 +94,7 @@ def review_section(request, section_slug, assigned=False):
         status = request.POST['status']
         base_obj = queryset.get(pk=pk)
         p_type = section_slug.rstrip('s').replace('-', '')
-        proposal = getattr(base_obj, 'pycon%sproposal' % p_type)
+        proposal = getattr(base_obj, 'sotm%sproposal' % p_type)
         proposal.overall_status = status
         proposal.save()
 
@@ -109,7 +109,7 @@ def review_section(request, section_slug, assigned=False):
         "proposals": proposals,
         "section": section,
         "can_manage": can_manage,
-        "status_options": PyConProposal.STATUS_OPTIONS
+        "status_options": SotMProposal.STATUS_OPTIONS
     }
 
     return render(request, "reviews/review_list.html", ctx)
