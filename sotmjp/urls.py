@@ -10,6 +10,7 @@ from sitetree.sitetreeapp import register_i18n_trees
 admin.autodiscover()
 
 import symposion.views
+import sotmjp.views
 import sotmjp.profile.views
 
 # from pinax.apps.account.openid_consumer import PinaxConsumer
@@ -64,6 +65,7 @@ urlpatterns = patterns("",
         url(r"^sitemap/", TemplateView.as_view(template_name="static/sitemap.html"), name="sitemap"),
         url(r'^selectable/', include('selectable.urls')),
         url(r"^change_language/", symposion.views.change_language, name="change_language"),
+        url('program_export/', sotmjp.views.program_export, name='program_export'),
 
         # This should be last, because it will create a new CMS page for
         # any unrecognized URL.
