@@ -39,7 +39,7 @@ virtualenv env/sotmjp
 . env/sotmjp/bin/activate
 pip install -r requirements/dev.txt
 pip install -r sotmjp/requirements/projects.txt
-echo please try ./load_fixtures.sh
+echo please try ./init_db.sh
 echo then ./manage.py createsuperuser
 SETUP
 

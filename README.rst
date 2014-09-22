@@ -34,7 +34,13 @@ To get running locally
 
 * Setup the database::
 
+  for development just do:
+
     $ ./init_db.sh
+
+  for staging/production
+
+    $ createdb sotmjp2014
 
 * Create a user account::
 
