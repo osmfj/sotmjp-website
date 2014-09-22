@@ -1,0 +1,74 @@
+[
+  {
+    "model": "database.constance",
+    "pk": 1,
+    "fields": {
+      "value": "gAJYBAAAAHNvb25xAS4=",
+      "key": "REGISTRATION_STATUS"
+    }
+  },
+  {
+    "model": "database.constance",
+    "pk": 2,
+    "fields": {
+      "value": "gAJYAAAAAC4=",
+      "key": "GOOGLE_ANALYTICS_TRACKING_ID"
+    }
+  },
+  {
+    "model": "database.constance",
+    "pk": 3,
+    "fields": {
+      "value": "gAJYAAAAAC4=",
+      "key": "SPONSOR_FROM_EMAIL"
+    }
+  },
+  {
+    "model": "database.constance",
+    "pk": 4,
+    "fields": {
+      "value": "gAJYAAAAAC4=",
+      "key": "CTE_TUTORIAL_DATA_URL"
+    }
+  },
+  {
+    "model": "database.constance",
+    "pk": 5,
+    "fields": {
+      "value": "gAJYAAAAAC4=",
+      "key": "REGISTRATION_URL"
+    }
+  },
+  {
+    "model": "database.constance",
+    "pk": 6,
+    "fields": {
+      "value": "gAJYAAAAAC4=",
+      "key": "CTE_SECRET"
+    }
+  },
+  {
+    "model": "database.constance",
+    "pk": 7,
+    "fields": {
+      "value": "gAJYAAAAAC4=",
+      "key": "CTE_BASICAUTH_PASS"
+    }
+  },
+  {
+    "model": "database.constance",
+    "pk": 8,
+    "fields": {
+      "value": "gAJYAAAAAC4=",
+      "key": "CTE_BASICAUTH_USER"
+    }
+  },
+  {
+    "model": "database.constance",
+    "pk": 9,
+    "fields": {
+      "value": true,
+      "key": "SHOW_LANGUAGE_SELECTOR"
+    }
+  }
+]

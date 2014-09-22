@@ -18,6 +18,7 @@ python manage.py loaddata \
   fixtures/auth_user.json \
   fixtures/initial_data.json \
   fixtures/conference.json \
+  fixtures/constance.json \
   fixtures/initial_boxes.json \
   fixtures/initial_data.json \
   fixtures/proposal_base.json \
