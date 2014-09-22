@@ -34,7 +34,7 @@ To get running locally
 
 * Setup the database::
 
-    $ ./load_fixtures.sh
+    $ ./init_db.sh
 
 * Create a user account::
 
