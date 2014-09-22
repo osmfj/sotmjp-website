@@ -9,1154 +9,868 @@
 # Takanori Suzuki <takanori@takanory.net>, 2014
 # Takuya Okada <okokada.takuya@gmail.com>, 2014
 # WAKAYAMA Shirou <shirou.faw@gmail.com>, 2014
+# 
+# Hiroshi Miura <miurahr@osmf.jp>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: pyconjp-website\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-20 13:48+0900\n"
-"PO-Revision-Date: 2014-06-14 13:43+0000\n"
-"Last-Translator: Ian Lewis <ianmlewis@gmail.com>\n"
-"Language-Team: Japanese (http://www.transifex.com/projects/p/pyconjp-website/"
-"language/ja/)\n"
+"POT-Creation-Date: 2014-09-22 20:56+0900\n"
+"PO-Revision-Date: 2014-09-22 21:37+0900\n"
+"Last-Translator: Hiroshi Miura <miurahr@osmf.jp>\n"
+"Language-Team: Japanese\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: pycon/forms.py:22
+#: sotmjp/forms.py:22
 msgid "The description must be less than 400 characters"
 msgstr "400文字以内で記入して下さい。"
 
-#: pycon/models.py:48 pycon/models.py:179
+#: sotmjp/models.py:48
+#: sotmjp/models.py:179
 msgid "Novice"
 msgstr "初級"
 
-#: pycon/models.py:49 pycon/models.py:180
+#: sotmjp/models.py:49
+#: sotmjp/models.py:180
 msgid "Intermediate"
 msgstr "中級"
 
-#: pycon/models.py:50 pycon/models.py:181
+#: sotmjp/models.py:50
+#: sotmjp/models.py:181
 msgid "Experienced"
 msgstr "上級"
 
-#: pycon/models.py:85 pyconjp/templates/proposals/_proposal_fields.html:12
+#: sotmjp/models.py:85
+#: sotmjp/templates/proposals/_proposal_fields.html:12
 #: symposion/templates/proposals/_proposal_fields.html:12
 #: symposion/templates/reviews/_review_table.html:8
 #: symposion/templates/reviews/result_notification.html:47
 msgid "Category"
 msgstr "カテゴリ"
 
-#: pycon/models.py:88
-msgid "Level of audience expertise assumed in Python."
-msgstr "対象者に期待するPythonに関する知識レベル"
+#: sotmjp/models.py:88
+msgid "Level of audience expertise."
+msgstr "対象者に期待する知識レベル"
 
-#: pycon/models.py:89
-msgid "Python level"
-msgstr "Python レベル"
+#: sotmjp/models.py:89
+msgid "Skill level"
+msgstr "レベル"
 
-#: pycon/models.py:93
+#: sotmjp/models.py:93
 msgid "The status of the proposal."
 msgstr "プロポーザルのステータス"
 
-#: pycon/models.py:97
-msgid ""
-"Numerical indicator of the amount of interest in a talk set to 'damaged' "
-"status."
+#: sotmjp/models.py:97
+msgid "Numerical indicator of the amount of interest in a talk set to 'damaged' status."
 msgstr ""
 
-#: pycon/models.py:102
+#: sotmjp/models.py:102
 msgid "The reason the proposal was rejected."
 msgstr "プロポーザルが却下された理由"
 
-#: pycon/models.py:104
+#: sotmjp/models.py:104
 msgid "Recording Release"
 msgstr "録画許可"
 
-#: pycon/models.py:106
-msgid ""
-"By submitting your talk proposal, you agree to give permission to the PyCon "
-"JP Management Team to record, edit, and release audio and/or video of your "
-"presentation. If you do not agree to this, please uncheck this box."
-msgstr ""
-"講演のプロポーザルを提出すると、PyCon JP 運営チームがあなたの講演を記録、編"
-"集、またその録音またはビデオあるいはその両方を頒布することに同意したとみなし"
-"ます。もしこれに同意しない場合はチェックボックスをオフにして下さい。"
+#: sotmjp/models.py:106
+msgid "By submitting your talk proposal, you agree to give permission to the SotM JP Management Team to record, edit, and release audio and/or video of your presentation. If you do not agree to this, please uncheck this box."
+msgstr "講演のプロポーザルを提出すると、SotM JP 運営チームがあなたの講演を記録、編集、またその録音またはビデオあるいはその両方を頒布することに同意したとみなします。もしこれに同意しない場合はチェックボックスをオフにして下さい。"
 
-#: pycon/models.py:110
+#: sotmjp/models.py:110
 msgid "Additional requirements"
 msgstr "追加必要事項"
 
-#: pycon/models.py:112
-msgid ""
-"Please let us know if you have any specific needs (A/V requirements, "
-"multiple microphones, a table, etc).  Note for example that 'audio out' is "
-"not provided for your computer unless you tell us in advance."
-msgstr ""
-"特に必要な物(A/V機器、複数のマイク、テーブルetc)があれば教えて下さい。例とし"
-"て、コンピュータからの「音声出力」は事前にお知らせ頂いていない場合は提供でき"
-"ないことに注意して下さい。"
+#: sotmjp/models.py:112
+msgid "Please let us know if you have any specific needs (A/V requirements, multiple microphones, a table, etc).  Note for example that 'audio out' is not provided for your computer unless you tell us in advance."
+msgstr "特に必要な物(A/V機器、複数のマイク、テーブルetc)があれば教えて下さい。例として、コンピュータからの「音声出力」は事前にお知らせ頂いていない場合は提供できないことに注意して下さい。"
 
-#: pycon/models.py:122
+#: sotmjp/models.py:122
 msgid "No preference"
 msgstr "希望なし"
 
-#: pycon/models.py:123
+#: sotmjp/models.py:123
 msgid "I prefer a 30 minute slot"
 msgstr "30分枠希望"
 
-#: pycon/models.py:124
+#: sotmjp/models.py:124
 msgid "I prefer a 45 minute slot"
 msgstr "45分枠希望"
 
-#: pycon/models.py:127 pyconjp/templates/proposals/_proposal_fields.html:33
+#: sotmjp/models.py:127
+#: sotmjp/templates/proposals/_proposal_fields.html:33
 #: symposion/templates/proposals/_proposal_fields.html:29
 msgid "Duration"
 msgstr "時間枠"
 
-#: pycon/models.py:130 pycon/models.py:190
-#: pyconjp/templates/proposals/_proposal_fields.html:66
+#: sotmjp/models.py:130
+#: sotmjp/models.py:190
+#: sotmjp/templates/proposals/_proposal_fields.html:66
 #: symposion/templates/proposals/_proposal_fields.html:62
 msgid "Outline"
 msgstr "アウトライン"
 
-#: pycon/models.py:134 pyconjp/templates/proposals/_proposal_fields.html:25
+#: sotmjp/models.py:134
+#: sotmjp/templates/proposals/_proposal_fields.html:25
 #: symposion/templates/proposals/_proposal_fields.html:21
 msgid "Audience"
 msgstr "対象者"
 
-#: pycon/models.py:135 pycon/models.py:199
-msgid ""
-"Who is the intended audience for your talk? (Be specific; \"Python "
-"programmers\" is not a good answer to this question.)"
-msgstr ""
-"想定している対象者について教えて下さい。(具体的にお願いします。例えば「Python"
-"プログラマー」は適切な回答ではありません。)"
+#: sotmjp/models.py:135
+msgid "Who is the intended audience for your talk? (Be specific; \"Python programmers\" is not a good answer to this question.)"
+msgstr "想定している対象者について教えて下さい。(具体的にお願いします。例えば「Pythonプログラマー」は適切な回答ではありません。)"
 
-#: pycon/models.py:140 pycon/models.py:204
-#: pyconjp/templates/proposals/_proposal_fields.html:28
+#: sotmjp/models.py:140
+#: sotmjp/models.py:204
+#: sotmjp/templates/proposals/_proposal_fields.html:28
 #: symposion/templates/proposals/_proposal_fields.html:24
 msgid "Objectives"
 msgstr "目的"
 
-#: pycon/models.py:142 pycon/models.py:206
-msgid ""
-"What will attendees get out of your talk? When they leave the room, what "
-"will they know that they didn't know before?"
-msgstr ""
-"参加者はあなたの講演から何を学びますか。参加者が会場に来る前は知らなかったけ"
-"れども、帰る際には得ている知識は何でしょうか。"
+#: sotmjp/models.py:142
+#: sotmjp/models.py:206
+msgid "What will attendees get out of your talk? When they leave the room, what will they know that they didn't know before?"
+msgstr "参加者はあなたの講演から何を学びますか。参加者が会場に来る前は知らなかったけれども、帰る際には得ている知識は何でしょうか。"
 
-#: pycon/models.py:186
+#: sotmjp/models.py:186
 msgid "Level of audience expertise assumed in the presentation's domain."
 msgstr "対象者に期待する題目の分野に関する知識レベル"
 
-#: pycon/models.py:193 pyconjp/templates/proposals/_proposal_fields.html:69
+#: sotmjp/models.py:193
+#: sotmjp/templates/proposals/_proposal_fields.html:69
 #: symposion/templates/proposals/_proposal_fields.html:65
 msgid "More info"
 msgstr "追加情報"
 
-#: pycon/models.py:194
+#: sotmjp/models.py:194
 msgid "More info. Will be made public if your talk is accepted."
 msgstr "追加された情報はあなたの講演が承認された後で公開されます。"
 
-#: pycon/models.py:211 pycon/templates/schedule/presentation_detail.html:65
-#: pyconjp/templates/proposals/_proposal_fields.html:84
+#: sotmjp/models.py:199
+msgid "Who is the intended audience for your talk? (Be specific; \"OSM Mapper\" is not a good answer to this question.)"
+msgstr "想定している対象者について教えて下さい。(具体的にお願いします。例えば「OSMのマッパー」は適切な回答ではありません。)"
+
+#: sotmjp/models.py:211
+#: sotmjp/templates/proposals/_proposal_fields.html:84
+#: sotmjp/templates/schedule/presentation_detail.html:65
 #: symposion/templates/proposals/_proposal_fields.html:80
 msgid "Student Handout"
 msgstr "参加者用ハンドアウト"
 
-#: pycon/models.py:214
-msgid ""
-"Upload a resource to be distributed to students  attending the tutorial "
-"session."
-msgstr ""
-"チュートリアルセッションの参加者へ配布するための資料をアプロードして下さい。"
+#: sotmjp/models.py:214
+msgid "Upload a resource to be distributed to students  attending the tutorial session."
+msgstr "チュートリアルセッションの参加者へ配布するための資料をアプロードして下さい。"
 
-#: pycon/models.py:223
+#: sotmjp/models.py:223
 msgid "CTE registered participants for this tutorial."
 msgstr ""
 
-#: pycon/models.py:228
-msgid ""
-"CTE Tutorial Identifier. This is typically auto-populated from a management "
-"command."
+#: sotmjp/models.py:228
+msgid "CTE Tutorial Identifier. This is typically auto-populated from a management command."
 msgstr ""
 
-#: pycon/models.py:236
+#: sotmjp/models.py:236
 msgid "Maximum number of attendees, per CTE data"
 msgstr ""
 
-#: pycon/finaid/forms.py:60
-msgid "Travel plans are required if requesting a travel grant."
-msgstr "交通費の助成が必要な場合は、旅行計画の提出が必要です。"
-
-#: pycon/finaid/models.py:14
-msgid "Female"
-msgstr "女性"
-
-#: pycon/finaid/models.py:15
-msgid "Male"
-msgstr "男性"
-
-#: pycon/finaid/models.py:19
-msgid "Yes"
-msgstr "はい"
-
-#: pycon/finaid/models.py:20
-msgid "No"
-msgstr "いいえ"
-
-#: pycon/finaid/models.py:21
-msgid "I have applied but don't know yet"
-msgstr ""
-
-#: pycon/finaid/models.py:33 pycon/finaid/models.py:163
-#: symposion/templates/proposals/_pending_proposal_row.html:17
-#: symposion/templates/proposals/_proposal_row.html:17
-msgid "Submitted"
-msgstr "申請済み"
-
-#: pycon/finaid/models.py:34
-msgid "Withdrawn"
-msgstr ""
-
-#: pycon/finaid/models.py:35
-msgid "Information needed"
-msgstr "情報が必要"
-
-#: pycon/finaid/models.py:36
-msgid "Offered"
-msgstr "オファー済み"
-
-#: pycon/finaid/models.py:37
-msgid "Rejected"
-msgstr "却下済み"
-
-#: pycon/finaid/models.py:38 symposion/proposals/models.py:207
-msgid "Declined"
-msgstr "辞退"
-
-#: pycon/finaid/models.py:39 symposion/proposals/models.py:206
-#: symposion/templates/proposals/_pending_proposal_row.html:15
-#: symposion/templates/proposals/_proposal_row.html:15
-msgid "Accepted"
-msgstr "受託済み"
-
-#: pycon/finaid/models.py:45
-msgid "Cash"
-msgstr "現金"
-
-#: pycon/finaid/models.py:46
-msgid "Check"
-msgstr "小切手"
-
-#: pycon/finaid/models.py:58
-msgid "PyLadies grant"
-msgstr "PyLadies助成金"
-
-#: pycon/finaid/models.py:59
-msgid "Would you like to be considered for a PyLadies grant? (Women only.)"
-msgstr "PyLadies助成金の選考対象に入りたいですか。(女性のみ)"
-
-#: pycon/finaid/models.py:62
-msgid "Registration grant"
-msgstr ""
-
-#: pycon/finaid/models.py:63
-msgid "Will you need assistance with the Conference Registration?"
-msgstr "カンファレンスに登録する際に補助が必要ですか。"
-
-#: pycon/finaid/models.py:67
-msgid "Hotel grant"
-msgstr "宿泊費補助"
-
-#: pycon/finaid/models.py:68
-msgid "Will you need assistance with a Hotel Room?"
-msgstr "ホテルの宿泊に関してサポートが必要ですか？"
-
-#: pycon/finaid/models.py:70
-msgid "Nights"
-msgstr "宿泊日数"
-
-#: pycon/finaid/models.py:71
-msgid "Please approximate how many nights you will be staying at the hotel."
-msgstr "ホテルに宿泊する大まかな日数を教えて下さい。"
-
-#: pycon/finaid/models.py:75
-msgid "Sex"
-msgstr "性別"
-
-#: pycon/finaid/models.py:77
-msgid ""
-"(Your sex will be used only to help assign roommates for those requesting "
-"hotel assistance)"
-msgstr ""
-"(あなたの性別はホテルでの援助を依頼された方へルームメイトを指定する際にのみ使"
-"用されます。)"
-
-#: pycon/finaid/models.py:83
-msgid "Travel grant"
-msgstr "旅費補助"
-
-#: pycon/finaid/models.py:84
-msgid "Will you need assistance with Travel Costs?"
-msgstr "旅費の補助は必要ですか。"
-
-#: pycon/finaid/models.py:86
-msgid "International"
-msgstr "国際"
-
-#: pycon/finaid/models.py:87
-msgid "Will you be traveling internationally?"
-msgstr "海外から渡航される予定ですか。"
-
-#: pycon/finaid/models.py:89
-msgid "Travel amount"
-msgstr "旅費"
-
-#: pycon/finaid/models.py:90
-msgid "Please enter the amount of travel assistance you need, in US dollars."
-msgstr "USドルで必要な旅費への補助額を入力して下さい。"
-
-#: pycon/finaid/models.py:94
-msgid "Travel plans"
-msgstr "旅行計画"
-
-#: pycon/finaid/models.py:96
-msgid "Please describe your travel plans"
-msgstr "旅行計画を記入して下さい。"
-
-#: pycon/finaid/models.py:99
-msgid "Tutorial grant"
-msgstr ""
-
-#: pycon/finaid/models.py:100
-msgid "Will you need assistance with tutorials?"
-msgstr "チュートリアルの際に補助は必要ですか。"
-
-#: pycon/finaid/models.py:103
-#: pycon/templates/finaid/_application_fields.html:83
-msgid "Profession"
-msgstr "専門"
-
-#: pycon/finaid/models.py:104
-msgid "What is it that you do"
-msgstr "お仕事は何ですか。"
-
-#: pycon/finaid/models.py:106
-#: pycon/templates/finaid/_application_fields.html:88
-msgid "Involvement"
-msgstr "関与"
-
-#: pycon/finaid/models.py:107
-msgid "Describe your involvement in any open source projects or community."
-msgstr ""
-"あなたが関わっている全てのオープンソースプロジェクトあるいはコミュニティを記"
-"入して下さい。"
-
-#: pycon/finaid/models.py:112
-#: pycon/templates/finaid/_application_fields.html:93
-msgid "What do you want to get out of attending PyCon?"
-msgstr "PyConに参加して何を得たいですか。"
-
-#: pycon/finaid/models.py:116
-msgid "What is it that you're hoping to learn?"
-msgstr "PyConから何を学びたいですか。"
-
-#: pycon/finaid/models.py:119
-#: pycon/templates/finaid/_application_fields.html:102
-msgid "Portfolios"
-msgstr "参加プロジェクト一覧"
-
-#: pycon/finaid/models.py:120
-msgid ""
-"Please provide links to any portfolios you have that contain Python work. (e."
-"g. Github, Bitbucket, etc.)"
-msgstr ""
-"あなたが関わったのプロジェクトでPythonが使用されたものがあればそのリンクを入"
-"力して下さい。(Github、Bitbucket、etc)"
-
-#: pycon/finaid/models.py:125
-#: pycon/templates/finaid/_application_fields.html:107
-msgid "Use of Python"
-msgstr "Pythonの利用方法"
-
-#: pycon/finaid/models.py:126
-msgid "Describe your use of Python"
-msgstr "Pythonをどのように利用していますか。"
-
-#: pycon/finaid/models.py:128
-#: pycon/templates/finaid/_application_fields.html:112
-msgid "Beginner resources"
-msgstr "初心者用資料"
-
-#: pycon/finaid/models.py:129
-msgid ""
-"If you're a beginner, describe the resources you're using to learn Python."
-msgstr ""
-"もしあなたが初級者なら、Pythonを学習するのに利用している情報源を教えて下さ"
-"い。"
-
-#: pycon/finaid/models.py:133
-msgid "Presenting"
-msgstr ""
-
-#: pycon/finaid/models.py:134
-msgid ""
-"Will you be speaking, hosting a poster session, or otherwise presenting at "
-"PyCon?"
-msgstr ""
-"プレゼンテーションのスピーカー、ポスターセッションのプレゼンター、あるいはそ"
-"の他の発表をする予定はありますか。"
-
-#: pycon/finaid/models.py:138
-msgid "Python experience level"
-msgstr "Pythonの経験レベル"
-
-#: pycon/finaid/models.py:139
-msgid "What is your experience level with Python?"
-msgstr "Pythonの経験レベルを教えて下さい。"
-
-#: pycon/finaid/models.py:142
-msgid "First time"
-msgstr "初参加です。"
-
-#: pycon/finaid/models.py:143
-msgid "Is this your first time attending PyCon?"
-msgstr "PyConに参加するのは初めてですか。"
-
-#: pycon/finaid/models.py:145
-msgid "Presented"
-msgstr "参加したことがあります。"
-
-#: pycon/finaid/models.py:146
-msgid "Have you spoken at PyCon in the past?"
-msgstr "今までにPyConで講演したことがありますか。"
-
-#: pycon/finaid/models.py:192 pycon/tutorials/models.py:15
-msgid "User who submitted the message"
-msgstr "このメッセージを送信したユーザー"
-
-#: pycon/finaid/models.py:195
-msgid "Whether message is visible to applicant"
-msgstr "申込者にメッセージを見せるかどうか"
-
-#: pycon/finaid/views.py:33
-msgid "Financial aid applications are not open at this time"
-msgstr "費用補助申請は現在できません。"
-
-#: pycon/finaid/views.py:68
-msgid "Application submitted"
-msgstr "申請が完了しました"
-
-#: pycon/finaid/views.py:85 pycon/finaid/views.py:146
-#: pycon/finaid/views.py:192 pycon/finaid/views.py:253
-#: pycon/finaid/views.py:366 pycon/tutorials/views.py:32
-#: pycon/tutorials/views.py:93
-msgid "Not authorized for this page"
-msgstr "このページを閲覧する権限がありません"
-
-#: pycon/finaid/views.py:99
-msgid "Please select at least one application"
-msgstr "最低一つの申請を選んでください"
-
-#: pycon/finaid/views.py:151
-msgid "No applications selected"
-msgstr ""
-
-#: pycon/finaid/views.py:178
-msgid "Messages sent"
-msgstr ""
-
-#: pycon/finaid/views.py:226 pycon/tutorials/views.py:65
-msgid "There was some error sending emails, not all of them might have made it"
-msgstr ""
-
-#: pycon/finaid/views.py:229
-msgid "Emails sent"
-msgstr ""
-
-#: pycon/finaid/views.py:286
-msgid ""
-"Message has been added to the application, and recipients notified by email."
-msgstr ""
-
-#: pycon/finaid/views.py:323
-msgid "You have not applied for financial aid"
-msgstr "あなたは費用援助に申し込んでいません"
-
-#: pycon/profile/forms.py:32
+#: sotmjp/profile/forms.py:32
 msgid "First Name (Japanese)"
 msgstr "名前"
 
-#: pycon/profile/forms.py:35
-msgid ""
-"Please enter your first  name in Japanese. Non-Japanese can leave this blank."
+#: sotmjp/profile/forms.py:35
+msgid "Please enter your first  name in Japanese. Non-Japanese can leave this blank."
 msgstr "名前を漢字で入力してください。"
 
-#: pycon/profile/forms.py:39
+#: sotmjp/profile/forms.py:39
 msgid "Last Name (Japanese)"
 msgstr "名字"
 
-#: pycon/profile/forms.py:42
-msgid ""
-"Please enter your last name in Japanese. Non-Japanese can leave this blank."
+#: sotmjp/profile/forms.py:42
+msgid "Please enter your last name in Japanese. Non-Japanese can leave this blank."
 msgstr "名字を漢字で入力してください。"
 
-#: pycon/profile/forms.py:59 symposion/templates/conference/user_list.html:62
+#: sotmjp/profile/forms.py:59
+#: symposion/templates/conference/user_list.html:62
 msgid "Email"
 msgstr "メールアドレス"
 
-#: pycon/profile/forms.py:60 pycon/templates/account/email_confirm.html:6
-#: pycon/templates/account/email_confirm.html:8
+#: sotmjp/profile/forms.py:60
 msgid "Confirm Email"
 msgstr "メールアドレスの確認"
 
-#: pycon/profile/forms.py:62
+#: sotmjp/profile/forms.py:62
 msgid "First Name"
 msgstr "名前 (ローマ字)"
 
-#: pycon/profile/forms.py:63
+#: sotmjp/profile/forms.py:63
 msgid "Please enter your first name."
 msgstr "名前をローマ字で入力してください。"
 
-#: pycon/profile/forms.py:64
+#: sotmjp/profile/forms.py:64
 msgid "Last Name"
 msgstr "名字 (ローマ字)"
 
-#: pycon/profile/forms.py:65
+#: sotmjp/profile/forms.py:65
 msgid "Please enter your last name."
 msgstr "名字をローマ字で入力してください"
 
-#: pycon/profile/views.py:47
+#: sotmjp/profile/views.py:47
 msgid "Successfully updated profile."
 msgstr "プロファイルのアップロードが成功しました。"
 
-#: pycon/settings/base.py:78
+#: sotmjp/settings/base.py:79
 msgid "English"
 msgstr "英語"
 
-#: pycon/settings/base.py:79
+#: sotmjp/settings/base.py:80
 msgid "French"
 msgstr "フランス語"
 
-#: pycon/sponsorship/admin.py:63
+#: sotmjp/settings/base.py:81
+msgid "Japanese"
+msgstr "日本語"
+
+#: sotmjp/sponsorship/admin.py:63
 msgid "Applicant"
 msgstr "参加者"
 
-#: pycon/sponsorship/admin.py:69
+#: sotmjp/sponsorship/admin.py:69
 msgid "unreviewed"
 msgstr "レビュー前"
 
-#: pycon/sponsorship/admin.py:70
+#: sotmjp/sponsorship/admin.py:70
 msgid "approved"
 msgstr "承認済み"
 
-#: pycon/sponsorship/admin.py:71
+#: sotmjp/sponsorship/admin.py:71
 msgid "rejected"
 msgstr "却下済み"
 
-#: pycon/sponsorship/admin.py:119
+#: sotmjp/sponsorship/admin.py:119
 msgid "None"
 msgstr ""
 
-#: pycon/sponsorship/forms.py:79 pycon/sponsorship/forms.py:82
+#: sotmjp/sponsorship/forms.py:79
+#: sotmjp/sponsorship/forms.py:82
 msgid "(comma-separated addresses)"
 msgstr "(コンマ区切りのアドレス)"
 
-#: pycon/sponsorship/models.py:31
+#: sotmjp/sponsorship/models.py:31
 msgid "Web Logo"
 msgstr "ウェブ用ロゴ"
 
-#: pycon/sponsorship/models.py:35
+#: sotmjp/sponsorship/models.py:35
 msgid "Print Logo"
 msgstr "印刷用ロゴ"
 
-#: pycon/sponsorship/models.py:39
+#: sotmjp/sponsorship/models.py:39
 msgid "Web Desc"
 msgstr ""
 
-#: pycon/sponsorship/models.py:43
+#: sotmjp/sponsorship/models.py:43
 msgid "Print Desc"
 msgstr ""
 
-#: pycon/sponsorship/models.py:47
+#: sotmjp/sponsorship/models.py:47
 msgid "Ad"
 msgstr "広告"
 
-#: pycon/sponsorship/models.py:54 symposion/conference/models.py:44
-#: symposion/conference/models.py:55 symposion/sponsorship/models.py:11
+#: sotmjp/sponsorship/models.py:54
+#: symposion/conference/models.py:44
+#: symposion/conference/models.py:55
+#: symposion/sponsorship/models.py:11
 msgid "conference"
 msgstr "カンファレンス"
 
-#: pycon/sponsorship/models.py:55 pycon/sponsorship/models.py:254
-#: symposion/conference/models.py:57 symposion/sponsorship/models.py:12
+#: sotmjp/sponsorship/models.py:55
+#: sotmjp/sponsorship/models.py:254
+#: symposion/conference/models.py:57
+#: symposion/sponsorship/models.py:12
 #: symposion/sponsorship/models.py:30
 msgid "name"
 msgstr "名前"
 
-#: pycon/sponsorship/models.py:56 symposion/sponsorship/models.py:13
+#: sotmjp/sponsorship/models.py:56
+#: symposion/sponsorship/models.py:13
 msgid "order"
-msgstr ""
+msgstr "発注"
 
-#: pycon/sponsorship/models.py:57
+#: sotmjp/sponsorship/models.py:57
 msgid "cost"
 msgstr "費用"
 
-#: pycon/sponsorship/models.py:58 pycon/sponsorship/models.py:255
+#: sotmjp/sponsorship/models.py:58
+#: sotmjp/sponsorship/models.py:255
 #: symposion/sponsorship/models.py:14
 msgid "description"
 msgstr "説明"
 
-#: pycon/sponsorship/models.py:58
+#: sotmjp/sponsorship/models.py:58
 msgid "This is private."
 msgstr "このページは非公開です。"
 
-#: pycon/sponsorship/models.py:62 symposion/sponsorship/models.py:18
+#: sotmjp/sponsorship/models.py:62
+#: symposion/sponsorship/models.py:18
 msgid "sponsor level"
 msgstr "スポンサーレベル"
 
-#: pycon/sponsorship/models.py:63 symposion/sponsorship/models.py:19
+#: sotmjp/sponsorship/models.py:63
+#: symposion/sponsorship/models.py:19
 msgid "sponsor levels"
 msgstr "スポンサーレベル"
 
-#: pycon/sponsorship/models.py:74 pycon/templates/dashboard.html:342
+#: sotmjp/sponsorship/models.py:74
+#: sotmjp/templates/dashboard.html:299
 msgid "applicant"
 msgstr "応募者"
 
-#: pycon/sponsorship/models.py:76
+#: sotmjp/sponsorship/models.py:76
 msgid "Sponsor Name"
 msgstr "スポンサー名"
 
-#: pycon/sponsorship/models.py:77
+#: sotmjp/sponsorship/models.py:77
 msgid "display URL"
 msgstr "URLを表示する"
 
-#: pycon/sponsorship/models.py:78 symposion/sponsorship/models.py:31
+#: sotmjp/sponsorship/models.py:78
+#: symposion/sponsorship/models.py:31
 msgid "external URL"
 msgstr "外部URL"
 
-#: pycon/sponsorship/models.py:79 symposion/sponsorship/models.py:32
+#: sotmjp/sponsorship/models.py:79
+#: symposion/sponsorship/models.py:32
 msgid "annotation"
 msgstr "注釈"
 
-#: pycon/sponsorship/models.py:80
+#: sotmjp/sponsorship/models.py:80
 msgid "Contact Name"
 msgstr "連絡先"
 
-#: pycon/sponsorship/models.py:81
+#: sotmjp/sponsorship/models.py:81
 msgid "Contact Email"
 msgstr "連絡先メールアドレス"
 
-#: pycon/sponsorship/models.py:82 pycon/sponsorship/models.py:298
+#: sotmjp/sponsorship/models.py:82
+#: sotmjp/sponsorship/models.py:298
 #: symposion/sponsorship/models.py:36
 msgid "level"
 msgstr "レベル"
 
-#: pycon/sponsorship/models.py:83 symposion/sponsorship/models.py:37
+#: sotmjp/sponsorship/models.py:83
+#: symposion/sponsorship/models.py:37
 msgid "added"
-msgstr ""
+msgstr "追加された"
 
-#: pycon/sponsorship/models.py:84 symposion/sponsorship/models.py:38
+#: sotmjp/sponsorship/models.py:84
+#: symposion/sponsorship/models.py:38
 msgid "active"
 msgstr "有効"
 
-#: pycon/sponsorship/models.py:91
+#: sotmjp/sponsorship/models.py:91
 msgid "Web logo benefit is complete"
 msgstr ""
 
-#: pycon/sponsorship/models.py:92
+#: sotmjp/sponsorship/models.py:92
 msgid "Print logo benefit is complete"
 msgstr ""
 
-#: pycon/sponsorship/models.py:93
+#: sotmjp/sponsorship/models.py:93
 msgid "Print description benefit is complete"
 msgstr ""
 
-#: pycon/sponsorship/models.py:94
+#: sotmjp/sponsorship/models.py:94
 msgid "Company description benefit is complete"
 msgstr ""
 
-#: pycon/sponsorship/models.py:95
+#: sotmjp/sponsorship/models.py:95
 msgid "Advertisement benefit is complete"
 msgstr ""
 
-#: pycon/sponsorship/models.py:103 pycon/sponsorship/models.py:315
+#: sotmjp/sponsorship/models.py:103
+#: sotmjp/sponsorship/models.py:315
 #: symposion/sponsorship/models.py:44
 msgid "sponsor"
 msgstr "スポンサー"
 
-#: pycon/sponsorship/models.py:104 symposion/sponsorship/models.py:45
+#: sotmjp/sponsorship/models.py:104
+#: symposion/sponsorship/models.py:45
 msgid "sponsors"
 msgstr "スポンサー"
 
-#: pycon/sponsorship/models.py:257
+#: sotmjp/sponsorship/models.py:257
 msgid "type"
 msgstr "タイプ"
 
-#: pycon/sponsorship/models.py:270
+#: sotmjp/sponsorship/models.py:270
 msgid "content type"
-msgstr ""
+msgstr "content type"
 
-#: pycon/sponsorship/models.py:293 pycon/sponsorship/models.py:320
+#: sotmjp/sponsorship/models.py:293
+#: sotmjp/sponsorship/models.py:320
 msgid "benefit"
 msgstr "特典"
 
-#: pycon/sponsorship/models.py:300
+#: sotmjp/sponsorship/models.py:300
 msgid "max words"
 msgstr "最大文字数"
 
-#: pycon/sponsorship/models.py:301 pycon/sponsorship/models.py:327
+#: sotmjp/sponsorship/models.py:301
+#: sotmjp/sponsorship/models.py:327
 msgid "other limits"
 msgstr "その他の制限"
 
-#: pycon/sponsorship/models.py:326
+#: sotmjp/sponsorship/models.py:326
 msgid "max characters"
-msgstr ""
+msgstr "最大文字数"
 
-#: pycon/sponsorship/models.py:331
+#: sotmjp/sponsorship/models.py:331
 msgid "text"
 msgstr "テキスト"
 
-#: pycon/sponsorship/models.py:332
+#: sotmjp/sponsorship/models.py:332
 msgid "file"
 msgstr "ファイル"
 
-#: pycon/sponsorship/models.py:336
+#: sotmjp/sponsorship/models.py:336
 msgid "True - benefit complete; False - benefit incomplete; Null - n/a"
-msgstr ""
+msgstr "真 - 利益を得られた; 偽 - 利益を得られなかった; 空 - N/A"
 
-#: pycon/sponsorship/models.py:354
+#: sotmjp/sponsorship/models.py:354
 #, python-format
 msgid "Sponsorship level only allows for %(max_words)s characters."
 msgstr "%(max_words)s 文字以内で入力してください。"
 
-#: pycon/sponsorship/views.py:181
+#: sotmjp/sponsorship/views.py:181
 msgid "Email selected sponsors"
 msgstr "選択したスポンサーへメールを送信"
 
-#: pycon/sponsorship/views.py:228
+#: sotmjp/sponsorship/views.py:228
 msgid "Email sent to sponsors"
 msgstr "スポンサーへ送信したメール"
 
-#: pycon/templates/_account_bar.html:15
+#: sotmjp/templates/_account_bar.html:15
 #: symposion/templates/_account_bar.html:9
 msgid "Admin"
 msgstr "管理画面"
 
-#: pycon/templates/_account_bar.html:17 pycon/templates/auth_base.html:8
-#: pycon/templates/dashboard.html:9 pycon/templates/dashboard.html.py:13
+#: sotmjp/templates/_account_bar.html:17
+#: sotmjp/templates/auth_base.html:8
+#: sotmjp/templates/dashboard.html:9
+#: sotmjp/templates/dashboard.html.py:13
 #: symposion/templates/_account_bar.html:11
-#: symposion/templates/auth_base.html:14 symposion/templates/dashboard.html:17
+#: symposion/templates/auth_base.html:14
+#: symposion/templates/dashboard.html:17
 msgid "Dashboard"
 msgstr "ダッシュボード"
 
-#: pycon/templates/_account_bar.html:19 pycon/templates/account/base.html:14
+#: sotmjp/templates/_account_bar.html:19
 #: symposion/templates/_account_bar.html:13
 #: symposion/templates/account/base.html:11
 msgid "Settings"
 msgstr "設定"
 
-#: pycon/templates/_account_bar.html:21 pycon/templates/account/logout.html:6
-#: pycon/templates/account/logout.html:8
-#: pycon/templates/account/logout.html:16
+#: sotmjp/templates/_account_bar.html:21
 #: symposion/templates/_account_bar.html:16
 msgid "Log out"
 msgstr "ログアウト"
 
-#: pycon/templates/_account_bar.html:24 pycon/templates/account/login.html:7
-#: pycon/templates/account/login.html:11 pycon/templates/account/login.html:23
-#: pycon/templates/admin/login.html:54
+#: sotmjp/templates/_account_bar.html:24
+#: sotmjp/templates/admin/login.html:54
 #: symposion/templates/_account_bar.html:26
 #: symposion/templates/account/login.html:7
 #: symposion/templates/account/login.html:20
 msgid "Log in"
 msgstr "ログイン"
 
-#: pycon/templates/_account_bar.html:25
+#: sotmjp/templates/_account_bar.html:25
 #: symposion/templates/_account_bar.html:28
 msgid "Sign up"
 msgstr "会員登録"
 
-#: pycon/templates/_sponsorship_link.html:4
+#: sotmjp/templates/_sponsorship_link.html:4
 msgid "Sponsorship available! Learn more"
 msgstr "スポンサーシップ募集中！詳しく見る"
 
-#: pycon/templates/dashboard.html:29
-#: pyconjp/templates/proposals/_proposal_fields.html:16
+#: sotmjp/templates/dashboard.html:29
+#: sotmjp/templates/proposals/_proposal_fields.html:16
 #: symposion/proposals/models.py:116
 #: symposion/templates/reviews/_review_table.html:9
 msgid "Language"
 msgstr "言語"
 
-#: pycon/templates/dashboard.html:36
+#: sotmjp/templates/dashboard.html:36
 msgid "Change"
 msgstr "変更する"
 
-#: pycon/templates/dashboard.html:45 pycon/templates/dashboard.html.py:135
+#: sotmjp/templates/dashboard.html:45
+#: sotmjp/templates/dashboard.html:135
 msgid "Speaking"
 msgstr "講演"
 
-#: pycon/templates/dashboard.html:52 pycon/templates/dashboard.html.py:139
+#: sotmjp/templates/dashboard.html:52
+#: sotmjp/templates/dashboard.html:139
 msgid "Edit your speaker profile"
 msgstr "スピーカー用プロファイルを編集する"
 
-#: pycon/templates/dashboard.html:58
+#: sotmjp/templates/dashboard.html:58
 msgid "Submit a new proposal"
 msgstr "新しいプロポーザルを提出する"
 
-#: pycon/templates/dashboard.html:64
+#: sotmjp/templates/dashboard.html:64
 msgid "Your Proposals"
 msgstr "あなたのプロポーザル"
 
-#: pycon/templates/dashboard.html:68 pycon/templates/dashboard.html.py:88
-#: pycon/templates/dashboard.html:106 pycon/templates/dashboard.html.py:150
+#: sotmjp/templates/dashboard.html:68
+#: sotmjp/templates/dashboard.html.py:88
+#: sotmjp/templates/dashboard.html:106
+#: sotmjp/templates/dashboard.html:150
 #: symposion/proposals/models.py:88
 msgid "Title"
 msgstr "題目"
 
-#: pycon/templates/dashboard.html:69 pycon/templates/dashboard.html.py:89
-#: pycon/templates/dashboard.html:107
+#: sotmjp/templates/dashboard.html:69
+#: sotmjp/templates/dashboard.html.py:89
+#: sotmjp/templates/dashboard.html:107
 msgid "Session type"
 msgstr "セッションのタイプ"
 
-#: pycon/templates/dashboard.html:70 pycon/templates/dashboard.html.py:90
-#: pycon/templates/dashboard.html:108
+#: sotmjp/templates/dashboard.html:70
+#: sotmjp/templates/dashboard.html.py:90
+#: sotmjp/templates/dashboard.html:108
 #: symposion/templates/reviews/result_notification.html:48
 msgid "Status"
 msgstr "ステータス"
 
-#: pycon/templates/dashboard.html:71 pycon/templates/dashboard.html.py:91
-#: pycon/templates/dashboard.html:109
+#: sotmjp/templates/dashboard.html:71
+#: sotmjp/templates/dashboard.html.py:91
+#: sotmjp/templates/dashboard.html:109
 msgid "Actions"
 msgstr "アクション"
 
-#: pycon/templates/dashboard.html:78
+#: sotmjp/templates/dashboard.html:78
 msgid "No proposals submitted yet."
 msgstr "提出されたプロポーザルはありません。"
 
-#: pycon/templates/dashboard.html:85
+#: sotmjp/templates/dashboard.html:85
 msgid "Proposals you have joined as an additional speaker"
 msgstr "追加スピーカーとしてあなたが参加したプロポーザル"
 
-#: pycon/templates/dashboard.html:103
+#: sotmjp/templates/dashboard.html:103
 msgid "Proposals you have been invited to join"
 msgstr "招待されているプロポーザル"
 
-#: pycon/templates/dashboard.html:119
+#: sotmjp/templates/dashboard.html:119
 msgid "To submit a proposal, first create a speaker profile."
 msgstr "プロポーザルを提出するにはスピーカー用プロファイルが必要です。"
 
-#: pycon/templates/dashboard.html:123
+#: sotmjp/templates/dashboard.html:123
 msgid "Create a speaker profile"
 msgstr "スピーカー用プロファイルを作成する"
 
-#: pycon/templates/dashboard.html:145
+#: sotmjp/templates/dashboard.html:145
 msgid "Your Presentations"
 msgstr "あなたのプレゼンテーション"
 
-#: pycon/templates/dashboard.html:149
+#: sotmjp/templates/dashboard.html:149
 msgid "Session Type"
 msgstr "セッションのタイプ"
 
-#: pycon/templates/dashboard.html:151
+#: sotmjp/templates/dashboard.html:151
 msgid "Slot"
 msgstr "時間枠"
 
-#: pycon/templates/dashboard.html:173
-msgid "Financial Aid"
-msgstr "費用補助"
-
-#: pycon/templates/dashboard.html:180
-msgid "Apply for financial aid"
-msgstr "費用補助を申請する"
-
-#: pycon/templates/dashboard.html:186
-msgid "Edit financial aid application"
-msgstr "費用補助の申請を編集"
-
-#: pycon/templates/dashboard.html:192
-msgid "Financial aid application status"
-msgstr "費用補助申請のステータス"
-
-#: pycon/templates/dashboard.html:198
-msgid "Review applications"
-msgstr "申請をレビュー"
-
-#: pycon/templates/dashboard.html:204
-msgid "Download applications"
-msgstr "申請をダウンロード"
-
-#: pycon/templates/dashboard.html:215
+#: sotmjp/templates/dashboard.html:172
 #: symposion/templates/sponsorship/detail.html:8
 msgid "Sponsorship"
 msgstr "スポンサーシップ"
 
-#: pycon/templates/dashboard.html:221
+#: sotmjp/templates/dashboard.html:178
 msgid "Learn about sponsorship"
 msgstr "スポンサーシップについて詳しく見る"
 
-#: pycon/templates/dashboard.html:226
+#: sotmjp/templates/dashboard.html:183
 msgid "Apply to be a sponsor"
 msgstr "スポンサーに応募する"
 
-#: pycon/templates/dashboard.html:232
+#: sotmjp/templates/dashboard.html:189
 msgid "Download sponsor logos"
-msgstr ""
+msgstr "スポンサーロゴのダウンロード"
 
-#: pycon/templates/dashboard.html:239
+#: sotmjp/templates/dashboard.html:196
 msgid "Your Sponsorship"
 msgstr "あなたのスポンサー情報"
 
-#: pycon/templates/dashboard.html:246
+#: sotmjp/templates/dashboard.html:203
 msgid "awaiting approval"
 msgstr "承認待ち"
 
-#: pycon/templates/dashboard.html:260 symposion/templates/dashboard.html:195
+#: sotmjp/templates/dashboard.html:217
+#: symposion/templates/dashboard.html:195
 #: symposion/templates/reviews/base.html:85
 msgid "Reviews"
 msgstr "審査"
 
-#: pycon/templates/dashboard.html:264
+#: sotmjp/templates/dashboard.html:221
 msgid "Review Sections"
 msgstr "審査セクション"
 
-#: pycon/templates/dashboard.html:272
+#: sotmjp/templates/dashboard.html:229
 msgid "Proposals you have reviewed"
 msgstr "プロポーザルは審査されました"
 
-#: pycon/templates/dashboard.html:276
+#: sotmjp/templates/dashboard.html:233
 #: symposion/templates/reviews/_review_table.html:7
 #: symposion/templates/reviews/result_notification.html:46
 msgid "Speaker / Title"
 msgstr "スピーカー / タイトル"
 
-#: pycon/templates/dashboard.html:277
+#: sotmjp/templates/dashboard.html:234
 msgid "Your Vote"
 msgstr "あなたの投票"
 
-#: pycon/templates/dashboard.html:324 symposion/templates/dashboard.html:259
+#: sotmjp/templates/dashboard.html:281
+#: symposion/templates/dashboard.html:259
 msgid "Teams"
 msgstr "チーム"
 
-#: pycon/templates/dashboard.html:329
+#: sotmjp/templates/dashboard.html:286
 msgid "Your Teams"
 msgstr "あなたのチーム"
 
-#: pycon/templates/dashboard.html:350
+#: sotmjp/templates/dashboard.html:307
 msgid "Available Teams"
 msgstr "参加可能なチーム"
 
-#: pycon/templates/dashboard.html:374
+#: sotmjp/templates/dashboard.html:331
 msgid "Program Export"
 msgstr "プログラムエクスポート"
 
-#: pycon/templates/dashboard.html:377
+#: sotmjp/templates/dashboard.html:334
 msgid "Export Program Data"
 msgstr "プログラムデータをエクスポート"
 
-#: pycon/templates/dashboard.html:378
+#: sotmjp/templates/dashboard.html:335
 msgid "This action may take up to a minute to complete."
-msgstr ""
+msgstr "この手続きは、１分程度の時間で出来ます。"
 
-#: pycon/templates/homepage.html:52
-msgid "Tutorials"
-msgstr "チュートリアル"
+#: sotmjp/templates/homepage.html:29
+msgid "Coming soon!"
+msgstr "近日開催！"
 
-#: pycon/templates/homepage.html:52
-msgid "September 12"
-msgstr ""
+#: sotmjp/templates/homepage.html:31
+msgid "Registration Closed"
+msgstr "参加登録は受け付けていません"
 
-#: pycon/templates/homepage.html:53
+#: sotmjp/templates/homepage.html:37
+msgid "State of the Map Japan 2014 Tokyo December 13th"
+msgstr "State of the Map Japan 2014東京、１２月１３日"
+
+#: sotmjp/templates/homepage.html:38
+msgid "1st"
+msgstr "第一回"
+
+#: sotmjp/templates/homepage.html:38
+msgid "Annual OpenStreetMap Conference in JAPAN!"
+msgstr "日本での年次OpenStreetMap会議！"
+
+#: sotmjp/templates/homepage.html:51
 msgid "Conference"
 msgstr "カンファレンス"
 
-#: pycon/templates/homepage.html:53
-msgid "September 13&ndash;14"
-msgstr ""
+#: sotmjp/templates/homepage.html:51
+msgid "December 13"
+msgstr "１２月１３日"
 
-#: pycon/templates/homepage.html:54
-msgid "Sprints"
-msgstr "スプリント"
-
-#: pycon/templates/homepage.html:54
-msgid "September 15"
-msgstr ""
-
-#: pycon/templates/homepage.html:59
-msgid "PyCon JP 2014 is over!"
-msgstr "PyCon JP 2014 は盛況のうちに終了しました。"
-
-#: pycon/templates/homepage.html:60
-msgid "Thanks to everyone for making it a great success!"
-msgstr "ご来場・ご協力いただいた皆様、ありがとうございました。"
-
-#: pycon/templates/homepage.html:64
+#: sotmjp/templates/homepage.html:64
 msgid "REGISTER"
 msgstr "参加登録"
 
-#: pycon/templates/homepage.html:91 symposion/templates/static/sponsors.html:5
+#: sotmjp/templates/homepage.html:91
+#: symposion/templates/static/sponsors.html:5
 msgid "Sponsors"
 msgstr "スポンサー"
 
-#: pycon/templates/homepage.html:129
+#: sotmjp/templates/homepage.html:129
 #: symposion/templates/biblion/blog_list.html:6
 #: symposion/templates/biblion/blog_list.html:12
 msgid "Announcements"
 msgstr "アナウンス"
 
-#: pycon/templates/homepage.html:138
+#: sotmjp/templates/homepage.html:138
 #, python-format
 msgid ""
 "\n"
-"                              <p class=\"post_dateline\">by <span class="
-"\"author\">%(author)s</span></p>\n"
+"                              <p class=\"post_dateline\">by <span class=\"author\">%(author)s</span></p>\n"
 "                            "
 msgstr ""
+"\n"
+"                              <p class=\"post_dateline\">by <span class=\"author\">%(author)s</span></p>\n"
+"                            "
 
-#: pycon/templates/homepage.html:145
+#: sotmjp/templates/homepage.html:145
 msgid "No announcements have been published."
 msgstr "掲載されたアナウンスはありません。"
 
-#: pycon/templates/responsive_base.html:31 pycon/templates/site_base.html:63
+#: sotmjp/templates/responsive_base.html:31
+#: sotmjp/templates/site_base.html:62
 msgid "Skip to main content"
 msgstr "メインページへ戻る"
 
-#: pycon/templates/responsive_base.html:34 pycon/templates/site_base.html:65
+#: sotmjp/templates/responsive_base.html:34
+#: sotmjp/templates/site_base.html:64
 msgid "loggedin"
 msgstr "ログインしています"
 
-#: pycon/templates/site_base.html:119
+#: sotmjp/templates/site_base.html:118
 msgid "SPONSORS"
 msgstr "スポンサー"
 
-#: pycon/templates/site_base.html:166
+#: sotmjp/templates/site_base.html:167
 msgid ""
 "\n"
-"                    PyCon JP 2014 in Tokyo is a production of the <a href="
-"\"http://www.pycon.jp/\">PyCon JP Management Team</a>.\n"
+"                    State of the Map Japan 2014 in Tokyo is a production of the \n"
+"                    <a href=\"http://osmf.jp/\">OpenStreetMap Foundation Japan</a>.\n"
 "                  "
 msgstr ""
+"\n"
+"                    State of the Map Japan 2014 東京 は、 \n"
+"                    <a href=\"http://osmf.jp/\">OpenStreetMap Foundation Japan</a>が運営しています。\n"
+"                  "
 
-#: pycon/templates/site_base.html:171
+#: sotmjp/templates/site_base.html:173
 msgid ""
 "\n"
-"                    Site forked from the <a href=\"http://us.pycon."
-"jp/2014\">PyCon 2014</a> site built by <a href=\"http://caktusgroup.com"
-"\">Caktus Consulting Group, LLC.</a> using <a href=\"http://eldarion.com/"
-"symposion/\" title=\"Symposion — An Open Platform for Conference Websites"
-"\">Symposion</a>.\n"
+"                    Site forked from the <a href=\"http://pycon.jp/2014\">PyCon JP 2014</a> site built by <a href=\"http://caktusgroup.com\">Caktus Consulting Group, LLC.</a> using <a href=\"http://eldarion.com/symposion/\" title=\"Symposion — An Open Platform for Conference Websites\">Symposion</a>.\n"
 "                  "
 msgstr ""
+"\n"
+"                    このサイトは、 <a href=\"http://pycon.jp/2014\">PyCon JP 2014</a> サイトからフォークして作られました。そして、それは <a href=\"http://caktusgroup.com\">Caktus Consulting Group, LLC.</a> によって作られた、 <a href=\"http://eldarion.com/symposion/\" title=\"Symposion — An Open Platform for Conference Websites\">Symposion</a>を使っています。\n"
+"                  "
 
-#: pycon/templates/site_base.html:176
+#: sotmjp/templates/site_base.html:178
 msgid ""
 "\n"
-"                    Questions? Comments? Contact <a href=\"mailto:2014@pycon."
-"jp\">2014@pycon.jp</a>\n"
+"                    Questions? Comments? Contact <a href=\"mailto:info@osmf.jp\">info@osmf.jp</a>\n"
 "                  "
 msgstr ""
+"\n"
+"                    質問？コメント？ <a href=\"mailto:info@osmf.jp\">info@osmf.jp</a>に連絡を\n"
+"                  "
 
-#: pycon/templates/account/_openid_sidebar.html:5
-#: symposion/templates/account/_openid_sidebar.html:5
-#: symposion/templates/social_auth/usersocialauth_list.html:47
-msgid "Sign in with another account:"
-msgstr "他のアカウントでログイン"
+#: sotmjp/templates/admin/login.html:23
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] "下のエラーを訂正して下さい。"
 
-#: pycon/templates/account/_openid_sidebar.html:17
-#: symposion/templates/account/_openid_sidebar.html:17
-msgid "Sign in with OpenID"
-msgstr "OpenIDでログインする"
+#: sotmjp/templates/admin/login.html:43
+msgid "Password:"
+msgstr "パスワード:"
 
-#: pycon/templates/account/_openid_sidebar.html:21
-#: symposion/templates/account/_openid_sidebar.html:21
-msgid "Sign in"
-msgstr "ログイン"
+#: sotmjp/templates/admin/login.html:50
+msgid "Forgotten your password or username?"
+msgstr "パスワードあるいはユーザー名をお忘れですか？"
 
-#: pycon/templates/account/_openid_sidebar.html:26
-#: symposion/templates/account/_openid_sidebar.html:25
-msgid "Don't have an account? "
-msgstr "アカウントをお持ちですか。"
+#: sotmjp/templates/proposals/_proposal_fields.html:4
+#: symposion/templates/proposals/_proposal_fields.html:4
+msgid "Submitted by"
+msgstr "提出者"
 
-#: pycon/templates/account/_openid_sidebar.html:27
-msgid "Sign up now!"
-msgstr "今すぐ会員登録する"
+#: sotmjp/templates/proposals/_proposal_fields.html:8
+#: symposion/templates/proposals/_proposal_fields.html:8
+#: symposion/templates/reviews/_review_table.html:10
+msgid "Tags"
+msgstr "タグ"
 
-#: pycon/templates/account/base.html:13
-#: pycon/templates/account/settings.html:6
-#: pycon/templates/account/settings.html:8
-#: pycon/templates/account/settings.html:12
-#: symposion/templates/account/base.html:10
-msgid "Account"
-msgstr "アカウント"
+#: sotmjp/templates/proposals/_proposal_fields.html:20
+#: symposion/templates/proposals/_proposal_fields.html:16
+msgid "Python Level"
+msgstr "Python レベル"
 
-#: pycon/templates/account/base.html:15
-#: pycon/templates/account/password_change.html:7
-#: pycon/templates/account/password_change.html:11
-#: symposion/templates/account/base.html:12
-msgid "Change password"
-msgstr "パスワードを変更する"
-
-#: pycon/templates/account/base.html:16
-#: symposion/templates/account/base.html:13
-#: symposion/templates/social_auth/usersocialauth_list.html:4
-#: symposion/templates/social_auth/usersocialauth_list.html:7
-msgid "Associations"
-msgstr "関連付け"
-
-#: pycon/templates/account/base.html:17
-#: symposion/templates/account/base.html:14
-msgid "Delete account"
-msgstr "アカウント削除"
-
-#: pycon/templates/account/delete.html:7
-#: pycon/templates/account/delete.html:10
-msgid "Delete Account"
-msgstr "アカウント削除"
-
-#: pycon/templates/account/delete.html:12
-#, python-format
-msgid ""
-"If you go ahead and delete your account, your information will be "
-"<b>expunged within %(ACCOUNT_DELETION_EXPUNGE_HOURS)s hours</b>."
+#: sotmjp/templates/proposals/_proposal_fields.html:38
+#: symposion/templates/proposals/_proposal_fields.html:34
+msgid "Domain Level"
 msgstr ""
-"ここでアカウントを削除を削除したら、情報は%(ACCOUNT_DELETION_EXPUNGE_HOURS)s"
-"時間内に完全に削除されます。"
 
-#: pycon/templates/account/delete.html:16
-msgid "Delete My Account"
-msgstr "アカウントを削除する"
+#: sotmjp/templates/proposals/_proposal_fields.html:43
+#: symposion/templates/proposals/_proposal_fields.html:39
+msgid "Additional Speakers"
+msgstr "追加スピーカー"
 
-#: pycon/templates/account/email_confirm.html:14
-#, python-format
-msgid "Confirm email address <b>%(email)s</b>?"
-msgstr "メールアドレスは<b>%(email)s</b>でよろしいですか？"
+#: sotmjp/templates/proposals/_proposal_fields.html:50
+#: symposion/templates/proposals/_proposal_fields.html:46
+msgid "Invitation Sent"
+msgstr "送信された招待状"
 
-#: pycon/templates/account/email_confirm.html:16
-msgid "Confirm"
-msgstr "確認"
+#: sotmjp/templates/proposals/_proposal_fields.html:57
+#: sotmjp/templates/schedule/presentation_detail.html:53
+#: symposion/proposals/models.py:90
+#: symposion/templates/proposals/_proposal_fields.html:53
+#: symposion/templates/schedule/presentation_detail.html:33
+msgid "Description"
+msgstr "説明"
 
-#: pycon/templates/account/login.html:16
-#: symposion/templates/account/login.html:12
-msgid "Log in to an existing account"
-msgstr "既存のアカウントでログインする"
+#: sotmjp/templates/proposals/_proposal_fields.html:61
+#: sotmjp/templates/schedule/presentation_detail.html:58
+#: symposion/templates/proposals/_proposal_fields.html:57
+#: symposion/templates/schedule/presentation_detail.html:37
+msgid "Abstract"
+msgstr "概要"
 
-#: pycon/templates/account/login.html:26
-#: symposion/templates/account/login.html:19
-msgid "Forgot your password?"
-msgstr "パスワードをお忘れですか？"
+#: sotmjp/templates/proposals/_proposal_fields.html:73
+#: symposion/templates/proposals/_proposal_fields.html:69
+msgid "Notes"
+msgstr "メモ"
 
-#: pycon/templates/account/logout.html:14
-msgid "Are you sure you want to log out?"
-msgstr "ログアウトしてよろしいですか？"
+#: sotmjp/templates/proposals/_proposal_fields.html:76
+#: symposion/templates/proposals/_proposal_fields.html:72
+msgid "Speaker Bio"
+msgstr "スピーカー略歴"
 
-#: pycon/templates/account/password_change.html:16
-#: pycon/templates/account/settings.html:16
-#: pycon/templates/cms/page_edit.html:20
-#: pycon/templates/proposals/proposal_submit_kind.html:25
-#: pycon/templates/schedule/_slot_edit.html:12
-#: pycon/templates/speakers/speaker_create.html:31
+#: sotmjp/templates/proposals/_proposal_fields.html:79
+#: symposion/templates/proposals/_proposal_fields.html:75
+msgid "Additional Requirements"
+msgstr "追加の必要事項"
+
+#: sotmjp/templates/proposals/_proposal_fields.html:87
+#: symposion/templates/proposals/_proposal_fields.html:83
+msgid "Download"
+msgstr "ダウンロードする"
+
+#: sotmjp/templates/proposals/_proposal_fields.html:89
+#: symposion/templates/proposals/_proposal_fields.html:85
+msgid "No handout attached to this proposal."
+msgstr "このプロポーザルに付属するハンドアウトはありません。"
+
+#: sotmjp/templates/proposals/_proposal_fields.html:94
+#: symposion/templates/proposals/_proposal_fields.html:90
+#: symposion/templates/proposals/proposal_detail.html:58
+#: symposion/templates/proposals/proposal_detail.html:70
+msgid "Supporting Documents"
+msgstr "補足資料"
+
+#: sotmjp/templates/proposals/_proposal_fields.html:104
+#: symposion/templates/cms/file_index.html:16
+#: symposion/templates/proposals/_proposal_fields.html:100
+#: symposion/templates/proposals/proposal_detail.html:80
+msgid "delete"
+msgstr "削除する"
+
+#: sotmjp/templates/proposals/_proposal_fields.html:111
+#: symposion/templates/proposals/_proposal_fields.html:107
+#: symposion/templates/proposals/proposal_detail.html:87
+msgid "No supporting documents attached to this proposal."
+msgstr "このプロポーザルに付属する補助資料はありません。"
+
+#: sotmjp/templates/schedule/_slot_edit.html:5
+#: symposion/templates/schedule/_slot_edit.html:5
+msgid "Edit Slot"
+msgstr "時間枠を編集する"
+
+#: sotmjp/templates/schedule/_slot_edit.html:12
+#: sotmjp/templates/speakers/speaker_create.html:31
 #: symposion/templates/cms/page_edit.html:22
 #: symposion/templates/proposals/proposal_edit.html:18
 #: symposion/templates/proposals/proposal_submit_kind.html:21
@@ -1167,797 +881,198 @@ msgstr "ログアウトしてよろしいですか？"
 msgid "Save"
 msgstr "保存"
 
-#: pycon/templates/account/signup.html:7
-#: symposion/templates/account/signup.html:7
-msgid "Create an account"
-msgstr "アカウントを作成"
-
-#: pycon/templates/account/signup.html:11
-msgid "Sign Up"
-msgstr "会員登録"
-
-#: pycon/templates/account/signup.html:17
-#: symposion/templates/account/signup.html:11
-msgid "Create a new account"
-msgstr "アカウントを作成"
-
-#: pycon/templates/account/signup.html:25
-#: symposion/templates/account/signup.html:19
-msgid "Create Account"
-msgstr "アカウントを作成"
-
-#: pycon/templates/account/email/email_confirmation_message.txt:1
-#, python-format
-msgid ""
-"A user on %(site_name)s has created an account using this email address.\n"
-"\n"
-"To confirm this email address, go to %(activate_url)s\n"
-"\n"
-"If you did not sign up for this site, you can ignore this message.\n"
-msgstr ""
-"%(site_name)s でユーザーがこのメールアドレスを使って、アカウントを作成しまし"
-"た。\n"
-"\n"
-"このメールアドレスを確認するには以下のURLをクリックしてください。\n"
-"%(activate_url)s\n"
-"\n"
-"このメールに心当たりの無い方は無視してください。\n"
-
-#: pycon/templates/account/email/email_confirmation_subject.txt:1
-#, python-format
-msgid "Confirm email address for %(site_name)s"
-msgstr "%(site_name)s のメールアドレス確認"
-
-#: pycon/templates/account/email/password_change.txt:1
-#, python-format
-msgid ""
-"This is the email notification to confirm your password has been changed on "
-"%(now)s."
-msgstr "あなたのパスワードは%(now)sに変更されました。"
-
-#: pycon/templates/account/email/password_change_subject.txt:1
-msgid "Change password email notification"
-msgstr "パスワード変更"
-
-#: pycon/templates/account/email/password_reset.txt:1
-#, python-format
-msgid ""
-"You're receiving this email because you or someone else has requested a "
-"password for your user account at %(site_name)s.\n"
-"It can be safely ignored if you did not request a password reset. Click the "
-"link below to reset your password.\n"
-"\n"
-"%(password_reset_url)s\n"
-msgstr ""
-"%(site_name)s でパスワード再設定の手続きを承りました。\n"
-"\n"
-"パスワードを再設定するには以下のURLをクリックしてください。\n"
-"%(password_reset_url)s\n"
-"\n"
-"このメールに心当たりの無い方は無視してください。\n"
-
-#: pycon/templates/account/email/password_reset_subject.txt:1
-#, python-format
-msgid "[%(site_name)s] Password reset"
-msgstr "[%(site_name)s] パスワード再設定"
-
-#: pycon/templates/admin/login.html:23 pycon/templates/finaid/edit.html:32
-msgid "Please correct the error below."
-msgid_plural "Please correct the errors below."
-msgstr[0] "下のエラーを訂正して下さい。"
-
-#: pycon/templates/admin/login.html:43
-msgid "Password:"
-msgstr "パスワード:"
-
-#: pycon/templates/admin/login.html:50
-msgid "Forgotten your password or username?"
-msgstr "パスワードあるいはユーザー名をお忘れですか？"
-
-#: pycon/templates/boxes/box.html:8 symposion/templates/boxes/box.html:8
-msgid "Editing content:"
-msgstr "編集"
-
-#: pycon/templates/boxes/box.html:16
-#, python-format
-msgid ""
-"\n"
-"                   Content is processed using <a href=\"%(helplink)s\" "
-"target=\"_blank\">Markdown</a>\n"
-"                 "
-msgstr ""
-"\n"
-"<a href=\"%(helplink)s\"target=\"_blank\"> Markdown</a> を使用してコンテンツ"
-"は処理されます。"
-
-#: pycon/templates/boxes/box.html:20 symposion/templates/boxes/box.html:16
-msgid "Close"
-msgstr "閉じる"
-
-#: pycon/templates/boxes/box.html:21 symposion/templates/boxes/box.html:17
-msgid "Save changes"
-msgstr "変更を保存する"
-
-#: pycon/templates/boxes/box.html:39
-#: symposion/templates/proposals/_proposal_row.html:28
-#: symposion/templates/speakers/speaker_profile.html:35
-msgid "Edit"
-msgstr "編集する"
-
-#: pycon/templates/cms/page_detail.html:26
-#: symposion/templates/cms/page_detail.html:15
-msgid "Edit page"
-msgstr "ページを編集する"
-
-#: pycon/templates/cms/page_edit.html:9
-msgid "Create/Edit Page"
-msgstr "ページを作成し編集する"
-
-#: pycon/templates/cms/page_edit.html:11
-msgid "Edit:"
-msgstr "編集："
-
-#: pycon/templates/finaid/_application_fields.html:3
-msgid "STATUS"
-msgstr "ステータス"
-
-#: pycon/templates/finaid/_application_fields.html:15
-msgid "TIMESTAMP"
-msgstr ""
-
-#: pycon/templates/finaid/_application_fields.html:17
-msgid "Submitted:"
-msgstr "登録済み"
-
-#: pycon/templates/finaid/_application_fields.html:23
-msgid "Last updated:"
-msgstr "最終変更日時："
-
-#: pycon/templates/finaid/_application_fields.html:32
-msgid "GRANT(S) REQUESTED"
-msgstr ""
-
-#: pycon/templates/finaid/_application_fields.html:34
-msgid "PyLadies grant requested"
-msgstr ""
-
-#: pycon/templates/finaid/_application_fields.html:37
-msgid "Registration grant requested"
-msgstr ""
-
-#: pycon/templates/finaid/_application_fields.html:40
-msgid "Tutorial grant requested"
-msgstr ""
-
-#: pycon/templates/finaid/_application_fields.html:43
-msgid "Hotel grant requested"
-msgstr ""
-
-#: pycon/templates/finaid/_application_fields.html:46
-msgid "Hotel nights:"
-msgstr "宿泊日数"
-
-#: pycon/templates/finaid/_application_fields.html:50
-msgid "Sex:"
-msgstr "性別"
-
-#: pycon/templates/finaid/_application_fields.html:57
-msgid "Travel grant requested"
-msgstr ""
-
-#: pycon/templates/finaid/_application_fields.html:60
-msgid "Travel funds requested:"
-msgstr ""
-
-#: pycon/templates/finaid/_application_fields.html:64
-msgid "International travel?"
-msgstr "海外からの渡航ですか。"
-
-#: pycon/templates/finaid/_application_fields.html:69
-msgid "What are your travel plans?"
-msgstr "旅行計画について教えて下さい。"
-
-#: pycon/templates/finaid/_application_fields.html:81
-msgid "APPLICANT INFO"
-msgstr ""
-
-#: pycon/templates/finaid/_application_fields.html:97
-msgid "What do you want to learn?"
-msgstr "何を学びたいですか。"
-
-#: pycon/templates/finaid/_application_fields.html:117
-msgid "Presenting at PyCon:"
-msgstr ""
-
-#: pycon/templates/finaid/_application_fields.html:121
-msgid "Experience level"
-msgstr "経験レベル"
-
-#: pycon/templates/finaid/_application_fields.html:126
-msgid "Presented at PyCon before:"
-msgstr "PyConに参加したことがある："
-
-#: pycon/templates/finaid/_application_fields.html:132
-msgid "First time at PyCon:"
-msgstr "PyConに参加するのは初めてです："
-
-#: pycon/templates/finaid/application_list.html:62
-msgid "Leave message"
-msgstr ""
-
-#: pycon/templates/finaid/application_list.html:66
-msgid "Change status to"
-msgstr ""
-
-#: pycon/templates/finaid/edit.html:9 pycon/templates/finaid/edit.html:28
-msgid "Apply for Financial Aid"
-msgstr "金銭的支援を申請する"
-
-#: pycon/templates/finaid/edit.html:9 pycon/templates/finaid/edit.html:28
-msgid "Edit Financial Aid Application"
-msgstr "金銭的支援の項目を編集する"
-
-#: pycon/templates/finaid/edit.html:21 pycon/templates/finaid/email.html:16
-#: pycon/templates/speakers/speaker_create.html:19
-#: pycon/templates/speakers/speaker_edit.html:20
-#: pycon/templates/tutorials/email.html:27
-msgid "There were errors in your form, please correct them and submit again."
-msgstr "フォームに誤りがあります。訂正してもう一度提出して下さい。"
-
-#: pycon/templates/finaid/edit.html:38
-#: pycon/templates/sponsorship/apply.html:22
-#: symposion/templates/sponsorship/apply.html:20
-msgid "Apply"
-msgstr ""
-
-#: pycon/templates/finaid/edit.html:38 pycon/templates/finaid/review.html:84
-#: pycon/templates/finaid/review.html:139
-#: pycon/templates/finaid/reviewer_message.html:40
-#: pycon/templates/finaid/status.html:54
-#: pycon/templates/tutorials/message.html:32
-#: symposion/templates/proposals/proposal_detail.html:116
-msgid "Submit"
-msgstr "提出する"
-
-#: pycon/templates/finaid/email.html:6 pycon/templates/finaid/email.html:23
-msgid "Send emails to applicants"
-msgstr "申請者にメールを送る"
-
-#: pycon/templates/finaid/email.html:33
-msgid "(Use admin to add email templates.)"
-msgstr "(メールのテンプレートを加えるにはadminになってください)"
-
-#: pycon/templates/finaid/email.html:35
-#: pycon/templates/sponsorship/email.html:33
-#: pycon/templates/tutorials/email.html:51
-msgid "Send"
-msgstr "送信する"
-
-#: pycon/templates/finaid/reviewer_message.html:9
-#: pycon/templates/finaid/reviewer_message.html:13
-msgid "Financial Aid Application Message"
-msgstr "費用補助申請メッセージ"
-
-#: pycon/templates/finaid/reviewer_message.html:19
-msgid "Back to list of applications"
-msgstr "申請リストに戻る"
-
-#: pycon/templates/finaid/reviewer_message.html:23
-#: pycon/templates/finaid/status.html:44
-#: symposion/templates/proposals/proposal_detail.html:106
-msgid "Leave a Message"
-msgstr "メッセージを残す"
-
-#: pycon/templates/finaid/reviewer_message.html:25
-msgid "You can leave a message for the applicants and other reviewers here."
-msgstr ""
-
-#: pycon/templates/finaid/reviewer_message.html:27
-msgid "Selected applicants"
-msgstr ""
-
-#: pycon/templates/finaid/status.html:10 pycon/templates/finaid/status.html:14
-msgid "Financial Aid Application Status"
-msgstr "費用補助申請の状態"
-
-#: pycon/templates/finaid/status.html:23
-#: symposion/templates/proposals/proposal_detail.html:56
-msgid "Proposal Details"
-msgstr "プロポーザルの詳細"
-
-#: pycon/templates/finaid/status.html:24
-#: symposion/templates/proposals/proposal_detail.html:61
-msgid "Reviewer Feedback"
-msgstr "レビュアーからのフィードバック"
-
-#: pycon/templates/finaid/status.html:33
-#: symposion/templates/proposals/proposal_detail.html:96
-msgid "Conversation with Reviewers"
-msgstr "レビュアーとの会話"
-
-#: pycon/templates/finaid/status.html:46
-#: symposion/templates/proposals/proposal_detail.html:108
-msgid "You can leave a message for the reviewers here."
-msgstr "ここでレビュアーにメッセージを残すことが出来ます。"
-
-#: pycon/templates/profiles/edit.html:6
-msgid "Edit Profile"
-msgstr "プロファイルを編集する"
-
-#: pycon/templates/profiles/edit.html:12
-msgid "Update your volunteer profile"
-msgstr "ボランティア用プロファイルを編集する"
-
-#: pycon/templates/profiles/edit.html:13
-msgid "A profile is required to volunteer with PyCon."
-msgstr "PyConでボランティアをするためにはプロファイルが必要です。"
-
-#: pycon/templates/profiles/edit.html:19
-msgid "Save Profile"
-msgstr "プロファイルを保存する"
-
-#: pycon/templates/proposals/proposal_submit_kind.html:7
-#: pycon/templates/proposals/proposal_submit_kind.html:8
-#: symposion/templates/proposals/proposal_submit_kind.html:7
-#, python-format
-msgid "Submit a Proposal for a %(name)s"
-msgstr "%(name)s のプロポーザルを提出する"
-
-#: pycon/templates/proposals/proposal_submit_kind.html:19
-msgid ""
-"\n"
-"                    You will be able to edit your proposal after it has been "
-"submitted.\n"
-"                    The program committee may ask questions, provide "
-"feedback,\n"
-"                    and even suggest changes to your proposal as part of the "
-"review processes.\n"
-"                  "
-msgstr ""
-"\n"
-"プロポーザルは提出した後でも編集できます。\n"
-"審査の過程で運営委員会は提出されたプロポーザルへの質問やフィードバック、変更"
-"依頼をすることがあります。"
-
-#: pycon/templates/proposals/proposal_submit_kind.html:27
-#: symposion/templates/proposals/proposal_submit_kind.html:23
-msgid "Save and Add Additional Speakers"
-msgstr "スピーカーを追加して保存する"
-
-#: pycon/templates/schedule/_slot_edit.html:5
-#: symposion/templates/schedule/_slot_edit.html:5
-msgid "Edit Slot"
-msgstr "時間枠を編集する"
-
-#: pycon/templates/schedule/presentation_detail.html:8
+#: sotmjp/templates/schedule/presentation_detail.html:8
 #: symposion/templates/schedule/presentation_detail.html:6
 msgid "Presentation: "
 msgstr "プレゼンテーション："
 
-#: pycon/templates/schedule/presentation_detail.html:46
+#: sotmjp/templates/schedule/presentation_detail.html:46
 #: symposion/templates/schedule/presentation_detail.html:26
 msgid "Audience level:"
 msgstr "対象レベル："
 
-#: pycon/templates/schedule/presentation_detail.html:48
+#: sotmjp/templates/schedule/presentation_detail.html:48
 #: symposion/templates/schedule/presentation_detail.html:28
 msgid "Category:"
 msgstr "カテゴリ："
 
-#: pycon/templates/schedule/presentation_detail.html:53
-#: pyconjp/templates/proposals/_proposal_fields.html:57
-#: symposion/proposals/models.py:90
-#: symposion/templates/proposals/_proposal_fields.html:53
-#: symposion/templates/schedule/presentation_detail.html:33
-msgid "Description"
-msgstr "説明"
-
-#: pycon/templates/schedule/presentation_detail.html:58
-#: pyconjp/templates/proposals/_proposal_fields.html:61
-#: symposion/templates/proposals/_proposal_fields.html:57
-#: symposion/templates/schedule/presentation_detail.html:37
-msgid "Abstract"
-msgstr "概要"
-
-#: pycon/templates/schedule/presentation_detail.html:70
+#: sotmjp/templates/schedule/presentation_detail.html:70
 msgid "No handouts have been provided yet for this tutorial"
-msgstr ""
+msgstr "このチュートリアルには、まだ配布資料がありません。"
 
-#: pycon/templates/schedule/presentation_detail.html:76
+#: sotmjp/templates/schedule/presentation_detail.html:76
 msgid "Questions about this tutorial"
-msgstr ""
+msgstr "このチュートリアルに対しての質問"
 
-#: pycon/templates/schedule/presentation_detail.html:81
-#: pycon/templates/tutorials/message.html:22
+#: sotmjp/templates/schedule/presentation_detail.html:81
 msgid "Leave class note"
-msgstr ""
+msgstr "クラスノートをそのままにしておく"
 
-#: pycon/templates/schedule/presentation_detail.html:84
-#: pycon/templates/tutorials/message.html:24
+#: sotmjp/templates/schedule/presentation_detail.html:84
 msgid "Class notes are visible to both instructor(s) and attendees"
-msgstr ""
+msgstr "クラスノートは、講師と参加者の双方に見えるようになります。"
 
-#: pycon/templates/schedule/presentation_detail.html:103
+#: sotmjp/templates/schedule/presentation_detail.html:103
 msgid "Email Attendees"
-msgstr ""
+msgstr "参加者にメールする"
 
-#: pycon/templates/schedule/presentation_detail.html:104
+#: sotmjp/templates/schedule/presentation_detail.html:104
 msgid "Select attendee(s) to email directly"
-msgstr ""
+msgstr "直接電子メールしたい参加者を選択する"
 
-#: pycon/templates/schedule/presentation_detail.html:136
+#: sotmjp/templates/schedule/presentation_detail.html:136
 msgid "Email Instructors"
-msgstr ""
+msgstr "講師にメールする"
 
-#: pycon/templates/schedule/presentation_detail.html:137
+#: sotmjp/templates/schedule/presentation_detail.html:137
 msgid "Email instructors privately"
-msgstr ""
+msgstr "講師に個人的にメールする"
 
-#: pycon/templates/schedule/presentation_detail.html:146
+#: sotmjp/templates/schedule/presentation_detail.html:146
 msgid "Send email"
 msgstr "メールを送信する"
 
-#: pycon/templates/schedule/schedule_conference.html:8
-#: pycon/templates/schedule/schedule_conference.html:11
+#: sotmjp/templates/schedule/schedule_conference.html:8
+#: sotmjp/templates/schedule/schedule_conference.html:11
 #: symposion/templates/schedule/schedule_conference.html:8
 #: symposion/templates/schedule/schedule_conference.html:19
 #: symposion/templates/schedule/schedule_detail.html:9
 msgid "Conference Schedule"
 msgstr "カンファレンススケジュール"
 
-#: pycon/templates/schedule/schedule_detail.html:9
-#: pycon/templates/schedule/schedule_detail.html:12
+#: sotmjp/templates/schedule/schedule_detail.html:9
+#: sotmjp/templates/schedule/schedule_detail.html:12
 msgid " Schedule"
 msgstr "スケジュール"
 
-#: pycon/templates/schedule/schedule_edit.html:7
-#: pycon/templates/schedule/schedule_edit.html:14
+#: sotmjp/templates/schedule/schedule_edit.html:7
+#: sotmjp/templates/schedule/schedule_edit.html:14
 #: symposion/templates/schedule/schedule_edit.html:7
 msgid "Conference Schedule Edit"
 msgstr "カンファレンススケジュールリスト"
 
-#: pycon/templates/schedule/session_detail.html:10
+#: sotmjp/templates/schedule/session_detail.html:10
 #: symposion/templates/schedule/session_detail.html:11
 msgid "Session Detail"
 msgstr "セッションの詳細"
 
-#: pycon/templates/schedule/session_detail.html:18
+#: sotmjp/templates/schedule/session_detail.html:18
 #: symposion/templates/schedule/session_detail.html:20
 msgid "Session Chair"
 msgstr "司会者"
 
-#: pycon/templates/schedule/session_detail.html:41
-#: pycon/templates/schedule/session_detail.html:73
+#: sotmjp/templates/schedule/session_detail.html:41
+#: sotmjp/templates/schedule/session_detail.html:73
 #: symposion/templates/schedule/session_detail.html:43
 #: symposion/templates/schedule/session_detail.html:73
 #, python-format
-msgid ""
-"<a href=\"%(profile_edit)s?next=%(request.path)s\">Click here to create a "
-"volunteer profile</a> and enable volunteering for session roles."
-msgstr ""
-"ボランティア用プロファイルを作成してセッションをサポートするには、<a href="
-"\"%(profile_edit)s?next=%(request.path)s\">ここをクリック</a>して下さい。"
+msgid "<a href=\"%(profile_edit)s?next=%(request.path)s\">Click here to create a volunteer profile</a> and enable volunteering for session roles."
+msgstr "ボランティア用プロファイルを作成してセッションをサポートするには、<a href=\"%(profile_edit)s?next=%(request.path)s\">ここをクリック</a>して下さい。"
 
-#: pycon/templates/schedule/session_detail.html:46
+#: sotmjp/templates/schedule/session_detail.html:46
 #, python-format
-msgid ""
-"<a href=\"%(account_signup)s\">Sign up</a> and <a href=\"%(account_login)s?"
-"next=%(request.path)s\">log in</a> to volunteer to be session chair."
-msgstr ""
+msgid "<a href=\"%(account_signup)s\">Sign up</a> and <a href=\"%(account_login)s?next=%(request.path)s\">log in</a> to volunteer to be session chair."
+msgstr "セッションの司会になるには、<a href=\"%(account_signup)s\">参加登録</a> と<a href=\"%(account_login)s?next=%(request.path)s\">ログイン</a> してください。"
 
-#: pycon/templates/schedule/session_detail.html:50
+#: sotmjp/templates/schedule/session_detail.html:50
 #: symposion/templates/schedule/session_detail.html:51
 msgid "Session Runner"
 msgstr "アシスタント"
 
-#: pycon/templates/schedule/session_detail.html:78
+#: sotmjp/templates/schedule/session_detail.html:78
 #, python-format
-msgid ""
-"<a href=\"%(account_signup)s\">Sign up</a> and <a href=\"%(account_login)s?"
-"next=%(request.path)s\">log in</a> to volunteer to be session runner."
-msgstr ""
+msgid "<a href=\"%(account_signup)s\">Sign up</a> and <a href=\"%(account_login)s?next=%(request.path)s\">log in</a> to volunteer to be session runner."
+msgstr "セッション進行(Runner)のボランティアになるには、<a href=\"%(account_signup)s\">ユーザ登録</a>と <a href=\"%(account_login)s?next=%(request.path)s\">ログイン</a> してください。"
 
-#: pycon/templates/schedule/session_detail.html:93
-#: pycon/templates/schedule/session_list.html:33
+#: sotmjp/templates/schedule/session_detail.html:93
+#: sotmjp/templates/schedule/session_list.html:33
 #: symposion/templates/schedule/session_detail.html:91
 #: symposion/templates/schedule/session_list.html:33
 msgid "No slots in session."
 msgstr "このセッションには時間枠がありません。"
 
-#: pycon/templates/schedule/session_list.html:6
+#: sotmjp/templates/schedule/session_list.html:6
 #: symposion/templates/schedule/session_list.html:6
 msgid "Sessions"
 msgstr "セッション"
 
-#: pycon/templates/schedule/session_list.html:12
+#: sotmjp/templates/schedule/session_list.html:12
 #: symposion/templates/schedule/session_list.html:12
 msgid "Session #"
-msgstr ""
+msgstr "セッション番号"
 
-#: pycon/templates/schedule/session_list.html:20
+#: sotmjp/templates/schedule/session_list.html:20
 #: symposion/templates/schedule/session_list.html:20
 msgid "No volunteers signed up"
 msgstr "登録されたボランティアはいません。"
 
-#: pycon/templates/schedule/session_list.html:23
+#: sotmjp/templates/schedule/session_list.html:23
 #: symposion/templates/schedule/session_list.html:23
 msgid "Slots"
 msgstr "時間枠"
 
-#: pycon/templates/schedule/session_list.html:40
+#: sotmjp/templates/schedule/session_list.html:40
 #: symposion/templates/schedule/session_list.html:40
 msgid "No sessions defined."
 msgstr "セッションが登録されていません"
 
-#: pycon/templates/speakers/speaker_create.html:7
-#: pycon/templates/speakers/speaker_create.html:9
-#: pycon/templates/speakers/speaker_create.html:26
+#: sotmjp/templates/speakers/speaker_create.html:7
+#: sotmjp/templates/speakers/speaker_create.html:9
+#: sotmjp/templates/speakers/speaker_create.html:26
 #: symposion/templates/speakers/speaker_create.html:7
 #: symposion/templates/speakers/speaker_create.html:16
 msgid "Create Speaker Profile"
 msgstr "スピーカー用プロファイルを作成する"
 
-#: pycon/templates/speakers/speaker_create.html:32
-#: pycon/templates/speakers/speaker_edit.html:33
+#: sotmjp/templates/speakers/speaker_create.html:19
+#: sotmjp/templates/speakers/speaker_edit.html:20
+msgid "There were errors in your form, please correct them and submit again."
+msgstr "フォームに誤りがあります。訂正してもう一度提出して下さい。"
+
+#: sotmjp/templates/speakers/speaker_create.html:32
+#: sotmjp/templates/speakers/speaker_edit.html:33
 #: symposion/templates/proposals/proposal_edit.html:19
 #: symposion/templates/speakers/speaker_create.html:22
 #: symposion/templates/speakers/speaker_edit.html:22
 msgid "Cancel"
 msgstr "キャンセルする"
 
-#: pycon/templates/speakers/speaker_edit.html:7
-#: pycon/templates/speakers/speaker_edit.html:9
-#: pycon/templates/speakers/speaker_edit.html:27
+#: sotmjp/templates/speakers/speaker_edit.html:7
+#: sotmjp/templates/speakers/speaker_edit.html:9
+#: sotmjp/templates/speakers/speaker_edit.html:27
 #: symposion/templates/speakers/speaker_edit.html:7
 #: symposion/templates/speakers/speaker_edit.html:16
 msgid "Edit Speaker Profile"
 msgstr "スピーカー用プロファイルを編集する"
 
-#: pycon/templates/sponsorship/apply.html:7
-#: pycon/templates/sponsorship/apply.html:19
-#: symposion/templates/sponsorship/apply.html:7
-#: symposion/templates/sponsorship/apply.html:17
-msgid "Apply to be a Sponsor"
-msgstr "スポンサーに応募する"
+#: sotmjp/tutorials/models.py:15
+msgid "User who submitted the message"
+msgstr "このメッセージを送信したユーザー"
 
-#: pycon/templates/sponsorship/email.html:8
-#: pycon/templates/sponsorship/email.html:13
-#: pycon/templates/sponsorship/email.html:30
-msgid "Email selected PyCon Sponsors"
-msgstr "選択したスポンサーへメールを送信する"
-
-#: pycon/templates/sponsorship/email.html:18
-msgid "Sponsors we're about to email:"
-msgstr "メールを送信するスポンサー："
-
-#: pycon/templates/sponsorship/jobs.html:8
-#: pycon/templates/sponsorship/jobs.html:25
-#: symposion/templates/sponsorship/jobs.html:8
-msgid "PyCon JP Jobs Fair"
-msgstr "PyCon JP 求人フェア"
-
-#: pycon/templates/sponsorship/jobs.html:27
-#: pycon/templates/sponsorship/list.html:15
-msgid "Learn how to become a sponsor "
-msgstr "スポンサーになる方法を見る"
-
-#: pycon/templates/sponsorship/list.html:8
-#: pycon/templates/sponsorship/list.html:13
-#: symposion/templates/sponsorship/list.html:8
-#: symposion/templates/sponsorship/list.html:17
-msgid "About PyCon JP Sponsors"
-msgstr "PyCon JP のスポンサーについて"
-
-#: pycon/templates/static/sitemap.html:8
-#: pycon/templates/static/sitemap.html:10
-#: symposion/templates/static/sitemap.html:8
-#: symposion/templates/static/sitemap.html:10
-msgid "Sitemap"
-msgstr "サイトマップ"
-
-#: pycon/templates/teams/team_detail.html:18
-#, python-format
-msgid "You are a <em>%(state)s</em> of %(name)s"
-msgstr "あなたは %(name)s において <em>%(state)s</em> です"
-
-#: pycon/templates/teams/team_detail.html:25
-msgid "JOIN"
-msgstr "参加"
-
-#: pycon/templates/teams/team_detail.html:32
-msgid "LEAVE"
-msgstr "抜ける"
-
-#: pycon/templates/teams/team_detail.html:39
-msgid "APPLY"
-msgstr "参加"
-
-#: pycon/templates/teams/team_detail.html:45
-#: symposion/templates/teams/team_detail.html:38
-msgid ""
-"You have been invited to join this team. Click <b>join</b> to the right to "
-"accept."
-msgstr ""
-"あなたはこのチームに招待されています。承認して参加するには右をクリックして下"
-"さい。"
-
-#: pycon/templates/teams/team_detail.html:49
-#: symposion/templates/teams/team_detail.html:42
-msgid "Managers"
-msgstr "マネージャー"
-
-#: pycon/templates/teams/team_detail.html:53
-#: pycon/templates/teams/team_detail.html:66
-msgid "you"
-msgstr "あなた"
-
-#: pycon/templates/teams/team_detail.html:55
-msgid "DEMOTE"
-msgstr "降格"
-
-#: pycon/templates/teams/team_detail.html:62
-#: symposion/templates/teams/team_detail.html:55
-msgid "Team Members"
-msgstr "チームメンバー"
-
-#: pycon/templates/teams/team_detail.html:68
-#: symposion/templates/teams/team_detail.html:61
-msgid "promote"
-msgstr "昇格"
-
-#: pycon/templates/teams/team_detail.html:75
-#: symposion/templates/teams/team_detail.html:68
-msgid "Applicants"
-msgstr ""
-
-#: pycon/templates/teams/team_detail.html:81
-#: symposion/templates/teams/team_detail.html:74
-msgid "accept"
-msgstr "受託する"
-
-#: pycon/templates/teams/team_detail.html:82
-#: symposion/templates/teams/team_detail.html:75
-msgid "reject"
-msgstr "却下する"
-
-#: pycon/templates/teams/team_detail.html:89
-#: symposion/templates/teams/team_detail.html:82
-msgid "Invitees"
-msgstr "招待された人"
-
-#: pycon/templates/teams/team_detail.html:101
-#: symposion/templates/teams/team_detail.html:94
-msgid "Invite User to Team"
-msgstr "ユーザーをチームに招待する"
-
-#: pycon/templates/teams/team_detail.html:104
-#: symposion/templates/teams/team_detail.html:97
-msgid "Invite"
-msgstr "招待する"
-
-#: pycon/templates/tutorials/email.html:8
-#: pycon/templates/tutorials/email.html:36
-msgid "Send emails to attendees"
-msgstr ""
-
-#: pycon/templates/tutorials/email.html:10
-#: pycon/templates/tutorials/email.html:38
-msgid "Send emails to instructors"
-msgstr ""
-
-#: pycon/templates/tutorials/email.html:20
-#: pycon/templates/tutorials/message.html:18
-msgid "Back to presentation details"
-msgstr ""
-
-#: pycon/templates/tutorials/message.html:8
-#: pycon/templates/tutorials/message.html:12
-msgid "Tutorial Comment"
-msgstr ""
-
-#: pycon/templates/venue/base.html:13
-msgid "Venue Information"
-msgstr "開催地情報"
-
-#: pycon/templates/venue/detail.html:6 pycon/templates/venue/detail.html:8
-msgid "Venue Details"
-msgstr "開催地詳細"
-
-#: pycon/templates/venue/detail.html:27
-msgid "Hotels"
-msgstr "ホテル"
-
-#: pycon/tutorials/utils.py:98
+#: sotmjp/tutorials/utils.py:98
 msgid "Please select at least one attendee"
-msgstr ""
+msgstr "最低一人の参加者を選択してください。"
 
-#: pycon/tutorials/utils.py:109
+#: sotmjp/tutorials/utils.py:109
 msgid "An invalid form action was attempted"
-msgstr ""
+msgstr "不正なフォームへの入力が行なわれました"
 
-#: pycon/tutorials/views.py:69
+#: sotmjp/tutorials/views.py:32
+#: sotmjp/tutorials/views.py:93
+msgid "Not authorized for this page"
+msgstr "このページを閲覧する権限がありません"
+
+#: sotmjp/tutorials/views.py:65
+msgid "There was some error sending emails, not all of them might have made it"
+msgstr "電子メールの送信にエラーがあり、一部の処理がされましせんでした。"
+
+#: sotmjp/tutorials/views.py:69
 msgid "Email(s) sent"
-msgstr ""
+msgstr "送信した電子メール"
 
-#: pycon/tutorials/views.py:116
+#: sotmjp/tutorials/views.py:116
 msgid "Message sent"
-msgstr ""
-
-#: pyconjp/templates/proposals/_proposal_fields.html:4
-#: symposion/templates/proposals/_proposal_fields.html:4
-msgid "Submitted by"
-msgstr "提出者"
-
-#: pyconjp/templates/proposals/_proposal_fields.html:8
-#: symposion/templates/proposals/_proposal_fields.html:8
-#: symposion/templates/reviews/_review_table.html:10
-msgid "Tags"
-msgstr "タグ"
-
-#: pyconjp/templates/proposals/_proposal_fields.html:20
-#: symposion/templates/proposals/_proposal_fields.html:16
-msgid "Python Level"
-msgstr "Python レベル"
-
-#: pyconjp/templates/proposals/_proposal_fields.html:38
-#: symposion/templates/proposals/_proposal_fields.html:34
-msgid "Domain Level"
-msgstr ""
-
-#: pyconjp/templates/proposals/_proposal_fields.html:43
-#: symposion/templates/proposals/_proposal_fields.html:39
-msgid "Additional Speakers"
-msgstr "追加スピーカー"
-
-#: pyconjp/templates/proposals/_proposal_fields.html:50
-#: symposion/templates/proposals/_proposal_fields.html:46
-msgid "Invitation Sent"
-msgstr "送信された招待状"
-
-#: pyconjp/templates/proposals/_proposal_fields.html:73
-#: symposion/templates/proposals/_proposal_fields.html:69
-msgid "Notes"
-msgstr "メモ"
-
-#: pyconjp/templates/proposals/_proposal_fields.html:76
-#: symposion/templates/proposals/_proposal_fields.html:72
-msgid "Speaker Bio"
-msgstr "スピーカー略歴"
-
-#: pyconjp/templates/proposals/_proposal_fields.html:79
-#: symposion/templates/proposals/_proposal_fields.html:75
-msgid "Additional Requirements"
-msgstr "追加の必要事項"
-
-#: pyconjp/templates/proposals/_proposal_fields.html:87
-#: symposion/templates/proposals/_proposal_fields.html:83
-msgid "Download"
-msgstr "ダウンロードする"
-
-#: pyconjp/templates/proposals/_proposal_fields.html:89
-#: symposion/templates/proposals/_proposal_fields.html:85
-msgid "No handout attached to this proposal."
-msgstr "このプロポーザルに付属するハンドアウトはありません。"
-
-#: pyconjp/templates/proposals/_proposal_fields.html:94
-#: symposion/templates/proposals/_proposal_fields.html:90
-#: symposion/templates/proposals/proposal_detail.html:58
-#: symposion/templates/proposals/proposal_detail.html:70
-msgid "Supporting Documents"
-msgstr "補足資料"
-
-#: pyconjp/templates/proposals/_proposal_fields.html:104
-#: symposion/templates/cms/file_index.html:16
-#: symposion/templates/proposals/_proposal_fields.html:100
-#: symposion/templates/proposals/proposal_detail.html:80
-msgid "delete"
-msgstr "削除する"
-
-#: pyconjp/templates/proposals/_proposal_fields.html:111
-#: symposion/templates/proposals/_proposal_fields.html:107
-#: symposion/templates/proposals/proposal_detail.html:87
-msgid "No supporting documents attached to this proposal."
-msgstr "このプロポーザルに付属する補助資料はありません。"
+msgstr "メッセージが送られました。"
 
 #: symposion/forms.py:47
 msgid "Change language for this session"
@@ -1973,19 +1088,19 @@ msgstr "公開"
 
 #: symposion/cms/models.py:55
 msgid "Path can only contain letters, numbers and hyphens and end with /"
-msgstr ""
-"パスはアルファベット、数字、ハイフンのみ使用でき、スラッシュで終わる必要があ"
-"ります"
+msgstr "パスはアルファベット、数字、ハイフンのみ使用でき、スラッシュで終わる必要があります"
 
 #: symposion/conference/models.py:18
 msgid "title"
 msgstr "題目"
 
-#: symposion/conference/models.py:21 symposion/conference/models.py:61
+#: symposion/conference/models.py:21
+#: symposion/conference/models.py:61
 msgid "start date"
 msgstr "開始日"
 
-#: symposion/conference/models.py:22 symposion/conference/models.py:62
+#: symposion/conference/models.py:22
+#: symposion/conference/models.py:62
 msgid "end date"
 msgstr "終了日"
 
@@ -2010,12 +1125,8 @@ msgid "Email address"
 msgstr "メールアドレス"
 
 #: symposion/proposals/forms.py:36
-msgid ""
-"You have submitted the Proposal author's email address. Please select "
-"another email address."
-msgstr ""
-"すでにプロポーザルのメールアドレスに登録しています。他のメールアドレスを選ん"
-"でください。"
+msgid "You have submitted the Proposal author's email address. Please select another email address."
+msgstr "すでにプロポーザルのメールアドレスに登録しています。他のメールアドレスを選んでください。"
 
 #: symposion/proposals/forms.py:45
 msgid "This email address has already been invited to your talk proposal"
@@ -2039,12 +1150,8 @@ msgid "Name"
 msgstr "名前"
 
 #: symposion/proposals/models.py:92
-msgid ""
-"If your talk is accepted this will be made public and printed in the "
-"program. Should be one paragraph, maximum 400 characters."
-msgstr ""
-"講演が承認されたら、このテキストはプログラムに印刷され、公開されます。 最大４"
-"００文字"
+msgid "If your talk is accepted this will be made public and printed in the program. Should be one paragraph, maximum 400 characters."
+msgstr "講演が承認されたら、このテキストはプログラムに印刷され、公開されます。 最大４００文字"
 
 #: symposion/proposals/models.py:95
 msgid "Detailed Abstract"
@@ -2059,26 +1166,26 @@ msgid "Additional Notes"
 msgstr "その他のメモ"
 
 #: symposion/proposals/models.py:102
-msgid ""
-"Anything else you'd like the program committee to know when making their "
-"selection: your past speaking experience, open source community experience, "
-"etc."
-msgstr ""
-"選考について運営に伝えたいことは他にありますか。 例: 過去の講演経験、オープン"
-"ソースコミュニティでの経験など"
+msgid "Anything else you'd like the program committee to know when making their selection: your past speaking experience, open source community experience, etc."
+msgstr "選考について運営に伝えたいことは他にありますか。 例: 過去の講演経験、オープンソースコミュニティでの経験など"
 
 #: symposion/proposals/models.py:205
 msgid "Pending"
 msgstr "保留"
 
+#: symposion/proposals/models.py:206
+#: symposion/templates/proposals/_pending_proposal_row.html:15
+#: symposion/templates/proposals/_proposal_row.html:15
+msgid "Accepted"
+msgstr "受託済み"
+
+#: symposion/proposals/models.py:207
+msgid "Declined"
+msgstr "辞退"
+
 #: symposion/social_auth/views.py:33
-msgid ""
-"Cannot remove the only Social Account without first setting a Password or "
-"adding another Social Account."
-msgstr ""
-"ソーシャルアカウントが一つしか登録されていません。パスワードを設定するか他の"
-"ソーシャルアカウントを追加されないとこのソーシャルアカウントを削除できませ"
-"ん。"
+msgid "Cannot remove the only Social Account without first setting a Password or adding another Social Account."
+msgstr "ソーシャルアカウントが一つしか登録されていません。パスワードを設定するか他のソーシャルアカウントを追加されないとこのソーシャルアカウントを削除できません。"
 
 #: symposion/social_auth/views.py:39
 #, python-format
@@ -2086,12 +1193,8 @@ msgid "Removed the %(provider)s account '%(uid)s'."
 msgstr "%(provider)s アカウント '%(uid)s'を削除しました。"
 
 #: symposion/speakers/forms.py:16
-msgid ""
-"If you've submitted multiple proposals, please let us know if you only want "
-"to give one or if you'd like to give two talks."
-msgstr ""
-"複数のプロポーザルを提出している場合は、１回だけ講演したいかあるいは２回講演"
-"したいのかお知らせ下さい。"
+msgid "If you've submitted multiple proposals, please let us know if you only want to give one or if you'd like to give two talks."
+msgstr "複数のプロポーザルを提出している場合は、１回だけ講演したいかあるいは２回講演したいのかお知らせ下さい。"
 
 #: symposion/speakers/forms.py:47
 msgid "Please limit speaker biography to 100 words or less"
@@ -2107,30 +1210,19 @@ msgstr "２"
 
 #: symposion/speakers/models.py:18
 msgid "As you would like it to appear in the conference program."
-msgstr ""
+msgstr "会議プログラムに掲載されたい名前で記載してください。"
 
 #: symposion/speakers/models.py:21
-msgid ""
-"A little bit about you. 100 words or less, please. This will be used in "
-"print publications so please keep it simple, no links or formatting."
-msgstr ""
-"100文字以内で自己紹介をお願いします。この文章は印刷物に使用されますのでシンプ"
-"ルにお願いします。リンクや書式の設定はできません。"
+msgid "A little bit about you. 100 words or less, please. This will be used in print publications so please keep it simple, no links or formatting."
+msgstr "100文字以内で自己紹介をお願いします。この文章は印刷物に使用されますのでシンプルにお願いします。リンクや書式の設定はできません。"
 
 #: symposion/speakers/models.py:28
 msgid "Your Twitter account"
 msgstr "あなたのTwitterアカウント"
 
 #: symposion/speakers/models.py:41
-msgid ""
-"If you've submitted multiple talk proposals, please let us know if you only "
-"want to give one or if you'd like to give two talks.  For tutorials and "
-"posters, state similar preferences in the additional notes section of your "
-"proposals."
-msgstr ""
-"複数のプロポーザルを提出している場合は、１回だけ講演したいかあるいは２回講演"
-"したいのかお知らせ下さい。チュートリアルとポスターの場合は、プロポーザルのメ"
-"モ欄にsimilar preferencesを記入して下さい。"
+msgid "If you've submitted multiple talk proposals, please let us know if you only want to give one or if you'd like to give two talks.  For tutorials and posters, state similar preferences in the additional notes section of your proposals."
+msgstr "複数のプロポーザルを提出している場合は、１回だけ講演したいかあるいは２回講演したいのかお知らせ下さい。チュートリアルとポスターの場合は、プロポーザルのメモ欄にsimilar preferencesを記入して下さい。"
 
 #: symposion/sponsorship/models.py:33
 msgid "contact_name"
@@ -2155,20 +1247,67 @@ msgstr "次は何？"
 
 #: symposion/templates/about/what_next.html:23
 #, python-format
-msgid ""
-"Start by <a href=\"%(signup_url)s\">signing up</a> and <a href="
-"\"%(login_url)s\">logging in</a>."
-msgstr ""
-"<a href=\"%(signup_url)s\"> 登録</a>して<a href=\"%(login_url)s\"> ログイン</"
-"a>して下さい。"
+msgid "Start by <a href=\"%(signup_url)s\">signing up</a> and <a href=\"%(login_url)s\">logging in</a>."
+msgstr "<a href=\"%(signup_url)s\"> 登録</a>して<a href=\"%(login_url)s\"> ログイン</a>して下さい。"
+
+#: symposion/templates/account/_openid_sidebar.html:5
+#: symposion/templates/social_auth/usersocialauth_list.html:47
+msgid "Sign in with another account:"
+msgstr "他のアカウントでログイン"
+
+#: symposion/templates/account/_openid_sidebar.html:17
+msgid "Sign in with OpenID"
+msgstr "OpenIDでログインする"
+
+#: symposion/templates/account/_openid_sidebar.html:21
+msgid "Sign in"
+msgstr "ログイン"
+
+#: symposion/templates/account/_openid_sidebar.html:25
+msgid "Don't have an account? "
+msgstr "アカウントをお持ちですか。"
+
+#: symposion/templates/account/base.html:10
+msgid "Account"
+msgstr "アカウント"
+
+#: symposion/templates/account/base.html:12
+msgid "Change password"
+msgstr "パスワードを変更する"
+
+#: symposion/templates/account/base.html:13
+#: symposion/templates/social_auth/usersocialauth_list.html:4
+#: symposion/templates/social_auth/usersocialauth_list.html:7
+msgid "Associations"
+msgstr "関連付け"
+
+#: symposion/templates/account/base.html:14
+msgid "Delete account"
+msgstr "アカウント削除"
 
 #: symposion/templates/account/login.html:10
-msgid ""
-"<b>Note:</b> Account information is not saved year to year, you will need to "
-"make a new account or login using one of the method on the right."
-msgstr ""
-"<b>注意：</b> アカウント情報は一年間しか保存されません。右の方法のいずれかで"
-"のログインか新しいアカウントの作成が必要にあります。"
+msgid "<b>Note:</b> Account information is not saved year to year, you will need to make a new account or login using one of the method on the right."
+msgstr "<b>注意：</b> アカウント情報は一年間しか保存されません。右の方法のいずれかでのログインか新しいアカウントの作成が必要にあります。"
+
+#: symposion/templates/account/login.html:12
+msgid "Log in to an existing account"
+msgstr "既存のアカウントでログインする"
+
+#: symposion/templates/account/login.html:19
+msgid "Forgot your password?"
+msgstr "パスワードをお忘れですか？"
+
+#: symposion/templates/account/signup.html:7
+msgid "Create an account"
+msgstr "アカウントを作成"
+
+#: symposion/templates/account/signup.html:11
+msgid "Create a new account"
+msgstr "アカウントを作成"
+
+#: symposion/templates/account/signup.html:19
+msgid "Create Account"
+msgstr "アカウントを作成"
 
 #: symposion/templates/biblion/blog_list.html:26
 #: symposion/templates/biblion/blog_post.html:20
@@ -2183,13 +1322,21 @@ msgstr "続きを読む・・"
 msgid "No posts have been published."
 msgstr "公開された投稿はありません。"
 
+#: symposion/templates/boxes/box.html:8
+msgid "Editing content:"
+msgstr "編集"
+
 #: symposion/templates/boxes/box.html:15
-msgid ""
-"Content is processed using <a href=\"http://daringfireball.net/projects/"
-"markdown/syntax\" target=\"_blank\">Markdown</a>"
-msgstr ""
-"コンテンツは<a href=\"http://daringfireball.net/projects/markdown/syntax\" "
-"target=\"_blank\">マークダウン</a>で処理されます。"
+msgid "Content is processed using <a href=\"http://daringfireball.net/projects/markdown/syntax\" target=\"_blank\">Markdown</a>"
+msgstr "コンテンツは<a href=\"http://daringfireball.net/projects/markdown/syntax\" target=\"_blank\">マークダウン</a>で処理されます。"
+
+#: symposion/templates/boxes/box.html:16
+msgid "Close"
+msgstr "閉じる"
+
+#: symposion/templates/boxes/box.html:17
+msgid "Save changes"
+msgstr "変更を保存する"
 
 #: symposion/templates/boxes/box.html:34
 msgid "Edit this content"
@@ -2221,6 +1368,10 @@ msgstr "アップロードされたファイルはありません。"
 msgid "Add File"
 msgstr "ファイルを追加する"
 
+#: symposion/templates/cms/page_detail.html:15
+msgid "Edit page"
+msgstr "ページを編集する"
+
 #: symposion/templates/cms/page_edit.html:9
 msgid "Create Page"
 msgstr "ページを作成する"
@@ -2247,27 +1398,22 @@ msgstr "作成する"
 msgid ""
 "\n"
 "    <p>\n"
-"        User \"%(username)s\" has applied to join <b>%(team_name)s</b> on "
-"%(site_name)s.\n"
+"        User \"%(username)s\" has applied to join <b>%(team_name)s</b> on %(site_name)s.\n"
 "    </p>\n"
 "\n"
 "    <p>\n"
-"        To accept this application and see any other pending applications, "
-"visit the following url:\n"
-"        <a href=\"http://%(site_url)s%(team_url)s\">http://%(site_url)s"
-"%(team_url)s</a>\n"
+"        To accept this application and see any other pending applications, visit the following url:\n"
+"        <a href=\"http://%(site_url)s%(team_url)s\">http://%(site_url)s%(team_url)s</a>\n"
 "    </p>\n"
 msgstr ""
 "\n"
 "<p>\n"
-"ユーザー \"%(username)s\"が%(site_name)sにある<b>%(team_name)s</b>への参加を"
-"申請しています。\n"
+"ユーザー \"%(username)s\"が%(site_name)sにある<b>%(team_name)s</b>への参加を申請しています。\n"
 "</p>\n"
 " \n"
 "<p>\n"
 "この申請を承認して他の保留中の申請を見るには、次のURLを開いて下さい：\n"
-"<a href=\"http://%(site_url)s%(team_url)s\">http://%(site_url)s%(team_url)s</"
-"a>\n"
+"<a href=\"http://%(site_url)s%(team_url)s\">http://%(site_url)s%(team_url)s</a>\n"
 "</p>\n"
 
 #: symposion/templates/emails/teams_user_applied/subject.txt:1
@@ -2280,14 +1426,12 @@ msgstr "ユーザー \"%(username)s\"が%(team)sへの参加を申請してい�
 msgid ""
 "\n"
 "    <p>\n"
-"        You have been invited to join <b>%(team_name)s</b> on "
-"%(site_name)s.\n"
+"        You have been invited to join <b>%(team_name)s</b> on %(site_name)s.\n"
 "    </p>\n"
 "\n"
 "    <p>\n"
 "        To accept this invitation, visit the following url:\n"
-"        <a href=\"http://%(site_url)s%(team_url)s\">http://%(site_url)s"
-"%(team_url)s</a>\n"
+"        <a href=\"http://%(site_url)s%(team_url)s\">http://%(site_url)s%(team_url)s</a>\n"
 "    </p>\n"
 msgstr ""
 "\n"
@@ -2297,8 +1441,7 @@ msgstr ""
 "\n"
 "<p>\n"
 "この招待を承認するには次のURLを開いて下さい：\n"
-"<a href=\"http://%(site_url)s%(team_url)s\">http://%(site_url)s%(team_url)s</"
-"a>\n"
+"<a href=\"http://%(site_url)s%(team_url)s\">http://%(site_url)s%(team_url)s</a>\n"
 "</p>\n"
 
 #: symposion/templates/emails/teams_user_invited/subject.txt:1
@@ -2310,6 +1453,11 @@ msgstr "あなたは\"%(team)s\"に招待されています"
 #: symposion/templates/proposals/_proposal_row.html:11
 msgid "Cancelled"
 msgstr "キャンセル済み"
+
+#: symposion/templates/proposals/_pending_proposal_row.html:17
+#: symposion/templates/proposals/_proposal_row.html:17
+msgid "Submitted"
+msgstr "申請済み"
 
 #: symposion/templates/proposals/_pending_proposal_row.html:20
 msgid "Invited"
@@ -2330,6 +1478,11 @@ msgstr "招待を辞退する"
 #: symposion/templates/proposals/_proposal_row.html:20
 msgid "Associated"
 msgstr ""
+
+#: symposion/templates/proposals/_proposal_row.html:28
+#: symposion/templates/speakers/speaker_profile.html:35
+msgid "Edit"
+msgstr "編集する"
 
 #: symposion/templates/proposals/_proposal_row.html:29
 msgid "Manage Additional Speakers"
@@ -2356,7 +1509,7 @@ msgstr "はい"
 
 #: symposion/templates/proposals/proposal_cancel.html:15
 msgid "No, keep it for now"
-msgstr ""
+msgstr "いいえ、そのままにしてください"
 
 #: symposion/templates/proposals/proposal_detail.html:31
 msgid "Edit this proposal"
@@ -2375,17 +1528,36 @@ msgid "Proposal Locked"
 msgstr "プロポーザルはロックされています"
 
 #: symposion/templates/proposals/proposal_detail.html:47
-msgid ""
-"This proposal is locked as the review period for this section has ended. "
-"Edits of proposals after acceptance will not be reflected on the official "
-"schedule."
-msgstr ""
-"このプロポーザルはこのセクションの審査が終了するとロックされます。承認された"
-"後にプロポーザルを編集しても公式スケジュールへは反映されません。"
+msgid "This proposal is locked as the review period for this section has ended. Edits of proposals after acceptance will not be reflected on the official schedule."
+msgstr "このプロポーザルはこのセクションの審査が終了するとロックされます。承認された後にプロポーザルを編集しても公式スケジュールへは反映されません。"
+
+#: symposion/templates/proposals/proposal_detail.html:56
+msgid "Proposal Details"
+msgstr "プロポーザルの詳細"
+
+#: symposion/templates/proposals/proposal_detail.html:61
+msgid "Reviewer Feedback"
+msgstr "レビュアーからのフィードバック"
 
 #: symposion/templates/proposals/proposal_detail.html:89
 msgid "Add Document"
 msgstr "ドキュメントを追加する"
+
+#: symposion/templates/proposals/proposal_detail.html:96
+msgid "Conversation with Reviewers"
+msgstr "レビュアーとの会話"
+
+#: symposion/templates/proposals/proposal_detail.html:106
+msgid "Leave a Message"
+msgstr "メッセージを残す"
+
+#: symposion/templates/proposals/proposal_detail.html:108
+msgid "You can leave a message for the reviewers here."
+msgstr "ここでレビュアーにメッセージを残すことが出来ます。"
+
+#: symposion/templates/proposals/proposal_detail.html:116
+msgid "Submit"
+msgstr "提出する"
 
 #: symposion/templates/proposals/proposal_edit.html:6
 #, python-format
@@ -2408,7 +1580,7 @@ msgstr "%(title)sを離れています"
 #: symposion/templates/proposals/proposal_leave.html:9
 #, python-format
 msgid "Are you sure you wish to leave as a speaker on <b>%(title)s</b>?"
-msgstr ""
+msgstr "あなたを、<b>%(title)s</b>の講演者のままにしておきますか？"
 
 #: symposion/templates/proposals/proposal_speaker_manage.html:28
 msgid "Proposal:"
@@ -2431,14 +1603,8 @@ msgid "Add another speaker"
 msgstr "別のスピーカーを追加する"
 
 #: symposion/templates/proposals/proposal_speaker_manage.html:46
-msgid ""
-"Lookup speaker by email, first, or last name. If a Speaker does not exist "
-"for the email provided, an invitation to create an account will be sent to "
-"them."
-msgstr ""
-"スピーカーをメールアドレス、氏名で検索する。検索されたメールアドレスのスピー"
-"カーがいない場合、そのメールアドレスへアカウント作成のための招待状が送信され"
-"ます。"
+msgid "Lookup speaker by email, first, or last name. If a Speaker does not exist for the email provided, an invitation to create an account will be sent to them."
+msgstr "スピーカーをメールアドレス、氏名で検索する。検索されたメールアドレスのスピーカーがいない場合、そのメールアドレスへアカウント作成のための招待状が送信されます。"
 
 #: symposion/templates/proposals/proposal_speaker_manage.html:50
 msgid "Add speaker"
@@ -2456,14 +1622,18 @@ msgstr "どのタイプのプロポーザルを提出するか選んで下さい
 msgid "Proposals are not currently open for submission."
 msgstr "現在プロポーザルの提出は受け付けていません。"
 
+#: symposion/templates/proposals/proposal_submit_kind.html:7
+#, python-format
+msgid "Submit a Proposal for a %(name)s"
+msgstr "%(name)s のプロポーザルを提出する"
+
 #: symposion/templates/proposals/proposal_submit_kind.html:19
-msgid ""
-"You will be able to edit your proposal after it has been submitted. The "
-"program committee may ask questions, provide feedback, and even suggest "
-"changes to your proposal as part of the review processes."
-msgstr ""
-"プロポーザルは提出した後でも編集できます。審査の過程で運営委員会は提出された"
-"プロポーザルへの質問やフィードバック、変更依頼をすることがあります。"
+msgid "You will be able to edit your proposal after it has been submitted. The program committee may ask questions, provide feedback, and even suggest changes to your proposal as part of the review processes."
+msgstr "プロポーザルは提出した後でも編集できます。審査の過程で運営委員会は提出されたプロポーザルへの質問やフィードバック、変更依頼をすることがあります。"
+
+#: symposion/templates/proposals/proposal_submit_kind.html:23
+msgid "Save and Add Additional Speakers"
+msgstr "スピーカーを追加して保存する"
 
 #: symposion/templates/registration/login.html:12
 msgid "Redirecting to CTE..."
@@ -2471,7 +1641,7 @@ msgstr "CTEにリダイレクトしています・・・"
 
 #: symposion/templates/registration/login.html:14
 msgid "Registration is closed"
-msgstr ""
+msgstr "参加登録は終了しました"
 
 #: symposion/templates/registration/login.html:16
 msgid "Registration not ready"
@@ -2483,7 +1653,7 @@ msgstr "参加登録にリダイレクトしています。しばらくお待ち
 
 #: symposion/templates/registration/login.html:44
 msgid "Registration is closed."
-msgstr ""
+msgstr "参加登録は終了しました。"
 
 #: symposion/templates/registration/login.html:46
 msgid "Registration is not yet ready, please come back later."
@@ -2491,19 +1661,19 @@ msgstr "参加登録は今しばらくお待ちください"
 
 #: symposion/templates/registration/register.html:5
 msgid "Registration and Housing"
-msgstr ""
+msgstr "参加登録と収容計画"
 
 #: symposion/templates/reviews/_review_table.html:16
 msgid "Online Result Status"
-msgstr ""
+msgstr "オンライン結果の状況"
 
 #: symposion/templates/reviews/_review_table.html:17
 msgid "Overall Status"
-msgstr ""
+msgstr "全体の状況"
 
 #: symposion/templates/reviews/_review_table.html:19
 msgid "Update Overall Status"
-msgstr ""
+msgstr "全体の状況を更新"
 
 #: symposion/templates/reviews/_review_table.html:22
 msgid "Rejection Status"
@@ -2511,7 +1681,7 @@ msgstr "却下状態"
 
 #: symposion/templates/reviews/_review_table.html:23
 msgid "Damage Score"
-msgstr ""
+msgstr "ダメージスコア"
 
 #: symposion/templates/reviews/base.html:98
 msgid "Voting Status"
@@ -2544,21 +1714,13 @@ msgstr "プレゼンテーションのリスト"
 
 #: symposion/templates/schedule/session_detail.html:47
 #, python-format
-msgid ""
-"Sign up and <a href=\"%(account_login)s?next=%(request.path)s\">log in</a> "
-"to volunteer to be session chair."
-msgstr ""
-"司会者のボランティアをするには登録して <a href=\"%(account_login)s?next="
-"%(request.path)s\">ログイン</a> して下さい。"
+msgid "Sign up and <a href=\"%(account_login)s?next=%(request.path)s\">log in</a> to volunteer to be session chair."
+msgstr "司会者のボランティアをするには登録して <a href=\"%(account_login)s?next=%(request.path)s\">ログイン</a> して下さい。"
 
 #: symposion/templates/schedule/session_detail.html:76
 #, python-format
-msgid ""
-"Sign up and <a href=\"%(account_login)s?next=%(request.path)s\">log in</a> "
-"to volunteer to be session runner."
-msgstr ""
-"アシスタントをするには登録して<a href=\"%(account_login)s?next="
-"%(request.path)s\">ログイン</a>して下さい。"
+msgid "Sign up and <a href=\"%(account_login)s?next=%(request.path)s\">log in</a> to volunteer to be session runner."
+msgstr "アシスタントをするには登録して<a href=\"%(account_login)s?next=%(request.path)s\">ログイン</a>して下さい。"
 
 #: symposion/templates/social_auth/usersocialauth_list.html:15
 msgid "Remove"
@@ -2573,51 +1735,58 @@ msgid "Presentations"
 msgstr "プレゼンテーション"
 
 #: symposion/templates/speakers/speaker_profile.html:52
-msgid ""
-"No presentations. This page is only visible to staff until there is a "
-"presentation."
-msgstr ""
-"プレゼンテーションがありません。このページはプレゼンテーションが登録されるま"
-"でスタッフにしか表示されません。"
+msgid "No presentations. This page is only visible to staff until there is a presentation."
+msgstr "プレゼンテーションがありません。このページはプレゼンテーションが登録されるまでスタッフにしか表示されません。"
+
+#: symposion/templates/sponsorship/apply.html:7
+#: symposion/templates/sponsorship/apply.html:17
+msgid "Apply to be a Sponsor"
+msgstr "スポンサーに応募する"
+
+#: symposion/templates/sponsorship/apply.html:20
+msgid "Apply"
+msgstr "適用する"
 
 #: symposion/templates/sponsorship/apply.html:23
 #, python-format
-msgid ""
-"By submitting this sponsor application you are agreeing to the <a href="
-"\"%(terms)s\" target=\"_blank\">terms and conditions</a>."
-msgstr ""
-"スポンサーに応募すると<a href=\"%(terms)s\" target=\"_blank\">条項と条件</a>"
-"に同意したことになります。"
+msgid "By submitting this sponsor application you are agreeing to the <a href=\"%(terms)s\" target=\"_blank\">terms and conditions</a>."
+msgstr "スポンサーに応募すると<a href=\"%(terms)s\" target=\"_blank\">条項と条件</a>に同意したことになります。"
 
 #: symposion/templates/sponsorship/detail.html:12
 msgid "Your sponsorship has been submitted! Thank you!"
 msgstr "スポンサー申請を受付しました！ ありがとうございます！"
 
 #: symposion/templates/sponsorship/detail.html:13
-msgid ""
-"Please enter the information below at your leasure. Your submission will "
-"become active once it has been reviewed and you have uploaded an image and "
-"text for use on the website."
-msgstr ""
-"スポンサーシップの申請を完了するには、以下のスポンサー情報の最低限、ウェブ用"
-"のロゴ、会社の説明を入力してください。 最低限の情報が登録できたら、スタッフに"
-"レビューされ、スポンサーシップの申請が有効になります。 有効になったら、スポン"
-"サーのロゴや、リンクがサイト上に表示されます。"
+msgid "Please enter the information below at your leasure. Your submission will become active once it has been reviewed and you have uploaded an image and text for use on the website."
+msgstr "スポンサーシップの申請を完了するには、以下のスポンサー情報の最低限、ウェブ用のロゴ、会社の説明を入力してください。 最低限の情報が登録できたら、スタッフにレビューされ、スポンサーシップの申請が有効になります。 有効になったら、スポンサーのロゴや、リンクがサイト上に表示されます。"
 
 #: symposion/templates/sponsorship/detail.html:24
 #, python-format
 msgid "%(sponsor.level)s Sponsor Benefits"
 msgstr "%(sponsor.level)s スポンサー特典"
 
+#: symposion/templates/sponsorship/jobs.html:8
+msgid "SotM JP Jobs Fair"
+msgstr "SotM JP 求人フェア"
+
 #: symposion/templates/sponsorship/jobs.html:16
-#, fuzzy
-msgid "PyCon Jobs JP Fair"
-msgstr "PyCon JP 求人フェア"
+msgid "SotM Jobs JP Fair"
+msgstr "SotM JP 求人フェア"
 
 #: symposion/templates/sponsorship/jobs.html:17
 #: symposion/templates/sponsorship/list.html:18
 msgid "Learn how to become a sponsor"
 msgstr "スポンサーになる方法を見る"
+
+#: symposion/templates/sponsorship/list.html:8
+#: symposion/templates/sponsorship/list.html:17
+msgid "About SotM JP Sponsors"
+msgstr "SotM JP のスポンサーについて"
+
+#: symposion/templates/static/sitemap.html:8
+#: symposion/templates/static/sitemap.html:10
+msgid "Sitemap"
+msgstr "サイトマップ"
 
 #: symposion/templates/static/speaker_detail.html:5
 msgid "Speaker Name"
@@ -2628,6 +1797,461 @@ msgstr "スポンサー名"
 msgid "Venue"
 msgstr "開催地"
 
+#: symposion/templates/teams/team_detail.html:38
+msgid "You have been invited to join this team. Click <b>join</b> to the right to accept."
+msgstr "あなたはこのチームに招待されています。承認して参加するには右をクリックして下さい。"
+
+#: symposion/templates/teams/team_detail.html:42
+msgid "Managers"
+msgstr "マネージャー"
+
 #: symposion/templates/teams/team_detail.html:48
 msgid "demote"
 msgstr ""
+
+#: symposion/templates/teams/team_detail.html:55
+msgid "Team Members"
+msgstr "チームメンバー"
+
+#: symposion/templates/teams/team_detail.html:61
+msgid "promote"
+msgstr "昇格"
+
+#: symposion/templates/teams/team_detail.html:68
+msgid "Applicants"
+msgstr "応募者"
+
+#: symposion/templates/teams/team_detail.html:74
+msgid "accept"
+msgstr "受託する"
+
+#: symposion/templates/teams/team_detail.html:75
+msgid "reject"
+msgstr "却下する"
+
+#: symposion/templates/teams/team_detail.html:82
+msgid "Invitees"
+msgstr "招待された人"
+
+#: symposion/templates/teams/team_detail.html:94
+msgid "Invite User to Team"
+msgstr "ユーザーをチームに招待する"
+
+#: symposion/templates/teams/team_detail.html:97
+msgid "Invite"
+msgstr "招待する"
+
+#~ msgid "Python level"
+#~ msgstr "Python レベル"
+
+#~ msgid "Travel plans are required if requesting a travel grant."
+#~ msgstr "交通費の助成が必要な場合は、旅行計画の提出が必要です。"
+
+#~ msgid "Female"
+#~ msgstr "女性"
+
+#~ msgid "Male"
+#~ msgstr "男性"
+
+#~ msgid "Yes"
+#~ msgstr "はい"
+
+#~ msgid "No"
+#~ msgstr "いいえ"
+
+#~ msgid "Information needed"
+#~ msgstr "情報が必要"
+
+#~ msgid "Offered"
+#~ msgstr "オファー済み"
+
+#~ msgid "Rejected"
+#~ msgstr "却下済み"
+
+#~ msgid "Cash"
+#~ msgstr "現金"
+
+#~ msgid "Check"
+#~ msgstr "小切手"
+
+#~ msgid "PyLadies grant"
+#~ msgstr "PyLadies助成金"
+
+#~ msgid "Would you like to be considered for a PyLadies grant? (Women only.)"
+#~ msgstr "PyLadies助成金の選考対象に入りたいですか。(女性のみ)"
+
+#~ msgid "Will you need assistance with the Conference Registration?"
+#~ msgstr "カンファレンスに登録する際に補助が必要ですか。"
+
+#~ msgid "Hotel grant"
+#~ msgstr "宿泊費補助"
+
+#~ msgid "Will you need assistance with a Hotel Room?"
+#~ msgstr "ホテルの宿泊に関してサポートが必要ですか？"
+
+#~ msgid "Nights"
+#~ msgstr "宿泊日数"
+
+#~ msgid "Please approximate how many nights you will be staying at the hotel."
+#~ msgstr "ホテルに宿泊する大まかな日数を教えて下さい。"
+
+#~ msgid "Sex"
+#~ msgstr "性別"
+
+#~ msgid ""
+#~ "(Your sex will be used only to help assign roommates for those requesting "
+#~ "hotel assistance)"
+#~ msgstr ""
+#~ "(あなたの性別はホテルでの援助を依頼された方へルームメイトを指定する際にの"
+#~ "み使用されます。)"
+
+#~ msgid "Travel grant"
+#~ msgstr "旅費補助"
+
+#~ msgid "Will you need assistance with Travel Costs?"
+#~ msgstr "旅費の補助は必要ですか。"
+
+#~ msgid "International"
+#~ msgstr "国際"
+
+#~ msgid "Will you be traveling internationally?"
+#~ msgstr "海外から渡航される予定ですか。"
+
+#~ msgid "Travel amount"
+#~ msgstr "旅費"
+
+#~ msgid ""
+#~ "Please enter the amount of travel assistance you need, in US dollars."
+#~ msgstr "USドルで必要な旅費への補助額を入力して下さい。"
+
+#~ msgid "Travel plans"
+#~ msgstr "旅行計画"
+
+#~ msgid "Please describe your travel plans"
+#~ msgstr "旅行計画を記入して下さい。"
+
+#~ msgid "Will you need assistance with tutorials?"
+#~ msgstr "チュートリアルの際に補助は必要ですか。"
+
+#~ msgid "Profession"
+#~ msgstr "専門"
+
+#~ msgid "What is it that you do"
+#~ msgstr "お仕事は何ですか。"
+
+#~ msgid "Involvement"
+#~ msgstr "関与"
+
+#~ msgid "Describe your involvement in any open source projects or community."
+#~ msgstr ""
+#~ "あなたが関わっている全てのオープンソースプロジェクトあるいはコミュニティを"
+#~ "記入して下さい。"
+
+#~ msgid "What do you want to get out of attending PyCon?"
+#~ msgstr "PyConに参加して何を得たいですか。"
+
+#~ msgid "What is it that you're hoping to learn?"
+#~ msgstr "PyConから何を学びたいですか。"
+
+#~ msgid "Portfolios"
+#~ msgstr "参加プロジェクト一覧"
+
+#~ msgid ""
+#~ "Please provide links to any portfolios you have that contain Python work. "
+#~ "(e.g. Github, Bitbucket, etc.)"
+#~ msgstr ""
+#~ "あなたが関わったのプロジェクトでPythonが使用されたものがあればそのリンクを"
+#~ "入力して下さい。(Github、Bitbucket、etc)"
+
+#~ msgid "Use of Python"
+#~ msgstr "Pythonの利用方法"
+
+#~ msgid "Describe your use of Python"
+#~ msgstr "Pythonをどのように利用していますか。"
+
+#~ msgid "Beginner resources"
+#~ msgstr "初心者用資料"
+
+#~ msgid ""
+#~ "If you're a beginner, describe the resources you're using to learn Python."
+#~ msgstr ""
+#~ "もしあなたが初級者なら、Pythonを学習するのに利用している情報源を教えて下さ"
+#~ "い。"
+
+#~ msgid ""
+#~ "Will you be speaking, hosting a poster session, or otherwise presenting "
+#~ "at PyCon?"
+#~ msgstr ""
+#~ "プレゼンテーションのスピーカー、ポスターセッションのプレゼンター、あるいは"
+#~ "その他の発表をする予定はありますか。"
+
+#~ msgid "Python experience level"
+#~ msgstr "Pythonの経験レベル"
+
+#~ msgid "What is your experience level with Python?"
+#~ msgstr "Pythonの経験レベルを教えて下さい。"
+
+#~ msgid "First time"
+#~ msgstr "初参加です。"
+
+#~ msgid "Is this your first time attending PyCon?"
+#~ msgstr "PyConに参加するのは初めてですか。"
+
+#~ msgid "Presented"
+#~ msgstr "参加したことがあります。"
+
+#~ msgid "Have you spoken at PyCon in the past?"
+#~ msgstr "今までにPyConで講演したことがありますか。"
+
+#~ msgid "Whether message is visible to applicant"
+#~ msgstr "申込者にメッセージを見せるかどうか"
+
+#~ msgid "Financial aid applications are not open at this time"
+#~ msgstr "費用補助申請は現在できません。"
+
+#~ msgid "Application submitted"
+#~ msgstr "申請が完了しました"
+
+#~ msgid "Please select at least one application"
+#~ msgstr "最低一つの申請を選んでください"
+
+#~ msgid "You have not applied for financial aid"
+#~ msgstr "あなたは費用援助に申し込んでいません"
+
+#~ msgid "Financial Aid"
+#~ msgstr "費用補助"
+
+#~ msgid "Apply for financial aid"
+#~ msgstr "費用補助を申請する"
+
+#~ msgid "Edit financial aid application"
+#~ msgstr "費用補助の申請を編集"
+
+#~ msgid "Financial aid application status"
+#~ msgstr "費用補助申請のステータス"
+
+#~ msgid "Review applications"
+#~ msgstr "申請をレビュー"
+
+#~ msgid "Download applications"
+#~ msgstr "申請をダウンロード"
+
+#~ msgid "Tutorials"
+#~ msgstr "チュートリアル"
+
+#~ msgid "Sprints"
+#~ msgstr "スプリント"
+
+#~ msgid "PyCon JP 2014 is over!"
+#~ msgstr "PyCon JP 2014 は盛況のうちに終了しました。"
+
+#~ msgid "Thanks to everyone for making it a great success!"
+#~ msgstr "ご来場・ご協力いただいた皆様、ありがとうございました。"
+
+#~ msgid "Sign up now!"
+#~ msgstr "今すぐ会員登録する"
+
+#~ msgid "Delete Account"
+#~ msgstr "アカウント削除"
+
+#~ msgid ""
+#~ "If you go ahead and delete your account, your information will be "
+#~ "<b>expunged within %(ACCOUNT_DELETION_EXPUNGE_HOURS)s hours</b>."
+#~ msgstr ""
+#~ "ここでアカウントを削除を削除したら、情報"
+#~ "は%(ACCOUNT_DELETION_EXPUNGE_HOURS)s時間内に完全に削除されます。"
+
+#~ msgid "Delete My Account"
+#~ msgstr "アカウントを削除する"
+
+#~ msgid "Confirm email address <b>%(email)s</b>?"
+#~ msgstr "メールアドレスは<b>%(email)s</b>でよろしいですか？"
+
+#~ msgid "Confirm"
+#~ msgstr "確認"
+
+#~ msgid "Are you sure you want to log out?"
+#~ msgstr "ログアウトしてよろしいですか？"
+
+#~ msgid "Sign Up"
+#~ msgstr "会員登録"
+
+#~ msgid ""
+#~ "A user on %(site_name)s has created an account using this email address.\n"
+#~ "\n"
+#~ "To confirm this email address, go to %(activate_url)s\n"
+#~ "\n"
+#~ "If you did not sign up for this site, you can ignore this message.\n"
+#~ msgstr ""
+#~ "%(site_name)s でユーザーがこのメールアドレスを使って、アカウントを作成しま"
+#~ "した。\n"
+#~ "\n"
+#~ "このメールアドレスを確認するには以下のURLをクリックしてください。\n"
+#~ "%(activate_url)s\n"
+#~ "\n"
+#~ "このメールに心当たりの無い方は無視してください。\n"
+
+#~ msgid "Confirm email address for %(site_name)s"
+#~ msgstr "%(site_name)s のメールアドレス確認"
+
+#~ msgid ""
+#~ "This is the email notification to confirm your password has been changed "
+#~ "on %(now)s."
+#~ msgstr "あなたのパスワードは%(now)sに変更されました。"
+
+#~ msgid "Change password email notification"
+#~ msgstr "パスワード変更"
+
+#~ msgid ""
+#~ "You're receiving this email because you or someone else has requested a "
+#~ "password for your user account at %(site_name)s.\n"
+#~ "It can be safely ignored if you did not request a password reset. Click "
+#~ "the link below to reset your password.\n"
+#~ "\n"
+#~ "%(password_reset_url)s\n"
+#~ msgstr ""
+#~ "%(site_name)s でパスワード再設定の手続きを承りました。\n"
+#~ "\n"
+#~ "パスワードを再設定するには以下のURLをクリックしてください。\n"
+#~ "%(password_reset_url)s\n"
+#~ "\n"
+#~ "このメールに心当たりの無い方は無視してください。\n"
+
+#~ msgid "[%(site_name)s] Password reset"
+#~ msgstr "[%(site_name)s] パスワード再設定"
+
+#~ msgid ""
+#~ "\n"
+#~ "                   Content is processed using <a href=\"%(helplink)s\" "
+#~ "target=\"_blank\">Markdown</a>\n"
+#~ "                 "
+#~ msgstr ""
+#~ "\n"
+#~ "<a href=\"%(helplink)s\"target=\"_blank\"> Markdown</a> を使用してコンテン"
+#~ "ツは処理されます。"
+
+#~ msgid "Create/Edit Page"
+#~ msgstr "ページを作成し編集する"
+
+#~ msgid "Edit:"
+#~ msgstr "編集："
+
+#~ msgid "STATUS"
+#~ msgstr "ステータス"
+
+#~ msgid "Submitted:"
+#~ msgstr "登録済み"
+
+#~ msgid "Last updated:"
+#~ msgstr "最終変更日時："
+
+#~ msgid "Hotel nights:"
+#~ msgstr "宿泊日数"
+
+#~ msgid "Sex:"
+#~ msgstr "性別"
+
+#~ msgid "International travel?"
+#~ msgstr "海外からの渡航ですか。"
+
+#~ msgid "What are your travel plans?"
+#~ msgstr "旅行計画について教えて下さい。"
+
+#~ msgid "What do you want to learn?"
+#~ msgstr "何を学びたいですか。"
+
+#~ msgid "Experience level"
+#~ msgstr "経験レベル"
+
+#~ msgid "Presented at PyCon before:"
+#~ msgstr "PyConに参加したことがある："
+
+#~ msgid "First time at PyCon:"
+#~ msgstr "PyConに参加するのは初めてです："
+
+#~ msgid "Apply for Financial Aid"
+#~ msgstr "金銭的支援を申請する"
+
+#~ msgid "Edit Financial Aid Application"
+#~ msgstr "金銭的支援の項目を編集する"
+
+#~ msgid "Send emails to applicants"
+#~ msgstr "申請者にメールを送る"
+
+#~ msgid "(Use admin to add email templates.)"
+#~ msgstr "(メールのテンプレートを加えるにはadminになってください)"
+
+#~ msgid "Send"
+#~ msgstr "送信する"
+
+#~ msgid "Financial Aid Application Message"
+#~ msgstr "費用補助申請メッセージ"
+
+#~ msgid "Back to list of applications"
+#~ msgstr "申請リストに戻る"
+
+#~ msgid "Financial Aid Application Status"
+#~ msgstr "費用補助申請の状態"
+
+#~ msgid "Edit Profile"
+#~ msgstr "プロファイルを編集する"
+
+#~ msgid "Update your volunteer profile"
+#~ msgstr "ボランティア用プロファイルを編集する"
+
+#~ msgid "A profile is required to volunteer with PyCon."
+#~ msgstr "PyConでボランティアをするためにはプロファイルが必要です。"
+
+#~ msgid "Save Profile"
+#~ msgstr "プロファイルを保存する"
+
+#~ msgid ""
+#~ "\n"
+#~ "                    You will be able to edit your proposal after it has "
+#~ "been submitted.\n"
+#~ "                    The program committee may ask questions, provide "
+#~ "feedback,\n"
+#~ "                    and even suggest changes to your proposal as part of "
+#~ "the review processes.\n"
+#~ "                  "
+#~ msgstr ""
+#~ "\n"
+#~ "プロポーザルは提出した後でも編集できます。\n"
+#~ "審査の過程で運営委員会は提出されたプロポーザルへの質問やフィードバック、変"
+#~ "更依頼をすることがあります。"
+
+#~ msgid "Email selected PyCon Sponsors"
+#~ msgstr "選択したスポンサーへメールを送信する"
+
+#~ msgid "Sponsors we're about to email:"
+#~ msgstr "メールを送信するスポンサー："
+
+#~ msgid "Learn how to become a sponsor "
+#~ msgstr "スポンサーになる方法を見る"
+
+#~ msgid "You are a <em>%(state)s</em> of %(name)s"
+#~ msgstr "あなたは %(name)s において <em>%(state)s</em> です"
+
+#~ msgid "JOIN"
+#~ msgstr "参加"
+
+#~ msgid "LEAVE"
+#~ msgstr "抜ける"
+
+#~ msgid "APPLY"
+#~ msgstr "参加"
+
+#~ msgid "you"
+#~ msgstr "あなた"
+
+#~ msgid "DEMOTE"
+#~ msgstr "降格"
+
+#~ msgid "Venue Information"
+#~ msgstr "開催地情報"
+
+#~ msgid "Venue Details"
+#~ msgstr "開催地詳細"
+
+#~ msgid "Hotels"
+#~ msgstr "ホテル"
