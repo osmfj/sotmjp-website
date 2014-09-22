@@ -1,5 +1,8 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
+#
+# Vagrantfile for staging of State of the Map Japan 2014 website
+#
 
 require_relative "credential"
 include Credential
