@@ -15,20 +15,16 @@ python manage.py syncdb --noinput
 python manage.py migrate
 
 python manage.py loaddata \
+  fixtures/initial_data.json \
   fixtures/auth_user.json \
-  fixtures/initial_data.json \
+  fixtures/auth_permission.json \
   fixtures/conference.json \
-  fixtures/constance.json \
-  fixtures/initial_boxes.json \
-  fixtures/initial_data.json \
+  fixtures/database_constance.json \
+  fixtures/boxes.json \
   fixtures/proposal_base.json \
-  fixtures/sitetree_menu.json \
-  fixtures/sitetree_menu_ja.json \
-  fixtures/sponsorship_benefits.json \
-  fixtures/sponsorship_levels.json \
-  fixtures/tutorials_schedule.json \
-  fixtures/talks_schedule.json \
-  fixtures/permissions.json \
+  fixtures/sitetree.json \
+  fixtures/sponsorship.json \
+  fixtures/schedule.json \
   fixtures/teams.json \
 
 echo
