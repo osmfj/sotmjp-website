@@ -135,17 +135,6 @@
     }
 },
 {
-    "pk": 8, 
-    "model": "schedule.slot", 
-    "fields": {
-        "start": "14:55:00", 
-        "kind": 7, 
-        "end": "15:10:00", 
-        "day": 1, 
-        "content_override": ""
-    }
-},
-{
     "pk": 9, 
     "model": "schedule.slot", 
     "fields": {
@@ -285,18 +274,114 @@
     }
 },
 {
-    "pk": 6, 
-    "model": "schedule.slotroom", 
-    "fields": {
-        "slot": 3, 
-        "room": 2
-    }
-},
-{
     "pk": 7, 
     "model": "schedule.slotroom", 
     "fields": {
         "slot": 6, 
+        "room": 1
+    }
+},
+{
+    "pk": 8, 
+    "model": "schedule.slotroom", 
+    "fields": {
+        "slot": 7, 
+        "room": 1
+    }
+},
+{
+    "pk": 10, 
+    "model": "schedule.slotroom", 
+    "fields": {
+        "slot": 9, 
+        "room": 1
+    }
+},
+{
+    "pk": 11, 
+    "model": "schedule.slotroom", 
+    "fields": {
+        "slot": 10, 
+        "room": 1
+    }
+},
+{
+    "pk": 12, 
+    "model": "schedule.slotroom", 
+    "fields": {
+        "slot": 11, 
+        "room": 1
+    }
+},
+{
+    "pk": 13, 
+    "model": "schedule.slotroom", 
+    "fields": {
+        "slot": 12, 
+        "room": 1
+    }
+},
+{
+    "pk": 14, 
+    "model": "schedule.slotroom", 
+    "fields": {
+        "slot": 2, 
+        "room": 2
+    }
+},
+{
+    "pk": 15, 
+    "model": "schedule.slotroom", 
+    "fields": {
+        "slot": 7, 
+        "room": 2
+    }
+},
+{
+    "pk": 17, 
+    "model": "schedule.slotroom", 
+    "fields": {
+        "slot": 9, 
+        "room": 2
+    }
+},
+{
+    "pk": 18, 
+    "model": "schedule.slotroom", 
+    "fields": {
+        "slot": 16, 
+        "room": 1
+    }
+},
+{
+    "pk": 19, 
+    "model": "schedule.slotroom", 
+    "fields": {
+        "slot": 13, 
+        "room": 1
+    }
+},
+{
+    "pk": 20, 
+    "model": "schedule.slotroom", 
+    "fields": {
+        "slot": 14, 
+        "room": 1
+    }
+},
+{
+    "pk": 21, 
+    "model": "schedule.slotroom", 
+    "fields": {
+        "slot": 15, 
+        "room": 1
+    }
+},
+{
+    "pk": 22, 
+    "model": "schedule.slotroom", 
+    "fields": {
+        "slot": 17, 
         "room": 1
     }
 }

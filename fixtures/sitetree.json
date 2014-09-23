@@ -638,5 +638,53 @@
         "urlaspattern": true, 
         "access_guest": false
     }
+},
+{
+    "pk": 39, 
+    "model": "sitetree.treeitem", 
+    "fields": {
+        "parent": 19, 
+        "access_restricted": false, 
+        "access_permissions": [], 
+        "description": "", 
+        "insitetree": true, 
+        "hint": "", 
+        "url": "schedule_conference", 
+        "inbreadcrumbs": true, 
+        "title": "\u30ab\u30f3\u30d5\u30a1\u30ec\u30f3\u30b9\u30b9\u30b1\u30b8\u30e5\u30fc\u30eb", 
+        "tree": 1, 
+        "access_perm_type": 1, 
+        "alias": null, 
+        "sort_order": 39, 
+        "inmenu": true, 
+        "access_loggedin": false, 
+        "hidden": false, 
+        "urlaspattern": true, 
+        "access_guest": false
+    }
+},
+{
+    "pk": 40, 
+    "model": "sitetree.treeitem", 
+    "fields": {
+        "parent": 34, 
+        "access_restricted": false, 
+        "access_permissions": [], 
+        "description": "", 
+        "insitetree": true, 
+        "hint": "", 
+        "url": "schedule_conference", 
+        "inbreadcrumbs": true, 
+        "title": "schedule table", 
+        "tree": 2, 
+        "access_perm_type": 1, 
+        "alias": null, 
+        "sort_order": 40, 
+        "inmenu": true, 
+        "access_loggedin": false, 
+        "hidden": false, 
+        "urlaspattern": true, 
+        "access_guest": false
+    }
 }
 ]
