@@ -2169,60 +2169,6 @@
     }
 },
 {
-    "pk": 257, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "add_proposaldata", 
-        "name": "Can add proposal data", 
-        "content_type": 87
-    }
-},
-{
-    "pk": 258, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "change_proposaldata", 
-        "name": "Can change proposal data", 
-        "content_type": 87
-    }
-},
-{
-    "pk": 259, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "delete_proposaldata", 
-        "name": "Can delete proposal data", 
-        "content_type": 87
-    }
-},
-{
-    "pk": 263, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "add_sotmtutorialmessage", 
-        "name": "Can add sotm tutorial message", 
-        "content_type": 89
-    }
-},
-{
-    "pk": 264, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "change_sotmtutorialmessage", 
-        "name": "Can change sotm tutorial message", 
-        "content_type": 89
-    }
-},
-{
-    "pk": 265, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "delete_sotmtutorialmessage", 
-        "name": "Can delete sotm tutorial message", 
-        "content_type": 89
-    }
-},
-{
     "pk": 266, 
     "model": "auth.permission", 
     "fields": {
