@@ -1,74 +1,74 @@
 [
-  {
-    "model": "database.constance",
-    "pk": 1,
+{
+    "pk": 1, 
+    "model": "database.constance", 
     "fields": {
-      "value": "gAJYBAAAAHNvb25xAS4=",
-      "key": "REGISTRATION_STATUS"
+        "value": "gAJYBAAAAHNvb25xAS4=", 
+        "key": "REGISTRATION_STATUS"
     }
-  },
-  {
-    "model": "database.constance",
-    "pk": 2,
+},
+{
+    "pk": 2, 
+    "model": "database.constance", 
     "fields": {
-      "value": "gAJYAAAAAC4=",
-      "key": "GOOGLE_ANALYTICS_TRACKING_ID"
+        "value": "gAJYAAAAAC4=", 
+        "key": "GOOGLE_ANALYTICS_TRACKING_ID"
     }
-  },
-  {
-    "model": "database.constance",
-    "pk": 3,
+},
+{
+    "pk": 3, 
+    "model": "database.constance", 
     "fields": {
-      "value": "gAJYAAAAAC4=",
-      "key": "SPONSOR_FROM_EMAIL"
+        "value": "gAJYAAAAAC4=", 
+        "key": "SPONSOR_FROM_EMAIL"
     }
-  },
-  {
-    "model": "database.constance",
-    "pk": 4,
+},
+{
+    "pk": 4, 
+    "model": "database.constance", 
     "fields": {
-      "value": "gAJYAAAAAC4=",
-      "key": "CTE_TUTORIAL_DATA_URL"
+        "value": "gAJYAAAAAC4=", 
+        "key": "CTE_TUTORIAL_DATA_URL"
     }
-  },
-  {
-    "model": "database.constance",
-    "pk": 5,
+},
+{
+    "pk": 5, 
+    "model": "database.constance", 
     "fields": {
-      "value": "gAJYAAAAAC4=",
-      "key": "REGISTRATION_URL"
+        "value": "gAJYAAAAAC4=", 
+        "key": "REGISTRATION_URL"
     }
-  },
-  {
-    "model": "database.constance",
-    "pk": 6,
+},
+{
+    "pk": 6, 
+    "model": "database.constance", 
     "fields": {
-      "value": "gAJYAAAAAC4=",
-      "key": "CTE_SECRET"
+        "value": "gAJYAAAAAC4=", 
+        "key": "CTE_SECRET"
     }
-  },
-  {
-    "model": "database.constance",
-    "pk": 7,
+},
+{
+    "pk": 7, 
+    "model": "database.constance", 
     "fields": {
-      "value": "gAJYAAAAAC4=",
-      "key": "CTE_BASICAUTH_PASS"
+        "value": "gAJYAAAAAC4=", 
+        "key": "CTE_BASICAUTH_PASS"
     }
-  },
-  {
-    "model": "database.constance",
-    "pk": 8,
+},
+{
+    "pk": 8, 
+    "model": "database.constance", 
     "fields": {
-      "value": "gAJYAAAAAC4=",
-      "key": "CTE_BASICAUTH_USER"
+        "value": "gAJYAAAAAC4=", 
+        "key": "CTE_BASICAUTH_USER"
     }
-  },
-  {
-    "model": "database.constance",
-    "pk": 9,
+},
+{
+    "pk": 9, 
+    "model": "database.constance", 
     "fields": {
-      "value": true,
-      "key": "SHOW_LANGUAGE_SELECTOR"
+        "value": false, 
+        "key": "SHOW_LANGUAGE_SELECTOR"
     }
-  }
+}
 ]

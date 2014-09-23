@@ -1,67 +1,67 @@
 [
-    {
-        "pk": 1,
-        "model": "conference.conference",
-        "fields": {
-            "timezone": "Canada/Eastern",
-            "start_date": "2014-04-09",
-            "end_date": "2014-04-17",
-            "title": "PyCon 2014"
-        }
-    },
-    {
-        "pk": 1,
-        "model": "conference.section",
-        "fields": {
-            "conference": 1,
-            "start_date": "2014-03-13",
-            "name": "Tutorials",
-            "end_date": "2014-03-14",
-            "slug": "tutorials"
-        }
-    },
-    {
-        "pk": 2,
-        "model": "conference.section",
-        "fields": {
-            "conference": 1,
-            "start_date": "2014-03-15",
-            "name": "Talks",
-            "end_date": "2014-03-18",
-            "slug": "talks"
-        }
-    },
-    {
-        "pk": 3,
-        "model": "conference.section",
-        "fields": {
-            "conference": 1,
-            "start_date": null,
-            "name": "Posters",
-            "end_date": null,
-            "slug": "posters"
-        }
-    },
-    {
-        "pk": 4,
-        "model": "conference.section",
-        "fields": {
-            "conference": 1,
-            "start_date": "2014-03-19",
-            "name": "Sprints",
-            "end_date": "2014-03-21",
-            "slug": "sprints"
-        }
-    },
-    {
-        "pk": 5,
-        "model": "conference.section",
-        "fields": {
-            "conference": 1,
-            "start_date": null,
-            "name": "Open Spaces",
-            "end_date": null,
-            "slug": "open-spaces"
-        }
+{
+    "pk": 1, 
+    "model": "conference.conference", 
+    "fields": {
+        "timezone": "Asia/Tokyo", 
+        "start_date": "2014-12-13", 
+        "end_date": "2014-12-13", 
+        "title": "State of the Map JAPAN 2014"
     }
+},
+{
+    "pk": 1, 
+    "model": "conference.section", 
+    "fields": {
+        "conference": 1, 
+        "start_date": "2014-12-13", 
+        "name": "\u30c1\u30e5\u30fc\u30c8\u30ea\u30a2\u30eb", 
+        "end_date": "2014-12-13", 
+        "slug": "tutorials"
+    }
+},
+{
+    "pk": 2, 
+    "model": "conference.section", 
+    "fields": {
+        "conference": 1, 
+        "start_date": "2014-12-13", 
+        "name": "\u8b1b\u6f14", 
+        "end_date": "2014-12-13", 
+        "slug": "talks"
+    }
+},
+{
+    "pk": 3, 
+    "model": "conference.section", 
+    "fields": {
+        "conference": 1, 
+        "start_date": null, 
+        "name": "\u30dd\u30b9\u30bf\u30fc", 
+        "end_date": null, 
+        "slug": "posters"
+    }
+},
+{
+    "pk": 4, 
+    "model": "conference.section", 
+    "fields": {
+        "conference": 1, 
+        "start_date": "2014-12-13", 
+        "name": "Lightening talk", 
+        "end_date": "2014-12-13", 
+        "slug": "lightening-talk"
+    }
+},
+{
+    "pk": 5, 
+    "model": "conference.section", 
+    "fields": {
+        "conference": 1, 
+        "start_date": null, 
+        "name": "\u30aa\u30fc\u30d7\u30f3\u30b9\u30da\u30fc\u30b9", 
+        "end_date": null, 
+        "slug": "open-spaces"
+    }
+}
 ]

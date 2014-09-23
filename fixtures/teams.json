@@ -1,115 +1,83 @@
 [
 {
-  "pk": 1, 
-  "model": "teams.team", 
-  "fields": {
-    "description": "", 
-    "created": "2012-08-08T03:24:22.332", 
-    "manager_permissions": [
-      [
-        "can_manage_tutorials", 
-        "reviews", 
-        "review"
-      ]
-    ], 
-    "name": "Tutorial Reviewers", 
-    "access": "application", 
-    "slug": "tutorial-reviewers", 
-    "permissions": [
-      [
-        "can_review_tutorials", 
-        "reviews", 
-        "review"
-      ]
-    ]
-  }
+    "pk": 1, 
+    "model": "teams.team", 
+    "fields": {
+        "description": "", 
+        "created": "2012-08-08T03:24:22.332", 
+        "manager_permissions": [
+            269
+        ], 
+        "name": "Tutorial Reviewers", 
+        "access": "application", 
+        "slug": "tutorial-reviewers", 
+        "permissions": [
+            273
+        ]
+    }
 },
 {
-  "pk": 2, 
-  "model": "teams.team", 
-  "fields": {
-    "description": "", 
-    "created": "2012-08-08T03:24:46.366", 
-    "manager_permissions": [
-      [
-        "can_manage_talks", 
-        "reviews", 
-        "review"
-      ]
-    ], 
-    "name": "Talk Reviewers", 
-    "access": "application", 
-    "slug": "talk-reviewers", 
-    "permissions": [
-      [
-        "can_review_talks", 
-        "reviews", 
-        "review"
-      ]
-    ]
-  }
+    "pk": 2, 
+    "model": "teams.team", 
+    "fields": {
+        "description": "", 
+        "created": "2012-08-08T03:24:46.366", 
+        "manager_permissions": [
+            267
+        ], 
+        "name": "Talk Reviewers", 
+        "access": "application", 
+        "slug": "talk-reviewers", 
+        "permissions": [
+            272
+        ]
+    }
 },
 {
-  "pk": 3, 
-  "model": "teams.team", 
-  "fields": {
-    "description": "", 
-    "created": "2012-08-08T03:25:05.140", 
-    "manager_permissions": [
-      [
-        "can_manage_posters", 
-        "reviews", 
-        "review"
-      ]
-    ], 
-    "name": "Poster Reviewers", 
-    "access": "application", 
-    "slug": "poster-reviewers", 
-    "permissions": [
-      [
-        "can_review_posters", 
-        "reviews", 
-        "review"
-      ]
-    ]
-  }
+    "pk": 3, 
+    "model": "teams.team", 
+    "fields": {
+        "description": "", 
+        "created": "2012-08-08T03:25:05.140", 
+        "manager_permissions": [
+            268
+        ], 
+        "name": "Poster Reviewers", 
+        "access": "application", 
+        "slug": "poster-reviewers", 
+        "permissions": [
+            271
+        ]
+    }
 },
 {
-  "pk": 4, 
-  "model": "teams.team", 
-  "fields": {
-    "description": "Pool of people whom are volunteering.", 
-    "created": "2013-01-08T18:41:25.238", 
-    "manager_permissions": [], 
-    "name": "Volunteers", 
-    "access": "invitation", 
-    "slug": "volunteers", 
-    "permissions": []
-  }
+    "pk": 4, 
+    "model": "teams.team", 
+    "fields": {
+        "description": "\u30dc\u30e9\u30f3\u30c6\u30a3\u30a2\u3059\u308b\u4eba\u306e\u96c6\u307e\u308a", 
+        "created": "2013-01-08T18:41:25.238", 
+        "manager_permissions": [], 
+        "name": "\u30dc\u30e9\u30f3\u30c6\u30a3\u30a2", 
+        "access": "invitation", 
+        "slug": "volunteers", 
+        "permissions": []
+    }
 },
 {
-  "pk": 5, 
-  "model": "teams.team", 
-  "fields": {
-    "description": "", 
-    "created": "2013-07-09T11:34:02.444", 
-    "manager_permissions": [
-      [
-        "can_manage_lightning-talks", 
-        "reviews", 
-        "review"
-      ]
-    ], 
-    "name": "Lightning talk reviewers", 
-    "access": "application", 
-    "slug": "lightning-talk-reviewers", 
-    "permissions": [
-      [
-        "can_review_lightning-talks", 
-        "reviews", 
-        "review"
-      ]
-    ]
-  }
+    "pk": 5, 
+    "model": "teams.team", 
+    "fields": {
+        "description": "", 
+        "created": "2013-07-09T11:34:02.444", 
+        "manager_permissions": [
+            266
+        ], 
+        "name": "Lightning\u30c8\u30fc\u30af \u30ec\u30d3\u30e5\u30a2\u30fc", 
+        "access": "application", 
+        "slug": "lightning-talk-reviewers", 
+        "permissions": [
+            270
+        ]
+    }
 }
 ]

@@ -1,405 +1,306 @@
 [
-    {
-        "pk": 1, 
-        "model": "sponsorship.benefit", 
-        "fields": {
-            "type": "simple", 
-            "name": "Company Name", 
-            "description": ""
-        }
-    }, 
-    {
-        "pk": 2, 
-        "model": "sponsorship.benefit", 
-        "fields": {
-            "type": "weblogo", 
-            "name": "Web logo", 
-            "description": ""
-        }
-    }, 
-    {
-        "pk": 3, 
-        "model": "sponsorship.benefit", 
-        "fields": {
-            "type": "text", 
-            "name": "Print Description", 
-            "description": ""
-        }
-    }, 
-    {
-        "pk": 4, 
-        "model": "sponsorship.benefit", 
-        "fields": {
-            "type": "simple", 
-            "name": "Company URL", 
-            "description": ""
-        }
-    }, 
-    {
-        "pk": 5, 
-        "model": "sponsorship.benefit", 
-        "fields": {
-            "type": "file", 
-            "name": "Advertisement", 
-            "description": ""
-        }
-    }, 
-    {
-        "pk": 6, 
-        "model": "sponsorship.benefit", 
-        "fields": {
-            "type": "file", 
-            "name": "Print logo", 
-            "description": ""
-        }
-    }, 
-    {
-        "pk": 7, 
-        "model": "sponsorship.benefit", 
-        "fields": {
-            "type": "text", 
-            "name": "Company Description", 
-            "description": ""
-        }
-    }, 
-    {
-        "pk": 5, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "", 
-            "benefit": 1, 
-            "max_words": null, 
-            "level": 1
-        }
-    }, 
-    {
-        "pk": 6, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "", 
-            "benefit": 2, 
-            "max_words": null, 
-            "level": 1
-        }
-    }, 
-    {
-        "pk": 10, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "", 
-            "benefit": 3, 
-            "max_words": 500, 
-            "level": 1
-        }
-    }, 
-    {
-        "pk": 15, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "", 
-            "benefit": 4, 
-            "max_words": null, 
-            "level": 1
-        }
-    }, 
-    {
-        "pk": 21, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "Full-page", 
-            "benefit": 5, 
-            "max_words": null, 
-            "level": 1
-        }
-    }, 
-    {
-        "pk": 26, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "2x2 inch", 
-            "benefit": 6, 
-            "max_words": null, 
-            "level": 1
-        }
-    }, 
-    {
-        "pk": 30, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "", 
-            "benefit": 7, 
-            "max_words": 400, 
-            "level": 1
-        }
-    }, 
-    {
-        "pk": 4, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "", 
-            "benefit": 1, 
-            "max_words": null, 
-            "level": 2
-        }
-    }, 
-    {
-        "pk": 7, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "", 
-            "benefit": 2, 
-            "max_words": null, 
-            "level": 2
-        }
-    }, 
-    {
-        "pk": 11, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "", 
-            "benefit": 3, 
-            "max_words": 200, 
-            "level": 2
-        }
-    }, 
-    {
-        "pk": 16, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "", 
-            "benefit": 4, 
-            "max_words": null, 
-            "level": 2
-        }
-    }, 
-    {
-        "pk": 22, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "Half-page", 
-            "benefit": 5, 
-            "max_words": null, 
-            "level": 2
-        }
-    }, 
-    {
-        "pk": 27, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "1x2 inch", 
-            "benefit": 6, 
-            "max_words": null, 
-            "level": 2
-        }
-    }, 
-    {
-        "pk": 31, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "", 
-            "benefit": 7, 
-            "max_words": 200, 
-            "level": 2
-        }
-    }, 
-    {
-        "pk": 3, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "", 
-            "benefit": 1, 
-            "max_words": null, 
-            "level": 3
-        }
-    }, 
-    {
-        "pk": 8, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "", 
-            "benefit": 2, 
-            "max_words": null, 
-            "level": 3
-        }
-    }, 
-    {
-        "pk": 12, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "", 
-            "benefit": 3, 
-            "max_words": 100, 
-            "level": 3
-        }
-    }, 
-    {
-        "pk": 17, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "", 
-            "benefit": 4, 
-            "max_words": null, 
-            "level": 3
-        }
-    }, 
-    {
-        "pk": 23, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "Quarter-page", 
-            "benefit": 5, 
-            "max_words": null, 
-            "level": 3
-        }
-    }, 
-    {
-        "pk": 28, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "1x1 inch", 
-            "benefit": 6, 
-            "max_words": null, 
-            "level": 3
-        }
-    }, 
-    {
-        "pk": 32, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "", 
-            "benefit": 7, 
-            "max_words": 100, 
-            "level": 3
-        }
-    }, 
-    {
-        "pk": 2, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "", 
-            "benefit": 1, 
-            "max_words": null, 
-            "level": 4
-        }
-    }, 
-    {
-        "pk": 9, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "", 
-            "benefit": 2, 
-            "max_words": null, 
-            "level": 4
-        }
-    }, 
-    {
-        "pk": 13, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "", 
-            "benefit": 3, 
-            "max_words": 50, 
-            "level": 4
-        }
-    }, 
-    {
-        "pk": 18, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "", 
-            "benefit": 4, 
-            "max_words": null, 
-            "level": 4
-        }
-    }, 
-    {
-        "pk": 24, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "1x3 inch", 
-            "benefit": 5, 
-            "max_words": null, 
-            "level": 4
-        }
-    }, 
-    {
-        "pk": 29, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "1x.5 inch", 
-            "benefit": 6, 
-            "max_words": null, 
-            "level": 4
-        }
-    }, 
-    {
-        "pk": 33, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "", 
-            "benefit": 7, 
-            "max_words": 50, 
-            "level": 4
-        }
-    }, 
-    {
-        "pk": 1, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "", 
-            "benefit": 1, 
-            "max_words": null, 
-            "level": 5
-        }
-    }, 
-    {
-        "pk": 14, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "", 
-            "benefit": 3, 
-            "max_words": 25, 
-            "level": 5
-        }
-    }, 
-    {
-        "pk": 19, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "", 
-            "benefit": 4, 
-            "max_words": null, 
-            "level": 5
-        }
-    }, 
-    {
-        "pk": 25, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "1x1 inch", 
-            "benefit": 5, 
-            "max_words": null, 
-            "level": 5
-        }
-    }, 
-    {
-        "pk": 34, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "", 
-            "benefit": 7, 
-            "max_words": 25, 
-            "level": 5
-        }
-    }, 
-    {
-        "pk": 20, 
-        "model": "sponsorship.benefitlevel", 
-        "fields": {
-            "other_limits": "", 
-            "benefit": 4, 
-            "max_words": null, 
-            "level": 6
-        }
+{
+    "pk": 3, 
+    "model": "sponsorship.sponsorlevel", 
+    "fields": {
+        "conference": 1, 
+        "description": "", 
+        "cost": 100000, 
+        "name": "\u30b4\u30fc\u30eb\u30c9", 
+        "order": 2
     }
+},
+{
+    "pk": 4, 
+    "model": "sponsorship.sponsorlevel", 
+    "fields": {
+        "conference": 1, 
+        "description": "", 
+        "cost": 50000, 
+        "name": "\u30b7\u30eb\u30d0\u30fc", 
+        "order": 3
+    }
+},
+{
+    "pk": 5, 
+    "model": "sponsorship.sponsorlevel", 
+    "fields": {
+        "conference": 1, 
+        "description": "", 
+        "cost": 5000, 
+        "name": "\u500b\u4eba\u30b9\u30dd\u30f3\u30b5\u30fc", 
+        "order": 4
+    }
+},
+{
+    "pk": 7, 
+    "model": "sponsorship.sponsorlevel", 
+    "fields": {
+        "conference": 1, 
+        "description": "", 
+        "cost": 0, 
+        "name": "\u30e1\u30c7\u30a3\u30a2\u30b9\u30dd\u30f3\u30b5\u30fc", 
+        "order": 6
+    }
+},
+{
+    "pk": 1, 
+    "model": "sponsorship.benefit", 
+    "fields": {
+        "type": "simple", 
+        "name": "Company Name", 
+        "content_type": "simple", 
+        "description": ""
+    }
+},
+{
+    "pk": 2, 
+    "model": "sponsorship.benefit", 
+    "fields": {
+        "type": "weblogo", 
+        "name": "Web logo", 
+        "content_type": "simple", 
+        "description": ""
+    }
+},
+{
+    "pk": 3, 
+    "model": "sponsorship.benefit", 
+    "fields": {
+        "type": "text", 
+        "name": "Print Description", 
+        "content_type": "simple", 
+        "description": ""
+    }
+},
+{
+    "pk": 4, 
+    "model": "sponsorship.benefit", 
+    "fields": {
+        "type": "simple", 
+        "name": "Company URL", 
+        "content_type": "simple", 
+        "description": ""
+    }
+},
+{
+    "pk": 5, 
+    "model": "sponsorship.benefit", 
+    "fields": {
+        "type": "file", 
+        "name": "Advertisement", 
+        "content_type": "simple", 
+        "description": ""
+    }
+},
+{
+    "pk": 6, 
+    "model": "sponsorship.benefit", 
+    "fields": {
+        "type": "file", 
+        "name": "Print logo", 
+        "content_type": "simple", 
+        "description": ""
+    }
+},
+{
+    "pk": 7, 
+    "model": "sponsorship.benefit", 
+    "fields": {
+        "type": "text", 
+        "name": "Company Description", 
+        "content_type": "simple", 
+        "description": ""
+    }
+},
+{
+    "pk": 1, 
+    "model": "sponsorship.benefitlevel", 
+    "fields": {
+        "other_limits": "", 
+        "benefit": 1, 
+        "max_words": null, 
+        "level": 5
+    }
+},
+{
+    "pk": 2, 
+    "model": "sponsorship.benefitlevel", 
+    "fields": {
+        "other_limits": "", 
+        "benefit": 1, 
+        "max_words": null, 
+        "level": 4
+    }
+},
+{
+    "pk": 3, 
+    "model": "sponsorship.benefitlevel", 
+    "fields": {
+        "other_limits": "", 
+        "benefit": 1, 
+        "max_words": null, 
+        "level": 3
+    }
+},
+{
+    "pk": 8, 
+    "model": "sponsorship.benefitlevel", 
+    "fields": {
+        "other_limits": "", 
+        "benefit": 2, 
+        "max_words": null, 
+        "level": 3
+    }
+},
+{
+    "pk": 9, 
+    "model": "sponsorship.benefitlevel", 
+    "fields": {
+        "other_limits": "", 
+        "benefit": 2, 
+        "max_words": null, 
+        "level": 4
+    }
+},
+{
+    "pk": 12, 
+    "model": "sponsorship.benefitlevel", 
+    "fields": {
+        "other_limits": "", 
+        "benefit": 3, 
+        "max_words": 100, 
+        "level": 3
+    }
+},
+{
+    "pk": 13, 
+    "model": "sponsorship.benefitlevel", 
+    "fields": {
+        "other_limits": "", 
+        "benefit": 3, 
+        "max_words": 50, 
+        "level": 4
+    }
+},
+{
+    "pk": 14, 
+    "model": "sponsorship.benefitlevel", 
+    "fields": {
+        "other_limits": "", 
+        "benefit": 3, 
+        "max_words": 25, 
+        "level": 5
+    }
+},
+{
+    "pk": 17, 
+    "model": "sponsorship.benefitlevel", 
+    "fields": {
+        "other_limits": "", 
+        "benefit": 4, 
+        "max_words": null, 
+        "level": 3
+    }
+},
+{
+    "pk": 18, 
+    "model": "sponsorship.benefitlevel", 
+    "fields": {
+        "other_limits": "", 
+        "benefit": 4, 
+        "max_words": null, 
+        "level": 4
+    }
+},
+{
+    "pk": 19, 
+    "model": "sponsorship.benefitlevel", 
+    "fields": {
+        "other_limits": "", 
+        "benefit": 4, 
+        "max_words": null, 
+        "level": 5
+    }
+},
+{
+    "pk": 23, 
+    "model": "sponsorship.benefitlevel", 
+    "fields": {
+        "other_limits": "1/4\u30da\u30fc\u30b8", 
+        "benefit": 5, 
+        "max_words": null, 
+        "level": 3
+    }
+},
+{
+    "pk": 24, 
+    "model": "sponsorship.benefitlevel", 
+    "fields": {
+        "other_limits": "3cm x 10cm", 
+        "benefit": 5, 
+        "max_words": null, 
+        "level": 4
+    }
+},
+{
+    "pk": 25, 
+    "model": "sponsorship.benefitlevel", 
+    "fields": {
+        "other_limits": "2.5cm x 2.5cm", 
+        "benefit": 5, 
+        "max_words": null, 
+        "level": 5
+    }
+},
+{
+    "pk": 28, 
+    "model": "sponsorship.benefitlevel", 
+    "fields": {
+        "other_limits": "5cm x 5cm", 
+        "benefit": 6, 
+        "max_words": null, 
+        "level": 3
+    }
+},
+{
+    "pk": 29, 
+    "model": "sponsorship.benefitlevel", 
+    "fields": {
+        "other_limits": "3cm x 3cm", 
+        "benefit": 6, 
+        "max_words": null, 
+        "level": 4
+    }
+},
+{
+    "pk": 32, 
+    "model": "sponsorship.benefitlevel", 
+    "fields": {
+        "other_limits": "", 
+        "benefit": 7, 
+        "max_words": 100, 
+        "level": 3
+    }
+},
+{
+    "pk": 33, 
+    "model": "sponsorship.benefitlevel", 
+    "fields": {
+        "other_limits": "", 
+        "benefit": 7, 
+        "max_words": 50, 
+        "level": 4
+    }
+},
+{
+    "pk": 34, 
+    "model": "sponsorship.benefitlevel", 
+    "fields": {
+        "other_limits": "", 
+        "benefit": 7, 
+        "max_words": 25, 
+        "level": 5
+    }
+}
 ]

@@ -1,0 +1,97 @@
+[
+{
+    "pk": 1, 
+    "model": "proposals.proposalsection", 
+    "fields": {
+        "start": null, 
+        "section": 1, 
+        "end": null, 
+        "closed": null, 
+        "published": null
+    }
+},
+{
+    "pk": 2, 
+    "model": "proposals.proposalsection", 
+    "fields": {
+        "start": null, 
+        "section": 2, 
+        "end": null, 
+        "closed": null, 
+        "published": null
+    }
+},
+{
+    "pk": 3, 
+    "model": "proposals.proposalsection", 
+    "fields": {
+        "start": null, 
+        "section": 3, 
+        "end": null, 
+        "closed": null, 
+        "published": null
+    }
+},
+{
+    "pk": 4, 
+    "model": "proposals.proposalsection", 
+    "fields": {
+        "start": null, 
+        "section": 4, 
+        "end": null, 
+        "closed": null, 
+        "published": null
+    }
+},
+{
+    "pk": 1, 
+    "model": "proposals.proposalkind", 
+    "fields": {
+        "section": 1, 
+        "name": "tutorial", 
+        "slug": "tutorial"
+    }
+},
+{
+    "pk": 2, 
+    "model": "proposals.proposalkind", 
+    "fields": {
+        "section": 2, 
+        "name": "talk", 
+        "slug": "talk"
+    }
+},
+{
+    "pk": 3, 
+    "model": "proposals.proposalkind", 
+    "fields": {
+        "section": 3, 
+        "name": "poster", 
+        "slug": "poster"
+    }
+},
+{
+    "pk": 4, 
+    "model": "proposals.proposalkind", 
+    "fields": {
+        "section": 4, 
+        "name": "lightning talk", 
+        "slug": "lightning-talk"
+    }
+},
+{
+    "pk": 1, 
+    "model": "proposals.proposalbase", 
+    "fields": {
+        "kind": 2, 
+        "description": "\u30c6\u30b9\u30c8", 
+        "language": "ja", 
+        "title": "\u30c6\u30b9\u30c8", 
+        "abstract": "\u8aac\u660e\u8a73\u7d30", 
+        "submitted": "2014-09-23T13:41:30.753", 
+        "additional_notes": "", 
+        "speaker": 2, 
+        "cancelled": false
+    }
+}
+]

@@ -2142,6 +2142,33 @@
     }
 },
 {
+    "pk": 239, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_profile", 
+        "name": "Can add profile", 
+        "content_type": 81
+    }
+},
+{
+    "pk": 240, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_profile", 
+        "name": "Can change profile", 
+        "content_type": 81
+    }
+},
+{
+    "pk": 241, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_profile", 
+        "name": "Can delete profile", 
+        "content_type": 81
+    }
+},
+{
     "pk": 257, 
     "model": "auth.permission", 
     "fields": {
@@ -2196,99 +2223,426 @@
     }
 },
 {
-  "pk": 266, 
-  "model": "auth.permission", 
-  "fields": {
-    "codename": "can_manage_lightning-talks", 
-    "name": "Can manage lightning talks", 
-    "content_type": [
-      "reviews",
-      "review"
-    ]
-  }
+    "pk": 266, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "can_manage_lightning-talks", 
+        "name": "Can manage lightning talks", 
+        "content_type": 59
+    }
 },
 {
-  "pk": 267, 
-  "model": "auth.permission", 
-  "fields": {
-    "codename": "can_manage_talks", 
-    "name": "Can manage talks", 
-    "content_type": [
-      "reviews",
-      "review"
-    ]
-  }
+    "pk": 267, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "can_manage_talks", 
+        "name": "Can manage talks", 
+        "content_type": 59
+    }
 },
 {
-  "pk": 268, 
-  "model": "auth.permission", 
-  "fields": {
-    "codename": "can_manage_posters", 
-    "name": "Can manage posters", 
-    "content_type": [
-      "reviews",
-      "review"
-    ]
-  }
+    "pk": 268, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "can_manage_posters", 
+        "name": "Can manage posters", 
+        "content_type": 59
+    }
 },
 {
-  "pk": 269, 
-  "model": "auth.permission", 
-  "fields": {
-    "codename": "can_manage_tutorials", 
-    "name": "Can manage tutorials", 
-    "content_type": [
-      "reviews",
-      "review"
-    ]
-  }
+    "pk": 269, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "can_manage_tutorials", 
+        "name": "Can manage tutorials", 
+        "content_type": 59
+    }
 },
 {
-  "pk": 270, 
-  "model": "auth.permission", 
-  "fields": {
-    "codename": "can_review_lightning-talks", 
-    "name": "Can review lightning-talks", 
-    "content_type": [
-      "reviews",
-      "review"
-    ]
-  }
+    "pk": 270, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "can_review_lightning-talks", 
+        "name": "Can review lightning-talks", 
+        "content_type": 59
+    }
 },
 {
-  "pk": 271, 
-  "model": "auth.permission", 
-  "fields": {
-    "codename": "can_review_posters", 
-    "name": "Can review posters", 
-    "content_type": [
-      "reviews",
-      "review"
-    ]
-  }
+    "pk": 271, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "can_review_posters", 
+        "name": "Can review posters", 
+        "content_type": 59
+    }
 },
 {
-  "pk": 272, 
-  "model": "auth.permission", 
-  "fields": {
-    "codename": "can_review_talks", 
-    "name": "Can review talks", 
-    "content_type": [
-      "reviews",
-      "review"
-    ]
-  }
+    "pk": 272, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "can_review_talks", 
+        "name": "Can review talks", 
+        "content_type": 59
+    }
 },
 {
-  "pk": 273, 
-  "model": "auth.permission", 
-  "fields": {
-    "codename": "can_review_tutorials", 
-    "name": "Can review tutorials", 
-    "content_type": [
-      "reviews",
-      "review"
-    ]
-  }
+    "pk": 273, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "can_review_tutorials", 
+        "name": "Can review tutorials", 
+        "content_type": 59
+    }
+},
+{
+    "pk": 274, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_sotmproposalcategory", 
+        "name": "Can add SotM proposal category", 
+        "content_type": 23
+    }
+},
+{
+    "pk": 275, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_sotmproposalcategory", 
+        "name": "Can change SotM proposal category", 
+        "content_type": 23
+    }
+},
+{
+    "pk": 276, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_sotmproposalcategory", 
+        "name": "Can delete SotM proposal category", 
+        "content_type": 23
+    }
+},
+{
+    "pk": 277, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_thunderdomegroup", 
+        "name": "Can add thunderdome group", 
+        "content_type": 24
+    }
+},
+{
+    "pk": 278, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_thunderdomegroup", 
+        "name": "Can change thunderdome group", 
+        "content_type": 24
+    }
+},
+{
+    "pk": 279, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_thunderdomegroup", 
+        "name": "Can delete thunderdome group", 
+        "content_type": 24
+    }
+},
+{
+    "pk": 280, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_sotmtalkproposal", 
+        "name": "Can add SotM talk proposal", 
+        "content_type": 25
+    }
+},
+{
+    "pk": 281, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_sotmtalkproposal", 
+        "name": "Can change SotM talk proposal", 
+        "content_type": 25
+    }
+},
+{
+    "pk": 282, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_sotmtalkproposal", 
+        "name": "Can delete SotM talk proposal", 
+        "content_type": 25
+    }
+},
+{
+    "pk": 283, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_sotmlightningtalkproposal", 
+        "name": "Can add SotM lightning talk proposal", 
+        "content_type": 26
+    }
+},
+{
+    "pk": 284, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_sotmlightningtalkproposal", 
+        "name": "Can change SotM lightning talk proposal", 
+        "content_type": 26
+    }
+},
+{
+    "pk": 285, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_sotmlightningtalkproposal", 
+        "name": "Can delete SotM lightning talk proposal", 
+        "content_type": 26
+    }
+},
+{
+    "pk": 286, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_sotmtutorialproposal", 
+        "name": "Can add SotM tutorial proposal", 
+        "content_type": 27
+    }
+},
+{
+    "pk": 287, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_sotmtutorialproposal", 
+        "name": "Can change SotM tutorial proposal", 
+        "content_type": 27
+    }
+},
+{
+    "pk": 288, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_sotmtutorialproposal", 
+        "name": "Can delete SotM tutorial proposal", 
+        "content_type": 27
+    }
+},
+{
+    "pk": 289, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_sotmposterproposal", 
+        "name": "Can add SotM Poster proposal", 
+        "content_type": 28
+    }
+},
+{
+    "pk": 290, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_sotmposterproposal", 
+        "name": "Can change SotM Poster proposal", 
+        "content_type": 28
+    }
+},
+{
+    "pk": 291, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_sotmposterproposal", 
+        "name": "Can delete SotM Poster proposal", 
+        "content_type": 28
+    }
+},
+{
+    "pk": 292, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_sotmsponsortutorialproposal", 
+        "name": "Can add SotM Sponsor Tutorial proposal", 
+        "content_type": 29
+    }
+},
+{
+    "pk": 293, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_sotmsponsortutorialproposal", 
+        "name": "Can change SotM Sponsor Tutorial proposal", 
+        "content_type": 29
+    }
+},
+{
+    "pk": 294, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_sotmsponsortutorialproposal", 
+        "name": "Can delete SotM Sponsor Tutorial proposal", 
+        "content_type": 29
+    }
+},
+{
+    "pk": 295, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_sotmopenspaceproposal", 
+        "name": "Can add SotM Open Space proposal", 
+        "content_type": 30
+    }
+},
+{
+    "pk": 296, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_sotmopenspaceproposal", 
+        "name": "Can change SotM Open Space proposal", 
+        "content_type": 30
+    }
+},
+{
+    "pk": 297, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_sotmopenspaceproposal", 
+        "name": "Can delete SotM Open Space proposal", 
+        "content_type": 30
+    }
+},
+{
+    "pk": 298, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_page", 
+        "name": "Can add page", 
+        "content_type": 31
+    }
+},
+{
+    "pk": 299, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_page", 
+        "name": "Can change page", 
+        "content_type": 31
+    }
+},
+{
+    "pk": 300, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_page", 
+        "name": "Can delete page", 
+        "content_type": 31
+    }
+},
+{
+    "pk": 301, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_file", 
+        "name": "Can add file", 
+        "content_type": 32
+    }
+},
+{
+    "pk": 302, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_file", 
+        "name": "Can change file", 
+        "content_type": 32
+    }
+},
+{
+    "pk": 303, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_file", 
+        "name": "Can delete file", 
+        "content_type": 32
+    }
+},
+{
+    "pk": 304, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_nonce", 
+        "name": "Can add nonce", 
+        "content_type": 33
+    }
+},
+{
+    "pk": 305, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_nonce", 
+        "name": "Can change nonce", 
+        "content_type": 33
+    }
+},
+{
+    "pk": 306, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_nonce", 
+        "name": "Can delete nonce", 
+        "content_type": 33
+    }
+},
+{
+    "pk": 307, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_association", 
+        "name": "Can add association", 
+        "content_type": 34
+    }
+},
+{
+    "pk": 308, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_association", 
+        "name": "Can change association", 
+        "content_type": 34
+    }
+},
+{
+    "pk": 309, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_association", 
+        "name": "Can delete association", 
+        "content_type": 34
+    }
+},
+{
+    "pk": 310, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_useropenidassociation", 
+        "name": "Can add user openid association", 
+        "content_type": 35
+    }
+},
+{
+    "pk": 311, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_useropenidassociation", 
+        "name": "Can change user openid association", 
+        "content_type": 35
+    }
+},
+{
+    "pk": 312, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_useropenidassociation", 
+        "name": "Can delete user openid association", 
+        "content_type": 35
+    }
 }
 ]

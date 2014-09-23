@@ -1,20 +1,20 @@
 [
-  {
-    "pk": 1,
-    "model": "auth.user",
+{
+    "pk": 1, 
+    "model": "auth.user", 
     "fields": {
-      "username": "user1",
-      "first_name": "",
-      "last_name": "",
-      "is_active": true,
-      "is_superuser": true,
-      "is_staff": true,
-      "last_login": "2013-06-05T13:06:07.617",
-      "groups": [],
-      "user_permissions": [],
-      "password": "",
-      "email": "user1@example.com",
-      "date_joined": "2013-06-05T13:06:07.617"
+        "username": "administrator", 
+        "first_name": "Admin", 
+        "last_name": "istrator", 
+        "is_active": true, 
+        "is_superuser": true, 
+        "is_staff": true, 
+        "last_login": "2014-09-23T12:36:55.234", 
+        "groups": [], 
+        "user_permissions": [], 
+        "password": "pbkdf2_sha256$10000$uPqNMo1dRpLe$wfEVrV83nLoOYTUDcE9mTEbD+nJs+XSt5HpODuRwl/A=", 
+        "email": "info@osmf.jp", 
+        "date_joined": "2014-09-23T10:21:45.773"
     }
-  }
+}
 ]
