@@ -22,6 +22,7 @@ python manage.py loaddata \
   fixtures/boxes.json \
   fixtures/proposals.json \
   fixtures/sitetree.json \
+  fixtures/sotmjp.json \
   fixtures/sponsorship.json \
   fixtures/schedule.json \
   fixtures/teams.json \

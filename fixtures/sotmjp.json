@@ -1,0 +1,52 @@
+[
+{
+    "pk": 1, 
+    "model": "sotmjp.sotmproposalcategory", 
+    "fields": {
+        "name": "\u30b3\u30df\u30e5\u30cb\u30c6\u30a3", 
+        "slug": "community"
+    }
+},
+{
+    "pk": 2, 
+    "model": "sotmjp.sotmproposalcategory", 
+    "fields": {
+        "name": "\u30d3\u30b8\u30cd\u30b9", 
+        "slug": "business"
+    }
+},
+{
+    "pk": 3, 
+    "model": "sotmjp.sotmproposalcategory", 
+    "fields": {
+        "name": "\u653f\u5e9c\u30fb\u81ea\u6cbb\u4f53", 
+        "slug": "government"
+    }
+},
+{
+    "pk": 4, 
+    "model": "sotmjp.sotmproposalcategory", 
+    "fields": {
+        "name": "\u30c6\u30af\u30ce\u30ed\u30b8\u30fc", 
+        "slug": "technology"
+    }
+},
+{
+    "pk": 2, 
+    "model": "sotmjp.sotmtalkproposal", 
+    "fields": {
+        "category": 1, 
+        "outline": "\u30a2\u30a6\u30c8\u30e9\u30a4\u30f3\u306e\u30c6\u30b9\u30c8\u7528", 
+        "recording_release": true, 
+        "damaged_score": null, 
+        "additional_requirements": "", 
+        "rejection_status": null, 
+        "overall_status": 1, 
+        "audience": "\u5bfe\u8c61\u8005\u306e\u30c6\u30b9\u30c8\u7528", 
+        "thunderdome_group": null, 
+        "duration": 0, 
+        "perceived_value": "\u76ee\u7684\u306e\u30c6\u30b9\u30c8\u7528", 
+        "audience_level": 1
+    }
+}
+]

@@ -78,20 +78,5 @@
         "name": "lightning talk", 
         "slug": "lightning-talk"
     }
-},
-{
-    "pk": 1, 
-    "model": "proposals.proposalbase", 
-    "fields": {
-        "kind": 2, 
-        "description": "\u30c6\u30b9\u30c8", 
-        "language": "ja", 
-        "title": "\u30c6\u30b9\u30c8", 
-        "abstract": "\u8aac\u660e\u8a73\u7d30", 
-        "submitted": "2014-09-23T13:41:30.753", 
-        "additional_notes": "", 
-        "speaker": 2, 
-        "cancelled": false
-    }
 }
 ]

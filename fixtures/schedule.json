@@ -159,20 +159,5 @@
         "slot": 3, 
         "room": 2
     }
-},
-{
-    "pk": 1, 
-    "model": "schedule.presentation", 
-    "fields": {
-        "slot": 2, 
-        "description": "\u30c6\u30b9\u30c8", 
-        "title": "\u30c6\u30b9\u30c8", 
-        "abstract": "\u30c6\u30b9\u30c8", 
-        "additional_speakers": [], 
-        "proposal_base": 1, 
-        "speaker": 1, 
-        "cancelled": false, 
-        "section": 2
-    }
 }
 ]
