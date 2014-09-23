@@ -63,7 +63,7 @@
     "fields": {
         "start": "13:00:00", 
         "kind": 8, 
-        "end": "14:25:00", 
+        "end": "13:40:00", 
         "day": 1, 
         "content_override": ""
     }
@@ -74,7 +74,7 @@
     "fields": {
         "start": "14:25:00", 
         "kind": 7, 
-        "end": "15:30:00", 
+        "end": "14:45:00", 
         "day": 1, 
         "content_override": ""
     }
@@ -85,7 +85,7 @@
     "fields": {
         "start": "15:50:00", 
         "kind": 7, 
-        "end": "16:50:00", 
+        "end": "16:05:00", 
         "day": 1, 
         "content_override": ""
     }
@@ -96,7 +96,7 @@
     "fields": {
         "start": "17:00:00", 
         "kind": 4, 
-        "end": "18:00:00", 
+        "end": "17:05:00", 
         "day": 1, 
         "content_override": ""
     }
@@ -105,9 +105,141 @@
     "pk": 5, 
     "model": "schedule.slot", 
     "fields": {
-        "start": "18:00:00", 
+        "start": "17:30:00", 
         "kind": 7, 
-        "end": "18:10:00", 
+        "end": "17:40:00", 
+        "day": 1, 
+        "content_override": ""
+    }
+},
+{
+    "pk": 6, 
+    "model": "schedule.slot", 
+    "fields": {
+        "start": "13:40:00", 
+        "kind": 8, 
+        "end": "14:20:00", 
+        "day": 1, 
+        "content_override": ""
+    }
+},
+{
+    "pk": 7, 
+    "model": "schedule.slot", 
+    "fields": {
+        "start": "14:45:00", 
+        "kind": 7, 
+        "end": "15:05:00", 
+        "day": 1, 
+        "content_override": ""
+    }
+},
+{
+    "pk": 8, 
+    "model": "schedule.slot", 
+    "fields": {
+        "start": "14:55:00", 
+        "kind": 7, 
+        "end": "15:10:00", 
+        "day": 1, 
+        "content_override": ""
+    }
+},
+{
+    "pk": 9, 
+    "model": "schedule.slot", 
+    "fields": {
+        "start": "15:10:00", 
+        "kind": 7, 
+        "end": "15:30:00", 
+        "day": 1, 
+        "content_override": ""
+    }
+},
+{
+    "pk": 10, 
+    "model": "schedule.slot", 
+    "fields": {
+        "start": "16:05:00", 
+        "kind": 7, 
+        "end": "16:20:00", 
+        "day": 1, 
+        "content_override": ""
+    }
+},
+{
+    "pk": 11, 
+    "model": "schedule.slot", 
+    "fields": {
+        "start": "16:20:00", 
+        "kind": 7, 
+        "end": "16:35:00", 
+        "day": 1, 
+        "content_override": ""
+    }
+},
+{
+    "pk": 12, 
+    "model": "schedule.slot", 
+    "fields": {
+        "start": "16:35:00", 
+        "kind": 7, 
+        "end": "16:50:00", 
+        "day": 1, 
+        "content_override": ""
+    }
+},
+{
+    "pk": 13, 
+    "model": "schedule.slot", 
+    "fields": {
+        "start": "17:10:00", 
+        "kind": 4, 
+        "end": "17:15:00", 
+        "day": 1, 
+        "content_override": ""
+    }
+},
+{
+    "pk": 14, 
+    "model": "schedule.slot", 
+    "fields": {
+        "start": "17:15:00", 
+        "kind": 4, 
+        "end": "17:20:00", 
+        "day": 1, 
+        "content_override": ""
+    }
+},
+{
+    "pk": 15, 
+    "model": "schedule.slot", 
+    "fields": {
+        "start": "17:20:00", 
+        "kind": 4, 
+        "end": "17:25:00", 
+        "day": 1, 
+        "content_override": ""
+    }
+},
+{
+    "pk": 16, 
+    "model": "schedule.slot", 
+    "fields": {
+        "start": "17:05:00", 
+        "kind": 4, 
+        "end": "17:10:00", 
+        "day": 1, 
+        "content_override": ""
+    }
+},
+{
+    "pk": 17, 
+    "model": "schedule.slot", 
+    "fields": {
+        "start": "17:25:00", 
+        "kind": 4, 
+        "end": "17:30:00", 
         "day": 1, 
         "content_override": ""
     }
@@ -158,6 +290,14 @@
     "fields": {
         "slot": 3, 
         "room": 2
+    }
+},
+{
+    "pk": 7, 
+    "model": "schedule.slotroom", 
+    "fields": {
+        "slot": 6, 
+        "room": 1
     }
 }
 ]
