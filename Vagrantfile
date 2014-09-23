@@ -29,7 +29,7 @@ $dependency = <<DEPENDENCY
 apt-fast update
 apt-fast install -y devscripts python-virtualenv
 apt-fast install -y postgresql libpq-dev postgresql-server-dev-9.3
-apt-fast install -y python-dev
+apt-fast install -y python-dev python-pysqlite2 libsqlite3-0
 DEPENDENCY
 
 $setup = <<SETUP
