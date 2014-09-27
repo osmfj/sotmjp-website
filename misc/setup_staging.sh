@@ -1,4 +1,8 @@
 #!/bin/bash
+BASEDIR=$(dirname $0)/..
+
+# virtualenv environment name
+VENV=sotmjp-website
 
 DEBUG=false
 DB_ENGINE=postgresql_psycopg2
@@ -18,5 +22,6 @@ GRANT ALL PRIVILEGES ON DATABASE $DB_NAME to $DB_USER;
 \q
 _SQL
 
-./manage.py compress --force
-./manage.py  collectstatic --no-input
+${BASEDIR}/manage.py compress --force
+${BASEDIR}/manage.py collectstatic --no-input
+${BASEDIR}/build-css.sh
