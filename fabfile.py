@@ -19,11 +19,11 @@ def staging():
     env.environment = 'staging'
     env.hosts = ['sotm.openstreetmap.jp']
     env.site_hostname = 'staging-sotm.openstreetmap.jp'
-    env.root = '/srv/staging-sotm.openstreetmap.jp'
+    env.root = '/home/ubuntu/sotmjp-website'
     env.branch = 'staging'
     env.db = 'sotmjp2014-staging'
     env.db_host = 'sotm.opensteetmap.jp'
-    env.db_user = 'sotmjp2014-staging'
+    env.db_user = 'ubuntu'
     setup_path()
 
 @task
@@ -31,11 +31,11 @@ def production():
     env.environment = 'production'
     env.hosts = ['sotm.openstreetmap.jp']
     env.site_hostname = 'stateofthemap.jp'
-    env.root = '/srv/staging-sotm.openstreetmap.jp'
+    env.root = '/srv/sotmjp-website'
     env.branch = 'production'
     env.db = 'sotmjp2014'
     env.db_host = 'sotm.openstreetmap.jp'
-    env.db_user = 'sotmjp2014'
+    env.db_user = 'sotmjp'
     setup_path()
 
 

@@ -19,8 +19,8 @@ To get running locally
 
 * Create a new virtualenv and activate it::
 
-    $ virtualenv env/sotmjp
-    $ . env/sotmjp/bin/activate
+    $ virtualenv env/sotmjp-website
+    $ . env/sotmjp-website/bin/activate
 
 * Install the requirements for running and testing locally::
 
@@ -48,14 +48,14 @@ To get running locally
 
 * If you have ssh access to the staging server, copy the database and media::
 
-    $ fab staging get_db_dump:sotmjp2014
+    $ fab staging get_db_dump:sotmjp2014_staging
     $ fab staging get_media
 
   Change ``sotmjp2014`` in that first command to the name of your local database.
 
 * Run local server::
 
-    python manage.py runserver
+    $ ./manage.py runserver
 
 For production
 --------------
@@ -70,18 +70,30 @@ For production
 * Install ``lessc`` (Go to http://lesscss.org and search for "Server-side usage")
 * Pre-compress everything by running::
 
-    python manage.py compress --force
+    $ ./manage.py compress --force
 
   That will write compressed css and js files under site_media
 * Gather the static files::
 
-    python manage.py collectstatic --noinput
+    $ ./manage.py collectstatic --noinput
+
+* Build site css file
+
+    $ ./build-css.sh
 
 * Arrange to serve the site_media directory as ``/2014/site_media/whatever``.
   E.g. ``site_media/foo.html`` would be at ``/2014/site_media/foo.html``.
 * Arrange to serve the wsgi application in ``symposion/wsgi.py`` at ``/``, running
   with the same virtualenv (or equivalent).  It will only handle URLs
   starting with ``/2014`` though, so you don't have to pass it any other requests.
+
+To run staging
+--------------
+
+* Setup same for production but except;
+
+  $ misc/start_staging.sh
+
 
 To run tests
 ------------

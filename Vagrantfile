@@ -31,14 +31,22 @@ apt-fast install -y devscripts python-virtualenv
 apt-fast install -y postgresql libpq-dev postgresql-server-dev-9.3
 apt-fast install -y python-dev python-pysqlite2 libsqlite3-0
 apt-fast install -y nginx-full
+apt-fast install -y yui-compressor
 DEPENDENCY
 
 $setup = <<SETUP
-git clone https://github.com/osmfj/symposion-jp.git
-cd symposion-jp
-virtualenv env/sotmjp
-. env/sotmjp/bin/activate
+cd /srv
+sudo mkdir sites
+sudo chmod go+w sites
+cd sites
+git clone https://github.com/osmfj/sotmjp-website.git
+cd sotmjp-website
+virtualenv env/sotmjp-website
+. env/sotmjp-website/bin/activate
 pip install -r sotmjp/requirements/production.txt
+./manage.py compress --force
+./build-css.sh
+./manage.py collectstatic --noinput
 echo next step is ./init_db.sh
 SETUP
 

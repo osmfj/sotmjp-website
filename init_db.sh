@@ -1,4 +1,5 @@
 #!/bin/bash
+BASEDIR=$(dirname $0)
 
 # Create fresh db, load fixtures in an order that works
 
