@@ -156,6 +156,33 @@ body.home {
 			}
 		}
 	}
+	.dark {
+		.promo {
+			&.no-link {
+				@media (max-width: @breakDesktop) {
+					display: none;
+				}
+			}
+			a {
+				@media (max-width: @breakMobileLandscape) {
+					font-size: 18px;
+					margin: 0 0 20px;
+					padding: 10px 50px;
+				}
+			}
+		}
+		.logo {
+			@media (max-width: @breakTablet) {
+				background-size: 202px 147px;
+			}
+			@media (max-width: @breakMobileLandscape) {
+				background-size: 202px 147px;
+			}
+		}
+		@media (max-width: @breakMobileLandscape) {
+			padding-top: 20px;
+		}
+	}
 	.sky {
 		.promo {
 			&.no-link {
@@ -184,6 +211,40 @@ body.home {
 		}
 	}
 	.city {
+		.tokyo-slideshow {
+			@media (min-width: @breakDesktop) {
+				background-size: 900px 600px;
+				background-position: center;
+				left: 200px;
+			}
+ 			@media (max-width: @breakDesktop) {
+				background-size: 600px 400px;
+				background-position: center;
+				left: 150px;
+			}
+			@media (max-width: @breakTablet) {
+				background-size: 400px 300px;
+				background-position: center;
+				left: 100px;
+			}
+			@media (max-width: @breakMobileLandscape) {
+				background-size: 250px 70px;
+				height: 100px;
+				background-position: center;
+				left: 50px;
+			}
+		}
+		.tokyo {
+			@media (max-width: @breakTablet) {
+				background-size: 400px 100px;
+				background-position: center;
+			}
+			@media (max-width: @breakMobileLandscape) {
+				background-size: 250px 70px;
+				height: 100px;
+				background-position: center;
+			}
+ 		}
 		.montreal {
 			@media (max-width: @breakTablet) {
 				background-size: 400px 100px;
