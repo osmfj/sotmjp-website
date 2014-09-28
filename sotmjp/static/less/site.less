@@ -387,7 +387,7 @@ aside {
 .page-head {
   padding: 10px 0 20px 0;
   min-height: 55px;
-  background-color: @blueSky;
+  background-color: @blueDark;
   background-image: url('../img/pagehead-bkg.png');
   background-repeat: no-repeat;
   background-position: right bottom;
@@ -569,6 +569,7 @@ div.DTTT.btn-group {
 ==================== */
 header.main {
   padding-top: 10px;
+  background-color: #edfaff;
   .account-bar {
     position: relative;
     font-family: 'Lato', sans-serif;
@@ -581,7 +582,7 @@ header.main {
       top: 15px;
     }
     a {
-      color: @blueDark;
+      color: @blueSky;
       &.login {
         font-size:@baseFontSize - 2.5 !important;
         padding: 2px 12px !important;
@@ -743,6 +744,71 @@ body.home {
       padding-bottom: 25px;
     }
   }
+  .dark {
+    padding-top: 50px;
+    position: relative;
+    background: #2871ba;
+    background: -moz-linear-gradient(top,  #edfaff 13%, #cbeced 52%, #2871ba 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(13%,#edfaff), color-stop(52%,#cbeced), color-stop(100%,#2878ba)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #edfaff 13%,#cbeced 52%,#2871ba 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #edfaff 13%,#cbeced 52%,#2871ba 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #edfaff 13%,#cbeced 52%,#2871ba 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #edfaff 13%,#cbeced 52%,#2871ba 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edfaff', endColorstr='#2871ba',GradientType=0 ); /* IE6-9 */
+ 
+    .logo {
+      background: url("../img/12logo.png") no-repeat scroll 0 0 transparent;
+      display: block;
+      height: 200px;
+      text-indent: -9999px;
+      whitespace: nowrap;
+      background-position: center center;
+      -webkit-background-size: auto 200px;
+      -moz-background-size: auto 200px;
+      background-size: auto 200px;
+    }
+    .headline {
+      text-align: center;
+      padding: 35px 10px 25px;
+      font-size: 32px;
+      font-weight: 900;
+      line-height: 32px;
+      color: @black;
+    }
+    .details { display: none; }
+    .span12 { position: relative; }
+    .promo {
+      text-align: center;
+      &.no-link {
+        .border-radius(100%);
+        background-color: @yellowBeak;
+        position: absolute;
+        width: 100px;
+        padding: 35px 10px 25px;
+        right: 0;
+        top: -15px;
+        border: 8px solid lighten(@yellowBeak, 20%);
+        z-index: 3;
+        p {
+          text-align: center;
+          font-size: 22px;
+          font-weight: 900;
+          line-height: 22px;
+          color: @white;
+          &.small {
+            font-size: 18px;
+          }
+        }
+      }
+      a {
+        .btn;
+        .btn-primary;
+        padding: 15px 75px;
+        margin: 40px 0 0 0;
+        font-size: 24px;
+      }
+    }
+  }
   .sky {
     padding-top: 50px;
     position: relative;
@@ -789,6 +855,7 @@ body.home {
         right: 0;
         top: -15px;
         border: 8px solid lighten(@yellowBeak, 20%);
+        z-index: 3;
         p {
           text-align: center;
           font-size: 22px;
@@ -834,14 +901,116 @@ body.home {
   }
   .city {
     position: relative;
-    height: 225px;
-    // background-color: @blueSky;
-    background-color: #cbeced;
+    height: 630px;
+    // background-color: @darkBlue;
+    background-color: #2871ba;
+
+    @keyframes imageAnimation {
+      0% {
+        opacity: 0; 
+        //animation-timing-function: ease-in;
+      }
+      8% {
+        opacity: 1;
+        //animation-timing-function: ease-out;
+      }
+      17% {
+        opacity: 1
+      }
+      25% {
+        opacity: 0
+      }
+      100% { 
+        opacity: 0
+      }
+    }
+
+    .tokyo-slideshow,
+    .tokyo-slideshow:after {
+      position: relative;
+      background-position: center;
+      width: 100%;
+      height: 600px;
+      z-index: 0;
+      margin: 10px 0 0 0;
+    }
+    .tokyo-slideshow:after {
+      content: '';
+      background-color: #cbeced;
+    }
+    .tokyo-slideshow ul {
+      list-style-type: none;
+    }
+    .tokyo-slideshow li span {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      color: transparent;
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: none;
+      opacity: 0;
+      z-index: 2;
+      -webkit-backface-visibility: hidden;
+      -webkit-animation: imageAnimation 36s linear infinite 0s;
+      -moz-animation: imageAnimation 36s linear infinite 0s;
+      -o-animation: imageAnimation 36s linear infinite 0s;
+      -ms-animation: imageAnimation 36s linear infinite 0s
+      animation: imageAnimation 36s linear infinite 0s;
+    }
+    .tokyo-slideshow li:nth-child(1) span {
+      background-image: url(../img/sotm12_photo.jpg);
+    }
+    .tokyo-slideshow li:nth-child(2) span {
+      background-image: url(../img/tokyo_3d.png);
+      -webkit-animation-delay: 6s;
+      -moz-animation-delay: 6s;
+      -o-animation-delay: 6s;
+      -ms-animation-delay: 6s;
+      animation-delay: 6s;
+    }
+    .tokyo-slideshow li:nth-child(3) span {
+      background-image: url(../img/tokyo_3d2.png);
+      -webkit-animation-delay: 12s;
+      -moz-animation-delay: 12s;
+      -o-animation-delay: 12s;
+      -ms-animation-delay: 12s;
+      animation-delay: 12s;
+    }
+    .tokyo-slideshow li:nth-child(4) span {
+      background-image: url(../img/tokyo_gps_network.png);
+      -webkit-animation-delay: 18s;
+      -moz-animation-delay: 18s;
+      -o-animation-delay: 18s;
+      -ms-animation-delay: 18s;
+      animation-delay: 18s;
+    }
+    .tokyo-slideshow li:nth-child(5) span {
+      background-image: url(../img/sotm12_goyo.png);
+      -webkit-animation-delay: 24s;
+      -moz-animation-delay: 24s;
+      -o-animation-delay: 24s;
+      -ms-animation-delay: 24s;
+      animation-delay: 24s;
+    }
+    .tokyo-slideshow li:nth-child(6) span {
+      background-image: url(../img/tokyo_3d3.png);
+      -webkit-animation-delay: 30s;
+      -moz-animation-delay: 30s;
+      -o-animation-delay: 30s;
+      -ms-animation-delay: 30s;
+      animation-delay: 30s;
+    }
+    .no-cssanimations .tokyo-slideshow li span{
+      opacity: 1;
+    }
 
     .tokyo {
       position: relative;
-      background: url("../img/tokyo.png") no-repeat scroll 0 0 transparent;
-      height: 180px;
+      background: url("../img/tokyo_3d2.png") no-repeat scroll 0 0 transparent;
+      height: 585px;
       width: 100%;
       z-index: 1;
       margin: 10px 0 0 0;
