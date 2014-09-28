@@ -213,25 +213,30 @@ body.home {
 	.city {
 		.tokyo-slideshow {
 			@media (min-width: @breakDesktop) {
-				background-size: 900px 600px;
+				background-size: 900px 550px;
 				background-position: center;
 				left: 200px;
 			}
  			@media (max-width: @breakDesktop) {
-				background-size: 600px 400px;
+				background-size: 600px 450px;
 				background-position: center;
+				height: 450px;
 				left: 150px;
 			}
 			@media (max-width: @breakTablet) {
 				background-size: 400px 300px;
 				background-position: center;
-				left: 100px;
+				height: 300px;
+				left: 120px;
 			}
 			@media (max-width: @breakMobileLandscape) {
 				background-size: 250px 70px;
-				height: 100px;
 				background-position: center;
+				height: 70px;
 				left: 50px;
+			}
+			@media (max-width: @breakMobile) {
+				display: none;
 			}
 		}
 		.tokyo {
@@ -271,11 +276,17 @@ body.home {
 				display: none;
 			}
 		}
+		@media (min-width: @breakDesktop) {
+			height: 550px;
+		}
+ 		@media (max-width: @breakDesktop) {
+			height: 450px;
+		}
 		@media (max-width: @breakTablet) {
-			height: 190px;
+			height: 340px;
 		}
 		@media (max-width: @breakMobileLandscape) {
-			height: 120px;
+			height: 100px;
 		}
 		.water {
 			@media (max-width: @breakMobileLandscape) {
