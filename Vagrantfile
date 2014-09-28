@@ -32,6 +32,7 @@ apt-fast install -y postgresql libpq-dev postgresql-server-dev-9.3
 apt-fast install -y python-dev python-pysqlite2 libsqlite3-0
 apt-fast install -y nginx-full
 apt-fast install -y yui-compressor
+apt-fast build-dep -y python-imaging
 DEPENDENCY
 
 $setup = <<SETUP

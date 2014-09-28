@@ -17,6 +17,14 @@ at https://readthedocs.org/projects/pycon/.
 To get running locally
 ----------------------
 
+* Install dependency packages. for Ubuntu 12.04 and 14.04
+
+    $ misc/setup_environment.sh
+
+  If you run it on 14.04 and deriveratives, you should work around;
+
+    $ sudo ln -s /usr/include/freetype2 /usr/local/include/freetype
+
 * Create a new virtualenv and activate it::
 
     $ virtualenv env/sotmjp-website
@@ -89,6 +97,8 @@ For production
 
 To run staging
 --------------
+
+* Use Vagrant to prepare environment
 
 * Setup same for production but except;
 
