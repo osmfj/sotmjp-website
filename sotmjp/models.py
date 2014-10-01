@@ -1,4 +1,4 @@
-from django.conf import settings
+arom django.conf import settings
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
@@ -120,8 +120,8 @@ class SotMTalkProposal(SotMProposal):
 
     DURATION_CHOICES = [
         (0, _(u"No preference")),
-        (1, _(u"I prefer a 30 minute slot")),
-        (2, _(u"I prefer a 45 minute slot")),
+        (1, _(u"I prefer a 15 minute slot")),
+        (2, _(u"I prefer a 20 minute slot")),
     ]
 
     duration = models.IntegerField(choices=DURATION_CHOICES, verbose_name=_("Duration"))
