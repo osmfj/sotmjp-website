@@ -27,7 +27,7 @@ python manage.py loaddata \
   fixtures/sponsorship.json \
   fixtures/schedule.json \
   fixtures/teams.json \
-  fixtures/restcms.json \
+  fixtures/restcms_page.json \
 
 echo
 echo
