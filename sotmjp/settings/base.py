@@ -227,6 +227,8 @@ INSTALLED_APPS = [
     "sotmjp.schedule",
     "sotmjp.profile",
     #"sotmjp.tutorials",
+    "leaflet",
+    "osm_field",
 ]
 
 FIXTURE_DIRS = [

@@ -9,6 +9,7 @@
 {% load sponsorship_tags %}
 {% load thumbnail %}
 {% load sitetree %}
+{% load leaflet_tags %}
 
 {% block head_title_base %}{% block head_title %}{% endblock %} | State of the Map Japan 2014 in TOKYO{% endblock %}
 
@@ -36,6 +37,8 @@
 {% block extra_head_base %}
     <link href="{{ STATIC_URL }}img/favicon.ico" rel="shortcut icon" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    {% leaflet_js %}
+    {% leaflet_css %}
     {% include "markedit/includes/markedit-js.html" %}
     {% block extra_head %}{% endblock %}
     <meta name="google-site-verification" content="fG_xxxxxxxxxxxxxxxxxxxxxxxxxxxxs" />
