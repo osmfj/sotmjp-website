@@ -81,38 +81,38 @@ class SotMLightningTalkProposalForm(SotMProposalForm):
         }
 
 
-class SotMTutorialProposalForm(SotMProposalForm):
-
-    class Meta:
-        model = SotMTutorialProposal
-        fields = [
-            "title",
-            "category",
-            "audience_level",
-            "domain_level",
-            "description",
-            "audience",
-            "perceived_value",
-            "abstract",
-            "outline",
-            "more_info",
-            "additional_notes",
-            "additional_requirements",
-            "handout",
-            "recording_release",
-        ]
-        widgets = {
-            "title": forms.TextInput(attrs={'class': 'fullwidth-input'}),
-            "description": forms.Textarea(attrs={'rows': '3'}),
-            "audience": forms.TextInput(attrs={'class': 'fullwidth-input'}),
-            "perceived_value": forms.Textarea(attrs={'rows': '3'}),
-            "abstract": MarkEdit(),
-            "outline": MarkEdit(),
-            "more_info": MarkEdit(),
-            "additional_notes": MarkEdit(attrs={'rows': '3'}),
-            "additional_requirements": forms.Textarea(attrs={'rows': '3'}),
-        }
-
+#class SotMTutorialProposalForm(SotMProposalForm):
+#
+#    class Meta:
+#        model = SotMTutorialProposal
+#        fields = [
+#            "title",
+#            "category",
+#            "audience_level",
+#            "domain_level",
+#            "description",
+#            "audience",
+#            "perceived_value",
+#            "abstract",
+#            "outline",
+#            "more_info",
+#            "additional_notes",
+#            "additional_requirements",
+#            "handout",
+#            "recording_release",
+#        ]
+#        widgets = {
+#            "title": forms.TextInput(attrs={'class': 'fullwidth-input'}),
+#            "description": forms.Textarea(attrs={'rows': '3'}),
+#            "audience": forms.TextInput(attrs={'class': 'fullwidth-input'}),
+#            "perceived_value": forms.Textarea(attrs={'rows': '3'}),
+#            "abstract": MarkEdit(),
+#            "outline": MarkEdit(),
+#            "more_info": MarkEdit(),
+#            "additional_notes": MarkEdit(attrs={'rows': '3'}),
+#            "additional_requirements": forms.Textarea(attrs={'rows': '3'}),
+#        }
+#
 
 class SotMPosterProposalForm(SotMProposalForm):
 
