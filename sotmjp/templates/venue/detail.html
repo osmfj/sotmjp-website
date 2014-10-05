@@ -2,8 +2,12 @@
 
 {% load i18n %}
 {% load sitetree %}
+{% load leaflet_tags %}
+
 {% block head_title %}{% trans "Venue Details" %}{% endblock %}
 {% block extra_head %}
+   {% leaflet_css %}
+   {% leaflet_js %}
    <script type="text/javascript">
     function map_init_basic (map, options) {
         L.marker([35.661, 139.67775]).addTo(map);
@@ -11,6 +15,8 @@
    </script>
 {% endblock %}
 {% block page_title %}{% trans "Venue Details" %}{% endblock %}
+
+{% block body_class %}venue{% endblock %}
 
 {% block body %}
 
@@ -24,9 +30,7 @@
 
 <p class="intro">イベントおよび懇親会はすべて、この会場で実施します。</p>
 
-<div class="map-container">
-   {% leaflet_map "venue_small_map" callback="window.map_init_basic" %}
-</div>
-<small><a href="http://stateofthemap.jp/2014/venue/map/">大きな地図で見る</a></small>
+{% leaflet_map "venue_map" callback="window.map_init_basic" %}
+<small><a href="https://openstreetmap.jp/map/#zoom=19&lat=35.66112&lon=139.67755&layers=B00" target="_blank">大きな地図で見る</a></small>
 
 {% endblock %}

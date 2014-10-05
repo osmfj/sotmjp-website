@@ -36,17 +36,7 @@ urlpatterns = patterns("",
 
         url(r"^registration/", include("sotmjp.registration.urls")),
 
-        #url(r"^venue/$", TemplateView.as_view(template_name="venue/detail.html"), name="venue_detail"),
-        #url(r"^venue/traveling/", TemplateView.as_view(template_name="venue/traveling.html"), name="traveling"),
-        #url(r"^venue/directions/", TemplateView.as_view(template_name="venue/directions.html"), name="directions"),
-        #url(r"^venue/getting-around/", TemplateView.as_view(template_name="venue/getting_around.html"), name="getting_around"),
-        #url(r"^venue/weather/", TemplateView.as_view(template_name="venue/weather.html"), name="weather"),
-        #url(r"^venue/explore/", TemplateView.as_view(template_name="venue/explore.html"), name="explore"),
-        #url(r"^venue/restaurants/", TemplateView.as_view(template_name="venue/restaurants.html"), name="restaurants"),
-        #url(r"^venue/bars/", TemplateView.as_view(template_name="venue/bars.html"), name="bars"),
-        #url(r"^venue/shopping/", TemplateView.as_view(template_name="venue/shopping.html"), name="shopping"),
-        #url(r"^venue/share-room/", TemplateView.as_view(template_name="venue/share_room.html"), name="share_room"),
-        #url(r"^venue/hotels/", TemplateView.as_view(template_name="venue/hotels.html"), name="hotels"),
+        url(r"^venue/$", TemplateView.as_view(template_name="venue/detail.html"), name="venue_detail"),
 
         url(r"^schedule/", include("sotmjp.schedule.urls")),
         url(r"^profile/", include("sotmjp.profile.urls")),
@@ -67,7 +57,6 @@ urlpatterns = patterns("",
         url(r"^change_language/", symposion.views.change_language, name="change_language"),
         url('program_export/', sotmjp.views.program_export, name='program_export'),
 
-        url(r"^venue/map/", TemplateView.as_view(template_name="venue/map.html"), name="map"),
 
         # This should be last, because it will create a new CMS page for
         # any unrecognized URL.
