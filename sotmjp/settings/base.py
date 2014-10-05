@@ -357,3 +357,12 @@ LOGGING = DEFAULT_LOGGING
 # Add config for Google Analytics
 CONSTANCE_CONFIG["GOOGLE_ANALYTICS_TRACKING_ID"] = ("", "The site's Google Analytics Tracking ID.")
 
+# Add config for leaflet
+LEAFLET_CONFIG = {
+  'TILES': 'http://tile.openstreetmap.jp/{z}/{x}/{y}.png',
+  'SPATIAL_EXTENT': (139.65, 35.63, 139.75, 35.69),
+  'DEFAULT_CENTER': (35.662, 139.67771),
+  'DEFAULT_ZOOM': 17,
+  'MIN_ZOOM': 13,
+  'MAX_ZOOM': 19,
+}

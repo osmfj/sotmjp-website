@@ -50,7 +50,7 @@ urlpatterns = patterns("",
 
         url(r"^schedule/", include("sotmjp.schedule.urls")),
         url(r"^profile/", include("sotmjp.profile.urls")),
-        url(r"^tutorials/", include("sotmjp.tutorials.urls")),
+        #url(r"^tutorials/", include("sotmjp.tutorials.urls")),
 
         url(r"^speaker/", include("symposion.speakers.urls")),
         url(r"^proposals/", include("symposion.proposals.urls")),
@@ -66,6 +66,8 @@ urlpatterns = patterns("",
         url(r'^selectable/', include('selectable.urls')),
         url(r"^change_language/", symposion.views.change_language, name="change_language"),
         url('program_export/', sotmjp.views.program_export, name='program_export'),
+
+        url(r"^venue/map/", TemplateView.as_view(template_name="venue/map.html"), name="map"),
 
         # This should be last, because it will create a new CMS page for
         # any unrecognized URL.

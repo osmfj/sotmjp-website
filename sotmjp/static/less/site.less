@@ -18,7 +18,7 @@
 // -- Speaker profile
 // -- Reviews
 // -- Job fair
-// -- Financial Aid
+// -- Leaflet
 
 /* Imports
 ==================== */
@@ -1783,77 +1783,8 @@ table.calendar {
   }
 }
 
-/* Financial Aid
-==================== */
-body.finaid {
-
-  // Mark travel plans as required even though technically they aren't
-  // required by the form.
-  label[for=id_travel_plans]:before {
-    .is_required;
-  }
-
-  &#application_list {
-    form#applicant-list {
-      th { cursor: pointer;
-        &:hover { background-color: @grayLighter; }
-        &:first-child:hover {
-          background-color: transparent;
-          cursor: default;
-        }
-      }
-      .filter {
-        .clearfix;
-        padding: 15px 0;
-        .sort {
-          float: left;
-          select { width: auto; }
-          label { margin: 5px 0 0 0; }
-        }
-        .search { float: right;}
-      }
-      .table-pagination {
-        .clearfix;
-        float: right;
-      }
-      .actions { float: left; }
-    }
-  }
-
-  &#finaid_review {
-    .box-content {
-      header {
-        padding: 15px 0 25px;
-        h2, h3 { margin: 0; }
-      }
-      .applicant {
-        border-right: 1px solid @grayLighter;
-        padding-right: 50px;
-        ul {
-          padding: 8px 0;
-          li {
-            line-height: 1.6;
-            ul {
-              padding: 15px;
-              background-color: @grayLighter;
-              .border-radius(8px);
-              margin-bottom: 20px;
-            }
-          }
-        }
-        .applicant-info {
-          li {
-            padding-bottom: 20px;
-          }
-        }
-      }
-      .review-form {
-        padding-left: 25px;
-        label {
-          text-transform: none;
-          font-weight: bold;
-        }
-      }
-    }
-  }
+// Leaflet
+.leaflet-container {  /* all maps */
+    width:  700px;
+    height: 900px;
 }

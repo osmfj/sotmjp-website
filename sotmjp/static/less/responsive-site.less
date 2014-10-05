@@ -419,3 +419,29 @@ body.home {
 		}
 	}
 }
+
+/* Leaflet
+======================== */
+.leaflet-container {
+			@media (min-width: @breakDesktop) {
+         width: 700px;
+         height: 800px;
+			}
+ 			@media (max-width: @breakDesktop) {
+	      width: 700px;
+        height: 800px;
+			}
+			@media (max-width: @breakTablet) {
+	      width: 400px;
+        height: 600px;
+			}
+			@media (max-width: @breakMobileLandscape) {
+	      width: 300px;
+        height: 300px;
+			}
+			@media (max-width: @breakMobile) {
+	     width: 200px;
+       height: 200px;
+			}
+	
+}
