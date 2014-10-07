@@ -33,6 +33,7 @@ apt-fast install -y python-dev python-pysqlite2 libsqlite3-0
 apt-fast install -y nginx-full
 apt-fast install -y yui-compressor
 apt-fast build-dep -y python-imaging
+apt-fast install -y exim4
 DEPENDENCY
 
 $setup = <<SETUP
