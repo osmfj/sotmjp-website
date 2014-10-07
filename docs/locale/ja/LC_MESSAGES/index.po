@@ -1,0 +1,57 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Pinax Symposion 0.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-08 08:06+0900\n"
+"PO-Revision-Date: 2014-10-08 08:17+0900\n"
+"Last-Translator: Hiroshi Miura <miurahr@linux.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../index.rst:2
+msgid "SotM JP web site"
+msgstr "SotM JPウエブサイト"
+
+#: ../../index.rst:4
+msgid "The SotM JP web site is an open-source Django project for the State of the Map Japan 2014 conference, based on Pinax Symposion."
+msgstr "SotM JPウエブサイトは、State of the Map Japan 2014カンファレンスのためのオープンソースのDjangoプロジェクトで、Pinax Symposionをベースにしています。"
+
+#: ../../index.rst:7
+msgid "It came out of development done by Eldarion for DjangoCon US and US PyCon but has been independently used for a number of other conferences."
+msgstr "これは、Eldarionにより、DjangoCon USとPyConのために開発された成果であるが、他のカンファレンスにも独立して使われているものです。"
+
+#: ../../index.rst:10
+msgid "We are in the process of cleaning things up and making them more generic."
+msgstr "より一般化できるようにクリーニングのプロセスの最中です。"
+
+#: ../../index.rst:12
+msgid "The project homepage is http://github.com/osmfj/sotmjp-website."
+msgstr "プロジェクトのホームページは、https://github.com/osmfj/sotmjp-website です"
+
+#: ../../index.rst:14
+msgid "See ``README`` for the installation instructions."
+msgstr "インストール方法は、''README''ファイルをみてください。"
+
+#: ../../index.rst:16
+msgid "Apps:"
+msgstr ""
+
+#: ../../index.rst:29
+msgid "Indices and tables"
+msgstr "目次"
+
+#: ../../index.rst:31
+msgid ":ref:`genindex`"
+msgstr ""
+
+#: ../../index.rst:32
+msgid ":ref:`modindex`"
+msgstr ""
+
+#: ../../index.rst:33
+msgid ":ref:`search`"
+msgstr ""
+

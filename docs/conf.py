@@ -245,6 +245,13 @@ texinfo_documents = [
 # Arrange for importing pycon modules to work okay given that they'll
 # try to pull in Django
 # See http://techblog.ironfroggy.com/2012/06/how-to-use-sphinx-autodoc-on.html
-sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+#sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 import django
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "symposion.settings")
+
+# -- Locale configurations -----------------------------------------------------
+#
+# http://sphinx-doc.org/intl.html#translating-with-sphinx-intl
+locale_dirs = ['locale/']   # path is example but recommended.
+gettext_compact = False     # optional.
+language = ['ja']

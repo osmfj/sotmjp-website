@@ -1,0 +1,30 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Pinax Symposion 0.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-08 08:06+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../deploying.rst:2
+msgid "Deploying"
+msgstr ""
+
+#: ../../deploying.rst:4
+msgid "Some notes on deploying."
+msgstr ""
+
+#: ../../deploying.rst:7
+msgid "Periodic tasks"
+msgstr ""
+
+#: ../../deploying.rst:9
+msgid ""
+"Arrange to run this command every day or so to expunge the data from deleted"
+" accounts if more than 48 hours since they were deleted::"
+msgstr ""

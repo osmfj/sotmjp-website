@@ -1,0 +1,76 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Pinax Symposion 0.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-08 08:06+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../registration.rst:2
+msgid "Registration"
+msgstr ""
+
+#: ../../registration.rst:4
+msgid ""
+"The homepage template utilizes a configurable item to display information "
+"about conference registration. Go to ``/YEAR/admin/constance/config/`` and "
+"set ``REGISTRATION_STATUS`` to either ``soon``, ``open``, or ``closed``. If "
+"the value is an empty string or a value other than the three valid entries, "
+"the homepage template will not include any specific registration status "
+"information or link. If other valid states are required, the homepage "
+"template will have to be modified accordingly."
+msgstr ""
+
+#: ../../registration.rst:12
+msgid ""
+"The registration link (to actually register for the conference) just goes to"
+" a page that uses an iframe to wrap the real registration site, provided by "
+"a vendor."
+msgstr ""
+
+#: ../../registration.rst:16
+msgid ""
+"There are a couple of configuration items that need to be agreed with the "
+"vendor each year, a shared secret and a URL. These should then be configured"
+" using the admin in the ``constance`` app. Go to "
+"``/YEAR/admin/constance/config/`` and set ``CTE_SECRET`` to this year's "
+"shared secret and ``REGISTRATION_URL`` to this year's URL."
+msgstr ""
+
+#: ../../registration.rst:22
+msgid ""
+"When ready to open up registration, make sure the vendor is ready, then put "
+"a link on the front page that goes to the URL named \"registration_login\", "
+"e.g.::"
+msgstr ""
+
+#: ../../registration.rst:29
+msgid "Tutorial Registration Data"
+msgstr ""
+
+#: ../../registration.rst:31
+msgid ""
+"Once the Schedule has been set, and Tutorials are open for registration, a "
+"management command that consumed registration data from the registration "
+"provider can be placed on a cron job for periodic updates."
+msgstr ""
+
+#: ../../registration.rst:35
+msgid ""
+"One must configure the URL of the external CSV report to be consumed.  These"
+" should be configured using the admin in the ``constance`` app. Got to "
+"``/YEAR/admin/constance/config`` and set ``CTE_TUTORIAL_DATA_URL`` to this "
+"year's URL."
+msgstr ""
+
+#: ../../registration.rst:40
+msgid ""
+"Once this is set, running the command job will update the Tutorial "
+"registrants via consumed emails, as well as set the max attendees for the "
+"Tutorial::"
+msgstr ""

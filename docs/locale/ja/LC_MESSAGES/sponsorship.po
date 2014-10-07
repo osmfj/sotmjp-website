@@ -1,0 +1,108 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Pinax Symposion 0.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-08 08:06+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../sponsorship.rst:2
+msgid "Sponsorship App"
+msgstr ""
+
+#: ../../sponsorship.rst:4
+msgid "Sponsorship is managed via the ``sponsorship`` app."
+msgstr ""
+
+#: ../../sponsorship.rst:6
+msgid "Sponsorship levels and sponsors are added via the Django admin."
+msgstr ""
+
+#: ../../sponsorship.rst:10
+msgid "Models"
+msgstr ""
+
+#: ../../sponsorship.rst:12
+msgid ""
+"Each sponsor level has a ``name`` (e.g. \"Gold\", \"Silver\") and an "
+"``order`` field which is an integer that is used to sort levels (lowest "
+"first). Each level also has a ``description`` which is not currently exposed"
+" anywhere but can be used for private annotation."
+msgstr ""
+
+#: ../../sponsorship.rst:17
+msgid ""
+"Each sponsor has a ``name``, ``external_url`` (i.e. link to the sponsor's "
+"website), ``contact_name`` and ``contact_email``, ``logo``, and ``level``."
+msgstr ""
+
+#: ../../sponsorship.rst:20
+msgid ""
+"A sponsor may also have a private ``annotation`` that can be used by "
+"organizers to take notes about the sponsor."
+msgstr ""
+
+#: ../../sponsorship.rst:23
+msgid ""
+"A sponsor will not appear on the site until the ``active`` flag is set true."
+msgstr ""
+
+#: ../../sponsorship.rst:27
+msgid "Template Snippets"
+msgstr ""
+
+#: ../../sponsorship.rst:29
+msgid ""
+"The easiest way to include sponsor logos, grouped by level, is to either::"
+msgstr ""
+
+#: ../../sponsorship.rst:33 ../../sponsorship.rst:49 ../../sponsorship.rst:66
+msgid "or::"
+msgstr ""
+
+#: ../../sponsorship.rst:37
+msgid "You can get a wall of sponsors (without level designation) with::"
+msgstr ""
+
+#: ../../sponsorship.rst:42
+msgid ""
+"You can always tweak these templates or use them as the basis for your own. "
+"This is often all you'll need to do to display sponsors on your site."
+msgstr ""
+
+#: ../../sponsorship.rst:45
+msgid "If you want to display a specific sponsor logo you can use::"
+msgstr ""
+
+#: ../../sponsorship.rst:53
+msgid "if you want different dimensions than the default 150 x 150."
+msgstr ""
+
+#: ../../sponsorship.rst:57
+msgid "Template Tags"
+msgstr ""
+
+#: ../../sponsorship.rst:59
+msgid ""
+"If you want to retrieve the sponsors and traverse them yourself, you can use"
+" the provided template tags::"
+msgstr ""
+
+#: ../../sponsorship.rst:72
+msgid "if you want to just get a specific level."
+msgstr ""
+
+#: ../../sponsorship.rst:75
+msgid "You can get the levels with::"
+msgstr ""
+
+#: ../../sponsorship.rst:81
+msgid ""
+"and you can always iterate over those levels, calling ``level.sponsors`` to "
+"get the sponsors at that level."
+msgstr ""

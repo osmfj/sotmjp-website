@@ -2,6 +2,7 @@ _build
 *.pyc
 *.swp
 *.pot
+*.mo
 *.sqlite
 dev.db
 .DS_Store
