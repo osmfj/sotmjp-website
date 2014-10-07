@@ -39,6 +39,7 @@ help:
 	@echo "  linkcheck  to check all external links for integrity"
 	@echo "  doctest    to run all doctests embedded in the documentation (if enabled)"
 	@echo "  update-po  to update PO message cagalogs"
+	@echo "  build-mo   to build  MO message files"
 
 clean:
 	-rm -rf $(BUILDDIR)/*
