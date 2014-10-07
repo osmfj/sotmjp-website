@@ -9,7 +9,7 @@ but has been independently used for a number of other conferences.
 
 We are in the process of cleaning things up and making them more generic.
 
-The project homepage is http://github.com/caktus/pycon.
+The project homepage is http://github.com/osmfj/sotmjp-website.
 
 See ``README`` for the installation instructions.
 
@@ -21,10 +21,8 @@ Apps:
    conference
    sponsorship
    registration
-   finaid
    deploying
    translation
-   api
 
 
 Indices and tables
