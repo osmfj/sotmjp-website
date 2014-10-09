@@ -12,7 +12,7 @@
 
 Django==1.5.4
 pinax-theme-bootstrap==3.0a12
-django-user-accounts==1.0b13
+django-user-accounts==1.0
 metron==1.1
 pinax-utils==1.0b1.dev3
 django-debug-toolbar==0.9.4
