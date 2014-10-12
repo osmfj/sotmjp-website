@@ -32,7 +32,7 @@ To get running locally
 
 * Install the requirements for running and testing locally::
 
-    $ pip install -r sotmjp/requirements/dev.txt
+    $ pip install -r requirements/dev.txt
 
   (For production, install -r requirements/project.txt).
 
