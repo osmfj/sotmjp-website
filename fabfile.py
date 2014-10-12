@@ -17,7 +17,7 @@ env.settings = 'symposion.settings'
 @task
 def staging():
     env.environment = 'staging'
-    env.hosts = ['sotm.openstreetmap.jp']
+    env.hosts = ['staging-sotm.openstreetmap.jp']
     env.site_hostname = 'staging-sotm.openstreetmap.jp'
     env.root = '/home/ubuntu/sotmjp-website'
     env.branch = 'staging'
@@ -31,11 +31,11 @@ def production():
     env.environment = 'production'
     env.hosts = ['sotm.openstreetmap.jp']
     env.site_hostname = 'stateofthemap.jp'
-    env.root = '/srv/sotmjp-website'
+    env.root = '/srv/sites/sotmjp-website'
     env.branch = 'production'
     env.db = 'sotmjp2014'
-    env.db_host = 'sotm.openstreetmap.jp'
-    env.db_user = 'sotmjp'
+    env.db_host = 'rds.aws.amazon.com'
+    env.db_user = 'ubuntu'
     setup_path()
 
 
