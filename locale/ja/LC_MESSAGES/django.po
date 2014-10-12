@@ -9,15 +9,15 @@
 # Takanori Suzuki <takanori@takanory.net>, 2014
 # Takuya Okada <okokada.takuya@gmail.com>, 2014
 # WAKAYAMA Shirou <shirou.faw@gmail.com>, 2014
-# 
+#
 # Hiroshi Miura <miurahr@osmf.jp>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: pyconjp-website\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-09-22 20:56+0900\n"
-"PO-Revision-Date: 2014-09-22 21:37+0900\n"
-"Last-Translator: Hiroshi Miura <miurahr@osmf.jp>\n"
+"PO-Revision-Date: 2014-10-12 10:31+0900\n"
+"Last-Translator: Hiroshi Miura <miurahr@linux.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -674,7 +674,7 @@ msgstr "第一回"
 
 #: sotmjp/templates/homepage.html:38
 msgid "Annual OpenStreetMap Conference in JAPAN!"
-msgstr "日本での年次OpenStreetMap会議！"
+msgstr "年次OpenStreetMap会議 in JAPAN！"
 
 #: sotmjp/templates/homepage.html:51
 msgid "Conference"
