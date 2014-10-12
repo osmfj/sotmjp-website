@@ -65,13 +65,17 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     override.ssh.private_key_path = SSH_Private_key_path
 
     # EC2 configuration
-    aws.instance_type = "t1.micro"
+    aws.instance_type = "t2.micro"
     aws.region = "us-west-2"
-    aws.security_groups = "web-ssh"
-    aws.tags = {'Name' => 'sotm-jp'}
+    aws.availability_zone= "us-west-2b"
+    aws.security_groups = "web-ssh-rds"
+    aws.subnet_id = "subnet-a007edd7"
+    aws.vpc_id = "vpc-7ead561b"
+    aws.associate_public_ip = True
+    aws.tags = {'Name' => 'sotmjp-website'}
 
-    # Ubuntu 12.04.01(64bit) LTS
-    aws.ami = "ami-8bb8c0bb"
+    # Ubuntu 12.04.01(64bit) LTS (HVM)
+    aws.ami = "ami-3d50120d"
     override.ssh.username = "ubuntu"
   end
 
