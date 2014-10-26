@@ -211,57 +211,47 @@ body.home {
 		}
 	}
 	.city {
-		.tokyo-slideshow {
+      @media (min-width: @breakDesktop) {
+        height: 800px;
+			}
+ 			@media (max-width: @breakDesktop) {
+				height: 480px;
+			}
+			@media (max-width: @breakTablet) {
+				height: 330px;
+			}
+			@media (max-width: @breakMobileLandscape) {
+				height: 90px;
+			}
+			@media (max-width: @breakMobile) {
+				height: 50px;
+			}
+ 	
+		.tokyo {
 			@media (min-width: @breakDesktop) {
 				background-size: 900px 550px;
 				background-position: center;
-				left: 200px;
 			}
  			@media (max-width: @breakDesktop) {
 				background-size: 600px 450px;
 				background-position: center;
 				height: 450px;
-				left: 150px;
 			}
 			@media (max-width: @breakTablet) {
 				background-size: 400px 300px;
 				background-position: center;
 				height: 300px;
-				left: 120px;
 			}
 			@media (max-width: @breakMobileLandscape) {
 				background-size: 250px 70px;
 				background-position: center;
 				height: 70px;
-				left: 50px;
 			}
 			@media (max-width: @breakMobile) {
 				display: none;
 			}
-		}
-		.tokyo {
-			@media (max-width: @breakTablet) {
-				background-size: 400px 100px;
-				background-position: center;
-			}
-			@media (max-width: @breakMobileLandscape) {
-				background-size: 250px 70px;
-				height: 100px;
-				background-position: center;
-			}
  		}
-		.montreal {
-			@media (max-width: @breakTablet) {
-				background-size: 400px 100px;
-				background-position: center;
-			}
-			@media (max-width: @breakMobileLandscape) {
-				background-size: 250px 70px;
-				height: 100px;
-				background-position: center;
-			}
- 		}
-		.clouds {
+ 	  .clouds {
 			#one-cloud {
 				@media (max-width: @breakDesktop) {
 					right: 0px;
