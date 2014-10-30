@@ -151,9 +151,11 @@
 
         <div class="container">
         {% block footer %}
+              {% comment %}
             <a href="{%  url 'home' %}" class="logo">
                 <img src="{{ STATIC_URL }}img/12logo_sub.png" alt="State of the Map Japan 2014 in Tokyo">
             </a>
+              {% endcomment %}
             <a href="http://osmf.jp/" class="logo">
               <img src="{{ STATIC_URL }}img/osmfj_logo.png" alt="State of the Map Japan 2014 in Tokyo"></a>
             <div class="footer-content">
