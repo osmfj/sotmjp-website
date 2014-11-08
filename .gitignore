@@ -19,3 +19,4 @@ venv/
 credential.rb
 .vagrant
 vagrant.ssh.config
+backup_credential.inc
