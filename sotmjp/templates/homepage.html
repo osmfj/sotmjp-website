@@ -63,7 +63,8 @@
                 {% endcomment %}
                 {% if config.REGISTRATION_STATUS == 'open' %}
                     <div class="promo" itemprop="tickets" itemscope itemtype="http://data-vocabulary.org/Offer">
-                      <a href="{% url 'registration_start' %}">{% trans "REGISTER" %}</a>
+                      <% comment %}<a href="{% url 'registration_start' %}">{% trans "REGISTER" %}</a> {% endcomment %}
+                      <a href="http://sotmjp2014.peatix.com/">{% trans "REGISTER" %}</a>
                     </div>
                 {% endif %}
             </div>
