@@ -13,28 +13,26 @@
                 <td class="time">{{ row.time|date:"h:iA" }}</td>
                 {% for slot in row.slots %}
                     <td class="slot slot-{{ slot.kind.label }}" colspan="{{ slot.colspan }}" rowspan="{{ slot.rowspan }}">
-                        {% if slot.kind.label == "talk" or slot.kind.label == "tutorial" or slot.kind.label == "sponsor-tutorial" or slot.kind.label == "plenary" %}
-                            {% if not slot.content %}
-                            {% else %}
-                                <span class="title">
-                                    <a href="{% url 'schedule_presentation_detail'  slot.content.pk %}" title="{{ slot.content.description|striptags|cut:"\"" }}">{{ slot.content.title }}</a>
-                                </span>
-                                <span class="speaker">
-                                    {{ slot.content.speakers|join:", " }}
-                                </span>
-                                <div class="badges">
-                                    {% for session in slot.sessions.all %}
-                                        <a href="{% url 'schedule_session_detail' session.id %}" class="btn btn-mini" style="margin-right: 10px" title="Session Information">S</a>
-                                    {% endfor %}
-                                </div>
-                            {% endif %}
-                        {% else %}
-                            {% if slot.content_override %}
-                                {{ slot.content_override }}
+                        {% if not slot.content %}
+                            {% if slot.content_override.raw %}
+                                {{ slot.content_override.rendered|safe }}
                             {% else %}
                                 {{ slot.kind.label }}
                             {% endif %}
-                        {% endif %}
+                        {% else %}
+                          <span class="title">
+                                <a href="{% url 'schedule_presentation_detail'  slot.content.pk %}"
+                                   title="{{ slot.content.description|striptags|cut:"\"" }}">{{ slot.content.title }} </a>
+                          </span>
+                          <span class="speaker">
+                              {{ slot.content.speakers|join:", " }}
+                          </span>
+                          <div class="badges">
+                              {% for session in slot.sessions.all %}
+                              <a href="{% url 'schedule_session_detail' session.id %}" class="btn btn-mini" style="margin-right: 10px" title="Session Information">S</a>
+                              {% endfor %}
+                          </div>
+                       {% endif %}
                     </td>
                 {% endfor %}
                 {% if forloop.last %}
