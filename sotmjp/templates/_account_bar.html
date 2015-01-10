@@ -22,6 +22,9 @@
         </form>
     {% else %}
         <a class="login" href="{% url 'account_login' %}">{% trans "Log in" %}</a>
-        <a class="signup" href="{% url 'account_signup' %}">{% trans "Sign up" %}</a>
+
+        {% if config.REGISTRATION_STATUS != 'closed' %}
+          <a class="signup" href="{% url 'account_signup' %}">{% trans "Sign up" %}</a>
+        {% endif %}
     {% endif %}
 </div>
