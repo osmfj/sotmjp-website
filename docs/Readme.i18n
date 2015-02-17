@@ -1,0 +1,8 @@
+To translate in Japanese
+
+poedit locale/ja/LC_MESSAGES/index.po
+
+
+To build L10N html file.
+
+make -e SPHINXOPTS="-D language='ja'" html

@@ -1,0 +1,29 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Pinax Symposion 0.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-08 08:06+0900\n"
+"PO-Revision-Date: 2014-10-13 12:06+0900\n"
+"Last-Translator: Hiroshi Miura <miurahr@linux.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../deploying.rst:2
+msgid "Deploying"
+msgstr "インストール"
+
+#: ../../deploying.rst:4
+msgid "Some notes on deploying."
+msgstr "インストールメモ"
+
+#: ../../deploying.rst:7
+msgid "Periodic tasks"
+msgstr "定期的仕事"
+
+#: ../../deploying.rst:9
+msgid "Arrange to run this command every day or so to expunge the data from deleted accounts if more than 48 hours since they were deleted::"
+msgstr "削除されて４８時間たったら削除されたアカウントを綺麗にするなど、毎日コマンドを実行するようにします。"
+

@@ -1,0 +1,116 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Pinax Symposion 0.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-08 08:06+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../translation.rst:2
+msgid "Translation"
+msgstr ""
+
+#: ../../translation.rst:4
+msgid ""
+"The PyCon site is set up for use in English and French, for the most part."
+msgstr ""
+
+#: ../../translation.rst:7
+msgid "Which language is displayed"
+msgstr ""
+
+#: ../../translation.rst:9
+msgid ""
+"By default, the request headers control which language is displayed. A user "
+"can change their brower's settings to say what their preferred languages "
+"are, and if French comes before English, the site will use French when "
+"available. It'll fall back to English for text that isn't translated."
+msgstr ""
+
+#: ../../translation.rst:14
+msgid ""
+"A language selector can optionally be displayed on the Dashboard page. This "
+"allows a user to temporarily override the displayed language for the current"
+" session. Whether the language selector is displayed is controlled by the "
+"django-constance setting SHOW_LANGUAGE_SELECTOR, which can be changed in the"
+" admin at /YEAR/admin/constance/config/."
+msgstr ""
+
+#: ../../translation.rst:21
+msgid "Translating"
+msgstr ""
+
+#: ../../translation.rst:23
+msgid ""
+"For CMS pages, there are two body fields. The first is for English. The "
+"second is for French. You'll have to scroll down a ways to see it when "
+"editing a CMS page."
+msgstr ""
+
+#: ../../translation.rst:27
+msgid ""
+"Text on most other pages, forms, etc is translatable using Django's "
+"internationalization support. To add or update translations, a developer "
+"would:"
+msgstr ""
+
+#: ../../translation.rst:31
+msgid ""
+"set up a local development environment for PyCon according to the README"
+msgstr ""
+
+#: ../../translation.rst:32
+msgid "make a new branch off the `develop` branch"
+msgstr ""
+
+#: ../../translation.rst:33
+msgid "make sure you have Gnu gettext installed"
+msgstr ""
+
+#: ../../translation.rst:34
+msgid "install fabric: ``pip install fabric``"
+msgstr ""
+
+#: ../../translation.rst:35
+msgid ""
+"run ``fab make_messages`` to update the .po files, in case any translatable "
+"text has changed"
+msgstr ""
+
+#: ../../translation.rst:37
+msgid ""
+"edit ``locale/fr/LC_MESSAGES/django.po``, filling in ``msgstr`` with the "
+"translated version of whatever text is in the ``msgid`` just above it."
+msgstr ""
+
+#: ../../translation.rst:39
+msgid ""
+"run ``fab compile_messages`` to update the .mo file with the new "
+"translations"
+msgstr ""
+
+#: ../../translation.rst:41
+msgid "commit the updated .po and .mo files"
+msgstr ""
+
+#: ../../translation.rst:42
+msgid "open a pull request against the main repo to get your updates included"
+msgstr ""
+
+#: ../../translation.rst:44
+msgid ""
+"If a non-developer is going to help with translation, a developer could do "
+"all the steps except editing the .po file, just sending the .po file to the "
+"translator for them to edit and send back."
+msgstr ""
+
+#: ../../translation.rst:48
+msgid ""
+"Any text not translated in the translation files will be displayed as "
+"English."
+msgstr ""

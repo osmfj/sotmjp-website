@@ -1,0 +1,69 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Pinax Symposion 0.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-08 08:06+0900\n"
+"PO-Revision-Date: 2014-10-13 12:03+0900\n"
+"Last-Translator: Hiroshi Miura <miurahr@linux.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../conference.rst:2
+msgid "Conference App"
+msgstr "カンファレンスアプリ"
+
+#: ../../conference.rst:4
+msgid "The overall conference settings are managed via the ``conference`` app."
+msgstr "カファレンス全体の設定は、「カンファレンス」アプリで管理します。"
+
+#: ../../conference.rst:6
+msgid "Conferences and their sections are added and configured via the Django admin."
+msgstr "カンファレンスとそのセクションは、Django管理画面で追加設定できます。"
+
+#: ../../conference.rst:10
+msgid "Models"
+msgstr "モデル"
+
+#: ../../conference.rst:12
+msgid "Each conference needs an instance of a ``Conference`` model. In most cases you will only need one of these but Symposion does support multiple conferences sharing a database. Similar to the Django Sites framework, the conference your project is for is selected by the ``CONFERENCE_ID`` setting which defaults to ``1`` but can be changed to the pk of another conference if you have more than one."
+msgstr "各カンファレンスには、「カンファレンス」モデルのインスタンスが必要です。通常、一つのカンファレンスのインスタンスでいいのですが、Symposionは複数のカンファレンスで、データベースを共有することをサポートしています。Djangoサイトフレームワークと同様に、あなたの取り組むカンファレンスは、既定値が１の\"CONFERENCE_ID\"設定で選択されます。そして、複数管理するときは、他のカンファレンスには、１以外の値をプライマリーキーとして与えることができます。"
+
+#: ../../conference.rst:19
+msgid "The conference model has an optional ``start_date`` and ``end_date`` indicating when the conference will run. These are optional so you can begin to configure your conference even if you don't know the exact dates."
+msgstr "カンファレンスのモデルは、オプションで、\"start_date\"と\"end_date\"を持つことができます。これは、カンファレンス開催日程を示しています。オプション選択ですので、日程がきまっていなくても、カンファレンスの設定を開始することができます。"
+
+#: ../../conference.rst:23
+msgid "The conference model also has a ``timezone`` field which you should set to the timezone your conference will be in."
+msgstr "カンファレンスのモデルは、\"timezone\"フィールドも持っています。カンファレンスが開催される土地のタイムゾーンを設定してください。"
+
+#: ../../conference.rst:26
+msgid "There is also a ``Section`` model. This is useful if your conference has different parts to it that run of different days with a different management, review or scheduling process. Example of distinct sections might be \"Tutorials\", \"Talks\", \"Workshops\", \"Sprints\", \"Expo\". Many aspects of Symposion can be configured on a per-section basis."
+msgstr "``Section`` モードもあります。カンファレンスが、複数の日にまたがって実施され、かつそれぞれが異なったマネージメントやプログラム委員のレビューで実施されるような場合、この機能が有益です。別個のセクションの例としては、\"チュートリアル\", \"講演\", \"ワークショップ\", \"ハッカソン\", \"出展\"が有るでしょう。Symposionの多面性によって、各セクションごとに設定をできるようになっています。"
+
+#: ../../conference.rst:32
+msgid "Each section has an optional ``start_date`` and ``end_date`` similar to the overall conference."
+msgstr "各セクションは、オプションとして、``start-date``と``end_date``を、全体のカンファレンスと同様に設定できます。"
+
+#: ../../conference.rst:36
+msgid "Proposals"
+msgstr "提案"
+
+#: ../../conference.rst:38
+msgid "Create different kinds of proposals, e.g. `talk` or `tutorial`, by creating ProposalKind objects. You'll also need to create a Form in the code for that kind of proposal, and update the setting ``PROPOSAL_FORMS`` with the ProposalKind's ``slug`` as key, and the full package path to the form to use as value.  For example::"
+msgstr "異なった種類の提案を作ります。たとえば、`講演`と`チュートリアル`です。これは、ProposlaKindオブジェクトによって作られます。ソフトウエア・コードで、各提案の種類別のFormを作る必要もあるでしょう。そして、ProposalKindの``slug``をキーとして、``PROPOSAL_FORMS``設定を更新し、フォームに対するフルのパッケージバスを値として設定します。例："
+
+#: ../../conference.rst:50
+msgid "To allow submitting proposals for a particular Section of the conference, create a ProposalSection. The site will allow submitting proposals for that Section between the ProposalSection's ``start`` and ``end``, unless ``closed`` has been set."
+msgstr "特定のカンファレンスのセクションに対して、提案を受け付けるには、ProposalSectionを作製してください。サイトは、セクション毎に提案を受け付けるようになり、ProposalSectionの``start``と``end``の期間中に受付て、``closed``に設定されるまで、受け付けられます。"
+
+#: ../../conference.rst:57
+msgid "Helper Functions"
+msgstr "Helper機能"
+
+#: ../../conference.rst:59
+msgid "A ``conference.models.current_conference()`` function exists to retrieve the ``Conference`` selected by ``CONFERENCE_ID``."
+msgstr " ``conference.models.current_conference()`` 関数は、``CONFERENCE_ID``で選択される``Conference``を取得するためにあります。"
+
