@@ -11,6 +11,7 @@
 --allow-unverified PIL
 
 Django==1.5.4
+git+git://github.com/miurahr/symposion.git#egg=symposion
 pinax-theme-bootstrap==3.0a12
 django-user-accounts==1.0
 metron==1.1
