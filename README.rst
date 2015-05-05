@@ -1,8 +1,7 @@
-State of the Map Japan 2014 website being built by OpenStreetMap Foundation Japan, based on symposion fork that is used for PyCon JP 2014.
-That is because I18N and japanese translation.
+State of the Map Japan 2014-2015 website being built by OpenStreetMap Foundation Japan,
+based on symposion fork that is used for PyCon JP 2014.
 
 PyConJP 2014 website was built by forking PyCon 2014 website code.
-
 PyCon 2014 website being built by Caktus Consulting Group, based on symposion.
 
 Rather than use this as the basis for your conference site directly, you should
@@ -17,11 +16,11 @@ at https://readthedocs.org/projects/pycon/.
 To get running locally
 ----------------------
 
-* Install dependency packages. for Ubuntu 12.04 and 14.04
+* Install dependency packages for Ubuntu 14.04
 
     $ misc/setup_environment.sh
 
-  If you run it on 14.04 and deriveratives, you should work around;
+  If you run it on 14.04 and deriveratives, you should workaround;
 
     $ sudo ln -s /usr/include/freetype2 /usr/local/include/freetype
 
@@ -48,7 +47,7 @@ To get running locally
 
   for staging/production
 
-    $ createdb sotmjp2014
+    $ createdb sotmjp2015
 
 * Create a user account::
 
@@ -56,10 +55,10 @@ To get running locally
 
 * If you have ssh access to the staging server, copy the database and media::
 
-    $ fab staging get_db_dump:sotmjp2014_staging
+    $ fab staging get_db_dump:sotmjp2015_staging
     $ fab staging get_media
 
-  Change ``sotmjp2014`` in that first command to the name of your local database.
+  Change ``sotmjp2015`` in that first command to the name of your local database.
 
 * Run local server::
 
@@ -89,11 +88,11 @@ For production
 
     $ ./build-css.sh
 
-* Arrange to serve the site_media directory as ``/2014/site_media/whatever``.
-  E.g. ``site_media/foo.html`` would be at ``/2014/site_media/foo.html``.
+* Arrange to serve the site_media directory as ``/2015/site_media/whatever``.
+  E.g. ``site_media/foo.html`` would be at ``/2015/site_media/foo.html``.
 * Arrange to serve the wsgi application in ``symposion/wsgi.py`` at ``/``, running
   with the same virtualenv (or equivalent).  It will only handle URLs
-  starting with ``/2014`` though, so you don't have to pass it any other requests.
+  starting with ``/2015`` though, so you don't have to pass it any other requests.
 
 To run staging
 --------------
