@@ -12,30 +12,30 @@ PROJECT_ROOT = os.path.dirname(__file__)
 env.project = 'sotmjp'
 env.project_user = os.environ['LOGNAME']
 env.shell = '/bin/bash -c'
-env.settings = 'symposion.settings'
+env.settings = 'sotmjp.settings'
 
 @task
 def staging():
     env.environment = 'staging'
-    env.hosts = ['staging-sotm.openstreetmap.jp']
-    env.site_hostname = 'staging-sotm.openstreetmap.jp'
+    env.hosts = ['staging.stateofthemap.jp']
+    env.site_hostname = 'staging.stateofthemap.jp'
     env.root = '/home/ubuntu/sotmjp-website'
     env.branch = 'staging'
-    env.db = 'sotmjp2014-staging'
-    env.db_host = 'sotm.opensteetmap.jp'
-    env.db_user = 'ubuntu'
+    env.db = 'sotmjp2015-staging'
+    env.db_host = 'staging.stateofthemap.jp'
+    env.db_user = 'osmfj'
     setup_path()
 
 @task
 def production():
     env.environment = 'production'
-    env.hosts = ['sotm.openstreetmap.jp']
+    env.hosts = ['stateofthemap.jp']
     env.site_hostname = 'stateofthemap.jp'
     env.root = '/srv/sites/sotmjp-website'
     env.branch = 'production'
-    env.db = 'sotmjp2014'
-    env.db_host = 'rds.aws.amazon.com'
-    env.db_user = 'ubuntu'
+    env.db = 'sotmjp2015'
+    env.db_host = 'dbmaster'
+    env.db_user = 'osmfj'
     setup_path()
 
 
