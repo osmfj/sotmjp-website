@@ -1,72 +1,46 @@
-
-FROM ubuntu:14.04
-
-MAINTAINER <miura@linux.com>
+FROM ubuntu:14.04.2
+MAINTAINER miurahr@osmf.jp
 
 ENV LANG C.UTF-8
-
-ADD sources.list /etc/apt/sources.list
-
-RUN apt-get update && apt-get dist-upgrade -y --no-install-recommends
-
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \    
-  g++ \
-  gcc \
-  libc6-dev \
-  make \
-  git \
-  curl \
-  wget \
-  byobu \
-  man \
-  vim \
-  unzip \
-  language-pack-en \
-  python-all-dev \
-  libssl-dev \
-  libyaml-dev \
-  libffi-dev \
-  python-sendfile \
-  ca-certificates \
-  software-properties-common
-
 ENV PATH /usr/local/bin:${PATH}
 
-RUN curl -k -O https://bootstrap.pypa.io/ez_setup.py && python ez_setup.py --insecure && rm -f ez_setup.py setuptools*zip
-  
-RUN DEBIAN_FRONTEND=noninteractive apt-get build-dep -y pillow && \
-    curl -k -O https://bootstrap.pypa.io/get-pip.py && python get-pip.py && rm -f get-pip.py && \ 
-    pip install \
-    virtualenv \
-    wheel \
-    'cython==0.21.1' \
-    'pyOpenSSL==0.14' \
-    'greenlet==0.4.5' \
-    'gevent==1.0.1' \
-    'pyzmq==14.4.1' \
-    'psutil==2.1.3' \
-    'PyYAML==3.11' \
-    'six==1.8.0' \
-    'pycrypto==2.6.1' \
-    'paramiko==1.15.1' \
-    'Fabric==1.10.0' \
-    'fabtools==0.19.0' \
-    'Pillow==2.7.0' \
-    pycares \
-    requests
+RUN curl -sL https://deb.nodesource.com/setup | bash -
+RUN apt-get update && apt-get upgrade -y --no-install-recommends && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+    make g++ gcc libc6-dev git curl\
+    libssl-dev libyaml-dev libffi-dev \
+    ca-certificates software-properties-common yui-compressor \
+    nodejs npm \
+    libpq5 sqlite3 libmysqlclient18 \
+    libcurl3 libcurl3-nss libpcre3 libxml2 libxslt1.1 \
+    libreadline5 libyaml-0-2\
+    libmysqlclient-dev libsqlite3-dev libpq-dev \
+    libcurl4-openssl-dev libpcre3-dev libxml2-dev libxslt-dev \
+    libreadline-gplv2-dev \
+    debhelper tk-dev python-all-dev  python-tk python-nose libfreetype6-dev \
+    libjpeg-dev zlib1g-dev liblcms2-dev libwebp-dev
+RUN ln -s /usr/bin/nodejs /usr/local/bin/node
+RUN npm install -g npm
 
 RUN locale-gen en_US && \
     locale-gen en_US.UTF-8 && \
     dpkg-reconfigure locales
-    
-ADD root/.bashrc /root/.bashrc
-ADD root/.gitconfig /root/.gitconfig
-ADD root/.scripts /root/.scripts
 
-WORKDIR /code
+# workaround
+RUN ln -s /usr/include/freetype2 /usr/local/include/freetype
 
-RUN pip freeze
+RUN mkdir -p /opt/pyapp/sotmjp-website
+COPY . /opt/pyapp/sotmjp-website/
+WORKDIR /opt/pyapp/sotmjp-website
 
-RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apt-get install -y python-pip
 
-CMD ["bash"]
+RUN pip install -r requirements/dev.txt
+RUN npm install -g less
+
+# Environment prepared
+# You can now do following:
+#
+#  python ./manage.py compress --force
+#  ./build-css.sh
+#  python ./manage.py collectstatic --noinput
