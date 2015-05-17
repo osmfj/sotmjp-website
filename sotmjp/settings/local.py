@@ -45,7 +45,7 @@ DEBUG = env_var('DEBUG', bool, default=True)
 
 _db_engine = env_var('DB_ENGINE', default='sqlite3' if DEBUG else 'postgresql_psycopg2')
 _db_name = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
-                        'sotmjp2014.sqlite') if _db_engine == 'sqlite3' else 'sotmjp2014_staging'
+                        'sotmjp2015.sqlite') if _db_engine == 'sqlite3' else 'sotmjp2015_staging'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.%s' % _db_engine,
@@ -57,6 +57,7 @@ DATABASES = {
     }
 }
 LANGUAGE_CODE = "ja-jp"
+MARKITUP_FILTER = ('django.contrib.markup.templatetags.markup.textile', {})
 
 INSTALLED_APPS += ['debug_toolbar']
 MIDDLEWARE_CLASSES += ["debug_toolbar.middleware.DebugToolbarMiddleware"]
