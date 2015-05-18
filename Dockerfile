@@ -44,3 +44,5 @@ RUN npm install -g less
 #  python ./manage.py compress --force
 #  ./build-css.sh
 #  python ./manage.py collectstatic --noinput
+
+EXPOSE 8000
