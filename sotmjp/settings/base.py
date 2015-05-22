@@ -27,7 +27,7 @@ COMPRESS = False
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": env_or_default("DB_NAME", "sotmjp2014"),
+        "NAME": env_or_default("DB_NAME", "sotmjp2015"),
         "USER": env_or_default("DB_USER", ""),
         "PASSWORD": env_or_default("DB_PASSWORD", ""),
         "HOST": env_or_default("DB_HOST", ""),
@@ -60,9 +60,10 @@ LANGUAGE_CODE = "ja-jp"
 SITE_ID = 1
 
 # Conference ID and any URL prefixes
-CONFERENCE_ID = 1
+CONFERENCE_ID = 2
 CONFERENCE_URL_PREFIXES = {
     1: "2014",
+    2: "2015",
 }
 
 
@@ -202,7 +203,7 @@ INSTALLED_APPS = [
 
     # symposion
     "symposion.conference",
-    #"symposion.cms",
+    #"symposion.cms", # use restcms
     "symposion.boxes",
     "symposion.speakers",
     "symposion.proposals",
@@ -274,8 +275,8 @@ ACCOUNT_USER_DISPLAY = lambda user: user.get_full_name()
 LOGIN_ERROR_URL = reverse_lazy("account_login")
 
 # Need these to be reversed urls, currently breaks if using reverse_lazy
-SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/2014/dashboard/"
-SOCIAL_AUTH_NEW_USER_REDIRECT_URL = "/2014/dashboard/"
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/%s/dashboard/"% CONFERENCE_URL_PREFIXES[CONFERENCE_ID]
+SOCIAL_AUTH_NEW_USER_REDIRECT_URL = "/%s/dashboard/"% CONFERENCE_URL_PREFIXES[CONFERENCE_ID]
 
 SOCIAL_AUTH_ASSOCIATE_BY_MAIL = False
 
@@ -286,7 +287,7 @@ SOCIAL_AUTH_PROTECTED_USER_FIELDS = ['email',]
 
 EMAIL_CONFIRMATION_DAYS = 2
 EMAIL_DEBUG = DEBUG
-DEFAULT_FROM_EMAIL = "SotM JP 2014 <no-reply@stateofthemap.jp>"
+DEFAULT_FROM_EMAIL = "SotM JP committee <no-reply@stateofthemap.jp>"
 
 DEBUG_TOOLBAR_CONFIG = {
     "INTERCEPT_REDIRECTS": False,
