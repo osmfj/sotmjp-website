@@ -14,9 +14,6 @@ def env_or_default(NAME, default):
 # Top level of our source / repository
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__),
                                             os.pardir, os.pardir))
-# Symposion package
-PACKAGE_ROOT = os.path.join(PROJECT_ROOT, "symposion")
-
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
@@ -103,10 +100,7 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, "site_media", "static")
 STATIC_URL = "/%s/site_media/static/" % CONFERENCE_URL_PREFIXES[CONFERENCE_ID]
 
 # Additional directories which hold static files
-STATICFILES_DIRS = [
-    os.path.join(PACKAGE_ROOT, "static"),
-]
-
+STATICFILES_DIRS = []
 
 STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.FileSystemFinder",
@@ -149,7 +143,6 @@ ROOT_URLCONF = 'sotmjp.urls'
 
 TEMPLATE_DIRS = [
     os.path.join(PROJECT_ROOT, "sotmjp/templates"),
-    os.path.join(PACKAGE_ROOT, "templates"),
 ]
 
 TEMPLATE_CONTEXT_PROCESSORS = [
