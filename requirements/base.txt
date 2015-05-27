@@ -10,7 +10,7 @@
 --allow-all-external
 --allow-unverified PIL
 
-Django==1.7.1
+Django==1.7.8
 git+git://github.com/miurahr/symposion.git#egg=symposion
 pinax-theme-bootstrap==5.6.0
 django-user-accounts==1.0
