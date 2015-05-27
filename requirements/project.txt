@@ -7,8 +7,8 @@
 # See http://pip-installer.org/requirement-format.html for more information.
 
 Pillow==2.7.0
-easy-thumbnails==1.2
-html5lib==0.95
+easy-thumbnails==2.2
+html5lib==0.999
 django-social-auth==0.7.23
 
 gondor==1.2.4
