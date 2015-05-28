@@ -3,40 +3,27 @@
 # project specific not listed here use project.txt. You can, of course, update
 # versions of distributions here if needed.
 
---extra-index-url=http://dist.pinaxproject.com/dev/
---extra-index-url=http://dist.pinaxproject.com/alpha/
---extra-index-url=http://dist.pinaxproject.com/fresh-start/
-
 --allow-all-external
 --allow-unverified PIL
 
-Django==1.7.8
-git+git://github.com/miurahr/symposion.git#egg=symposion
+# as same as pinax-project-symposion requirements
+
+Django==1.7.1
 pinax-theme-bootstrap==5.6.0
 django-user-accounts==1.0
 metron==1.3.5
 eventlog==0.8.0
 django-jsonfield==0.9.13
-pinax-utils==1.0b1.dev3
-django-debug-toolbar==0.9.4
-django-model-utils==2.2
-django-mailer==0.2a1
 django-timezones==0.2
 pytz==2014.10
-django-openid==0.3a1
-python-openid==2.2.5
-django_compressor==1.3
-git+git://github.com/caktus/biblion.git@feature/django-1.5#egg=biblion
--e git+git://github.com/shvechikov/python-rtfng.git#egg=python-rtfng
-
 django-taggit==0.12.2
 django-reversion==1.8.5
-markdown==2.5.2
+## django-markitup==2.2.2
+markdown==2.6.2            # original: 2.5.1 depenency for pinax-blog
 django-sitetree==1.2.1
-django-selectable==0.7.0
-django-forms-bootstrap==2.0.3.post1
-django-uni-form==0.9.0
+Pillow==2.6.1
+easy-thumbnails==2.2
+html5lib==0.999
 
-requests==2.0.0
-
-markedit==0.2.dev1
+##git+git://github.com/pinax/symposion.git#egg=symposion
+git+git://github.com/miurahr/symposion.git#egg=symposion
