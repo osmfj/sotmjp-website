@@ -189,7 +189,7 @@ INSTALLED_APPS = [
     "sitetree",
     "taggit",
     "reversion",
-    "biblion",
+    "pinax.blog",
     "social_auth",
     "djangosecure",
     "raven.contrib.django",

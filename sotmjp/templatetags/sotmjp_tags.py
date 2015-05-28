@@ -1,6 +1,6 @@
 from django import template
 
-from biblion.models import Post
+from pinax.blog.models import Post
 
 register = template.Library()
 

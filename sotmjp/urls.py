@@ -31,7 +31,7 @@ urlpatterns = patterns("",
         url(r"^account/associations/", include("social_auth.urls")),
         url(r"^account/", include("account.urls")),
         url(r"^dashboard/", symposion.views.dashboard, name="dashboard"),
-        url(r"^blog/", include("biblion.urls")),
+        url(r"^blog/", include("pynax.blog.urls")),
         url(r"^force500/", lambda request: xxx),
 
         url(r"^registration/", include("sotmjp.registration.urls")),
