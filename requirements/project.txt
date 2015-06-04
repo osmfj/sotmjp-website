@@ -19,13 +19,10 @@ pinax-blog==4.0.2
 django-selectable==0.7.0
 django-forms-bootstrap==2.0.3.post1
 django-uni-form==0.9.0
-requests==2.0.0
 
 markedit==0.2.dev1
 
 django-social-auth==0.7.23
-gondor==1.2.4
-gunicorn==0.17.4
 django-secure==1.0
 raven==3.3.7
 django-constance==0.6
@@ -41,3 +38,11 @@ django_osm_field==0.1.4
 -e git+https://bitbucket.org/miurahr/django-restcms.git@e3b4600#egg=restcms
 
 sphinx-intl
+
+requests==2.6.0
+Markdown==2.6.1
+
+# hosting
+gondor==1.2.5
+gunicorn==19.3.0
+opbeat==2.0.4
