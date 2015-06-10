@@ -6,7 +6,6 @@
 # Put project-specific requirements here.
 # See http://pip-installer.org/requirement-format.html for more information.
 
-pinax-utils==1.0b1.dev3
 django-debug-toolbar==0.9.4
 django-model-utils==2.2
 django-mailer==0.2a1
