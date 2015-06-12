@@ -4,7 +4,7 @@
 --requirement=base.txt
 
 --extra-index-url=http://dist.pinaxproject.com/dev/
---extra-index-url=http://dist.pinaxproject.com/alpha/
+# --extra-index-url=http://dist.pinaxproject.com/alpha/
 # --extra-index-url=http://dist.pinaxproject.com/fresh-start/
 
 --allow-all-external
@@ -15,7 +15,11 @@
 django-debug-toolbar==0.9.4
 django-model-utils==2.2
 -e git+git://github.com/pinax/django-mailer#egg=django-mailer
-django-openid==0.3a1
+
+#  --------pinax dev
+django-openid==0.4.1
+#  --------
+
 python-openid==2.2.5
 django_compressor==1.3
 pinax-blog==4.0.2
