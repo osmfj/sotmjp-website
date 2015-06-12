@@ -3,6 +3,12 @@
 
 --requirement=base.txt
 
+--extra-index-url=http://dist.pinaxproject.com/dev/
+--extra-index-url=http://dist.pinaxproject.com/alpha/
+# --extra-index-url=http://dist.pinaxproject.com/fresh-start/
+
+--allow-all-external
+
 # Put project-specific requirements here.
 # See http://pip-installer.org/requirement-format.html for more information.
 
