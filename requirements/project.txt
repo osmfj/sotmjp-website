@@ -34,7 +34,7 @@ markedit==0.2.dev1
 django-social-auth==0.7.23
 django-secure==1.0
 raven==3.3.7
-django-constance==0.6
+django-constance==0.6 [database]
 django-picklefield==0.3.0
 
 django-redis-cache==0.9.7
