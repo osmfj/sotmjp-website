@@ -44,23 +44,22 @@ ENV DEBUG 1
 # init db for dev
 # in DEBUG mode, it force use sqlite
 #
-RUN python manage.py syncdb --noinput
-RUN python manage.py migrate
-RUN python manage.py loaddata \
-      fixtures/auth_user.json \
-      fixtures/auth_permission.json \
-      fixtures/conference.json \
-      fixtures/database_constance.json \
-      fixtures/boxes.json \
-      fixtures/proposals.json \
-      fixtures/sitetree.json \
-      fixtures/sotmjp.json \
-      fixtures/sponsorship.json \
-      fixtures/schedule.json \
-      fixtures/teams.json \
-      fixtures/restcms_page.json
-
-## next step
+#RUN python manage.py syncdb --noinput
+#RUN python manage.py migrate
+#RUN python manage.py loaddata \
+#      fixtures/auth_user.json \
+#      fixtures/auth_permission.json \
+#      fixtures/conference.json \
+#      fixtures/database_constance.json \
+#      fixtures/boxes.json \
+#      fixtures/proposals.json \
+#      fixtures/sitetree.json \
+#      fixtures/sotmjp.json \
+#      fixtures/sponsorship.json \
+#      fixtures/schedule.json \
+#      fixtures/teams.json \
+#      fixtures/restcms_page.json
+#
 #    python ./manage.py compress --force
 #    ./build-css.sh
 #    python ./manage.py collectstatic --noinput
