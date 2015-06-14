@@ -56,8 +56,8 @@ DATABASES = {
         'PORT': env_var('DB_PORT', default=''),
     }
 }
+
 LANGUAGE_CODE = "ja-jp"
-MARKITUP_FILTER = ('django.contrib.markup.templatetags.markup.textile', {})
 
 INSTALLED_APPS += ['debug_toolbar']
 MIDDLEWARE_CLASSES += ["debug_toolbar.middleware.DebugToolbarMiddleware"]
