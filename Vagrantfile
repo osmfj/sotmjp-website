@@ -29,10 +29,20 @@ $dependency = <<DEPENDENCY
 apt-fast update
 apt-fast install -y devscripts python-virtualenv
 apt-fast install -y postgresql libpq-dev postgresql-server-dev-9.3
-apt-fast install -y python-dev python-pysqlite2 libsqlite3-0
 apt-fast install -y nginx-full
-apt-fast install -y yui-compressor
-apt-fast build-dep -y python-imaging
+apt-fast install -y build-essential make g++ gcc libc6-dev git \
+    curl libcurl3 libcurl3-nss \
+    libssl-dev libyaml-dev libffi-dev \
+    ca-certificates software-properties-common yui-compressor \
+    libpq5 python-pysqlite2 sqlite3 libmysqlclient18 \
+    libpcre3 libxml2 libxslt1.1 \
+    libreadline5 libyaml-0-2\
+    libmysqlclient-dev libsqlite3-dev \
+    libcurl4-openssl-dev libpcre3-dev libxml2-dev libxslt-dev \
+    libreadline-gplv2-dev \
+    python2.7 python2.7-minimal python2.7-dev python-nose python-coverage \
+    libfreetype6-dev \
+    libjpeg-dev zlib1g-dev liblcms2-dev libwebp-dev
 apt-fast install -y exim4
 DEPENDENCY
 
@@ -45,7 +55,7 @@ git clone https://github.com/osmfj/sotmjp-website.git
 cd sotmjp-website
 virtualenv env/sotmjp-website
 . env/sotmjp-website/bin/activate
-pip install -r sotmjp/requirements/production.txt
+pip install -r sotmjp/requirements/dev.txt
 ./manage.py compress --force
 ./build-css.sh
 ./manage.py collectstatic --noinput
@@ -66,16 +76,16 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     # EC2 configuration
     aws.instance_type = "t2.micro"
-    aws.region = "us-west-2"
-    aws.availability_zone= "us-west-2b"
-    aws.security_groups = "web-ssh-rds"
-    aws.subnet_id = "subnet-a007edd7"
-    aws.vpc_id = "vpc-7ead561b"
+    aws.region = Region
+    aws.availability_zone= Availability_zone
+    aws.security_groups = Security_group
+    aws.subnet_id = Subnet_id
+    aws.vpc_id = Vpc_id
     aws.associate_public_ip = True
     aws.tags = {'Name' => 'sotmjp-website'}
 
     # Ubuntu 12.04.01(64bit) LTS (HVM)
-    aws.ami = "ami-3d50120d"
+    aws.ami = "ami-a9e2da99"
     override.ssh.username = "ubuntu"
   end
 
