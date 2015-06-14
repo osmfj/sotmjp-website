@@ -6,7 +6,7 @@ ENV PATH /usr/local/bin:${PATH}
 ## security upgrade and install dependencies
 RUN apt-get update && apt-get upgrade -y --no-install-recommends && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-    make g++ gcc libc6-dev git \
+    build-essential make g++ gcc libc6-dev git \
     curl libcurl3 libcurl3-nss \
     libssl-dev libyaml-dev libffi-dev \
     ca-certificates software-properties-common yui-compressor \
@@ -16,7 +16,8 @@ RUN apt-get update && apt-get upgrade -y --no-install-recommends && \
     libmysqlclient-dev libsqlite3-dev libpq-dev \
     libcurl4-openssl-dev libpcre3-dev libxml2-dev libxslt-dev \
     libreadline-gplv2-dev \
-    debhelper tk-dev python-all-dev  python-tk python-nose libfreetype6-dev \
+    python2.7 python2.7-minimal python2.7-dev python-nose python-coverage \
+    libfreetype6-dev \
     libjpeg-dev zlib1g-dev liblcms2-dev libwebp-dev && \
     apt-get clean
 
