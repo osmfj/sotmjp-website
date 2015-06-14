@@ -35,15 +35,11 @@ To get running locally
 
   (For production, install -r requirements/project.txt).
 
-* Copy ``sotmjp/settings/local.py-example`` to ``sotmjp/settings/local.py``.
-* Edit ``sotmjp/settings/local.py`` according to the comments. Note that you
-  `will` have to edit it; by default everything there is commented out.
-
 * Setup the database::
 
-  for development just do:
+  for development:
 
-    $ ./init_db.sh
+    $ env DEBUG=1 ./init_db.sh
 
   for staging/production
 
@@ -53,16 +49,21 @@ To get running locally
 
     $ ./manage.py createsuperuser
 
-* If you have ssh access to the staging server, copy the database and media::
-
-    $ fab staging get_db_dump:sotmjp2015_staging
-    $ fab staging get_media
-
-  Change ``sotmjp2015`` in that first command to the name of your local database.
-
 * Run local server::
 
     $ ./manage.py runserver
+
+For run for development with docker image
+-------------------------
+
+* Prepare docker enviroment and docker-compose
+  for example in Ubuntu 14.04.02(LTS) 64bit,
+
+    $ curl -sL https://get.docker.com/ | bash -
+
+* Run docker image (need to connect internet)
+
+    $ docker run -it miurahr/sotmjp-website bash -l
 
 For production
 --------------
