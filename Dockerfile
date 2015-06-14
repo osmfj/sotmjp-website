@@ -32,9 +32,10 @@ RUN mkdir -p /opt/pyapp/sotmjp-website
 COPY . /opt/pyapp/sotmjp-website/
 WORKDIR /opt/pyapp/sotmjp-website
 
-RUN pip install -r requirements/dev.txt && \
-    python ./manage.py compress --force && \
-    ./build-css.sh && \
-    python ./manage.py collectstatic --noinput
+RUN pip install -r requirements/dev.txt
+#
+#    python ./manage.py compress --force
+#    ./build-css.sh
+#    python ./manage.py collectstatic --noinput
 
 EXPOSE 8000
