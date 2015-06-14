@@ -8,7 +8,7 @@
 
 # as same as pinax-project-symposion requirements
 
-Django==1.7.1
+Django>=1.8.0              # originally suggest 1.7.1 but use django LTS
 pinax-theme-bootstrap==5.7.5
 django-user-accounts==1.0
 metron==1.3.5
