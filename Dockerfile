@@ -22,7 +22,7 @@ RUN apt-get update && apt-get upgrade -y --no-install-recommends && \
 
 ## install pip and node/npm
 RUN curl -sL https://raw.github.com/pypa/pip/master/contrib/get-pip.py | python - && \
-    curl -sL https://deb.nodesource.com/setup | bash -
+    curl -sL https://deb.nodesource.com/setup | bash - && apt-get install -y nodejs
 
 ## workaround and update npm
 RUN ln -s /usr/include/freetype2 /usr/local/include/freetype && \
