@@ -17,7 +17,7 @@ RUN apt-get update && apt-get upgrade -y --no-install-recommends && \
     libcurl4-openssl-dev libpcre3-dev libxml2-dev libxslt-dev \
     libreadline-gplv2-dev \
     python2.7 python2.7-minimal python2.7-dev python-nose python-coverage \
-    libfreetype6-dev \
+    python-pysqlite2 libfreetype6-dev \
     libjpeg-dev zlib1g-dev liblcms2-dev libwebp-dev && \
     apt-get clean
 
@@ -39,7 +39,7 @@ WORKDIR /opt/pyapp/sotmjp-website
 RUN mkdir -p /root/.pip && cp pip.conf /root/.pip/pip.conf
 RUN pip install -r requirements/dev.txt
 
-ENV DEBUG 1
+ENV DEBUG True
 
 # init db for dev
 # in DEBUG mode, it force use sqlite
