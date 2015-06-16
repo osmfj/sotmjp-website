@@ -80,8 +80,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     aws.availability_zone= Availability_zone
     aws.security_groups = Security_group
     aws.subnet_id = Subnet_id
-    aws.vpc_id = Vpc_id
-    aws.associate_public_ip = True
+    #aws.vpc_id = Vpc_id
+    aws.associate_public_ip = true
     aws.tags = {'Name' => 'sotmjp-website'}
 
     # Ubuntu 12.04.01(64bit) LTS (HVM)
