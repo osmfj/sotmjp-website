@@ -35,7 +35,7 @@ markedit==0.2.dev1
 django-secure==1.0
 raven==3.3.7
 psycopg2==2.6
-django-constance[database]==0.6
+django-constance-updated[database]==1.0.1
 django-picklefield==0.3.1
 
 django-redis-cache==0.9.7
