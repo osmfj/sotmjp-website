@@ -196,7 +196,7 @@ INSTALLED_APPS = [
     "constance",
     "constance.backends.database",
     "redis_cache",
-    "south",
+    # "south",  # don't use for Django >=1.7
     "uni_form",
     "gunicorn",
     "selectable",
