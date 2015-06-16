@@ -6,7 +6,7 @@ ENV PATH /usr/local/bin:${PATH}
 ## security upgrade and install dependencies
 RUN apt-get update && apt-get upgrade -y --no-install-recommends && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-    build-essential make g++ gcc libc6-dev git \
+    build-essential make g++ gcc libc6-dev git vim \
     curl libcurl3 libcurl3-nss \
     libssl-dev libyaml-dev libffi-dev \
     ca-certificates software-properties-common yui-compressor \
