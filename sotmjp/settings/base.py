@@ -133,10 +133,10 @@ MIDDLEWARE_CLASSES = [
     #"django.middleware.locale.LocaleMiddleware",
     "account.middleware.LocaleMiddleware",
     "django.middleware.common.CommonMiddleware",
-    "django_openid.consumer.SessionConsumer",
+    #"django_openid.consumer.SessionConsumer",
     "django.contrib.messages.middleware.MessageMiddleware",
     "reversion.middleware.RevisionMiddleware",
-    "social_auth.middleware.SocialAuthExceptionMiddleware",
+    #"social_auth.middleware.SocialAuthExceptionMiddleware",
     # "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
@@ -155,7 +155,7 @@ TEMPLATE_CONTEXT_PROCESSORS = [
     "django.core.context_processors.tz",
     "django.core.context_processors.request",
     "django.contrib.messages.context_processors.messages",
-    "social_auth.context_processors.social_auth_backends",
+    #"social_auth.context_processors.social_auth_backends",
     "pinax_utils.context_processors.settings",
     "account.context_processors.account",
     "symposion.reviews.context_processors.reviews",
@@ -181,16 +181,15 @@ INSTALLED_APPS = [
     # external
     "compressor",
     "mailer",
-    "django_openid",
+    #"django_openid",
     "timezones",
     "metron",
     "easy_thumbnails",
-    "account",
     "sitetree",
     "taggit",
     "reversion",
     "pinax.blog",
-    "social_auth",
+    #"social_auth",
     "djangosecure",
     "raven.contrib.django",
     "constance",
@@ -249,22 +248,22 @@ AUTHENTICATION_BACKENDS = [
     "symposion.teams.backends.TeamPermissionsBackend",
 
     # Social Auth Backends
-    "social_auth.backends.google.GoogleBackend",
-    "social_auth.backends.yahoo.YahooBackend",
-    "social_auth.backends.OpenIDBackend",
+    #"social_auth.backends.google.GoogleBackend",
+    #"social_auth.backends.yahoo.YahooBackend",
+    #"social_auth.backends.OpenIDBackend",
 
     # Django User Accounts
     "account.auth_backends.EmailAuthenticationBackend",
 ]
 
-SOCIAL_AUTH_PIPELINE = [
-    "social_auth.backends.pipeline.social.social_auth_user",
-    "social_auth.backends.pipeline.user.get_username",
-    "symposion.social_auth.pipeline.user.create_user",
-    "social_auth.backends.pipeline.social.associate_user",
-    "social_auth.backends.pipeline.social.load_extra_data",
-    "social_auth.backends.pipeline.user.update_user_details",
-]
+#SOCIAL_AUTH_PIPELINE = [
+#    "social_auth.backends.pipeline.social.social_auth_user",
+#    "social_auth.backends.pipeline.user.get_username",
+#    "symposion.social_auth.pipeline.user.create_user",
+#    "social_auth.backends.pipeline.social.associate_user",
+#    "social_auth.backends.pipeline.social.load_extra_data",
+#    "social_auth.backends.pipeline.user.update_user_details",
+#]
 
 LOGIN_URL = reverse_lazy("account_login")
 
@@ -275,15 +274,15 @@ ACCOUNT_USER_DISPLAY = lambda user: user.get_full_name()
 LOGIN_ERROR_URL = reverse_lazy("account_login")
 
 # Need these to be reversed urls, currently breaks if using reverse_lazy
-SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/%s/dashboard/"% CONFERENCE_URL_PREFIXES[CONFERENCE_ID]
-SOCIAL_AUTH_NEW_USER_REDIRECT_URL = "/%s/dashboard/"% CONFERENCE_URL_PREFIXES[CONFERENCE_ID]
+#SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/%s/dashboard/"% CONFERENCE_URL_PREFIXES[CONFERENCE_ID]
+#SOCIAL_AUTH_NEW_USER_REDIRECT_URL = "/%s/dashboard/"% CONFERENCE_URL_PREFIXES[CONFERENCE_ID]
 
-SOCIAL_AUTH_ASSOCIATE_BY_MAIL = False
+#SOCIAL_AUTH_ASSOCIATE_BY_MAIL = False
 
 # Don't clobber User.email if someone associates a social account that
 # happens to have a different email address
 # http://django-social-auth.readthedocs.org/en/latest/configuration.html#miscellaneous-settings
-SOCIAL_AUTH_PROTECTED_USER_FIELDS = ['email',]
+#SOCIAL_AUTH_PROTECTED_USER_FIELDS = ['email',]
 
 EMAIL_CONFIRMATION_DAYS = 2
 EMAIL_DEBUG = DEBUG
