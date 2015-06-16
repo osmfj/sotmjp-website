@@ -13,17 +13,12 @@ import symposion.views
 import sotmjp.views
 import sotmjp.profile.views
 
-# from pinax.apps.account.openid_consumer import PinaxConsumer
-
-
 URL_PREFIX = settings.CONFERENCE_URL_PREFIXES[settings.CONFERENCE_ID]
-
 
 urlpatterns = patterns("",
     url(r"^$", RedirectView.as_view(url="/%s/" % URL_PREFIX)),
     url(r"^%s/" % URL_PREFIX, include(patterns("",
-        url(r"^$", TemplateView.as_view(template_name="homepage.html"),
-            name="home"),
+        url(r"^$", TemplateView.as_view(template_name="homepage.html"), name="home"),
         url(r"^admin/", include(admin.site.urls)),
         url(r"^account/signup/$", sotmjp.profile.views.SignupView.as_view(), name="account_signup"),
         url(r"^account/login/$", symposion.views.LoginView.as_view(), name="account_login"),
@@ -32,16 +27,11 @@ urlpatterns = patterns("",
         url(r"^account/", include("account.urls")),
         url(r"^dashboard/", symposion.views.dashboard, name="dashboard"),
         url(r"^blog/", include("pynax.blog.urls")),
-        url(r"^force500/", lambda request: xxx),
-
         url(r"^registration/", include("sotmjp.registration.urls")),
 
         url(r"^venue/$", TemplateView.as_view(template_name="venue/detail.html"), name="venue_detail"),
 
-        url(r"^schedule/", include("sotmjp.schedule.urls")),
         url(r"^profile/", include("sotmjp.profile.urls")),
-        #url(r"^tutorials/", include("sotmjp.tutorials.urls")),
-
         url(r"^speaker/", include("symposion.speakers.urls")),
         url(r"^proposals/", include("symposion.proposals.urls")),
         url(r"^reviews/", include("symposion.reviews.urls")),

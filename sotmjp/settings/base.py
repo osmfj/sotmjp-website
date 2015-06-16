@@ -195,7 +195,7 @@ INSTALLED_APPS = [
     "raven.contrib.django",
     "constance",
     "constance.backends.database",
-    "redis_cache",
+    #"redis_cache",
     # "south",  # don't use for Django >=1.7
     "uni_form",
     "gunicorn",
@@ -209,7 +209,7 @@ INSTALLED_APPS = [
     "symposion.proposals",
     "symposion.reviews",
     "symposion.teams",
-    "symposion.schedule",
+    #"symposion.schedule",
 
     # custom
     "markedit",
