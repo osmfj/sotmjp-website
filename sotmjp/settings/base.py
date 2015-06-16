@@ -208,7 +208,7 @@ INSTALLED_APPS = [
     "symposion.proposals",
     "symposion.reviews",
     "symposion.teams",
-    #"symposion.schedule",
+    "symposion.schedule",
 
     # custom
     "markedit",
@@ -217,9 +217,7 @@ INSTALLED_APPS = [
     "restcms",
     "sotmjp.registration",
     "sotmjp.sponsorship",
-    "sotmjp.schedule",
     "sotmjp.profile",
-    #"sotmjp.tutorials",
     "leaflet",
     "osm_field",
 ]
