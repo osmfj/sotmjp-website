@@ -25,5 +25,4 @@ Pillow==2.6.1
 easy-thumbnails==2.2
 html5lib==0.999
 
-##git+git://github.com/pinax/symposion.git#egg=symposion
-git+git://github.com/miurahr/symposion.git@test-improvements#egg=symposion
+git+git://github.com/miurahr/symposion.git@sotmjp#egg=symposion
