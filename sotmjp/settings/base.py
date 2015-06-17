@@ -79,6 +79,8 @@ LANGUAGES = (
     ('ja', gettext('Japanese')),
 )
 
+SYMPOSION_SHOW_LANGUAGE_SELECTOR = True
+
 LOCALE_PATHS = [os.path.join(PROJECT_ROOT, "locale")]
 
 # Absolute path to the directory that holds media - this is files uploaded
