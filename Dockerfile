@@ -31,8 +31,9 @@ RUN ln -s /usr/include/freetype2 /usr/local/include/freetype && \
     npm install -g less
 
 ## install website source
-RUN mkdir -p /opt/pyapp/sotmjp-website
-COPY . /opt/pyapp/sotmjp-website/
+RUN mkdir -p /opt/pyapp/
+WORKDIR /opt/pyapp
+RUN git clone https://github.com/osmfj/sotmjp-website.git
 WORKDIR /opt/pyapp/sotmjp-website
 
 ## install requirements for dev
@@ -62,5 +63,8 @@ RUN python manage.py loaddata \
 RUN python ./manage.py compress --force
 RUN ./build-css.sh
 RUN python ./manage.py collectstatic --noinput
+
+ENTRYPOINT ["python", 'manage.py"]
+CMD ["runserver", "0.0.0.0:8000"]
 
 EXPOSE 8000
