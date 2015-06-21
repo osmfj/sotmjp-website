@@ -1,7 +1,7 @@
 [
 {
     "pk": 1, 
-    "model": "sponsorship.sponsorlevel", 
+    "model": "symposion_sponsorship.sponsorlevel", 
     "fields": {
         "conference": 1, 
         "description": "", 
@@ -12,7 +12,7 @@
 },
 {
     "pk": 2, 
-    "model": "sponsorship.sponsorlevel", 
+    "model": "symposion_sponsorship.sponsorlevel", 
     "fields": {
         "conference": 1, 
         "description": "", 
@@ -23,7 +23,7 @@
 },
 {
     "pk": 3, 
-    "model": "sponsorship.sponsorlevel", 
+    "model": "symposion_sponsorship.sponsorlevel", 
     "fields": {
         "conference": 1, 
         "description": "", 
@@ -34,7 +34,7 @@
 },
 {
     "pk": 4, 
-    "model": "sponsorship.sponsorlevel", 
+    "model": "symposion_sponsorship.sponsorlevel", 
     "fields": {
         "conference": 1, 
         "description": "", 
@@ -45,7 +45,7 @@
 },
 {
     "pk": 5, 
-    "model": "sponsorship.sponsorlevel", 
+    "model": "symposion_sponsorship.sponsorlevel", 
     "fields": {
         "conference": 2, 
         "description": "", 
@@ -56,7 +56,7 @@
 },
 {
     "pk": 6, 
-    "model": "sponsorship.sponsorlevel", 
+    "model": "symposion_sponsorship.sponsorlevel", 
     "fields": {
         "conference": 2, 
         "description": "", 
@@ -67,7 +67,7 @@
 },
 {
     "pk": 7, 
-    "model": "sponsorship.sponsorlevel", 
+    "model": "symposion_sponsorship.sponsorlevel", 
     "fields": {
         "conference": 2, 
         "description": "", 
@@ -78,7 +78,7 @@
 },
 {
     "pk": 8, 
-    "model": "sponsorship.sponsorlevel", 
+    "model": "symposion_sponsorship.sponsorlevel", 
     "fields": {
         "conference": 2, 
         "description": "", 
@@ -89,7 +89,7 @@
 },
 {
     "pk": 1, 
-    "model": "sponsorship.benefit", 
+    "model": "symposion_sponsorship.benefit", 
     "fields": {
         "type": "simple", 
         "name": "Company Name", 
@@ -99,7 +99,7 @@
 },
 {
     "pk": 2, 
-    "model": "sponsorship.benefit", 
+    "model": "symposion_sponsorship.benefit", 
     "fields": {
         "type": "weblogo", 
         "name": "Web logo", 
@@ -109,7 +109,7 @@
 },
 {
     "pk": 3, 
-    "model": "sponsorship.benefit", 
+    "model": "symposion_sponsorship.benefit", 
     "fields": {
         "type": "text", 
         "name": "Print Description", 
@@ -119,7 +119,7 @@
 },
 {
     "pk": 4, 
-    "model": "sponsorship.benefit", 
+    "model": "symposion_sponsorship.benefit", 
     "fields": {
         "type": "simple", 
         "name": "Company URL", 
@@ -129,7 +129,7 @@
 },
 {
     "pk": 5, 
-    "model": "sponsorship.benefit", 
+    "model": "symposion_sponsorship.benefit", 
     "fields": {
         "type": "file", 
         "name": "Advertisement", 
@@ -139,7 +139,7 @@
 },
 {
     "pk": 6, 
-    "model": "sponsorship.benefit", 
+    "model": "symposion_sponsorship.benefit", 
     "fields": {
         "type": "file", 
         "name": "Print logo", 
@@ -149,7 +149,7 @@
 },
 {
     "pk": 7, 
-    "model": "sponsorship.benefit", 
+    "model": "symposion_sponsorship.benefit", 
     "fields": {
         "type": "text", 
         "name": "Company Description", 
@@ -159,7 +159,7 @@
 },
 {
     "pk": 1, 
-    "model": "sponsorship.benefitlevel", 
+    "model": "symposion_sponsorship.benefitlevel", 
     "fields": {
         "other_limits": "", 
         "benefit": 1, 
@@ -169,7 +169,7 @@
 },
 {
     "pk": 2, 
-    "model": "sponsorship.benefitlevel", 
+    "model": "symposion_sponsorship.benefitlevel", 
     "fields": {
         "other_limits": "", 
         "benefit": 1, 
@@ -179,7 +179,7 @@
 },
 {
     "pk": 3, 
-    "model": "sponsorship.benefitlevel", 
+    "model": "symposion_sponsorship.benefitlevel", 
     "fields": {
         "other_limits": "", 
         "benefit": 1, 
@@ -189,7 +189,7 @@
 },
 {
     "pk": 8, 
-    "model": "sponsorship.benefitlevel", 
+    "model": "symposion_sponsorship.benefitlevel", 
     "fields": {
         "other_limits": "", 
         "benefit": 2, 
@@ -199,7 +199,7 @@
 },
 {
     "pk": 9, 
-    "model": "sponsorship.benefitlevel", 
+    "model": "symposion_sponsorship.benefitlevel", 
     "fields": {
         "other_limits": "", 
         "benefit": 2, 
@@ -209,7 +209,7 @@
 },
 {
     "pk": 12, 
-    "model": "sponsorship.benefitlevel", 
+    "model": "symposion_sponsorship.benefitlevel", 
     "fields": {
         "other_limits": "", 
         "benefit": 3, 
@@ -219,7 +219,7 @@
 },
 {
     "pk": 13, 
-    "model": "sponsorship.benefitlevel", 
+    "model": "symposion_sponsorship.benefitlevel", 
     "fields": {
         "other_limits": "", 
         "benefit": 3, 
@@ -229,7 +229,7 @@
 },
 {
     "pk": 14, 
-    "model": "sponsorship.benefitlevel", 
+    "model": "symposion_sponsorship.benefitlevel", 
     "fields": {
         "other_limits": "", 
         "benefit": 3, 
@@ -239,7 +239,7 @@
 },
 {
     "pk": 17, 
-    "model": "sponsorship.benefitlevel", 
+    "model": "symposion_sponsorship.benefitlevel", 
     "fields": {
         "other_limits": "", 
         "benefit": 4, 
@@ -249,7 +249,7 @@
 },
 {
     "pk": 18, 
-    "model": "sponsorship.benefitlevel", 
+    "model": "symposion_sponsorship.benefitlevel", 
     "fields": {
         "other_limits": "", 
         "benefit": 4, 
@@ -259,7 +259,7 @@
 },
 {
     "pk": 19, 
-    "model": "sponsorship.benefitlevel", 
+    "model": "symposion_sponsorship.benefitlevel", 
     "fields": {
         "other_limits": "", 
         "benefit": 4, 
@@ -269,7 +269,7 @@
 },
 {
     "pk": 23, 
-    "model": "sponsorship.benefitlevel", 
+    "model": "symposion_sponsorship.benefitlevel", 
     "fields": {
         "other_limits": "1/4\u30da\u30fc\u30b8", 
         "benefit": 5, 
@@ -279,7 +279,7 @@
 },
 {
     "pk": 24, 
-    "model": "sponsorship.benefitlevel", 
+    "model": "symposion_sponsorship.benefitlevel", 
     "fields": {
         "other_limits": "3cm x 10cm", 
         "benefit": 5, 
@@ -289,7 +289,7 @@
 },
 {
     "pk": 25, 
-    "model": "sponsorship.benefitlevel", 
+    "model": "symposion_sponsorship.benefitlevel", 
     "fields": {
         "other_limits": "2.5cm x 2.5cm", 
         "benefit": 5, 
@@ -299,7 +299,7 @@
 },
 {
     "pk": 28, 
-    "model": "sponsorship.benefitlevel", 
+    "model": "symposion_sponsorship.benefitlevel", 
     "fields": {
         "other_limits": "5cm x 5cm", 
         "benefit": 6, 
@@ -309,7 +309,7 @@
 },
 {
     "pk": 29, 
-    "model": "sponsorship.benefitlevel", 
+    "model": "symposion_sponsorship.benefitlevel", 
     "fields": {
         "other_limits": "3cm x 3cm", 
         "benefit": 6, 
@@ -319,7 +319,7 @@
 },
 {
     "pk": 32, 
-    "model": "sponsorship.benefitlevel", 
+    "model": "symposion_sponsorship.benefitlevel", 
     "fields": {
         "other_limits": "", 
         "benefit": 7, 
@@ -329,7 +329,7 @@
 },
 {
     "pk": 33, 
-    "model": "sponsorship.benefitlevel", 
+    "model": "symposion_sponsorship.benefitlevel", 
     "fields": {
         "other_limits": "", 
         "benefit": 7, 
@@ -339,7 +339,7 @@
 },
 {
     "pk": 34, 
-    "model": "sponsorship.benefitlevel", 
+    "model": "symposion_sponsorship.benefitlevel", 
     "fields": {
         "other_limits": "", 
         "benefit": 7, 

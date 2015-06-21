@@ -1,7 +1,7 @@
 [
 {
     "pk": 1, 
-    "model": "conference.conference", 
+    "model": "symposion_conference.conference", 
     "fields": {
         "timezone": "Asia/Tokyo", 
         "start_date": "2014-12-13", 
@@ -11,7 +11,7 @@
 },
 {
     "pk": 1, 
-    "model": "conference.section", 
+    "model": "symposion_conference.section", 
     "fields": {
         "conference": 1, 
         "start_date": "2014-12-13", 
@@ -22,7 +22,7 @@
 },
 {
     "pk": 2, 
-    "model": "conference.section", 
+    "model": "symposion_conference.section", 
     "fields": {
         "conference": 1, 
         "start_date": "2014-12-13", 
@@ -33,7 +33,7 @@
 },
 {
     "pk": 3, 
-    "model": "conference.section", 
+    "model": "symposion_conference.section", 
     "fields": {
         "conference": 1, 
         "start_date": null, 
@@ -44,7 +44,7 @@
 },
 {
     "pk": 4, 
-    "model": "conference.section", 
+    "model": "symposion_conference.section", 
     "fields": {
         "conference": 1, 
         "start_date": "2014-12-13", 
@@ -55,7 +55,7 @@
 },
 {
     "pk": 5, 
-    "model": "conference.section", 
+    "model": "symposion_conference.section", 
     "fields": {
         "conference": 1, 
         "start_date": null, 
@@ -66,7 +66,7 @@
 },
 {
     "pk": 2, 
-    "model": "conference.conference", 
+    "model": "symposion_conference.conference", 
     "fields": {
         "timezone": "Asia/Tokyo", 
         "start_date": "2015-10-31", 
@@ -76,7 +76,7 @@
 },
 {
     "pk": 6, 
-    "model": "conference.section", 
+    "model": "symposion_conference.section", 
     "fields": {
         "conference": 2, 
         "start_date": "2015-10-31", 
@@ -87,7 +87,7 @@
 },
 {
     "pk": 7, 
-    "model": "conference.section", 
+    "model": "symposion_conference.section", 
     "fields": {
         "conference": 2, 
         "start_date": "2015-10-31", 
@@ -98,7 +98,7 @@
 },
 {
     "pk": 8, 
-    "model": "conference.section", 
+    "model": "symposion_conference.section", 
     "fields": {
         "conference": 2, 
         "start_date": null, 
@@ -109,7 +109,7 @@
 },
 {
     "pk": 9, 
-    "model": "conference.section", 
+    "model": "symposion_conference.section", 
     "fields": {
         "conference": 2, 
         "start_date": "2015-10-31", 
@@ -120,7 +120,7 @@
 },
 {
     "pk": 10, 
-    "model": "conference.section", 
+    "model": "symposion_conference.section", 
     "fields": {
         "conference": 2, 
         "start_date": null, 
