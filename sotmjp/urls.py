@@ -39,7 +39,7 @@ urlpatterns = patterns("",
         url(r"^schedule/", include("symposion.schedule.urls")),
         url(r"^conference/", include("symposion.conference.urls")),
 
-        url(r"^sponsors/", include("sotmjp.sponsorship.urls")),
+        url(r"^sponsors/", include("symposion.sponsorship.urls")),
 
         url(r"^boxes/", include("symposion.boxes.urls")),
         url(r"^sitemap/", TemplateView.as_view(template_name="static/sitemap.html"), name="sitemap"),
