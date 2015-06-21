@@ -158,7 +158,7 @@ TEMPLATE_CONTEXT_PROCESSORS = [
     "django.core.context_processors.request",
     "django.contrib.messages.context_processors.messages",
     #"social_auth.context_processors.social_auth_backends",
-    "pinax_utils.context_processors.settings",
+    #"pinax_utils.context_processors.settings",
     "account.context_processors.account",
     "symposion.reviews.context_processors.reviews",
     "constance.context_processors.config",
@@ -181,6 +181,7 @@ INSTALLED_APPS = [
     "django_forms_bootstrap",
 
     # external
+    "account",
     "compressor",
     "mailer",
     #"django_openid",
@@ -216,7 +217,6 @@ INSTALLED_APPS = [
     # custom
     "markedit",
     "sotmjp",
-    "sotmjp.account",
     "restcms",
     "sotmjp.registration",
     "sotmjp.profile",

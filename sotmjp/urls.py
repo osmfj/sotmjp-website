@@ -26,7 +26,7 @@ urlpatterns = patterns("",
         #url(r"^account/associations/", include("social_auth.urls")),
         url(r"^account/", include("account.urls")),
         url(r"^dashboard/", symposion.views.dashboard, name="dashboard"),
-        url(r"^blog/", include("pynax.blog.urls")),
+        url(r"^blog/", include("pinax.blog.urls")),
         url(r"^registration/", include("sotmjp.registration.urls")),
 
         url(r"^venue/$", TemplateView.as_view(template_name="venue/detail.html"), name="venue_detail"),
@@ -44,7 +44,6 @@ urlpatterns = patterns("",
         url(r"^boxes/", include("symposion.boxes.urls")),
         url(r"^sitemap/", TemplateView.as_view(template_name="static/sitemap.html"), name="sitemap"),
         url(r'^selectable/', include('selectable.urls')),
-        url(r"^change_language/", symposion.views.change_language, name="change_language"),
         url('program_export/', sotmjp.views.program_export, name='program_export'),
 
 

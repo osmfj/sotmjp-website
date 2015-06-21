@@ -1,4 +1,4 @@
-from django.conf.urls import url
+from django.conf.urls import url, patterns
 
 
 urlpatterns = patterns("sotmjp.profile.views",
