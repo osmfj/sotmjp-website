@@ -28,47 +28,7 @@
     "model": "database.constance", 
     "fields": {
         "value": "gAJYAAAAAC4=", 
-        "key": "CTE_TUTORIAL_DATA_URL"
-    }
-},
-{
-    "pk": 5, 
-    "model": "database.constance", 
-    "fields": {
-        "value": "gAJYAAAAAC4=", 
         "key": "REGISTRATION_URL"
-    }
-},
-{
-    "pk": 6, 
-    "model": "database.constance", 
-    "fields": {
-        "value": "gAJYAAAAAC4=", 
-        "key": "CTE_SECRET"
-    }
-},
-{
-    "pk": 7, 
-    "model": "database.constance", 
-    "fields": {
-        "value": "gAJYAAAAAC4=", 
-        "key": "CTE_BASICAUTH_PASS"
-    }
-},
-{
-    "pk": 8, 
-    "model": "database.constance", 
-    "fields": {
-        "value": "gAJYAAAAAC4=", 
-        "key": "CTE_BASICAUTH_USER"
-    }
-},
-{
-    "pk": 9, 
-    "model": "database.constance", 
-    "fields": {
-        "value": false, 
-        "key": "SHOW_LANGUAGE_SELECTOR"
     }
 }
 ]

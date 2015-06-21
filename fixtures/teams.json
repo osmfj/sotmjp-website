@@ -1,6 +1,6 @@
 [
 {
-    "pk": 4, 
+    "pk": 1, 
     "model": "teams.team", 
     "fields": {
         "description": "\u30dc\u30e9\u30f3\u30c6\u30a3\u30a2\u3059\u308b\u4eba\u306e\u96c6\u307e\u308a", 
@@ -13,26 +13,16 @@
     }
 },
 {
-    "pk": 5, 
+    "pk": 2,
     "model": "teams.team", 
     "fields": {
         "description": "", 
         "created": "2013-07-09T11:34:02.444", 
-        "manager_permissions": [
-            266, 
-            268, 
-            267, 
-            269
-        ], 
+        "manager_permissions": [],
         "name": "\u8b1b\u6f14\u30ec\u30d3\u30e5\u30a2\u30fc", 
         "access": "application", 
         "slug": "talk-reviewers", 
-        "permissions": [
-            270, 
-            271, 
-            272, 
-            273
-        ]
+        "permissions": []
     }
 }
 ]

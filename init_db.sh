@@ -17,7 +17,6 @@ python manage.py migrate
 
 python manage.py loaddata \
   fixtures/auth_user.json \
-  fixtures/auth_permission.json \
   fixtures/conference.json \
   fixtures/database_constance.json \
   fixtures/boxes.json \
