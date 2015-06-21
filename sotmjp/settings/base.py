@@ -79,8 +79,6 @@ LANGUAGES = (
     ('ja', gettext('Japanese')),
 )
 
-SYMPOSION_SHOW_LANGUAGE_SELECTOR = True
-
 LOCALE_PATHS = [os.path.join(PROJECT_ROOT, "locale")]
 
 # Absolute path to the directory that holds media - this is files uploaded
@@ -228,7 +226,16 @@ FIXTURE_DIRS = [
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
+# for debug
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+# for production
+#EMAIL_BACKEND = "mailer.backend.DbBackend"
+EMAIL_HOST          = 'smtp.gmail.com'
+EMAIL_HOST_PASSWORD = 'tester@@abcd'
+EMAIL_HOST_USER     = 'tester.abcd@gmail.com'
+EMAIL_PORT          = 587
+EMAIL_USE_TLS       = True
 
 ACCOUNT_OPEN_SIGNUP = True
 ACCOUNT_USE_OPENID = False
