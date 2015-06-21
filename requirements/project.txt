@@ -3,10 +3,6 @@
 
 --requirement=base.txt
 
---extra-index-url=http://dist.pinaxproject.com/dev/
-# --extra-index-url=http://dist.pinaxproject.com/alpha/
-# --extra-index-url=http://dist.pinaxproject.com/fresh-start/
-
 --allow-all-external
 
 # Put project-specific requirements here.
@@ -16,11 +12,7 @@ django-debug-toolbar==1.3.2
 django-model-utils==2.2
 -e git+git://github.com/pinax/django-mailer#egg=django-mailer
 
-#  --------pinax dev
-#django-openid==0.4.1
-#  --------
-
-#python-openid==2.2.5
+python-openid==2.2.5
 django_compressor==1.5
 pinax-blog==4.0.2
 -e git+git://github.com/shvechikov/python-rtfng.git#egg=python-rtfng
@@ -31,7 +23,7 @@ django-uni-form==0.9.0
 
 markedit==0.2.dev1
 
-#django-social-auth==0.7.23
+django-social-auth==0.7.28
 django-secure==1.0
 raven==3.3.7
 psycopg2==2.6
@@ -41,7 +33,6 @@ django-picklefield==0.3.1
 django-redis-cache==0.9.7
 redis==2.7.5
 hiredis==0.1.1
-#South==0.8.1
 
 django-leaflet==0.14.1
 django_osm_field==0.1.4
