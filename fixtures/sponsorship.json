@@ -1,6 +1,6 @@
 [
 {
-    "pk": 3, 
+    "pk": 1, 
     "model": "sponsorship.sponsorlevel", 
     "fields": {
         "conference": 1, 
@@ -11,7 +11,7 @@
     }
 },
 {
-    "pk": 4, 
+    "pk": 2, 
     "model": "sponsorship.sponsorlevel", 
     "fields": {
         "conference": 1, 
@@ -22,7 +22,7 @@
     }
 },
 {
-    "pk": 5, 
+    "pk": 3, 
     "model": "sponsorship.sponsorlevel", 
     "fields": {
         "conference": 1, 
@@ -33,7 +33,7 @@
     }
 },
 {
-    "pk": 7, 
+    "pk": 4, 
     "model": "sponsorship.sponsorlevel", 
     "fields": {
         "conference": 1, 
@@ -41,6 +41,50 @@
         "cost": 0, 
         "name": "\u30e1\u30c7\u30a3\u30a2\u30b9\u30dd\u30f3\u30b5\u30fc", 
         "order": 6
+    }
+},
+{
+    "pk": 5, 
+    "model": "sponsorship.sponsorlevel", 
+    "fields": {
+        "conference": 2, 
+        "description": "", 
+        "cost": 100000, 
+        "name": "\u30b4\u30fc\u30eb\u30c9", 
+        "order": 1
+    }
+},
+{
+    "pk": 6, 
+    "model": "sponsorship.sponsorlevel", 
+    "fields": {
+        "conference": 2, 
+        "description": "", 
+        "cost": 50000, 
+        "name": "\u30b7\u30eb\u30d0\u30fc", 
+        "order": 2
+    }
+},
+{
+    "pk": 7, 
+    "model": "sponsorship.sponsorlevel", 
+    "fields": {
+        "conference": 2, 
+        "description": "", 
+        "cost": 5000, 
+        "name": "\u500b\u4eba\u30b9\u30dd\u30f3\u30b5\u30fc", 
+        "order": 3
+    }
+},
+{
+    "pk": 8, 
+    "model": "sponsorship.sponsorlevel", 
+    "fields": {
+        "conference": 2, 
+        "description": "", 
+        "cost": 0, 
+        "name": "\u30e1\u30c7\u30a3\u30a2\u30b9\u30dd\u30f3\u30b5\u30fc", 
+        "order": 4
     }
 },
 {

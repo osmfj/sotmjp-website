@@ -63,5 +63,70 @@
         "end_date": null, 
         "slug": "open-spaces"
     }
+},
+{
+    "pk": 2, 
+    "model": "conference.conference", 
+    "fields": {
+        "timezone": "Asia/Tokyo", 
+        "start_date": "2015-10-31", 
+        "end_date": "2015-10-31", 
+        "title": "State of the Map JAPAN 2015"
+    }
+},
+{
+    "pk": 6, 
+    "model": "conference.section", 
+    "fields": {
+        "conference": 2, 
+        "start_date": "2015-10-31", 
+        "name": "\u30c1\u30e5\u30fc\u30c8\u30ea\u30a2\u30eb", 
+        "end_date": "2015-10-31", 
+        "slug": "tutorials"
+    }
+},
+{
+    "pk": 7, 
+    "model": "conference.section", 
+    "fields": {
+        "conference": 2, 
+        "start_date": "2015-10-31", 
+        "name": "\u8b1b\u6f14", 
+        "end_date": "2015-10-31", 
+        "slug": "talks"
+    }
+},
+{
+    "pk": 8, 
+    "model": "conference.section", 
+    "fields": {
+        "conference": 2, 
+        "start_date": null, 
+        "name": "\u30dd\u30b9\u30bf\u30fc", 
+        "end_date": null, 
+        "slug": "posters"
+    }
+},
+{
+    "pk": 9, 
+    "model": "conference.section", 
+    "fields": {
+        "conference": 2, 
+        "start_date": "2015-10-31", 
+        "name": "Lightening talk", 
+        "end_date": "2015-10-31", 
+        "slug": "lightening-talk"
+    }
+},
+{
+    "pk": 10, 
+    "model": "conference.section", 
+    "fields": {
+        "conference": 2, 
+        "start_date": null, 
+        "name": "\u30aa\u30fc\u30d7\u30f3\u30b9\u30da\u30fc\u30b9", 
+        "end_date": null, 
+        "slug": "open-spaces"
+    }
 }
 ]
