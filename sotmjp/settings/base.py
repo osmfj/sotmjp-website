@@ -155,6 +155,7 @@ TEMPLATE_CONTEXT_PROCESSORS = [
     "django.core.context_processors.tz",
     "django.core.context_processors.request",
     "django.contrib.messages.context_processors.messages",
+    "pinax_theme_bootstrap.context_processors.theme",
     "social_auth.context_processors.social_auth_backends",
     #"pinax_utils.context_processors.settings",
     "account.context_processors.account",
