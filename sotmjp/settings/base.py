@@ -136,7 +136,7 @@ MIDDLEWARE_CLASSES = [
     #"django_openid.consumer.SessionConsumer",
     "django.contrib.messages.middleware.MessageMiddleware",
     "reversion.middleware.RevisionMiddleware",
-    "social_auth.middleware.SocialAuthExceptionMiddleware",
+    #"social_auth.middleware.SocialAuthExceptionMiddleware",
     # "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
@@ -156,7 +156,7 @@ TEMPLATE_CONTEXT_PROCESSORS = [
     "django.core.context_processors.request",
     "django.contrib.messages.context_processors.messages",
     "pinax_theme_bootstrap.context_processors.theme",
-    "social_auth.context_processors.social_auth_backends",
+    #"social_auth.context_processors.social_auth_backends",
     #"pinax_utils.context_processors.settings",
     "account.context_processors.account",
     "symposion.reviews.context_processors.reviews",
@@ -190,7 +190,7 @@ INSTALLED_APPS = [
     "taggit",
     "reversion",
     "pinax.blog",
-    "social_auth",
+    #"social_auth",
     "djangosecure",
     "raven.contrib.django",
     "constance",
@@ -253,8 +253,6 @@ TWITTER_CONSUMER_KEY         = ''
 TWITTER_CONSUMER_SECRET      = ''
 FACEBOOK_APP_ID              = ''
 FACEBOOK_API_SECRET          = ''
-LINKEDIN_CONSUMER_KEY        = ''
-LINKEDIN_CONSUMER_SECRET     = ''
 GOOGLE_CONSUMER_KEY          = ''
 GOOGLE_CONSUMER_SECRET       = ''
 GOOGLE_OAUTH2_CLIENT_ID      = ''
@@ -265,27 +263,27 @@ AUTHENTICATION_BACKENDS = [
     "symposion.teams.backends.TeamPermissionsBackend",
 
     # Social Auth Backends
-    'social_auth.backends.twitter.TwitterBackend',
-    'social_auth.backends.facebook.FacebookBackend',
-    'social_auth.backends.google.GoogleOAuth2Backend',
-    'social_auth.backends.google.GoogleBackend',
-    'social_auth.backends.contrib.linkedin.LinkedinBackend',
-    'social_auth.backends.contrib.github.GithubBackend',
-    'social_auth.backends.OpenIDBackend',
+    #'social_auth.backends.twitter.TwitterBackend',
+    #'social_auth.backends.facebook.FacebookBackend',
+    #'social_auth.backends.google.GoogleOAuth2Backend',
+    #'social_auth.backends.google.GoogleBackend',
+    #'social_auth.backends.contrib.linkedin.LinkedinBackend',
+    #'social_auth.backends.contrib.github.GithubBackend',
+    #'social_auth.backends.OpenIDBackend',
 
     # Django User Accounts
     "account.auth_backends.EmailAuthenticationBackend",
     'django.contrib.auth.backends.ModelBackend',
 ]
 
-SOCIAL_AUTH_PIPELINE = [
-    "social_auth.backends.pipeline.social.social_auth_user",
-    "social_auth.backends.pipeline.user.get_username",
-    "symposion.social_auth.pipeline.user.create_user",
-    "social_auth.backends.pipeline.social.associate_user",
-    "social_auth.backends.pipeline.social.load_extra_data",
-    "social_auth.backends.pipeline.user.update_user_details",
-]
+#SOCIAL_AUTH_PIPELINE = [
+#    "social_auth.backends.pipeline.social.social_auth_user",
+#    "social_auth.backends.pipeline.user.get_username",
+#    "symposion.social_auth.pipeline.user.create_user",
+#    "social_auth.backends.pipeline.social.associate_user",
+#    "social_auth.backends.pipeline.social.load_extra_data",
+#    "social_auth.backends.pipeline.user.update_user_details",
+#]
 
 LOGIN_URL = reverse_lazy("account_login")
 
@@ -296,15 +294,15 @@ ACCOUNT_USER_DISPLAY = lambda user: user.get_full_name()
 LOGIN_ERROR_URL = reverse_lazy("account_login")
 
 # Need these to be reversed urls, currently breaks if using reverse_lazy
-SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/%s/dashboard/"% CONFERENCE_URL_PREFIXES[CONFERENCE_ID]
-SOCIAL_AUTH_NEW_USER_REDIRECT_URL = "/%s/dashboard/"% CONFERENCE_URL_PREFIXES[CONFERENCE_ID]
+#SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/%s/dashboard/"% CONFERENCE_URL_PREFIXES[CONFERENCE_ID]
+#SOCIAL_AUTH_NEW_USER_REDIRECT_URL = "/%s/dashboard/"% CONFERENCE_URL_PREFIXES[CONFERENCE_ID]
 
-SOCIAL_AUTH_ASSOCIATE_BY_MAIL = False
+#SOCIAL_AUTH_ASSOCIATE_BY_MAIL = False
 
 # Don't clobber User.email if someone associates a social account that
 # happens to have a different email address
 # http://django-social-auth.readthedocs.org/en/latest/configuration.html#miscellaneous-settings
-SOCIAL_AUTH_PROTECTED_USER_FIELDS = ['email',]
+#SOCIAL_AUTH_PROTECTED_USER_FIELDS = ['email',]
 
 EMAIL_CONFIRMATION_DAYS = 2
 EMAIL_DEBUG = DEBUG
