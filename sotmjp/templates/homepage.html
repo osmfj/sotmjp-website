@@ -34,35 +34,35 @@
                                 {% endif %}
                             </div>
                         {% endif %}
-                        <div itemprop="summary" class="logo">State of the Map Japan 2014 Tokyo December 13th</div>
+                        <div itemprop="summary" class="logo">State of the Map Japan 2015 Hamamtsu October 31th</div>
                         <div itemprop="summary" class="headline">
-                          {% trans "State of the Map Japan 2014" %}</div>
+                          {% trans "State of the Map Japan 2015" %}</div>
                         <div class="details">
-                            <span itemprop="locality">Tokyo</span>,
+                            <span itemprop="locality">Hamamatsu</span>,
                             <span itemprop="country-name">Japan</span>,
-                            <time itemprop="startDate" datetime="2014-12-13">December 13</time>&ndash;
-                            <time itemprop="endDate" datetime="2014-12-13">13</time>
+                            <time itemprop="startDate" datetime="2015-10-31">October 31</time>&ndash;
+                            <time itemprop="endDate" datetime="2015-10-31">31</time>
                         </div>
 
                     </div>
                 </div>
-                {% comment %}
                 <div class="row">
                     <div class="schedule span12">
                         <ul>
-                          <li><strong>{% trans "Conference" %}</strong><br/>{% trans "December 13" %}</li>
+                          <li><strong>{% trans "Conference" %}</strong><br/>{% trans "October 31" %}</li>
                         </ul>
                     </div>
                 </div>
-                {% endcomment %}
+                {% comment %}
                 <div class="row" style="position: relative;text-align: center;z-index:1000;padding:0 10px;font-size: 32px;line-height: 40px;">
-                    {% trans "State of the Map Japan 2014 is over!" %}<br>
+                    {% trans "State of the Map Japan 2015 is over!" %}<br>
                     {% trans "Thanks to everyone for making it a great success!" %}<br>
                 </div>
+                {% endcomment %}
                 {% comment %}
                 {% if config.REGISTRATION_STATUS == 'open' %}
                     <div class="promo" itemprop="tickets" itemscope itemtype="http://data-vocabulary.org/Offer">
-                      <a href="http://sotmjp2014.peatix.com/">{% trans "REGISTER" %}</a>
+                      <a href="http://sotmjp2015.peatix.com/">{% trans "REGISTER" %}</a>
                     </div>
                 {% endif %}
                 {% endcomment %}
