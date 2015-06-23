@@ -73,6 +73,7 @@ setupDB () {
   case "${DB_TYPE}" in
     mysql) DB_PORT=${DB_PORT:-3306} ;;
     postgres) DB_PORT=${DB_PORT:-5432} ;;
+    sqlite) ;;
     *)
       echo "ERROR: "
       echo "  Please specify the database type in use via the DB_TYPE configuration option."
@@ -115,6 +116,9 @@ setupDB () {
     postgres)
       prog="pg_isready -h ${DB_HOST} -p ${DB_PORT} -U ${DB_USER} -d ${DB_NAME} -t 1"
       ;;
+    sqlite)
+      prog="echo"
+      ;;
   esac
 
   timeout=60
@@ -134,7 +138,10 @@ setupDB () {
 }
 
 appStart () {
-  exec /usr/bin/supervisord -n -c /etc/supervisor/supervisord.conf
+}
+
+appDebug () {
+  exec /usr/bin/python manage.py runserver 0.0.0.0:8000
 }
 
 appHelp () {
@@ -168,6 +175,9 @@ case "$1" in
     ;;
   app:help)
     appHelp
+    ;;
+  app:debug)
+    appDebug
     ;;
   *)
     if [ -x $1 ]; then
