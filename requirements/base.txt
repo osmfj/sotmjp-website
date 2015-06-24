@@ -20,7 +20,7 @@ django-taggit==0.12.2
 django-reversion==1.8.7
 ## django-markitup==2.2.2  # use Markedit
 ## Markdown==2.5.1         # depenency for pinax-blog
-django-sitetree==1.2.1
+django-sitetree==1.4.0
 Pillow==2.6.1
 easy-thumbnails==2.2
 html5lib==0.999
