@@ -220,12 +220,12 @@ class SotMTutorialProposal(SotMProposal):
         settings.AUTH_USER_MODEL,
         blank=True,
         null=True,
-        help_text=_(u'CTE registered participants for this tutorial.'),
+        help_text=_(u'Registered participants for this tutorial.'),
         )
 
     cte_tutorial_id = models.CharField(
         max_length=150,
-        help_text=_(u'CTE Tutorial Identifier. This is typically auto-populated'
+        help_text=_(u'Tutorial Identifier. This is typically auto-populated'
                     u' from a management command.'),
         blank=True,
         default="")
@@ -233,7 +233,7 @@ class SotMTutorialProposal(SotMProposal):
     max_attendees = models.IntegerField(
         blank=True,
         null=True,
-        help_text=_(u'Maximum number of attendees, per CTE data'))
+        help_text=_(u'Maximum number of attendees'))
 
 
     class Meta:
