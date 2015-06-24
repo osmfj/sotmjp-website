@@ -138,6 +138,13 @@ setupDB () {
 }
 
 appStart () {
+  /usr/local/bin/gunicorn --chdir=${INSTALL_DIR} \
+      --bind=0.0.0.0:8000 \
+      --workers=2 \
+      --threads=1 \
+      --env DJANGO_SETTINGS_MODULE="sotmjp.settings.production" \
+      --pid=/var/run/gunicorn.pid \
+      sotmjp.wsgi:application
 }
 
 appDebug () {

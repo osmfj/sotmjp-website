@@ -64,9 +64,9 @@ RUN python ./manage.py compress --force
 RUN ./build-css.sh
 RUN python ./manage.py collectstatic --noinput
 
-RUN chmod +x docker-init.sh
+RUN chmod +x misc/docker-init.sh
 
-ENTRYPOINT ["/opt/pyapp/sotmjp-website/docker-init.sh"]
+ENTRYPOINT ["/opt/pyapp/sotmjp-website/misc/docker-init.sh"]
 CMD ["app:debug"]
 
 EXPOSE 8000
