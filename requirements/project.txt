@@ -12,39 +12,55 @@ django-debug-toolbar==1.3.2
 django-model-utils==2.2
 -e git+git://github.com/pinax/django-mailer#egg=django-mailer
 
-python-openid==2.2.5
 django_compressor==1.5
 pinax-blog==4.0.2
 -e git+git://github.com/shvechikov/python-rtfng.git#egg=python-rtfng
 
-django-selectable==0.7.0
-django-forms-bootstrap==2.0.3.post1
-django-uni-form==0.9.0
-
-markedit==0.2.dev1
-
+# Social Login
 django-social-auth==0.7.28
+python-openid==2.2.5
 django-secure==1.0
+
 raven==3.3.7
+
+## Database driver
 psycopg2==2.6
+
+## Constance config
 django-constance-updated[database]==1.0.1
 django-picklefield==0.3.1
 
+## Redis Cache
 django-redis-cache==0.9.7
 redis==2.7.5
 hiredis==0.1.1
 
+## OpenStreetMap
 django-leaflet==0.14.1
 django_osm_field==0.1.4
 -e git+https://bitbucket.org/miurahr/django-restcms.git@e3b4600#egg=restcms
 
+## Document
 sphinx-intl
 
+## UI
+markedit==0.2.dev1
 requests==2.6.0
 Markdown==2.6.1
 simplejson==3.7.3
+django-selectable==0.7.0
+django-forms-bootstrap==2.0.3.post1
+django-uni-form==0.9.0
 
-# hosting
+
+## Admin UI
+-e git+https://github.com/liberation/django-admin-tabs.git#egg=django-admin-tabs
+-e git+https://github.com/django-admin-tools/django-admin-tools.git#egg=django-admin-tools
+
+
+
+
+## Hosting
 gondor==1.2.5
 gunicorn==19.3.0
 opbeat==2.0.4
