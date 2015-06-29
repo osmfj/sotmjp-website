@@ -139,20 +139,10 @@
     </div>
 
     <footer>
-        {% comment %}
-        <div class="hills">
-            <div class="trees-1"></div>
-            <div class="trees-2"></div>
-            <div class="bike"></div>
-            <div class="hill-1"></div>
-            <div class="hill-2"></div>
-        </div>
-        {% endcomment %}
-
         <div class="container">
         {% block footer %}
             <a href="{%  url 'home' %}" class="logo">
-                <img src="{{ STATIC_URL }}img/14logo-footer.png" alt="State of the Map Japan 2014 in Tokyo">
+                <img src="{{ STATIC_URL }}img/sotmjapan-footer.png" alt="State of the Map Japan">
             </a>
             <a href="http://www.csis.u-tokyo.ac.jp/japanese/index.html" class="logo">
                 <img src="{{ STATIC_URL }}img/csis-logo.png" alt="Center for Spatial Information Science The University of Tokyo">
@@ -166,7 +156,7 @@
                 </p>
                 <p>
                   {% blocktrans %}
-                    State of the Map Japan 2014 in Tokyo is a production of the 
+                    State of the Map Japan is a production of the
                     <a href="http://osmf.jp/">OpenStreetMap Foundation Japan</a>.
                   {% endblocktrans %}
                 </p>
