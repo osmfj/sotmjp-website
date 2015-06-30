@@ -6,6 +6,7 @@ import os.path
 import posixpath
 
 from django.core.urlresolvers import reverse_lazy
+from django.utils.translation import ugettext_lazy as _
 
 def env_or_default(NAME, default):
     return os.environ.get(NAME, default)
@@ -321,9 +322,20 @@ DEBUG_TOOLBAR_CONFIG = {
 CONSTANCE_BACKEND = "constance.backends.database.DatabaseBackend"
 CONSTANCE_CONFIG = {
     # "SETTING_NAME": (default_value, "help text")
-    "REGISTRATION_URL": ("", "URL for registration"),
-    "SPONSOR_FROM_EMAIL": ("", "From address for emails to sponsors"),
-    "REGISTRATION_STATUS": ("", "Used in the home page template. Valid values are 'soon', 'open' and 'closed'"),
+    "REGISTRATION_URL": ("", _("URL for registration")),
+    "SPONSOR_FROM_EMAIL": ("", _("From address for emails to sponsors")),
+    "REGISTRATION_STATUS": ("", _("Used in the home page template. Valid values are 'soon', 'open', 'closed' and 'over'")),
+    "PROPOSAL_NAME_MAX_LENGTH": (100, _("Maximum length for proposal title")),
+    "PROPOSAL_DURATION_CHOICE_COUNT": (2, _("Number of duration choices for talk")),
+    "PROPOSAL_DURAION_CHOICE_1": ("I prefer a 15 minute slot", _("Duration choice 1 for talk proposal")),
+    "PROPOSAL_DURAION_CHOICE_2": ("I prefer a 20 minute slot", _("Duration choice 2 for talk proposal")),
+    "CONFERENCE_NAME": ("State of the Map Japan 2015", _("Conference name (long)")),
+    "CONFERENCE_NAME_SHORT": ("SotM JP 15", _("Conference name (short)")),
+    "CONFERENCE_LOCALITY": ("Hamamatsu", _("Conference locality place")),
+    "CONFERENCE_COUNTRY": ("Japan", _("Conference locality country")),
+    "CONFERENCE_START_DATE": ("2015-10-31", _("Conference start date")),
+    "CONFERENCE_END_DATE": ("2015-10-31", _("Conference end date")),
+    "CONFERENCE_END_DATE_SHORT": ("10-31", _("Conference end date (short form)")),
 }
 
 SYMPOSION_PAGE_REGEX = r"(([\w-]{1,})(/[\w-]{1,})*)/$"

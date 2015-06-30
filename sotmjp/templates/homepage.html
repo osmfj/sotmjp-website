@@ -1,6 +1,5 @@
 {% extends "responsive_base.html" %}
 
-{# TODO:このファイルを修正する #}
 {% load i18n %}
 {% load cache %}
 {% load compress %}
@@ -10,7 +9,12 @@
 {% load pinax_blog_tags %}
 {% load sotmjp_tags %}
 
-{% block head_title_base %}State of the Map Japan 2014 in Tokyo | December 13th{% endblock %}
+{% block head_title_base %}
+    {% blocktrans with confname=config.CONFERENCE_NAME locality=config.CONFERENCE_LOCALITY
+                       startDate=config.CONFERENCE_START_DATE endDateShort=config.CONFERENCE_END_DATE_SHORT %}
+                       {{ confname }} in {{ locality }} | {{ startDate }} - {{ endDateShort }} 
+    {% endblocktrans %}
+{% endblock %}
 
 {% block body_class %}
     {{ block.super }}
@@ -26,7 +30,7 @@
                         {% if config.REGISTRATION_STATUS != 'open' %}
                             <div class="promo no-link">
                                 {% if config.REGISTRATION_STATUS == 'soon' %}
-                                    <p>{% trans "Coming soon!" %} SotM JP 2014</p>
+                                <p>{% trans "Coming soon!" %}{% config.CONFERENCE_NAME_SHORT %}</p>
                                 {% elif config.REGISTRATION_STATUS == 'closed' %}
                                     <p class="small">{% trans "Registration Closed" %}</p>
                                 {% else %}
@@ -34,14 +38,14 @@
                                 {% endif %}
                             </div>
                         {% endif %}
-                        <div itemprop="summary" class="logo">State of the Map Japan 2015 Hamamtsu October 31th</div>
+                        <div itemprop="summary" class="logo">{% config.CONFERENCE_NAME %}</div>
                         <div itemprop="summary" class="headline">
-                          {% trans "State of the Map Japan 2015" %}</div>
+                          {% config.CONFERENCE_NAME_SHORT %}</div>
                         <div class="details">
-                            <span itemprop="locality">Hamamatsu</span>,
-                            <span itemprop="country-name">Japan</span>,
-                            <time itemprop="startDate" datetime="2015-10-31">October 31</time>&ndash;
-                            <time itemprop="endDate" datetime="2015-10-31">31</time>
+                          <span itemprop="locality">{% config.CONFERENCE_LOCALITY %}</span>,
+                          <span itemprop="country-name">{% config.CONFERENCE_COUNTRY %}</span>,
+                          <time itemprop="startDate" datetime="{% config.CONFERENCE_START_DATE %}">{% config.CONFERENCE_START_DATE %}</time>&ndash;
+                          <time itemprop="endDate" datetime="{% config.CONFERENCE_END_DATE %}">{% config.CONFERENCE_END_DATE %}</time>
                         </div>
 
                     </div>
@@ -53,19 +57,18 @@
                         </ul>
                     </div>
                 </div>
-                {% comment %}
-                <div class="row" style="position: relative;text-align: center;z-index:1000;padding:0 10px;font-size: 32px;line-height: 40px;">
-                    {% trans "State of the Map Japan 2015 is over!" %}<br>
-                    {% trans "Thanks to everyone for making it a great success!" %}<br>
-                </div>
-                {% endcomment %}
-                {% comment %}
-                {% if config.REGISTRATION_STATUS == 'open' %}
+                {% if config.REGISTRATION_STATUS == 'over' %}
+                    <div class="row" style="position: relative;text-align: center;z-index:1000;padding:0 10px;font-size: 32px;line-height: 40px;">
+                        {% blocktrans with confname=config.CONFERENCE_NAME %}
+                        {{ confname }} is over! <br>
+                        Thanks to everyone for making it a great success!" <br>
+                        {% endblocktrans %}
+                    </div>
+                {% elif config.REGISTRATION_STATUS == 'open' %}
                     <div class="promo" itemprop="tickets" itemscope itemtype="http://data-vocabulary.org/Offer">
-                      <a href="http://sotmjp2015.peatix.com/">{% trans "REGISTER" %}</a>
+                      <a href="{% config.REGISTRATION_URL %}">{% trans "REGISTER" %}</a>
                     </div>
                 {% endif %}
-                {% endcomment %}
             </div>
         </div>
         <div class="city">
