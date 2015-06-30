@@ -329,12 +329,10 @@ CONSTANCE_CONFIG = {
 SYMPOSION_PAGE_REGEX = r"(([\w-]{1,})(/[\w-]{1,})*)/$"
 
 PROPOSAL_FORMS = {
-    "tutorial": "sotmjp.forms.SotMTutorialProposalForm",
-    "talk": "sotmjp.forms.SotMTalkProposalForm",
-    "poster": "sotmjp.forms.SotMPosterProposalForm",
-    "sponsor-tutorial": "sotmjp.forms.SotMSponsorTutorialForm",
-    "lightning-talk": "sotmjp.forms.SotMLightningTalkProposalForm",
-    "open-space": "sotmjp.forms.SotMOpenSpaceProposalForm",
+    "talk": "sotmjp.proposals.forms.TalkProposalForm",
+    "poster": "sotmjp.proposals.forms.PosterProposalForm",
+    "lightning-talk": "sotmjp.proposals.forms.LightningTalkProposalForm",
+    "open-space": "sotmjp.proposals.forms.OpenSpaceProposalForm",
 }
 
 
