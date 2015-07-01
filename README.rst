@@ -1,3 +1,7 @@
+.. image:: https://travis-ci.org/osmfj/sotmjp-website.svg?branch=master
+    :target: https://travis-ci.org/osmfj/sotmjp-website
+
+
 State of the Map Japan 2014-2015 website being built by OpenStreetMap Foundation Japan,
 based on symposion fork that is used for PyCon JP 2014.
 
