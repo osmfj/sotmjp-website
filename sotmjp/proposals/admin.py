@@ -51,11 +51,13 @@ class LightningTalkAdminForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(LightningTalkAdminForm, self).__init__(*args, **kwargs)
         # TODO: This is a hack to populate the field...
-        self.fields['category'].initial = SotMProposalCategory.objects.all()[0]
-        self.fields['audience_level'].initial = SotMLightningTalkProposal.AUDIENCE_LEVEL_NOVICE
+        initial_category = ProposalCategory.objects.all()[0]
+        initial_level = LightningTalkProposal.AUDIENCE_LEVEL_NOVICE
+        self.fields['category'].initial = initial_category
+        self.fields['audience_level'].initial = initial_level
 
     class Meta:
-        model = SotMLightningTalkProposal
+        model = LightningTalkProposal
         exclude = ['abstract']
 
 

@@ -27,18 +27,28 @@ class SocialAuths(LoginRequiredMixin, ListView):
 @dsa_view()
 def disconnect(request, backend, association_id=None):
     associated = request.user.social_auth.count()
-    url = request.REQUEST.get(REDIRECT_FIELD_NAME, '') or backend_setting(backend, 'SOCIAL_AUTH_DISCONNECT_REDIRECT_URL') or DEFAULT_REDIRECT
+    url = (request.REQUEST.get(REDIRECT_FIELD_NAME, '') or
+           backend_setting(backend, 'SOCIAL_AUTH_DISCONNECT_REDIRECT_URL') or
+           DEFAULT_REDIRECT)
 
     if not request.user.has_usable_password() and associated <= 1:
-        messages.error(request, _("Cannot remove the only Social Account without first setting a Password or adding another Social Account."))
+        messages.error(request,
+                       _("Cannot remove the only Social Account without "
+                         "first setting a Password or adding another "
+                         "Social Account."))
         return HttpResponseRedirect(url)
 
     usa = request.user.social_auth.get(pk=association_id)
 
     backend.disconnect(request.user, association_id)
-    messages.success(request, _("Removed the %(provider)s account '%(uid)s'.") % {
-        "provider": usa.provider,
-        "uid": usa.extra_data.get("display", usa.uid) if usa.extra_data is not None else usa.uid,
-    })
+    if usa.extra_data is not None:
+        uid = usa.extra_data.get("display", usa.uid)
+    else:
+        uid = usa.uid
+    messages.success(request,
+                     _("Removed "
+                       "the %(provider)s account"
+                       " '%(uid)s'.") % {"provider": usa.provider,
+                                         "uid": uid, })
 
     return HttpResponseRedirect(url)

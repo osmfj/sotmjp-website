@@ -1,4 +1,4 @@
-#:coding=utf-8:
+# :coding=utf-8:
 
 # Common settings for deployed servers
 # Will be imported by staging.py, production.py, etc.,
@@ -25,7 +25,7 @@ ALLOWED_HOSTS = [
     '.stateofthemap.jp',
     '.openstreetmap.jp',
 ]
-#USE_X_FORWARDED_HOST = True
+# USE_X_FORWARDED_HOST = True
 
 SECRET_KEY = os.environ['SECRET_KEY']
 

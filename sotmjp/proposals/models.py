@@ -1,4 +1,3 @@
-from django.conf import settings
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
@@ -39,13 +38,12 @@ class Proposal(ProposalBase):
     recording_release = models.BooleanField(
         _(u"Recording Release"),
         default=True,
-        help_text=_(u"By submitting your talk proposal, you agree to give permission"
-                     "to the Organization Team to record, edit, and release audio"
-                     "and/or video of your presentation. If you do not agree to this,"
-                     "please uncheck this box.")
+        help_text=_(u"By submitting your talk proposal, you agree to give "
+                    "permission to the Organization Team to record, edit, "
+                    "and release audio and/or video of your presentation. "
+                    "If you do not agree to this, please uncheck this box.")
     )
 
- 
     STATUS_UNREVIEWED = 1
     STATUS_ACCEPTED = 2
     STATUS_REJECTED = 3
@@ -73,7 +71,7 @@ class Proposal(ProposalBase):
         (REJECTION_POSTER, _('Suggest re-submission as poster.')),
         (REJECTION_LIGHTNING, _('Suggest lightening talk.')),
         (REJECTION_MOVED, _('Re-submitted under appropriate category.')),
-        (REJECTION_DUPLICATE,_( 'Duplicate')),
+        (REJECTION_DUPLICATE, _('Duplicate')),
         (REJECTION_ADMIN, _('Administrative Action (Other)')),
         (REJECTION_BAD, _("No really: rejected. It's just plain bad.")),
     ]
@@ -88,9 +86,9 @@ class Proposal(ProposalBase):
         _(u"Additional requirements"),
         blank=True,
         help_text=_(u"Please let us know if you have any specific needs"
-                     "(A/V requirements, multiple microphones, a table, etc)."
-                     "Note for example that 'audio out' is not provided"
-                     "for your computer unless you tell us in advance.")
+                    "(A/V requirements, multiple microphones, a table, etc)."
+                    "Note for example that 'audio out' is not provided"
+                    "for your computer unless you tell us in advance.")
     )
 
     class Meta:
@@ -105,7 +103,8 @@ class TalkProposal(Proposal):
         (2, config.PROPOSAL_DURATION_CHOICE_2),
     ]
 
-    duration = models.IntegerField(choices=DURATION_CHOICES, verbose_name=_("Duration"))
+    duration = models.IntegerField(choices=DURATION_CHOICES,
+                                   verbose_name=_("Duration"))
 
     outline = models.TextField(
         _(u"Outline")

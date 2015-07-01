@@ -12,8 +12,6 @@ from symposion.proposals.models import ProposalKind
 from symposion.schedule.models import Presentation, Schedule
 from symposion.sponsorship.models import Sponsor, SponsorLevel
 
-from django.conf import settings
-from django.contrib.sites.models import Site
 from django.core.urlresolvers import reverse
 
 
@@ -74,6 +72,9 @@ class BaseExporter(object):
             if not os.path.exists(path):
                 os.makedirs(path)
 
+    def mangle_name(self, name):
+        return name.lower().replace(' ', '_').replace('/', '_')
+
     def get_attribute(self, obj, attr_name, split='__'):
         """Recursive retrieval of properties, attributes, and callables.
 
@@ -100,15 +101,16 @@ class BaseExporter(object):
             if not (isinstance(field, tuple) or isinstance(field, list)):
                 fields[i] = (field, field)
         with open(self.get_csv_path(filename), 'w') as csvfile:
-            fieldnames = [field[0] for field in fields]
+            fieldnames = [fieldi[0] for fieldi in fields]
             csvwriter = UnicodeCSVDictWriter(csvfile, fieldnames)
             rtfdoc = RTFDoc("Program Export", self.get_rtf_path(filename),
                             self.description_fields)
             csvwriter.writerow(dict([(fieldname, display(fieldname))
                                      for fieldname in fieldnames]))
             for obj in objects:
-                data = OrderedDict([(name, unicode(self.get_attribute(obj, getter)))
-                            for name, getter in fields])
+                data = OrderedDict([(name,
+                                     unicode(self.get_attribute(obj, getter)))
+                                   for name, getter in fields])
                 csvwriter.writerow(data)
                 rtfdoc.add_sotmjp_section(data)
         rtfdoc.write()
@@ -124,8 +126,10 @@ class SpeakerBiosExporter(BaseExporter):
 
     def prepare_kinds(self, speaker):
         kinds = []
-        kinds.extend(list(speaker.presentations.values_list('proposal_base__kind__name', flat=True)))
-        kinds.extend(list(speaker.copresentations.values_list('proposal_base__kind__name', flat=True)))
+        kinds.extend(list(speaker.presentations.values_list(
+            'proposal_base__kind__name', flat=True)))
+        kinds.extend(list(speaker.copresentations.values_list(
+            'proposal_base__kind__name', flat=True)))
         return ', '.join(kinds)
 
     def export(self):
@@ -139,7 +143,7 @@ class SpeakerBiosExporter(BaseExporter):
                 speakers.extend(presentation.speakers())
                 all_speakers.extend(presentation.speakers())
             speakers = sorted(list(set(speakers)), key=sort_key)
-            filename = kind.name.lower().replace(' ', '_').replace('/', '_') + '_bios'
+            filename = self.mangle_name(kind.name) + '_bios'
             self.write(filename, speakers)
 
         all_speakers = sorted(list(set(all_speakers)), key=sort_key)
@@ -151,14 +155,17 @@ class SponsorsExporter(BaseExporter):
     basedir = 'sponsors/'
     description_fields = ['print_description', 'web_description']
 
+    def get_benefit_text(self, sponsor, bene):
+        return sponsor.sponsor_benefit.get(benefit__name=bene).text
+
     def prepare_print_description(self, sponsor):
         if sponsor.print_description_benefit:
-            return sponsor.sponsor_benefits.get(benefit__name='Print Description').text
+            return self.get_benefit_text(sponsor, 'Print Description')
         return ''
 
     def prepare_web_description(self, sponsor):
         if sponsor.company_description_benefit:
-            return sponsor.sponsor_benefits.get(benefit__name='Company Description').text
+            return self.get_benefit_text('Company Description')
         return ''
 
     def export(self):
@@ -166,7 +173,7 @@ class SponsorsExporter(BaseExporter):
         levels = SponsorLevel.objects.all()
         for level in levels:
             sponsors = queryset.filter(level=level).order_by('name')
-            filename = level.name.lower().replace(' ', '_').replace('/', '_') + '_sponsors'
+            filename = self.mangle_name(level.name) + '_sponsors'
             self.write(filename, sponsors)
 
 
@@ -181,7 +188,8 @@ class PresentationsExporter(BaseExporter):
         return ', '.join([s.name for s in presentation.speakers()])
 
     def prepare_url(self, presentation):
-        return full_url(reverse('schedule_presentation_detail', args=(presentation.pk,)))
+        return full_url(reverse('schedule_presentation_detail',
+                        args=(presentation.pk,)))
 
     def prepare_room(self, presentation):
         return ', '.join([r.name for r in presentation.slot.rooms])
@@ -198,11 +206,13 @@ class PresentationsExporter(BaseExporter):
         kinds = ProposalKind.objects.all()
         for kind in kinds:
             presentations = queryset.filter(proposal_base__kind=kind)
-            presentations = presentations.order_by('slot__day', 'slot__start', 'title')
-            filename = kind.name.lower().replace(' ', '_').replace('/', '_') + 's'
+            presentations = presentations.order_by('slot__day',
+                                                   'slot__start',
+                                                   'title')
+            filename = self.mangle_name(kind.name) + 's'
             if kind.name in ['Talk', 'Tutorial']:
                 self.write(filename, presentations,
-                                self.fields + ['room', 'time'])
+                           self.fields + ['room', 'time'])
             else:
                 self.write(filename, presentations)
 
@@ -241,7 +251,8 @@ class ScheduleExporter(BaseExporter):
 
     def prepare_url(self, slot):
         if slot.content:
-            return full_url(reverse('schedule_presentation_detail', args=(slot.content.pk,)))
+            return full_url(reverse('schedule_presentation_detail',
+                            args=(slot.content.pk,)))
         return ''
 
     def export(self):
@@ -258,7 +269,7 @@ class ScheduleExporter(BaseExporter):
             slots.sort(key=lambda s: s.end)
             slots.sort(key=lambda s: s.start)
             slots.sort(key=lambda s: s.day.date)
-            filename = schedule.section.name.lower().replace(' ', '_').replace('/', '_') + '_schedule'
+            filename = self.mangle_name(schedule.section.name) + '_schedule'
             self.write(filename, slots)
 
 
@@ -327,4 +338,5 @@ class RTFDoc(object):
                 if len(self.description_fields) > 1:
                     data[field] = field + ': ' + data[field]
                 for para in get_paragraph_list(data[field]):
-                    self.new_para(section, self.ss.ParagraphStyles.Normal).append(para)
+                    self.new_para(section,
+                                  self.ss.ParagraphStyles.Normal).append(para)

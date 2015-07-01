@@ -3,17 +3,17 @@ from django.utils.translation import ugettext_lazy as _
 
 from markedit.widgets import MarkEdit
 
-from .models import (SotMProposalCategory, SotMTalkProposal,
-                     SotMTutorialProposal, SotMPosterProposal,
-                     SotMLightningTalkProposal, SotMSponsorTutorialProposal,
-                     SotMOpenSpaceProposal)
+from .models import (ProposalCategory, TalkProposal,
+                     PosterProposal, LightningTalkProposal,
+                     OpenSpaceProposal)
 
 
-class SotMProposalForm(forms.ModelForm):
+class ProposalForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
-        super(SotMProposalForm, self).__init__(*args, **kwargs)
-        self.fields["category"].queryset = SotMProposalCategory.objects.order_by("name")
+        super(ProposalForm, self).__init__(*args, **kwargs)
+        queryset = ProposalCategory.objects.order_by("name")
+        self.fields["category"].queryset = queryset
 
     def clean_description(self):
         value = self.cleaned_data["description"]
@@ -24,10 +24,10 @@ class SotMProposalForm(forms.ModelForm):
         return value
 
 
-class SotMTalkProposalForm(SotMProposalForm):
+class TalkProposalForm(ProposalForm):
 
     class Meta:
-        model = SotMTalkProposal
+        model = TalkProposal
         fields = [
             "title",
             "category",
@@ -55,15 +55,16 @@ class SotMTalkProposalForm(SotMProposalForm):
         }
 
 
-class SotMLightningTalkProposalForm(SotMProposalForm):
+class LightningTalkProposalForm(ProposalForm):
 
     def __init__(self, *args, **kwargs):
-        super(SotMLightningTalkProposalForm, self).__init__(*args, **kwargs)
+        super(LightningTalkProposalForm, self).__init__(*args, **kwargs)
         self.fields['audience_level'].widget = forms.HiddenInput()
-        self.fields['audience_level'].initial = SotMLightningTalkProposal.AUDIENCE_LEVEL_NOVICE
+        initial_level = LightningTalkProposal.AUDIENCE_LEVEL_NOVICE
+        self.fields['audience_level'].initial = initial_level
 
     class Meta:
-        model = SotMLightningTalkProposal
+        model = LightningTalkProposal
         fields = [
             "title",
             "category",
@@ -81,43 +82,10 @@ class SotMLightningTalkProposalForm(SotMProposalForm):
         }
 
 
-#class SotMTutorialProposalForm(SotMProposalForm):
-#
-#    class Meta:
-#        model = SotMTutorialProposal
-#        fields = [
-#            "title",
-#            "category",
-#            "audience_level",
-#            "domain_level",
-#            "description",
-#            "audience",
-#            "perceived_value",
-#            "abstract",
-#            "outline",
-#            "more_info",
-#            "additional_notes",
-#            "additional_requirements",
-#            "handout",
-#            "recording_release",
-#        ]
-#        widgets = {
-#            "title": forms.TextInput(attrs={'class': 'fullwidth-input'}),
-#            "description": forms.Textarea(attrs={'rows': '3'}),
-#            "audience": forms.TextInput(attrs={'class': 'fullwidth-input'}),
-#            "perceived_value": forms.Textarea(attrs={'rows': '3'}),
-#            "abstract": MarkEdit(),
-#            "outline": MarkEdit(),
-#            "more_info": MarkEdit(),
-#            "additional_notes": MarkEdit(attrs={'rows': '3'}),
-#            "additional_requirements": forms.Textarea(attrs={'rows': '3'}),
-#        }
-#
-
-class SotMPosterProposalForm(SotMProposalForm):
+class PosterProposalForm(ProposalForm):
 
     class Meta:
-        model = SotMPosterProposal
+        model = PosterProposal
         fields = [
             "title",
             "category",
@@ -137,10 +105,10 @@ class SotMPosterProposalForm(SotMProposalForm):
         }
 
 
-class SotMOpenSpaceProposalForm(SotMProposalForm):
+class OpenSpaceProposalForm(ProposalForm):
 
     class Meta:
-        model = SotMOpenSpaceProposal
+        model = OpenSpaceProposal
         fields = [
             "title",
             "description",
@@ -157,31 +125,11 @@ class SotMOpenSpaceProposalForm(SotMProposalForm):
         }
 
     def __init__(self, *args, **kwargs):
-        super(SotMProposalForm, self).__init__(*args, **kwargs)
+        super(ProposalForm, self).__init__(*args, **kwargs)
         self.fields['audience_level'].widget = forms.HiddenInput()
-        self.fields['audience_level'].initial = SotMLightningTalkProposal.AUDIENCE_LEVEL_NOVICE
+        initial_level = LightningTalkProposal.AUDIENCE_LEVEL_NOVICE
+        self.fields['audience_level'].initial = initial_level
 
     def clean_description(self):
         value = self.cleaned_data["description"]
         return value
-
-
-class SotMSponsorTutorialForm(SotMProposalForm):
-
-    class Meta:
-        model = SotMSponsorTutorialProposal
-        fields = [
-            "title",
-            "description",
-            "abstract",
-            "additional_notes",
-        ]
-        widgets = {
-            "title": forms.TextInput(attrs={'class': 'fullwidth-input'}),
-            "description": forms.Textarea(attrs={'rows': '3'}),
-            "abstract": MarkEdit(),
-            "additional_notes": MarkEdit(attrs={'rows': '3'}),
-        }
-
-
-

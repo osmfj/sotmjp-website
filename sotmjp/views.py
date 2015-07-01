@@ -18,6 +18,7 @@ def program_export(request):
             fn = os.path.join(dirpath, f)
             z.write(fn, "program_export/" + fn.split(folder, 1)[1])
     z.close()
-    response = HttpResponse(s.getvalue(), content_type='application/x-zip-compressed')
+    response = HttpResponse(s.getvalue(),
+                            content_type='application/x-zip-compressed')
     response['Content-Disposition'] = 'attachment; filename=program_export.zip'
     return response

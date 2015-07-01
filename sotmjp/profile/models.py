@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 
 class Profile(models.Model):
-    
+
     user = models.OneToOneField(User, related_name="profile")
     first_name = models.CharField(max_length=50, blank=True, null=True)
     last_name = models.CharField(max_length=50, blank=True, null=True)
@@ -18,7 +18,7 @@ class Profile(models.Model):
             if key != "phone" and not getattr(self, key):
                 return False
         return True
-    
+
     @property
     def display_name(self):
         return " ".join([self.first_name, self.last_name])

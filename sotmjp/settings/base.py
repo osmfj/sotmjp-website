@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#:coding=utf-8:
+# :coding=utf-8:
 # base settings - imported by other settings files, then overridden
 
 import os.path
@@ -7,6 +7,7 @@ import posixpath
 
 from django.core.urlresolvers import reverse_lazy
 from django.utils.translation import ugettext_lazy as _
+
 
 def env_or_default(NAME, default):
     return os.environ.get(NAME, default)
@@ -85,7 +86,8 @@ LOCALE_PATHS = [os.path.join(PROJECT_ROOT, "locale")]
 # Absolute path to the directory that holds media - this is files uploaded
 # by users, such as attachments.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = env_or_default("MEDIA_ROOT", os.path.join(PROJECT_ROOT, "site_media", "media"))
+MEDIA_ROOT = env_or_default("MEDIA_ROOT",
+                            os.path.join(PROJECT_ROOT, "site_media", "media"))
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
@@ -123,22 +125,22 @@ TEMPLATE_LOADERS = [
     "django.template.loaders.filesystem.Loader",
     "django.template.loaders.app_directories.Loader",
 ]
-
+# XXX WARN:
+# LocaleMiddleware must follow session middleware, auth middleware,
+# and and cache middleware, and precede commonmiddleware
+#
+# XXX: you can add debug_toolbar
+# "debug_toolbar.middleware.DebugToolbarMiddleware",
 MIDDLEWARE_CLASSES = [
     "djangosecure.middleware.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
-    # LocaleMiddleware must follow session middleware, auth middleware,
-    # and and cache middleware, and precede commonmiddleware
     "django.middleware.locale.LocaleMiddleware",
     "account.middleware.LocaleMiddleware",
     "django.middleware.common.CommonMiddleware",
-    #"django_openid.consumer.SessionConsumer",
     "django.contrib.messages.middleware.MessageMiddleware",
     "reversion.middleware.RevisionMiddleware",
-    #"social_auth.middleware.SocialAuthExceptionMiddleware",
-    # "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = 'sotmjp.urls'
@@ -157,8 +159,6 @@ TEMPLATE_CONTEXT_PROCESSORS = [
     "django.core.context_processors.request",
     "django.contrib.messages.context_processors.messages",
     "pinax_theme_bootstrap.context_processors.theme",
-    #"social_auth.context_processors.social_auth_backends",
-    #"pinax_utils.context_processors.settings",
     "account.context_processors.account",
     "symposion.reviews.context_processors.reviews",
     "constance.context_processors.config",
@@ -197,19 +197,18 @@ INSTALLED_APPS = [
     "taggit",
     "reversion",
     "pinax.blog",
-    #"social_auth",
     "djangosecure",
     "raven.contrib.django",
     "constance",
     "constance.backends.database",
-    #"redis_cache",
+    "redis_cache",
     "uni_form",
     "gunicorn",
     "selectable",
 
     # symposion
     "symposion.conference",
-    #"symposion.cms", # use restcms
+    # "symposion.cms", # use restcms
     "symposion.boxes",
     "symposion.speakers",
     "symposion.proposals",
@@ -238,12 +237,12 @@ MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 # for production
-#EMAIL_BACKEND = "mailer.backend.DbBackend"
-EMAIL_HOST          = 'smtp.gmail.com'
+# EMAIL_BACKEND = "mailer.backend.DbBackend"
+EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_PASSWORD = 'tester@@abcd'
-EMAIL_HOST_USER     = 'tester.abcd@gmail.com'
-EMAIL_PORT          = 587
-EMAIL_USE_TLS       = True
+EMAIL_HOST_USER = 'tester.abcd@gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 ACCOUNT_OPEN_SIGNUP = True
 ACCOUNT_USE_OPENID = False
@@ -254,43 +253,13 @@ ACCOUNT_UNIQUE_EMAIL = EMAIL_CONFIRMATION_UNIQUE_EMAIL = False
 ACCOUNT_CREATE_ON_SAVE = True
 ACCOUNT_EMAIL_CONFIRMATION_EMAIL = False
 
-ACCOUNT_DELETION_EXPUNGE_CALLBACK = 'sotmjp.account.callbacks.account_delete_expunge'
-
-TWITTER_CONSUMER_KEY         = ''
-TWITTER_CONSUMER_SECRET      = ''
-FACEBOOK_APP_ID              = ''
-FACEBOOK_API_SECRET          = ''
-GOOGLE_CONSUMER_KEY          = ''
-GOOGLE_CONSUMER_SECRET       = ''
-GOOGLE_OAUTH2_CLIENT_ID      = ''
-GOOGLE_OAUTH2_CLIENT_SECRET  = ''
+ACCOUNT_DELETION_EXPUNGE_CALLBACK = 'sotmjp.account.callbacks.account_delete_expunge'  # NOQA
 
 AUTHENTICATION_BACKENDS = [
-    # Permissions backends
     "symposion.teams.backends.TeamPermissionsBackend",
-
-    # Social Auth Backends
-    #'social_auth.backends.twitter.TwitterBackend',
-    #'social_auth.backends.facebook.FacebookBackend',
-    #'social_auth.backends.google.GoogleOAuth2Backend',
-    #'social_auth.backends.google.GoogleBackend',
-    #'social_auth.backends.contrib.linkedin.LinkedinBackend',
-    #'social_auth.backends.contrib.github.GithubBackend',
-    #'social_auth.backends.OpenIDBackend',
-
-    # Django User Accounts
     "account.auth_backends.EmailAuthenticationBackend",
     'django.contrib.auth.backends.ModelBackend',
 ]
-
-#SOCIAL_AUTH_PIPELINE = [
-#    "social_auth.backends.pipeline.social.social_auth_user",
-#    "social_auth.backends.pipeline.user.get_username",
-#    "symposion.social_auth.pipeline.user.create_user",
-#    "social_auth.backends.pipeline.social.associate_user",
-#    "social_auth.backends.pipeline.social.load_extra_data",
-#    "social_auth.backends.pipeline.user.update_user_details",
-#]
 
 LOGIN_URL = reverse_lazy("account_login")
 
@@ -299,17 +268,6 @@ ACCOUNT_LOGIN_REDIRECT_URL = "dashboard"
 ACCOUNT_LOGOUT_REDIRECT_URL = "home"
 ACCOUNT_USER_DISPLAY = lambda user: user.get_full_name()
 LOGIN_ERROR_URL = reverse_lazy("account_login")
-
-# Need these to be reversed urls, currently breaks if using reverse_lazy
-#SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/%s/dashboard/"% CONFERENCE_URL_PREFIXES[CONFERENCE_ID]
-#SOCIAL_AUTH_NEW_USER_REDIRECT_URL = "/%s/dashboard/"% CONFERENCE_URL_PREFIXES[CONFERENCE_ID]
-
-#SOCIAL_AUTH_ASSOCIATE_BY_MAIL = False
-
-# Don't clobber User.email if someone associates a social account that
-# happens to have a different email address
-# http://django-social-auth.readthedocs.org/en/latest/configuration.html#miscellaneous-settings
-#SOCIAL_AUTH_PROTECTED_USER_FIELDS = ['email',]
 
 EMAIL_CONFIRMATION_DAYS = 2
 EMAIL_DEBUG = DEBUG
@@ -324,12 +282,18 @@ CONSTANCE_CONFIG = {
     # "SETTING_NAME": (default_value, "help text")
     "REGISTRATION_URL": ("", _("URL for registration")),
     "SPONSOR_FROM_EMAIL": ("", _("From address for emails to sponsors")),
-    "REGISTRATION_STATUS": ("", _("Used in the home page template. Valid values are 'soon', 'open', 'closed' and 'over'")),
+    "REGISTRATION_STATUS": ("", _("Used in the home page template."
+                                  " Valid values are 'soon',"
+                                  " 'open', 'closed' and 'over'")),
     "PROPOSAL_NAME_MAX_LENGTH": (100, _("Maximum length for proposal title")),
-    "PROPOSAL_DURATION_CHOICE_COUNT": (2, _("Number of duration choices for talk")),
-    "PROPOSAL_DURAION_CHOICE_1": ("I prefer a 15 minute slot", _("Duration choice 1 for talk proposal")),
-    "PROPOSAL_DURAION_CHOICE_2": ("I prefer a 20 minute slot", _("Duration choice 2 for talk proposal")),
-    "CONFERENCE_NAME": ("State of the Map Japan 2015", _("Conference name (long)")),
+    "PROPOSAL_DURATION_CHOICE_COUNT": (
+        2, _("Number of duration choices for talk")),
+    "PROPOSAL_DURAION_CHOICE_1": ("I prefer a 15 minute slot",
+                                  _("Duration choice 1 for talk proposal")),
+    "PROPOSAL_DURAION_CHOICE_2": ("I prefer a 20 minute slot",
+                                  _("Duration choice 2 for talk proposal")),
+    "CONFERENCE_NAME": ("State of the Map Japan 2015",
+                        _("Conference name (long)")),
     "CONFERENCE_NAME_SHORT": ("SotM JP 15", _("Conference name (short)")),
     "CONFERENCE_LOCALITY": ("Hamamatsu", _("Conference locality place")),
     "CONFERENCE_COUNTRY": ("Japan", _("Conference locality country")),
@@ -385,14 +349,15 @@ from django.utils.log import DEFAULT_LOGGING
 LOGGING = DEFAULT_LOGGING
 
 # Add config for Google Analytics
-CONSTANCE_CONFIG["GOOGLE_ANALYTICS_TRACKING_ID"] = ("", "The site's Google Analytics Tracking ID.")
+CONSTANCE_CONFIG["GOOGLE_ANALYTICS_TRACKING_ID"] = (
+    "", "The site's Google Analytics Tracking ID.")
 
 # Add config for leaflet
 LEAFLET_CONFIG = {
-  'TILES': 'http://tile.openstreetmap.jp/{z}/{x}/{y}.png',
-  'SPATIAL_EXTENT': (139.665, 35.655, 139.75, 35.6698),
-  'DEFAULT_CENTER': (35.662, 139.67771),
-  'DEFAULT_ZOOM': 17,
-  'MIN_ZOOM': 15,
-  'MAX_ZOOM': 19,
+    'TILES': 'http://tile.openstreetmap.jp/{z}/{x}/{y}.png',
+    'SPATIAL_EXTENT': (139.665, 35.655, 139.75, 35.6698),
+    'DEFAULT_CENTER': (35.662, 139.67771),
+    'DEFAULT_ZOOM': 17,
+    'MIN_ZOOM': 15,
+    'MAX_ZOOM': 19,
 }

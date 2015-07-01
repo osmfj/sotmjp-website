@@ -1,4 +1,4 @@
-#:coding=utf-8:
+# :coding=utf-8:
 
 # ローカル開発用の settings.py
 # この設定はデフォルトで sqlite を使います。
@@ -27,7 +27,8 @@ def env_var(var, var_type=None, *args, **kwargs):
         val = os.environ[var]
     except KeyError:
         if not args and 'default' not in kwargs:
-            raise ImproperlyConfigured('The environment variable "%s" is required.' % var)
+            raise ImproperlyConfigured(
+                'The environment variable "%s" is required.' % var)
         elif args:
             val = args[0]
         else:
@@ -37,15 +38,21 @@ def env_var(var, var_type=None, *args, **kwargs):
         try:
             val = var_type(val)
         except ValueError, e:
-            raise ImproperlyConfigured('Invalid setting for "%s": "%s"' % (var, e))
+            raise ImproperlyConfigured(
+                'Invalid setting for "%s": "%s"' % (var, e))
 
     return val
 
 DEBUG = env_var('DEBUG', bool, default=True)
 
-_db_engine = env_var('DB_ENGINE', default='sqlite3' if DEBUG else 'postgresql_psycopg2')
-_db_name = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
-                        'sotmjp2015.sqlite') if _db_engine == 'sqlite3' else 'sotmjp2015_staging'
+_db_engine = env_var('DB_ENGINE',
+                     default='sqlite3' if DEBUG else 'postgresql_psycopg2')
+if _db_engine == 'sqlite3':
+    _basedir = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+    _db_name = os.path.join(_basedir, 'sotmjp2015.sqlite')
+else:
+    _db_name = 'sotmjp2015_staging'
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.%s' % _db_engine,

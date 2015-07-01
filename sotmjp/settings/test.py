@@ -1,4 +1,4 @@
-#:coding=utf-8:
+# :coding=utf-8:
 
 # Settings file for running tests locally
 # See also travis.py
@@ -18,7 +18,8 @@ NOSE_ARGS = ['--nologcapture']
 COMPRESS_ENABLED = True
 
 # Including a default secret key since this is just for test
-SECRET_KEY = env_or_default('SECRET_KEY', u'dipps!+sq49#e2k#5^@4*^qn#8s83$kawqqxn&_-*xo7twru*8')
+SECRET_KEY = env_or_default(
+    'SECRET_KEY', u'dipps!+sq49#e2k#5^@4*^qn#8s83$kawqqxn&_-*xo7twru*8')
 
 # Speed up testing - skip running the migrations, just make the test database
 # with its current schema

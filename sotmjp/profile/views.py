@@ -27,7 +27,7 @@ class SignupView(SignupView):
 
 @login_required
 def profile_edit(request):
-    
+
     next = request.GET.get("next")
     profile, created = Profile.objects.get_or_create(
         user=request.user,
@@ -36,21 +36,21 @@ def profile_edit(request):
             "last_name": request.user.last_name,
         }
     )
-    
+
     if request.method == "POST":
         form = ProfileForm(request.POST, instance=profile)
         if form.is_valid():
             profile = form.save()
             request.user.first_name = form.cleaned_data["first_name"]
             request.user.last_name = form.cleaned_data["last_name"]
-            messages.add_message(request, messages.SUCCESS,
-                _("Successfully updated profile.")
-            )
+            messages.add_message(request,
+                                 messages.SUCCESS,
+                                 _("Successfully updated profile."))
             if next:
                 return redirect(next)
     else:
         form = ProfileForm(instance=profile)
-    
+
     return render(request, "profiles/edit.html", {
         "form": form,
         "next": next,

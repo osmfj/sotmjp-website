@@ -14,7 +14,8 @@ class LatestSectionPostsNode(template.Node):
     def render(self, context):
         try:
             section = self.section.resolve(context)
-            posts = Post.objects.section(section, queryset=Post.objects.current())
+            posts = Post.objects.section(section,
+                                         queryset=Post.objects.current())
             context[self.context_var] = posts
         except Exception:
             pass
