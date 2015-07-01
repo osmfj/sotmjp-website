@@ -335,7 +335,18 @@ CONSTANCE_CONFIG = {
     "CONFERENCE_COUNTRY": ("Japan", _("Conference locality country")),
     "CONFERENCE_START_DATE": ("2015-10-31", _("Conference start date")),
     "CONFERENCE_END_DATE": ("2015-10-31", _("Conference end date")),
-    "CONFERENCE_END_DATE_SHORT": ("10-31", _("Conference end date (short form)")),
+    "CONFERENCE_DURATION": ("2015-10-31 ~ 31", _("Conference duration")),
+    "CONFERENCE_DAYS": (1, _("How much days for conference(day number)?")),
+    "HAVE_TUTORIAL": ("No", _("Conference has tutorial program?(Yes/No)")),
+    "TUTORIAL_NAME": ("", _("Tutorial program name")),
+    "TUTORIAL_START_DATE": ("", _("Tutorial start date")),
+    "TUTORIAL_END_DATE": ("", _("Tutorial end date")),
+    "TUTORIAL_DURATION": ("", _("Tutorail duration")),
+    "HAVE_HACKATHON": ("No", _("Conference has hackathon program?(Yes/No)")),
+    "HACKATHON_NAME": ("", _("Hackathon program name")),
+    "HACKATHON_START_DATE": ("", _("Hackathon start date")),
+    "HACKATHON_END_DATE": ("", _("Hackathon end date")),
+    "HACKATHON_DURATION": ("", _("Hackathon duration")),
 }
 
 SYMPOSION_PAGE_REGEX = r"(([\w-]{1,})(/[\w-]{1,})*)/$"
