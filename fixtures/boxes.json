@@ -6,7 +6,97 @@
         "content": "### About\r\n\r\nState of the Map(SotM) is the largest annual gathering for the mapper and user community. SotM is organized by the OSM community for the community. We thank all attendees and staff for observing it.  \r\n\r\nSotM has an amazing variety of speakers, subjects and [keynote speakers](/2012/keynotes/)", 
         "last_updated_by": 1, 
         "created_by": 1, 
-        "label": "homepage-about"
+        "label": "homepage-about-en"
+    }
+},
+{
+    "pk": 2, 
+    "model": "boxes.box", 
+    "fields": {
+        "content": "### About\r\n\r\nState of the Map(SotM) is the largest annual gathering for the mapper and user community. SotM is organized by the OSM community for the community. We thank all attendees and staff for observing it.  \r\n\r\nSotM has an amazing variety of speakers, subjects and [keynote speakers](/2012/keynotes/)", 
+        "last_updated_by": 1, 
+        "created_by": 1, 
+        "label": "homepage-about-ja"
+    }
+},
+{
+    "pk": 3, 
+    "model": "boxes.box", 
+    "fields": {
+        "content": "Here you can manage your sponsor applications and/or talk proposals \r\n\r\n Please update your profile at first", 
+        "last_updated_by": 1, 
+        "created_by": 1, 
+        "label": "dashboard-top-en"
+    }
+},
+{
+    "pk": 4, 
+    "model": "boxes.box", 
+    "fields": {
+        "content": "Here you can manage your sponsor applications and/or talk proposals \r\n\r\n Please update your profile at first", 
+        "last_updated_by": 1, 
+        "created_by": 1, 
+        "label": "dashboard-top-ja"
+    }
+},
+{
+    "pk": 5, 
+    "model": "boxes.box", 
+    "fields": {
+        "content": "talk schedule \r\n\r\n", 
+        "last_updated_by": 1, 
+        "created_by": 1, 
+        "label": "schedule_top-en"
+    }
+},
+{
+    "pk": 6, 
+    "model": "boxes.box", 
+    "fields": {
+        "content": "talk schedule \r\n\r\n", 
+        "last_updated_by": 1, 
+        "created_by": 1, 
+        "label": "schedule_top-ja"
+    }
+},
+{
+    "pk": 7, 
+    "model": "boxes.box", 
+    "fields": {
+        "content": "if you want to change your talk slot \r\n\r\n Please contact organization committee", 
+        "last_updated_by": 1, 
+        "created_by": 1, 
+        "label": "schedule_bottom-en"
+    }
+},
+{
+    "pk": 8, 
+    "model": "boxes.box", 
+    "fields": {
+        "content": "if you want to change your talk slot \r\n\r\n Please contact organization committee", 
+        "last_updated_by": 1, 
+        "created_by": 1, 
+        "label": "schedule_bottom-ja"
+    }
+},
+{
+    "pk": 9, 
+    "model": "boxes.box", 
+    "fields": {
+        "content": "Here you can update your speaker profile", 
+        "last_updated_by": 1, 
+        "created_by": 1, 
+        "label": "speaker-profile-en"
+    }
+},
+{
+    "pk": 10, 
+    "model": "boxes.box", 
+    "fields": {
+        "content": "Here you can update your speaker profile", 
+        "last_updated_by": 1, 
+        "created_by": 1, 
+        "label": "speaker-profile-ja"
     }
 }
 ]
