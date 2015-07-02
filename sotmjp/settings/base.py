@@ -292,8 +292,10 @@ CONSTANCE_CONFIG = {
                                   _("Duration choice 1 for talk proposal")),
     "PROPOSAL_DURAION_CHOICE_2": ("I prefer a 20 minute slot",
                                   _("Duration choice 2 for talk proposal")),
-    "CONFERENCE_NAME": ("State of the Map Japan 2015",
+    "CONFERENCE_NAME": ("State of the Map Japan",
                         _("Conference name (long)")),
+    "CONFERENCE_YEAR": ("2015", _("Conference year (4-digit)")),
+    "CONFERENCE_YEAR_SHORT": ("15", _("Conference year (2-digit)")),
     "CONFERENCE_NAME_SHORT": ("SotM JP 15", _("Conference name (short)")),
     "CONFERENCE_LOCALITY": ("Hamamatsu", _("Conference locality place")),
     "CONFERENCE_COUNTRY": ("Japan", _("Conference locality country")),
@@ -311,6 +313,7 @@ CONSTANCE_CONFIG = {
     "HACKATHON_START_DATE": ("", _("Hackathon start date")),
     "HACKATHON_END_DATE": ("", _("Hackathon end date")),
     "HACKATHON_DURATION": ("", _("Hackathon duration")),
+    "GOOGLE_SITE_VERIFICATION_CODE": ("", _("Google site verification code")),
 }
 
 SYMPOSION_PAGE_REGEX = r"(([\w-]{1,})(/[\w-]{1,})*)/$"

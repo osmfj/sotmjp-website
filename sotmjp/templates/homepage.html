@@ -10,8 +10,8 @@
 {% load sotmjp_tags %}
 
 {% block head_title_base %}
-    {% blocktrans with confname=config.CONFERENCE_NAME locality=config.CONFERENCE_LOCALITY startDate=config.CONFERENCE_START_DATE endDateShort=config.CONFERENCE_END_DATE_SHORT %}
-                       {{ confname }} in {{ locality }} | {{ startDate }} - {{ endDateShort }} 
+    {% blocktrans with confname=config.CONFERENCE_NAME confyear=config.CONFERENCE_YEAR locality=config.CONFERENCE_LOCALITY startDate=config.CONFERENCE_START_DATE endDateShort=config.CONFERENCE_END_DATE_SHORT %}
+        {{ confname }} {{ confyear }}in {{ locality }} | {{ startDate }} - {{ endDateShort }}
     {% endblocktrans %}
 {% endblock %}
 
