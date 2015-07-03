@@ -30,7 +30,7 @@
     <header class="main">
         <a id="skip" href="#content">{% trans "Skip to main content" %}</a>
         <div class="container"> 
-            <a class="logo-smaller" href="{% url 'home' %}">State of the Map Japan 2014 in Tokyo</a>
+          <a class="logo-smaller" href="{% url 'home' %}">{{ config.CONFERENCE_NAME }}</a>
             <div class="account-bar{% if user.is_authenticated %} {% trans "loggedin" %}{% endif %}">
                 {% block account_bar %}
                 {% include "_account_bar.html" %}
@@ -38,7 +38,7 @@
             </div>
             {% block main_nav %}
                 <nav>
-                    <a class="logo-small" href="{% url 'home' %}">State of the Map Japan 2014 in Tokyo</a>
+                  <a class="logo-small" href="{% url 'home' %}">{{ confing.CONFERENCE_NAME }}</a>
                    
                     <div class="navbar navbar-inverse">
                         <div class="navbar-inner">

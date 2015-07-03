@@ -68,7 +68,7 @@
         {% block main_nav %}
             <nav>
                 <div class="container">
-                    <a class="logo-small" href="{% url 'home' %}">State of the Map Japan 2014 in Tokyo</a>
+                  <a class="logo-small" href="{% url 'home' %}">{{ config.CONFIG_CONFERENCE_NAME }}</a>
                     <div class="navbar navbar-inverse">
                         <div class="navbar-inner">
                             {% block topbar %}
