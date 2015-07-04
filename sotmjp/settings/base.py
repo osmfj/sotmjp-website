@@ -118,7 +118,7 @@ STATICFILES_FINDERS = [
 ADMIN_MEDIA_PREFIX = posixpath.join(STATIC_URL, "admin/")
 
 # Subdirectory of COMPRESS_ROOT to store the cached media files in
-COMPRESS_OUTPUT_DIR = "cache"
+COMPRESS_OUTPUT_DIR = ""
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = [
@@ -220,6 +220,7 @@ INSTALLED_APPS = [
     # custom
     "markedit",
     "sotmjp",
+    "sotmjp.proposals",
     "restcms",
     "sotmjp.registration",
     "sotmjp.profile",
@@ -285,13 +286,6 @@ CONSTANCE_CONFIG = {
     "REGISTRATION_STATUS": ("", _("Used in the home page template."
                                   " Valid values are 'soon',"
                                   " 'open', 'closed' and 'over'")),
-    "PROPOSAL_NAME_MAX_LENGTH": (100, _("Maximum length for proposal title")),
-    "PROPOSAL_DURATION_CHOICE_COUNT": (
-        2, _("Number of duration choices for talk")),
-    "PROPOSAL_DURAION_CHOICE_1": ("I prefer a 15 minute slot",
-                                  _("Duration choice 1 for talk proposal")),
-    "PROPOSAL_DURAION_CHOICE_2": ("I prefer a 20 minute slot",
-                                  _("Duration choice 2 for talk proposal")),
     "CONFERENCE_NAME": ("State of the Map Japan",
                         _("Conference name (long)")),
     "CONFERENCE_YEAR": ("2015", _("Conference year (4-digit)")),
