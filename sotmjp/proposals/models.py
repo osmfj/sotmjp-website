@@ -1,14 +1,12 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-from constance import config
-
 from symposion.proposals.models import ProposalBase
 
 
 class ProposalCategory(models.Model):
 
-    name = models.CharField(max_length=config.PROPOSAL_NAME_MAX_LENGTH)
+    name = models.CharField(max_length=100)
     slug = models.SlugField()
 
     def __unicode__(self):
@@ -99,8 +97,8 @@ class TalkProposal(Proposal):
 
     DURATION_CHOICES = [
         (0, _(u"No preference")),
-        (1, config.PROPOSAL_DURATION_CHOICE_1),
-        (2, config.PROPOSAL_DURATION_CHOICE_2),
+        (1, _(u"15min")),
+        (2, _(u"20min")),
     ]
 
     duration = models.IntegerField(choices=DURATION_CHOICES,
