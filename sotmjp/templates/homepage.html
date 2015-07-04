@@ -38,8 +38,11 @@
                             </div>
                         {% endif %}
                         <div itemprop="summary" class="logo">{{ config.CONFERENCE_NAME }}</div>
-                        <div itemprop="summary" class="headline">{{ config.CONFERENCE_NAME }}</div>
-
+                        <div itemprop="summary" class="headline">
+                          {% blocktrans with confname=config.CONFERENCE_NAME confyear=config.CONFERENCE_YEAR locality=config.CONFERENCE_LOCALITY %}
+                               {{ confname }} {{ confyear }}in {{ locality }}
+                          {% endblocktrans %}
+                        </div>
                         <div class="details">
                           <span itemprop="locality">{{ config.CONFERENCE_LOCALITY }}</span>,
                           <span itemprop="country-name">{{ config.CONFERENCE_COUNTRY }}</span>,
