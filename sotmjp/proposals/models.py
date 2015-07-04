@@ -1,8 +1,6 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-from constance import config
-
 from symposion.proposals.models import ProposalBase
 
 
