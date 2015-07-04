@@ -1,11 +1,11 @@
 # -*- mode: ruby -*-
-# vi: set ft=ruby :
-#
+# vi: set ft=ruby : #
 # Vagrantfile for staging of State of the Map Japan 2014 website
 #
 
-require_relative "credential"
+require_relative "misc/vagrant_config"
 include Credential
+include Aws_Config
 
 # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
 VAGRANTFILE_API_VERSION = "2"
@@ -80,12 +80,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     aws.availability_zone= Availability_zone
     aws.security_groups = Security_group
     aws.subnet_id = Subnet_id
-    #aws.vpc_id = Vpc_id
     aws.associate_public_ip = true
     aws.tags = {'Name' => 'sotmjp-website'}
 
-    # Ubuntu 12.04.01(64bit) LTS (HVM)
-    aws.ami = "ami-a9e2da99"
+    aws.ami = Ami
     override.ssh.username = "ubuntu"
   end
 
