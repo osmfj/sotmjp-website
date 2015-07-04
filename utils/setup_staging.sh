@@ -24,5 +24,5 @@ GRANT ALL PRIVILEGES ON DATABASE $DB_NAME to $DB_USER;
 _SQL
 
 ${BASEDIR}/manage.py compress --force
-${BASEDIR}/manage.py collectstatic --no-input
+${BASEDIR}/manage.py collectstatic --noinput
 ${BASEDIR}/utils/build-css.sh

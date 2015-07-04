@@ -28,4 +28,4 @@ _SQL
 
 ${BASEDIR}/manage.py compress --force
 ${BASEDIR}/utils/build-css.sh
-${BASEDIR}/manage.py collectstatic --no-input
+${BASEDIR}/manage.py collectstatic --noinput
