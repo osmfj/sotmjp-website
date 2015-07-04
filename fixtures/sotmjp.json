@@ -10,7 +10,7 @@
 {
     "pk": 2, 
     "model": "sotmjp.proposalcategory", 
-    "fields": 
+    "fields": {
         "name": "\u30d3\u30b8\u30cd\u30b9", 
         "slug": "business"
     }
