@@ -3,8 +3,7 @@ from django.contrib import admin
 
 from markedit.admin import MarkEditAdmin
 
-from .models import (ProposalCategory, SponsorTutorialProposal,
-                     TalkProposal, TutorialProposal,
+from .models import (ProposalCategory, TalkProposal,
                      PosterProposal, LightningTalkProposal,
                      OpenSpaceProposal)
 
@@ -116,8 +115,6 @@ class SponsorTutorialAdmin(ProposalMarkEditAdmin):
 
 admin.site.register(ProposalCategory)
 admin.site.register(TalkProposal, TalkAdmin)
-admin.site.register(TutorialProposal, TutorialAdmin)
 admin.site.register(PosterProposal, PosterAdmin)
 admin.site.register(OpenSpaceProposal, OpenSpaceAdmin)
-admin.site.register(SponsorTutorialProposal, SponsorTutorialAdmin)
 admin.site.register(LightningTalkProposal, LightningTalkAdmin)
