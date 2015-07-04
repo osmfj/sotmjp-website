@@ -1,7 +1,7 @@
 [
 {
     "pk": 1, 
-    "model": "sotmjp.sotmproposalcategory", 
+    "model": "sotmjp.proposalcategory", 
     "fields": {
         "name": "\u30b3\u30df\u30e5\u30cb\u30c6\u30a3", 
         "slug": "community"
@@ -9,15 +9,15 @@
 },
 {
     "pk": 2, 
-    "model": "sotmjp.sotmproposalcategory", 
-    "fields": {
+    "model": "sotmjp.proposalcategory", 
+    "fields": 
         "name": "\u30d3\u30b8\u30cd\u30b9", 
         "slug": "business"
     }
 },
 {
     "pk": 3, 
-    "model": "sotmjp.sotmproposalcategory", 
+    "model": "sotmjp.proposalcategory", 
     "fields": {
         "name": "\u653f\u5e9c\u30fb\u81ea\u6cbb\u4f53", 
         "slug": "government"
@@ -25,7 +25,7 @@
 },
 {
     "pk": 4, 
-    "model": "sotmjp.sotmproposalcategory", 
+    "model": "sotmjp.proposalcategory", 
     "fields": {
         "name": "\u30c6\u30af\u30ce\u30ed\u30b8\u30fc", 
         "slug": "technology"
