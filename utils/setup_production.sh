@@ -7,7 +7,7 @@ VENV=sotmjp-website
 
 DEBUG=false
 DB_ENGINE=postgresql_psycopg2
-DB_NAME=sotmjp2014
+DB_NAME=sotmjp2015
 DB_HOST=localhost
 DB_PORT=5432
 DB_USER=ubuntu
@@ -28,4 +28,4 @@ _SQL
 
 ${BASEDIR}/manage.py compress --force
 ${BASEDIR}/utils/build-css.sh
-${BASEDIR}/manage.py collectstatic --no-input
+${BASEDIR}/manage.py collectstatic --noinput

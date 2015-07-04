@@ -7,7 +7,7 @@ VENV=sotmjp-website
 
 DEBUG=false
 DB_ENGINE=postgresql_psycopg2
-DB_NAME=sotmjp2014_staging
+DB_NAME=sotmjp2015_staging
 DB_HOST=localhost
 DB_PORT=5432
 DB_USER=ubuntu
@@ -24,5 +24,5 @@ GRANT ALL PRIVILEGES ON DATABASE $DB_NAME to $DB_USER;
 _SQL
 
 ${BASEDIR}/manage.py compress --force
-${BASEDIR}/manage.py collectstatic --no-input
+${BASEDIR}/manage.py collectstatic --noinput
 ${BASEDIR}/utils/build-css.sh
