@@ -10,7 +10,7 @@ export IS_PRODUCTION=false
 # setup configurations; see local.py
 DEBUG=false
 DB_ENGINE=postgresql_psycopg2
-DB_NAME=sotmjp2014_staging
+DB_NAME=sotmjp2015_staging
 DB_HOST=localhost
 DB_PORT=5432
 DB_USER=ubuntu
@@ -19,12 +19,11 @@ SECRET_KEY=u'hogehoge'
 
 export DEBUG DB_ENGINE DB_NAME DB_HOST DB_PORT DB_USER DB_PASSWORD SECRET_KEY
 
-cd $BASEDIR
-${BASEDIR}/env/${VENV}/bin/uwsgi --chdir=${BASEDIR} \
-  -s 127.0.0.1:3032  \
-  --module=symposion.wsgi:application \
-  --home ${BASEDIR}/env/${VENV} \
-  --master \
-  --pidfile=/var/run/staging-uwsgi-master.pid \
-  --processes=2 \
-  --daemonize=/var/log/staging-uwsgi.log
+exec ${BASEDIR}/env/${VENV}/bin/gunicorn --chdir=${BASEDIR} \
+      --bind=127.0.0.1:8001 \
+      --workers=2 \
+      --threads=1 \
+      --env DJANGO_SETTINGS_MODULE="sotmjp.settings.staging" \
+      --pid=/var/run/gunicorn-staging.pid \
+      sotmjp.wsgi:application
+

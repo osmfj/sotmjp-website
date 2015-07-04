@@ -7,7 +7,7 @@ VENV=sotmjp-website
 
 DEBUG=false
 DB_ENGINE=postgresql_psycopg2
-DB_NAME=sotmjp2014_staging
+DB_NAME=sotmjp2015_staging
 DB_HOST=localhost
 DB_PORT=5432
 DB_USER=ubuntu

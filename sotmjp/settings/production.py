@@ -4,7 +4,7 @@
 from .server import *  # NOQA
 
 # From address for production
-DEFAULT_FROM_EMAIL = "State of the Map JP 2014 <no-reply@stateofthemap.jp>"
+DEFAULT_FROM_EMAIL = "State of the Map JP team <no-reply@stateofthemap.jp>"
 SERVER_EMAIL = DEFAULT_FROM_EMAIL
 
 LOGGING['filters']['static_fields']['fields']['environment'] = 'production'
