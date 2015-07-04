@@ -57,9 +57,9 @@ virtualenv env/sotmjp-website
 . env/sotmjp-website/bin/activate
 pip install -r sotmjp/requirements/dev.txt
 ./manage.py compress --force
-./build-css.sh
+./utils/build-css.sh
 ./manage.py collectstatic --noinput
-echo next step is ./init_db.sh
+echo next step is ./utils/init_db.sh
 SETUP
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|

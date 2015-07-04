@@ -37,7 +37,7 @@ RUN git clone https://github.com/osmfj/sotmjp-website.git
 WORKDIR /opt/pyapp/sotmjp-website
 
 ## install requirements for dev
-RUN mkdir -p /root/.pip && cp pip.conf /root/.pip/pip.conf
+RUN mkdir -p /root/.pip && cp misc/pip.conf /root/.pip/pip.conf
 RUN pip install -r requirements/dev.txt
 
 ENV DEBUG True
@@ -61,12 +61,12 @@ RUN python manage.py loaddata \
       fixtures/restcms_page.json
 
 RUN python ./manage.py compress --force
-RUN ./build-css.sh
+RUN ./utils/build-css.sh
 RUN python ./manage.py collectstatic --noinput
 
-RUN chmod +x misc/docker-init.sh
+RUN chmod +x utils/docker-init.sh
 
-ENTRYPOINT ["/opt/pyapp/sotmjp-website/misc/docker-init.sh"]
+ENTRYPOINT ["/opt/pyapp/sotmjp-website/utils/docker-init.sh"]
 CMD ["app:debug"]
 
 EXPOSE 8000

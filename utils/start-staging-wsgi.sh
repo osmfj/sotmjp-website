@@ -1,5 +1,6 @@
 #!/bin/sh
-BASEDIR=$(dirname $0)
+SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
+BASEDIR=${SCRIPTPATH%/*}
 
 # virtualenv environment name
 VENV=sotmjp-website
