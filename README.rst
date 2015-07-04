@@ -22,7 +22,7 @@ To get running locally
 
 * Install dependency packages for Ubuntu 14.04
 
-    $ misc/setup_environment.sh
+    $ utils/setup_environment.sh
 
   If you run it on 14.04 and deriveratives, you should workaround;
 
@@ -43,7 +43,7 @@ To get running locally
 
   for development:
 
-    $ env DEBUG=1 ./init_db.sh
+    $ env DEBUG=1 utils/init_db.sh
 
   for staging/production
 
@@ -91,7 +91,7 @@ For production
 
 * Build site css file
 
-    $ ./build-css.sh
+    $ ./utils/build-css.sh
 
 * Arrange to serve the site_media directory as ``/2015/site_media/whatever``.
   E.g. ``site_media/foo.html`` would be at ``/2015/site_media/foo.html``.
@@ -106,7 +106,7 @@ To run staging
 
 * Setup same for production but except;
 
-  $ misc/start_staging.sh
+  $ utils/start_staging.sh
 
 
 To run tests

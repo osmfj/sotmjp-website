@@ -1,5 +1,6 @@
 #!/bin/bash
-BASEDIR=$(dirname $0)/..
+SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
+BASEDIR=${SCRIPTPATH%/*}
 
 # virtualenv environment name
 VENV=sotmjp-website
@@ -24,4 +25,4 @@ _SQL
 
 ${BASEDIR}/manage.py compress --force
 ${BASEDIR}/manage.py collectstatic --no-input
-${BASEDIR}/build-css.sh
+${BASEDIR}/utils/build-css.sh
