@@ -5,8 +5,26 @@ INSTALL_DIR=${INSTALL_DIR:-"/opt/pyapp/sotmjp-website"}
 PROJECT_NAME=sotmjp
 
 setupRedis () {
-  # docker offical redis links with REDIS_PORT_6379_TCP_ADDR / _PORT
-  REDIS_URL=redis://${REDIS_PORT_6379_TCP_ADDR}:${REDIS_PORT_6379_TCP_PORT}
+  # detect links
+  if [ -n "${REDIS_PORT_6379_TCP_PORT}" ]; then
+    # docker offical redis links with REDIS_PORT_6379_TCP_ADDR / _PORT
+    REDIS_URL=redis://${REDIS_PORT_6379_TCP_ADDR}:${REDIS_PORT_6379_TCP_PORT}
+  fi
+
+  # configure django-redis cache
+  if [ -n "${REDIS_URL}" ]; then
+    cat >> ${INSTALL_DIR}/${PROJECT_NAME}/settings/local.py << __EOL__
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "${REDIS_URL}/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
+__EOL__
+  fi
 }
 
 setupDB () {
@@ -73,7 +91,6 @@ setupDB () {
   case "${DB_TYPE}" in
     mysql) DB_PORT=${DB_PORT:-3306} ;;
     postgres) DB_PORT=${DB_PORT:-5432} ;;
-    sqlite) ;;
     *)
       echo "ERROR: "
       echo "  Please specify the database type in use via the DB_TYPE configuration option."
@@ -86,21 +103,37 @@ setupDB () {
   DB_NAME=${DB_NAME:-sotmjp_production}
   DB_USER=${DB_USER:-root}
 
-  # XXX implement me - configure database
   case "${DB_TYPE}" in
     postgres)
-#       cat > ${INSTALL_DIR}/${PROJECT_NAME}/settings/local.py << __EOL0__
-#
-#__EOL0__
+       cat > ${INSTALL_DIR}/${PROJECT_NAME}/settings/local.py << __EOL0__
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': '${DB_NAME}',
+        'USER': '${DB_USER}',
+        'PASSWORD': '${DB_PASS}',
+        'HOST': '${DB_HOST}',
+        'PORT': '${DB_PORT}',
+    }
+}
+LANGUAGE_CODE = "ja-jp"
+__EOL0__
        ;;
     mysql)
-#       cat > ${INSTALL_DIR}/${PROJECT_NAME}/settings/local.py << __EOL1__
-#
-#__EOL1__
+       cat > ${INSTALL_DIR}/${PROJECT_NAME}/settings/local.py << __EOL1__
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': '${DB_NAME}',
+        'USER': '${DB_USER}',
+        'PASSWORD': '${DB_PASS}',
+        'HOST': '${DB_HOST}',
+        'PORT': '${DB_PORT}',
+    }
+}
+LANGUAGE_CODE = "ja-jp"
+__EOL1__
       ;;
-    sqlite)
-      ;;
-
     *)
       echo "Invalid database type: '$DB_TYPE'. Supported choices: [mysql, postgres]."
       exit 1
@@ -115,9 +148,6 @@ setupDB () {
       ;;
     postgres)
       prog="pg_isready -h ${DB_HOST} -p ${DB_PORT} -U ${DB_USER} -d ${DB_NAME} -t 1"
-      ;;
-    sqlite)
-      prog="echo"
       ;;
   esac
 
@@ -137,14 +167,78 @@ setupDB () {
 
 }
 
+initdb () {
+
+  python ${INSTALL_DIR}/manage.py syncdb --noinput
+  python ${INSTALL_DIR}/manage.py migrate
+
+  python ${INSTALL_DIR}/manage.py loaddata \
+    ${INSTALL_DIR}/fixtures/auth_user.json \
+    ${INSTALL_DIR}/fixtures/conference.json \
+    ${INSTALL_DIR}/fixtures/database_constance.json \
+    ${INSTALL_DIR}/fixtures/boxes.json \
+    ${INSTALL_DIR}/fixtures/proposals.json \
+    ${INSTALL_DIR}/fixtures/sitetree.json \
+    ${INSTALL_DIR}/fixtures/sotmjp.json \
+    ${INSTALL_DIR}/fixtures/sponsorship.json \
+    ${INSTALL_DIR}/fixtures/schedule.json \
+    ${INSTALL_DIR}/fixtures/teams.json \
+    ${INSTALL_DIR}/fixtures/restcms_page.json
+}
+
+setup () {
+  flag=$1
+
+  setupDB
+  setupRedis
+  if [ "$flag" == "initdb" ]; then
+    initdb
+  fi
+}
+
 appStart () {
   /usr/local/bin/gunicorn --chdir=${INSTALL_DIR} \
       --bind=0.0.0.0:8000 \
-      --workers=2 \
-      --threads=1 \
+      --workers=5 \
+      --threads=3 \
       --env DJANGO_SETTINGS_MODULE="sotmjp.settings.production" \
       --pid=/var/run/gunicorn.pid \
       sotmjp.wsgi:application
+}
+
+appStaging () {
+  cat >> ${INSTALL_DIR}/${PROJECT_NAME}/settings/local.py << __EOL__
+INSTALLED_APPS += ['debug_toolbar']
+MIDDLEWARE_CLASSES += ["debug_toolbar.middleware.DebugToolbarMiddleware"]
+__EOL__
+
+  /usr/local/bin/gunicorn --chdir=${INSTALL_DIR} \
+      --bind=0.0.0.0:8000 \
+      --workers=1 \
+      --threads=1 \
+      --env DEBUG="True"
+      --env DJANGO_SETTINGS_MODULE="sotmjp.settings.staging" \
+      --pid=/var/run/gunicorn.pid \
+      sotmjp.wsgi:application
+}
+
+setupDebug () {
+  # use bundled sqlite db
+  cat > ${INSTALL_DIR}/${PROJECT_NAME}/settings/local.py << __EOL__
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'sotmjp2015.sqlite',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
+    }
+}
+LANGUAGE_CODE = "ja-jp"
+INSTALLED_APPS += ['debug_toolbar']
+MIDDLEWARE_CLASSES += ["debug_toolbar.middleware.DebugToolbarMiddleware"]
+__EOL__
 }
 
 appDebug () {
@@ -153,15 +247,22 @@ appDebug () {
 
 appHelp () {
   echo "Available options:"
-  echo " app:start          - Starts the server (default)"
+  echo " app:start          - Starts the production server (default)"
+  echo " app:staging        - Starts the staging server"
+  echo " app:debug          - Starts the debug (use internal sqlite db)"
   echo " app:help           - Displays the help"
   echo " [command]          - Execute the specified linux command eg. bash."
+  echo
+  echo "Available argument:"
+  echo " initdb             - Initialize DB when start (use with caution!!)"
+  echo " (No argument)      - use DB as is"
   echo
   echo "Avalialble configurations through environment -e options"
   echo "database configurations"
   echo "-----------------------"
   echo "DB_TYPE, DB_HOST, DB_USER, DB_PASS, DB_NAME"
   echo "  It can ommit when using docker --link configuration"
+  echo "  It will be ignored when called with app:debug"
   echo
   echo "DB_TYPE             - mysql or postgresql"
   echo "DB_HOST             - dbms host name"
@@ -176,12 +277,15 @@ appHelp () {
 
 case "$1" in
   app:start)
-    setupDB
-    setupRedis
+    setup $2
     appStart
     ;;
   app:help)
     appHelp
+    ;;
+  app:staging)
+    setup $2
+    appStaging
     ;;
   app:debug)
     appDebug
