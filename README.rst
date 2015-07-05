@@ -67,7 +67,12 @@ For run for development with docker image
 
 * Run docker image (need to connect internet)
 
-    $ docker run -it miurahr/sotmjp-website bash -l
+    $ docker run -P --name="sotmjp-website" miurahr/sotmjp-website:latest app:debug
+
+* Create account
+
+    $ docker exec -it sotmjp-website python manage.py createsuperuser
+
 
 For production
 --------------

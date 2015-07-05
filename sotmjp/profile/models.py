@@ -1,16 +1,18 @@
+from __future__ import unicode_literals
 from django.db import models
 
 from django.contrib.auth.models import User
+from django.utils.translation import ugettext_lazy as _
 
 
 class Profile(models.Model):
 
-    user = models.OneToOneField(User, related_name="profile")
-    first_name = models.CharField(max_length=50, blank=True, null=True)
-    last_name = models.CharField(max_length=50, blank=True, null=True)
-    phone = models.CharField(max_length=20, blank=True, null=True)
-    first_name_ja = models.CharField(max_length=50, blank=True, null=True)
-    last_name_ja = models.CharField(max_length=50, blank=True, null=True)
+    user = models.OneToOneField(User, related_name="profile", verbose_name=_("User"))
+    first_name = models.CharField(max_length=50, blank=True, null=True, verbose_name=_("First name"))
+    last_name = models.CharField(max_length=50, blank=True, null=True, verbose_name=_("Last name"))
+    phone = models.CharField(max_length=20, blank=True, null=True, verbose_name=_("Phone"))
+    first_name_ja = models.CharField(max_length=50, blank=True, null=True, verbose_name=_("First name (Japanese)"))
+    last_name_ja = models.CharField(max_length=50, blank=True, null=True, verbose_name=_("Last name (Japanese)"))
 
     @property
     def is_complete(self):

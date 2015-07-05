@@ -1,3 +1,4 @@
+from __future__ import unicode_literals
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
@@ -24,19 +25,19 @@ class Proposal(ProposalBase):
     AUDIENCE_LEVEL_INTERMEDIATE = 3
 
     AUDIENCE_LEVELS = [
-        (AUDIENCE_LEVEL_NOVICE, _(u"Novice")),
-        (AUDIENCE_LEVEL_INTERMEDIATE, _(u"Intermediate")),
-        (AUDIENCE_LEVEL_EXPERIENCED, _(u"Experienced")),
+        (AUDIENCE_LEVEL_NOVICE, _("Novice")),
+        (AUDIENCE_LEVEL_INTERMEDIATE, _("Intermediate")),
+        (AUDIENCE_LEVEL_EXPERIENCED, _("Experienced")),
     ]
 
     audience_level = models.IntegerField(
         choices=AUDIENCE_LEVELS,
-        help_text=_(u'Level of audience expertise.'),
-        verbose_name=_(u'Skill level'))
+        help_text=_('Level of audience expertise.'),
+        verbose_name=_('Skill level'))
     recording_release = models.BooleanField(
-        _(u"Recording Release"),
+        _("Recording Release"),
         default=True,
-        help_text=_(u"By submitting your talk proposal, you agree to give "
+        help_text=_("By submitting your talk proposal, you agree to give "
                     "permission to the Organization Team to record, edit, "
                     "and release audio and/or video of your presentation. "
                     "If you do not agree to this, please uncheck this box.")
@@ -56,7 +57,7 @@ class Proposal(ProposalBase):
     overall_status = models.IntegerField(
         choices=STATUS_OPTIONS,
         default=STATUS_UNREVIEWED,
-        help_text=_(u'The status of the proposal.'))
+        help_text=_('The status of the proposal.'))
 
     REJECTION_POSTER = 1
     REJECTION_LIGHTNING = 2
@@ -81,9 +82,9 @@ class Proposal(ProposalBase):
         help_text=_(u'The reason the proposal was rejected.'))
 
     additional_requirements = models.TextField(
-        _(u"Additional requirements"),
+        _("Additional requirements"),
         blank=True,
-        help_text=_(u"Please let us know if you have any specific needs"
+        help_text=_("Please let us know if you have any specific needs"
                     "(A/V requirements, multiple microphones, a table, etc)."
                     "Note for example that 'audio out' is not provided"
                     "for your computer unless you tell us in advance.")
@@ -96,26 +97,26 @@ class Proposal(ProposalBase):
 class TalkProposal(Proposal):
 
     DURATION_CHOICES = [
-        (0, _(u"No preference")),
-        (1, _(u"15min")),
-        (2, _(u"20min")),
+        (0, _("No preference")),
+        (1, _("15min")),
+        (2, _("20min")),
     ]
 
     duration = models.IntegerField(choices=DURATION_CHOICES,
                                    verbose_name=_("Duration"))
 
     outline = models.TextField(
-        _(u"Outline")
+        _("Outline")
     )
     audience = models.CharField(
         max_length=150,
         verbose_name=_("Audience"),
-        help_text=_(u'Who is the intended audience for your talk?'),
+        help_text=_('Who is the intended audience for your talk?'),
     )
     perceived_value = models.TextField(
-        _(u"Objectives"),
+        _("Objectives"),
         max_length=400,
-        help_text=_(u"What will attendees get out of your talk?"),
+        help_text=_("What will attendees get out of your talk?"),
     )
 
     class Meta:

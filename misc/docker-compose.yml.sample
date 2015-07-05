@@ -1,14 +1,11 @@
-sotmjpweb:
+web:
   image: miurahr/sotmjp-website:latest
-  environment:
-    - DB_ENGINE=postgresql_psycopg2
-    - DB_USER=symposion
-    - DB_PASSWORD=phathowvhsukeuwo
-    - DB_NAME=sotmjp2015_staging
-   ports:
+  command: app:start
+  ports:
     - "8000:8000"
   links:
     - postgresql:postgresql
+    - redis:redis
 postgresql:
   image: sameersbn/postgresql:9.4
   environment:
@@ -17,3 +14,5 @@ postgresql:
     - DB_NAME=sotmjp2015_staging
   volumes:
     - /opt/postgresql/data:/var/lib/postgresql
+redis:
+  image: redis
