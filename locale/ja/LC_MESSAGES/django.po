@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pyconjp-website\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-24 09:40+0900\n"
-"PO-Revision-Date: 2015-06-24 09:44+0900\n"
+"POT-Creation-Date: 2015-07-05 10:16+0900\n"
+"PO-Revision-Date: 2015-07-05 10:32+0900\n"
 "Last-Translator: Hiroshi Miura <miurahr@linux.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -25,170 +25,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.5.4\n"
-
-#: sotmjp/forms.py:22
-msgid "The description must be less than 400 characters"
-msgstr "400文字以内で記入して下さい。"
-
-#: sotmjp/models.py:48 sotmjp/models.py:179
-msgid "Novice"
-msgstr "初級"
-
-#: sotmjp/models.py:49 sotmjp/models.py:180
-msgid "Intermediate"
-msgstr "中級"
-
-#: sotmjp/models.py:50 sotmjp/models.py:181
-msgid "Experienced"
-msgstr "上級"
-
-#: sotmjp/models.py:85 sotmjp/templates/proposals/_proposal_fields.html:12
-#: sotmjp/templates/reviews/_review_table.html:8
-#: sotmjp/templates/reviews/result_notification.html:47
-msgid "Category"
-msgstr "カテゴリ"
-
-#: sotmjp/models.py:88
-msgid "Level of audience expertise."
-msgstr "対象者に期待する知識レベル"
-
-#: sotmjp/models.py:89
-msgid "Skill level"
-msgstr "レベル"
-
-#: sotmjp/models.py:93
-msgid "The status of the proposal."
-msgstr "プロポーザルのステータス"
-
-#: sotmjp/models.py:97
-msgid ""
-"Numerical indicator of the amount of interest in a talk set to 'damaged' "
-"status."
-msgstr ""
-
-#: sotmjp/models.py:102
-msgid "The reason the proposal was rejected."
-msgstr "プロポーザルが却下された理由"
-
-#: sotmjp/models.py:104
-msgid "Recording Release"
-msgstr "録画許可"
-
-#: sotmjp/models.py:106
-msgid ""
-"By submitting your talk proposal, you agree to give permission to the SotM "
-"JP Management Team to record, edit, and release audio and/or video of your "
-"presentation. If you do not agree to this, please uncheck this box."
-msgstr ""
-"講演のプロポーザルを提出すると、SotM JP 運営チームがあなたの講演を記録、編"
-"集、またその録音またはビデオあるいはその両方を頒布することに同意したとみなし"
-"ます。もしこれに同意しない場合はチェックボックスをオフにして下さい。"
-
-#: sotmjp/models.py:110
-msgid "Additional requirements"
-msgstr "追加必要事項"
-
-#: sotmjp/models.py:112
-msgid ""
-"Please let us know if you have any specific needs (A/V requirements, "
-"multiple microphones, a table, etc).  Note for example that 'audio out' is "
-"not provided for your computer unless you tell us in advance."
-msgstr ""
-"特に必要な物(A/V機器、複数のマイク、テーブルetc)があれば教えて下さい。例とし"
-"て、コンピュータからの「音声出力」は事前にお知らせ頂いていない場合は提供でき"
-"ないことに注意して下さい。"
-
-#: sotmjp/models.py:122
-msgid "No preference"
-msgstr "希望なし"
-
-#: sotmjp/models.py:123
-msgid "I prefer a 15 minute slot"
-msgstr "15分枠希望"
-
-#: sotmjp/models.py:124
-msgid "I prefer a 20 minute slot"
-msgstr "20分枠希望"
-
-#: sotmjp/models.py:127 sotmjp/templates/proposals/_proposal_fields.html:33
-msgid "Duration"
-msgstr "時間枠"
-
-#: sotmjp/models.py:130 sotmjp/models.py:190
-#: sotmjp/templates/proposals/_proposal_fields.html:66
-msgid "Outline"
-msgstr "アウトライン"
-
-#: sotmjp/models.py:134 sotmjp/templates/proposals/_proposal_fields.html:25
-msgid "Audience"
-msgstr "対象者"
-
-#: sotmjp/models.py:135
-msgid ""
-"Who is the intended audience for your talk? (Be specific; \"Python "
-"programmers\" is not a good answer to this question.)"
-msgstr ""
-"想定している対象者について教えて下さい。(具体的にお願いします。例えば「Python"
-"プログラマー」は適切な回答ではありません。)"
-
-#: sotmjp/models.py:140 sotmjp/models.py:204
-#: sotmjp/templates/proposals/_proposal_fields.html:28
-msgid "Objectives"
-msgstr "目的"
-
-#: sotmjp/models.py:142 sotmjp/models.py:206
-msgid ""
-"What will attendees get out of your talk? When they leave the room, what "
-"will they know that they didn't know before?"
-msgstr ""
-"参加者はあなたの講演から何を学びますか。参加者が会場に来る前は知らなかったけ"
-"れども、帰る際には得ている知識は何でしょうか。"
-
-#: sotmjp/models.py:186
-msgid "Level of audience expertise assumed in the presentation's domain."
-msgstr "対象者に期待する題目の分野に関する知識レベル"
-
-#: sotmjp/models.py:193 sotmjp/templates/proposals/_proposal_fields.html:69
-msgid "More info"
-msgstr "追加情報"
-
-#: sotmjp/models.py:194
-msgid "More info. Will be made public if your talk is accepted."
-msgstr "追加された情報はあなたの講演が承認された後で公開されます。"
-
-#: sotmjp/models.py:199
-msgid ""
-"Who is the intended audience for your talk? (Be specific; \"OSM Mapper\" is "
-"not a good answer to this question.)"
-msgstr ""
-"想定している対象者について教えて下さい。(具体的にお願いします。例えば「OSMの"
-"マッパー」は適切な回答ではありません。)"
-
-#: sotmjp/models.py:211 sotmjp/templates/proposals/_proposal_fields.html:84
-#: sotmjp/templates/schedule/presentation_detail.html:67
-msgid "Student Handout"
-msgstr "参加者用ハンドアウト"
-
-#: sotmjp/models.py:214
-msgid ""
-"Upload a resource to be distributed to students  attending the tutorial "
-"session."
-msgstr ""
-"チュートリアルセッションの参加者へ配布するための資料をアプロードして下さい。"
-
-#: sotmjp/models.py:223
-msgid "CTE registered participants for this tutorial."
-msgstr ""
-
-#: sotmjp/models.py:228
-msgid ""
-"CTE Tutorial Identifier. This is typically auto-populated from a management "
-"command."
-msgstr ""
-
-#: sotmjp/models.py:236
-msgid "Maximum number of attendees, per CTE data"
-msgstr ""
 
 #: sotmjp/profile/forms.py:32
 msgid "First Name (Japanese)"
@@ -220,47 +56,312 @@ msgstr "メールアドレスの確認"
 msgid "First Name"
 msgstr "名前 (ローマ字)"
 
-#: sotmjp/profile/forms.py:63
+#: sotmjp/profile/forms.py:64
 msgid "Please enter your first name."
 msgstr "名前をローマ字で入力してください。"
 
-#: sotmjp/profile/forms.py:64
+#: sotmjp/profile/forms.py:65
 msgid "Last Name"
 msgstr "名字 (ローマ字)"
 
-#: sotmjp/profile/forms.py:65
+#: sotmjp/profile/forms.py:66
 msgid "Please enter your last name."
 msgstr "名字をローマ字で入力してください"
 
-#: sotmjp/profile/views.py:47
+#: sotmjp/profile/views.py:48
 msgid "Successfully updated profile."
 msgstr "プロファイルのアップロードが成功しました。"
 
-#: sotmjp/settings/base.py:77
+#: sotmjp/proposals/forms.py:22
+msgid "The description must be less than 400 characters"
+msgstr "400文字以内で記入して下さい。"
+
+#: sotmjp/proposals/models.py:16
+#| msgid "Proposal Locked"
+msgid "proposal category"
+msgstr "提案カテゴリ"
+
+#: sotmjp/proposals/models.py:17
+#| msgid "Proposal Details"
+msgid "proposal categories"
+msgstr "提案カテゴリ"
+
+#: sotmjp/proposals/models.py:27
+msgid "Novice"
+msgstr "初級"
+
+#: sotmjp/proposals/models.py:28
+msgid "Intermediate"
+msgstr "中級"
+
+#: sotmjp/proposals/models.py:29
+msgid "Experienced"
+msgstr "上級"
+
+#: sotmjp/proposals/models.py:34
+msgid "Level of audience expertise."
+msgstr "対象者に期待する知識レベル"
+
+#: sotmjp/proposals/models.py:35
+msgid "Skill level"
+msgstr "レベル"
+
+#: sotmjp/proposals/models.py:37
+msgid "Recording Release"
+msgstr "録画許可"
+
+#: sotmjp/proposals/models.py:39
+#| msgid ""
+#| "By submitting your talk proposal, you agree to give permission to the "
+#| "SotM JP Management Team to record, edit, and release audio and/or video "
+#| "of your presentation. If you do not agree to this, please uncheck this "
+#| "box."
+msgid ""
+"By submitting your talk proposal, you agree to give permission to the "
+"Organization Team to record, edit, and release audio and/or video of your "
+"presentation. If you do not agree to this, please uncheck this box."
+msgstr ""
+"講演のプロポーザルを提出すると、 運営チームがあなたの講演を記録、編集、またそ"
+"の録音またはビデオあるいはその両方を頒布することに同意したとみなします。もし"
+"これに同意しない場合はチェックボックスをオフにして下さい。"
+
+#: sotmjp/proposals/models.py:50
+msgid "Not Yet Reviewed"
+msgstr "レビュー前"
+
+#: sotmjp/proposals/models.py:51
+#: sotmjp/templates/proposals/_pending_proposal_row.html:15
+#: sotmjp/templates/proposals/_proposal_row.html:15
+msgid "Accepted"
+msgstr "受託済み"
+
+#: sotmjp/proposals/models.py:52
+#| msgid "rejected"
+msgid "Rejected"
+msgstr "却下"
+
+#: sotmjp/proposals/models.py:55
+#: sotmjp/templates/proposals/_proposal_fields.html:12
+#: sotmjp/templates/reviews/_review_table.html:8
+#: sotmjp/templates/reviews/result_notification.html:47
+msgid "Category"
+msgstr "カテゴリ"
+
+#: sotmjp/proposals/models.py:59
+msgid "The status of the proposal."
+msgstr "プロポーザルのステータス"
+
+#: sotmjp/proposals/models.py:69
+#| msgid "When submissions close"
+msgid "Suggest re-submission as poster."
+msgstr "ポスターとして再提案することを勧める"
+
+#: sotmjp/proposals/models.py:70
+msgid "Suggest lightening talk."
+msgstr "ライトニングトークを勧める。"
+
+#: sotmjp/proposals/models.py:71
+msgid "Re-submitted under appropriate category."
+msgstr "適切なカテゴリで再提案を勧める。"
+
+#: sotmjp/proposals/models.py:72
+#| msgid "applicant"
+msgid "Duplicate"
+msgstr "重複"
+
+#: sotmjp/proposals/models.py:73
+msgid "Administrative Action (Other)"
+msgstr "管理者の対応（その他）"
+
+#: sotmjp/proposals/models.py:74
+msgid "No really: rejected. It's just plain bad."
+msgstr "だめ：却下。単に悪い。"
+
+#: sotmjp/proposals/models.py:81
+msgid "The reason the proposal was rejected."
+msgstr "プロポーザルが却下された理由"
+
+#: sotmjp/proposals/models.py:84
+msgid "Additional requirements"
+msgstr "追加必要事項"
+
+#: sotmjp/proposals/models.py:86
+#| msgid ""
+#| "Please let us know if you have any specific needs (A/V requirements, "
+#| "multiple microphones, a table, etc).  Note for example that 'audio out' "
+#| "is not provided for your computer unless you tell us in advance."
+msgid ""
+"Please let us know if you have any specific needs(A/V requirements, multiple "
+"microphones, a table, etc).Note for example that 'audio out' is not "
+"providedfor your computer unless you tell us in advance."
+msgstr ""
+"特に必要な物(A/V機器、複数のマイク、テーブルetc)があれば教えて下さい。例とし"
+"て、コンピュータからの「音声出力」は事前にお知らせ頂いていない場合は提供でき"
+"ないことに注意して下さい。"
+
+#: sotmjp/proposals/models.py:99
+msgid "No preference"
+msgstr "希望なし"
+
+#: sotmjp/proposals/models.py:100
+msgid "15min"
+msgstr "15分間"
+
+#: sotmjp/proposals/models.py:101
+msgid "20min"
+msgstr "20分間"
+
+#: sotmjp/proposals/models.py:105
+#: sotmjp/templates/proposals/_proposal_fields.html:33
+msgid "Duration"
+msgstr "時間枠"
+
+#: sotmjp/proposals/models.py:108
+#: sotmjp/templates/proposals/_proposal_fields.html:66
+msgid "Outline"
+msgstr "アウトライン"
+
+#: sotmjp/proposals/models.py:112
+#: sotmjp/templates/proposals/_proposal_fields.html:25
+msgid "Audience"
+msgstr "対象者"
+
+#: sotmjp/proposals/models.py:113
+msgid "Who is the intended audience for your talk?"
+msgstr "講演の聴講者の想定はどんな人ですか。"
+
+#: sotmjp/proposals/models.py:116
+#: sotmjp/templates/proposals/_proposal_fields.html:28
+msgid "Objectives"
+msgstr "目的"
+
+#: sotmjp/proposals/models.py:118
+msgid "What will attendees get out of your talk?"
+msgstr "講演を聴講すると何が得られますか？"
+
+#: sotmjp/settings/base.py:79
 msgid "English"
 msgstr "英語"
 
-#: sotmjp/settings/base.py:78
+#: sotmjp/settings/base.py:80
 msgid "French"
 msgstr "フランス語"
 
-#: sotmjp/settings/base.py:79
+#: sotmjp/settings/base.py:81
 msgid "Japanese"
 msgstr "日本語"
 
-#: sotmjp/social_auth/views.py:33
-msgid ""
-"Cannot remove the only Social Account without first setting a Password or "
-"adding another Social Account."
-msgstr ""
-"ソーシャルアカウントが一つしか登録されていません。パスワードを設定するか他の"
-"ソーシャルアカウントを追加されないとこのソーシャルアカウントを削除できませ"
-"ん。"
+#: sotmjp/settings/base.py:284
+#| msgid "Your Presentations"
+msgid "URL for registration"
+msgstr "参加登録用のURL"
 
-#: sotmjp/social_auth/views.py:39
-#, python-format
-msgid "Removed the %(provider)s account '%(uid)s'."
-msgstr "%(provider)s アカウント '%(uid)s'を削除しました。"
+#: sotmjp/settings/base.py:285
+msgid "From address for emails to sponsors"
+msgstr "スポンサーへメール連絡するときの、送信者メールアドレス"
+
+#: sotmjp/settings/base.py:286
+msgid ""
+"Used in the home page template. Valid values are 'soon', 'open', 'closed' "
+"and 'over'"
+msgstr ""
+"ホームページテンプレートに使われます。適切な値は、'soon', 'open' 'closed' "
+"'over'のいずれかです。"
+
+#: sotmjp/settings/base.py:290
+#| msgid "Conference Schedule"
+msgid "Conference name (long)"
+msgstr "カンファレンス名称（長い）"
+
+#: sotmjp/settings/base.py:291
+#| msgid "Conference Schedule Edit"
+msgid "Conference year (4-digit)"
+msgstr "会議年（４桁）"
+
+#: sotmjp/settings/base.py:292
+#| msgid "Conference Schedule Edit"
+msgid "Conference year (2-digit)"
+msgstr "会議年（２桁）"
+
+#: sotmjp/settings/base.py:293
+#| msgid "Conference"
+msgid "Conference name (short)"
+msgstr "カンファレンス名称（短い）"
+
+#: sotmjp/settings/base.py:294
+#| msgid "Conference Schedule"
+msgid "Conference locality place"
+msgstr "カンファレンスの開催地"
+
+#: sotmjp/settings/base.py:295
+msgid "Conference locality country"
+msgstr "会議の開催される国"
+
+#: sotmjp/settings/base.py:296
+#| msgid "Conference Schedule"
+msgid "Conference start date"
+msgstr "カンファレンスの開始日"
+
+#: sotmjp/settings/base.py:297
+#| msgid "Conference Schedule Edit"
+msgid "Conference end date"
+msgstr "カンファレンスの終了日"
+
+#: sotmjp/settings/base.py:298
+#| msgid "Conference"
+msgid "Conference duration"
+msgstr "カンファレンス会期"
+
+#: sotmjp/settings/base.py:299
+msgid "How much days for conference(day number)?"
+msgstr "何日間の会議ですか（会期日数）"
+
+#: sotmjp/settings/base.py:300
+msgid "Conference has tutorial program?(Yes/No)"
+msgstr "会議ではチュートリアルが開催されますか？（Yes/No)"
+
+#: sotmjp/settings/base.py:301
+msgid "Tutorial program name"
+msgstr "チュートリアルの会議での名称"
+
+#: sotmjp/settings/base.py:302
+#| msgid "start date"
+msgid "Tutorial start date"
+msgstr "チュートリアル開始日"
+
+#: sotmjp/settings/base.py:303
+#| msgid "end date"
+msgid "Tutorial end date"
+msgstr "チュートリアル終了日"
+
+#: sotmjp/settings/base.py:304
+msgid "Tutorail duration"
+msgstr "チュートリアルの会期"
+
+#: sotmjp/settings/base.py:305
+msgid "Conference has hackathon program?(Yes/No)"
+msgstr "会議では、ハッカソンが予定されていますか？（Yes/No)"
+
+#: sotmjp/settings/base.py:306
+msgid "Hackathon program name"
+msgstr "ハッカソンの会議での名称"
+
+#: sotmjp/settings/base.py:307
+#| msgid "start date"
+msgid "Hackathon start date"
+msgstr "ハッカソン開始日"
+
+#: sotmjp/settings/base.py:308
+msgid "Hackathon end date"
+msgstr "ハッカソン終了日"
+
+#: sotmjp/settings/base.py:309
+msgid "Hackathon duration"
+msgstr "ハッカソンの会期"
+
+#: sotmjp/settings/base.py:310
+msgid "Google site verification code"
+msgstr "Googleサイト認証のコード"
 
 #: sotmjp/templates/_account_bar.html:15
 msgid "Admin"
@@ -358,25 +459,6 @@ msgstr "パスワード:"
 #: sotmjp/templates/admin/login.html:50
 msgid "Forgotten your password or username?"
 msgstr "パスワードあるいはユーザー名をお忘れですか？"
-
-#: sotmjp/templates/biblion/blog_list.html:6
-#: sotmjp/templates/biblion/blog_list.html:12
-#: sotmjp/templates/homepage.html:127
-msgid "Announcements"
-msgstr "アナウンス"
-
-#: sotmjp/templates/biblion/blog_list.html:26
-#: sotmjp/templates/biblion/blog_post.html:20
-msgid "Not published yet"
-msgstr "公開されていません"
-
-#: sotmjp/templates/biblion/blog_list.html:32
-msgid "Read more..."
-msgstr "続きを読む・・"
-
-#: sotmjp/templates/biblion/blog_list.html:36
-msgid "No posts have been published."
-msgstr "公開された投稿はありません。"
 
 #: sotmjp/templates/boxes/box.html:8
 msgid "Editing content:"
@@ -637,31 +719,84 @@ msgstr ""
 msgid "You have been invited to join \"%(team)s\""
 msgstr "あなたは\"%(team)s\"に招待されています"
 
-#: sotmjp/templates/homepage.html:29
+#: sotmjp/templates/homepage.html:13
+#, python-format
+msgid ""
+"\n"
+"        %(confname)s %(confyear)sin %(locality)s | %(startDate)s - "
+"%(endDateShort)s\n"
+"    "
+msgstr ""
+"\n"
+"        %(confname)s %(confyear)s　in %(locality)s | %(startDate)s - "
+"%(endDateShort)s\n"
+"    "
+
+#: sotmjp/templates/homepage.html:32
 msgid "Coming soon!"
 msgstr "近日開催！"
 
-#: sotmjp/templates/homepage.html:31
+#: sotmjp/templates/homepage.html:34
 msgid "Registration Closed"
 msgstr "参加登録は受け付けていません"
 
-#: sotmjp/templates/homepage.html:39
-msgid "State of the Map Japan 2015"
-msgstr "State of the Map Japan 2015"
+#: sotmjp/templates/homepage.html:42
+#, python-format
+#| msgid ""
+#| "\n"
+#| "                              <p class=\"post_dateline\">by <span class="
+#| "\"author\">%(author)s</span></p>\n"
+#| "                            "
+msgid ""
+"\n"
+"                               %(confname)s %(confyear)sin %(locality)s\n"
+"                          "
+msgstr ""
+"\n"
+"                               %(confname)s %(confyear)s　in %(locality)s\n"
+"                          "
 
-#: sotmjp/templates/homepage.html:52
+#: sotmjp/templates/homepage.html:58
 msgid "Conference"
 msgstr "カンファレンス"
 
-#: sotmjp/templates/homepage.html:52
-msgid "October 31"
-msgstr "１０月３１日"
+#: sotmjp/templates/homepage.html:60
+msgid "Tutorial"
+msgstr "チュートリアル"
 
-#: sotmjp/templates/homepage.html:89 sotmjp/templates/static/sponsors.html:5
+#: sotmjp/templates/homepage.html:63
+msgid "Hackathon"
+msgstr "ハッカソン"
+
+#: sotmjp/templates/homepage.html:70
+#, python-format
+msgid ""
+"\n"
+"                        %(confname)s is over! <br>\n"
+"                        Thanks to everyone for making it a great success!\" "
+"<br>\n"
+"                        "
+msgstr ""
+"\n"
+"                        %(confname)s は終了しました! <br>\n"
+"                        皆様のご協力に感謝します! <br>\n"
+"                        "
+
+#: sotmjp/templates/homepage.html:77
+msgid "REGISTER"
+msgstr "参加登録"
+
+#: sotmjp/templates/homepage.html:98 sotmjp/templates/static/sponsors.html:5
 msgid "Sponsors"
 msgstr "スポンサー"
 
 #: sotmjp/templates/homepage.html:136
+#: sotmjp/templates/pinax/blog/blog_list.html:6
+#: sotmjp/templates/pinax/blog/blog_list.html:12
+msgid "Announcements"
+msgstr "アナウンス"
+
+#: sotmjp/templates/homepage.html:145
 #, python-format
 msgid ""
 "\n"
@@ -674,19 +809,27 @@ msgstr ""
 "\"author\">%(author)s</span></p>\n"
 "                            "
 
-#: sotmjp/templates/homepage.html:143
+#: sotmjp/templates/homepage.html:152
 msgid "No announcements have been published."
 msgstr "掲載されたアナウンスはありません。"
+
+#: sotmjp/templates/pinax/blog/blog_list.html:26
+#: sotmjp/templates/pinax/blog/blog_post.html:20
+msgid "Not published yet"
+msgstr "公開されていません"
+
+#: sotmjp/templates/pinax/blog/blog_list.html:32
+msgid "Read more..."
+msgstr "続きを読む・・"
+
+#: sotmjp/templates/pinax/blog/blog_list.html:36
+msgid "No posts have been published."
+msgstr "公開された投稿はありません。"
 
 #: sotmjp/templates/proposals/_pending_proposal_row.html:11
 #: sotmjp/templates/proposals/_proposal_row.html:11
 msgid "Cancelled"
 msgstr "キャンセル済み"
-
-#: sotmjp/templates/proposals/_pending_proposal_row.html:15
-#: sotmjp/templates/proposals/_proposal_row.html:15
-msgid "Accepted"
-msgstr "受託済み"
 
 #: sotmjp/templates/proposals/_pending_proposal_row.html:17
 #: sotmjp/templates/proposals/_proposal_row.html:17
@@ -724,7 +867,7 @@ msgstr "Python レベル"
 
 #: sotmjp/templates/proposals/_proposal_fields.html:38
 msgid "Domain Level"
-msgstr ""
+msgstr "受講者のレベル"
 
 #: sotmjp/templates/proposals/_proposal_fields.html:43
 msgid "Additional Speakers"
@@ -744,6 +887,10 @@ msgstr "説明"
 msgid "Abstract"
 msgstr "概要"
 
+#: sotmjp/templates/proposals/_proposal_fields.html:69
+msgid "More info"
+msgstr "追加情報"
+
 #: sotmjp/templates/proposals/_proposal_fields.html:73
 msgid "Notes"
 msgstr "メモ"
@@ -755,6 +902,11 @@ msgstr "スピーカー略歴"
 #: sotmjp/templates/proposals/_proposal_fields.html:79
 msgid "Additional Requirements"
 msgstr "追加の必要事項"
+
+#: sotmjp/templates/proposals/_proposal_fields.html:84
+#: sotmjp/templates/schedule/presentation_detail.html:67
+msgid "Student Handout"
+msgstr "参加者用ハンドアウト"
 
 #: sotmjp/templates/proposals/_proposal_fields.html:87
 msgid "Download"
@@ -782,7 +934,7 @@ msgstr "このプロポーザルに付属する補助資料はありません。
 
 #: sotmjp/templates/proposals/_proposal_row.html:20
 msgid "Associated"
-msgstr ""
+msgstr "関連する"
 
 #: sotmjp/templates/proposals/_proposal_row.html:28
 #: sotmjp/templates/speakers/speaker_profile.html:35
@@ -1115,22 +1267,28 @@ msgstr "カンファレンススケジュールリスト"
 msgid "SPONSORS"
 msgstr "スポンサー"
 
-#: sotmjp/templates/site_base.html:169
+#: sotmjp/templates/site_base.html:161
+#| msgid ""
+#| "\n"
+#| "                    State of the Map Japan 2014 in Tokyo is a production "
+#| "of the \n"
+#| "                    <a href=\"http://osmf.jp/\">OpenStreetMap Foundation "
+#| "Japan</a>.\n"
+#| "                  "
 msgid ""
 "\n"
-"                    State of the Map Japan 2014 in Tokyo is a production of "
-"the \n"
+"                    State of the Map Japan is a production of the\n"
 "                    <a href=\"http://osmf.jp/\">OpenStreetMap Foundation "
 "Japan</a>.\n"
 "                  "
 msgstr ""
 "\n"
-"                    State of the Map Japan  は、 \n"
-"                    <a href=\"http://osmf.jp/\">OpenStreetMap Foundation "
-"Japan</a>が運営しています。\n"
+"                    State of the Map Japanは、<a href=\"http://osmf.jp/"
+"\">OpenStreetMap Foundation Japan</a>\n"
+"　　　　　の会議です。\n"
 "                  "
 
-#: sotmjp/templates/site_base.html:175
+#: sotmjp/templates/site_base.html:167
 msgid ""
 "\n"
 "                    Site forked from the <a href=\"http://pycon."
@@ -1148,7 +1306,7 @@ msgstr ""
 "for Conference Websites\">Symposion</a>を使っています。\n"
 "                  "
 
-#: sotmjp/templates/site_base.html:180
+#: sotmjp/templates/site_base.html:172
 msgid ""
 "\n"
 "                    Questions? Comments? Contact <a href=\"mailto:info@osmf."
@@ -1272,7 +1430,7 @@ msgstr "マネージャー"
 
 #: sotmjp/templates/teams/team_detail.html:48
 msgid "demote"
-msgstr ""
+msgstr "降格"
 
 #: sotmjp/templates/teams/team_detail.html:55
 msgid "Team Members"
@@ -1313,1953 +1471,3 @@ msgstr "開催地情報"
 #: sotmjp/templates/venue/detail.html:7 sotmjp/templates/venue/detail.html:17
 msgid "Venue Details"
 msgstr "開催地詳細"
-
-#: sotmjp/tutorials/models.py:15
-msgid "User who submitted the message"
-msgstr "このメッセージを送信したユーザー"
-
-#: sotmjp/tutorials/utils.py:98
-msgid "Please select at least one attendee"
-msgstr "最低一人の参加者を選択してください。"
-
-#: sotmjp/tutorials/utils.py:109
-msgid "An invalid form action was attempted"
-msgstr "不正なフォームへの入力が行なわれました"
-
-#: sotmjp/tutorials/views.py:32 sotmjp/tutorials/views.py:93
-msgid "Not authorized for this page"
-msgstr "このページを閲覧する権限がありません"
-
-#: sotmjp/tutorials/views.py:65
-msgid "There was some error sending emails, not all of them might have made it"
-msgstr "電子メールの送信にエラーがあり、一部の処理がされましせんでした。"
-
-#: sotmjp/tutorials/views.py:69
-msgid "Email(s) sent"
-msgstr "送信した電子メール"
-
-#: sotmjp/tutorials/views.py:116
-msgid "Message sent"
-msgstr "メッセージが送られました。"
-
-#, fuzzy
-#~ msgid "Log Messages"
-#~ msgstr "メッセージを残す"
-
-#, fuzzy
-#~ msgid "Profiling"
-#~ msgstr "専門"
-
-#~ msgid "Versions"
-#~ msgstr "バージョン"
-
-#, fuzzy
-#~ msgid "Function"
-#~ msgstr "アクション"
-
-#~ msgid "Level"
-#~ msgstr "レベル"
-
-#~ msgid "Channel"
-#~ msgstr "チャネル"
-
-#, fuzzy
-#~ msgid "Message"
-#~ msgstr "メッセージが送られました。"
-
-#~ msgid "Location"
-#~ msgstr "ロケーション"
-
-#, fuzzy
-#~ msgid "Count"
-#~ msgstr "アカウント"
-
-#, fuzzy
-#~ msgid "View information"
-#~ msgstr "開催地情報"
-
-#, fuzzy
-#~ msgid "View Function"
-#~ msgstr "審査セクション"
-
-#, fuzzy
-#~ msgid "Setting"
-#~ msgstr "設定"
-
-#, fuzzy
-#~ msgid "Signal"
-#~ msgstr "会員登録"
-
-#, fuzzy
-#~ msgid "Timeline"
-#~ msgstr "辞退"
-
-#, fuzzy
-#~ msgid "Action"
-#~ msgstr "アクション"
-
-#, fuzzy
-#~ msgid "SQL Profiled"
-#~ msgstr "プロファイルを保存する"
-
-#, fuzzy
-#~ msgid "SQL Selected"
-#~ msgstr "却下済み"
-
-#~ msgid "Version"
-#~ msgstr "バージョン"
-
-#~ msgid "Enter a valid email address."
-#~ msgstr "正しいメールアドレスを入力してくだい。"
-
-#~ msgid "Comma-separated integers"
-#~ msgstr "コンマ区切りの整数"
-
-#~ msgid "Email address"
-#~ msgstr "メールアドレス"
-
-#~ msgid "IPv4 address"
-#~ msgstr "IPv4アドレス"
-
-#~ msgid "IP address"
-#~ msgstr "IPアドレス"
-
-#~ msgid "Text"
-#~ msgstr "テキスト"
-
-#~ msgid "URL"
-#~ msgstr "URL"
-
-#~ msgid "File"
-#~ msgstr "ファイル"
-
-#~ msgid "This field is required."
-#~ msgstr "この欄は必須項目です。"
-
-#~ msgid "No file was submitted."
-#~ msgstr "ファイルが提出されていません。"
-
-#~ msgid "Enter a valid URL."
-#~ msgstr "適切なURLを入力"
-
-#, fuzzy
-#~ msgid "Order"
-#~ msgstr "発注"
-
-#~ msgid "Delete"
-#~ msgstr "削除する"
-
-#, fuzzy
-#~ msgid "Please correct the duplicate data for %(field)s."
-#~ msgstr "下のエラーを訂正して下さい。"
-
-#, fuzzy
-#~ msgid "Please correct the duplicate values below."
-#~ msgstr "下のエラーを訂正して下さい。"
-
-#~ msgid "Yes"
-#~ msgstr "はい"
-
-#~ msgid "No"
-#~ msgstr "いいえ"
-
-#~ msgid "p.m."
-#~ msgstr "午後"
-
-#~ msgid "a.m."
-#~ msgstr "午前"
-
-#~ msgid "PM"
-#~ msgstr "午後"
-
-#~ msgid "AM"
-#~ msgstr "午前"
-
-#~ msgid "Thu"
-#~ msgstr "木"
-
-#~ msgid "Fri"
-#~ msgstr "金"
-
-#, fuzzy
-#~ msgid "Sat"
-#~ msgstr "ステータス"
-
-#~ msgid "Sun"
-#~ msgstr "日"
-
-#~ msgid "January"
-#~ msgstr "１月"
-
-#~ msgid "February"
-#~ msgstr "２月"
-
-#~ msgid "September"
-#~ msgstr "９月"
-
-#~ msgid "December"
-#~ msgstr "12月"
-
-#~ msgid "jan"
-#~ msgstr "１月"
-
-#~ msgid "feb"
-#~ msgstr "２月"
-
-#~ msgid "mar"
-#~ msgstr "３月"
-
-#~ msgid "apr"
-#~ msgstr "４月"
-
-#~ msgctxt "alt. month"
-#~ msgid "September"
-#~ msgstr "９月"
-
-#~ msgctxt "alt. month"
-#~ msgid "December"
-#~ msgstr "１２月"
-
-#~ msgid "Yes, I'm sure"
-#~ msgstr "はい"
-
-#, fuzzy
-#~ msgid "Django administration"
-#~ msgstr "招待を辞退する"
-
-#, fuzzy
-#~ msgid "positional arguments"
-#~ msgstr "追加必要事項"
-
-#, fuzzy
-#~ msgid "optional arguments"
-#~ msgstr "追加必要事項"
-
-#, fuzzy
-#~ msgid "expected at least one argument"
-#~ msgstr "最低一人の参加者を選択してください。"
-
-#, fuzzy
-#~ msgid "created"
-#~ msgstr "作成する"
-
-#~ msgid "modified"
-#~ msgstr "変更された"
-
-#~ msgid "start"
-#~ msgstr "開始"
-
-#~ msgid "end"
-#~ msgstr "終了"
-
-#~ msgid "status"
-#~ msgstr "ステータス"
-
-#, fuzzy
-#~ msgid "status changed"
-#~ msgstr "変更を保存する"
-
-#~ msgid "active"
-#~ msgstr "有効"
-
-#~ msgid "deleted"
-#~ msgstr "削除済み"
-
-#~ msgid ""
-#~ "A user on %(site_name)s has created an account using this email address.\n"
-#~ "\n"
-#~ "To confirm this email address, go to %(activate_url)s\n"
-#~ "\n"
-#~ "If you did not sign up for this site, you can ignore this message.\n"
-#~ msgstr ""
-#~ "%(site_name)s でユーザーがこのメールアドレスを使って、アカウントを作成しま"
-#~ "した。\n"
-#~ "\n"
-#~ "このメールアドレスを確認するには以下のURLをクリックしてください。\n"
-#~ "%(activate_url)s\n"
-#~ "\n"
-#~ "このメールに心当たりの無い方は無視してください。\n"
-
-#~ msgid "Confirm email address for %(site_name)s"
-#~ msgstr "%(site_name)s のメールアドレス確認"
-
-#~ msgid ""
-#~ "You're receiving this email because you or someone else has requested a "
-#~ "password for your user account at %(site_name)s.\n"
-#~ "It can be safely ignored if you did not request a password reset. Click "
-#~ "the link below to reset your password.\n"
-#~ "\n"
-#~ "%(password_reset_url)s\n"
-#~ msgstr ""
-#~ "%(site_name)s でパスワード再設定の手続きを承りました。\n"
-#~ "\n"
-#~ "パスワードを再設定するには以下のURLをクリックしてください。\n"
-#~ "%(password_reset_url)s\n"
-#~ "\n"
-#~ "このメールに心当たりの無い方は無視してください。\n"
-
-#~ msgid "[%(site_name)s] Password reset"
-#~ msgstr "[%(site_name)s] パスワード再設定"
-
-#~ msgid "Confirm email address <b>%(email)s</b>?"
-#~ msgstr "メールアドレスは<b>%(email)s</b>でよろしいですか？"
-
-#~ msgid "Confirm"
-#~ msgstr "確認"
-
-#~ msgid "Confirm your email address"
-#~ msgstr "メールアドレスの確認"
-
-#, fuzzy
-#~ msgid "You have confirmed <b>%(email)s</b>"
-#~ msgstr "メールアドレスは<b>%(email)s</b>でよろしいですか？"
-
-#~ msgid "Are you sure you want to log out?"
-#~ msgstr "ログアウトしてよろしいですか？"
-
-#~ msgid "Password reset"
-#~ msgstr "パスワード リセット"
-
-#~ msgid "Reset my password"
-#~ msgstr "パスワードをお忘れですか？"
-
-#~ msgid "Resend"
-#~ msgstr "再送信"
-
-#~ msgid "Set your new password"
-#~ msgstr "新しいパスワード設定"
-
-#~ msgid "This site is in private beta"
-#~ msgstr "このサイトは、ベータ版です。"
-
-#, fuzzy
-#~ msgid "i18n text"
-#~ msgstr "テキスト"
-
-#~ msgid "Draft"
-#~ msgstr "下書き"
-
-#~ msgid "Public"
-#~ msgstr "公開"
-
-#~ msgid "Reject"
-#~ msgstr "却下"
-
-#~ msgid "Path can only contain letters, numbers and hyphens and end with /"
-#~ msgstr ""
-#~ "パスはアルファベット、数字、ハイフンのみ使用でき、スラッシュで終わる必要が"
-#~ "あります"
-
-#~ msgid "Edit page"
-#~ msgstr "ページを編集する"
-
-#~ msgid "Create Page"
-#~ msgstr "ページを作成する"
-
-#, fuzzy
-#~ msgid "Username"
-#~ msgstr "名前"
-
-#, fuzzy
-#~ msgid "Password"
-#~ msgstr "パスワード:"
-
-#, fuzzy
-#~ msgid "Password (again)"
-#~ msgstr "パスワード:"
-
-#, fuzzy
-#~ msgid "Usernames can only contain letters, numbers and underscores."
-#~ msgstr ""
-#~ "パスはアルファベット、数字、ハイフンのみ使用でき、スラッシュで終わる必要が"
-#~ "あります"
-
-#, fuzzy
-#~ msgid "Remember Me"
-#~ msgstr "１２月１３日"
-
-#, fuzzy
-#~ msgid "This account is inactive."
-#~ msgstr "このページは非公開です。"
-
-#, fuzzy
-#~ msgid "Current Password"
-#~ msgstr "パスワードを変更する"
-
-#, fuzzy
-#~ msgid "New Password"
-#~ msgstr "パスワード:"
-
-#, fuzzy
-#~ msgid "Please type your current password."
-#~ msgstr "名前をローマ字で入力してください。"
-
-#, fuzzy
-#~ msgid "Timezone"
-#~ msgstr "タイムゾーン"
-
-#~ msgid "timezone"
-#~ msgstr "タイムゾーン"
-
-#, fuzzy
-#~ msgid "language"
-#~ msgstr "言語"
-
-#, fuzzy
-#~ msgid "notes"
-#~ msgstr "メモ"
-
-#, fuzzy
-#~ msgid "sent"
-#~ msgstr "参加したことがあります。"
-
-#, fuzzy
-#~ msgid "use count"
-#~ msgstr "アカウント"
-
-#, fuzzy
-#~ msgid "email address"
-#~ msgstr "メールアドレス"
-
-#, fuzzy
-#~ msgid "email addresses"
-#~ msgstr "メールアドレス"
-
-#, fuzzy
-#~ msgid "email confirmation"
-#~ msgstr "開催地情報"
-
-#, fuzzy
-#~ msgid "email confirmations"
-#~ msgstr "開催地情報"
-
-#, fuzzy
-#~ msgid "Create Alias"
-#~ msgstr "ページを作成する"
-
-#, fuzzy
-#~ msgid "Content"
-#~ msgstr "content type"
-
-#, fuzzy
-#~ msgid "Sites"
-#~ msgstr "サイトマップ"
-
-#, fuzzy
-#~ msgid "Admin Sites"
-#~ msgstr "管理画面"
-
-#, fuzzy
-#~ msgid "Administration"
-#~ msgstr "招待に応じる"
-
-#, fuzzy
-#~ msgid "User settings"
-#~ msgstr "設定"
-
-#, fuzzy
-#~ msgid "Users"
-#~ msgstr "ユーザーリスト"
-
-#, fuzzy
-#~ msgid "Page settings"
-#~ msgstr "設定"
-
-#, fuzzy
-#~ msgid "Are you sure you want copy all plugins from %s?"
-#~ msgstr "ログアウトしてよろしいですか？"
-
-#, fuzzy
-#~ msgid "Add Page"
-#~ msgstr "スピーカーを追加する"
-
-#, fuzzy
-#~ msgid "New Page"
-#~ msgstr "ページを作成する"
-
-#, fuzzy
-#~ msgid "Edit this Page"
-#~ msgstr "このコメントを編集する"
-
-#, fuzzy
-#~ msgid "Permissions"
-#~ msgstr "セッション"
-
-#, fuzzy
-#~ msgid "Hide in navigation"
-#~ msgstr "招待を辞退する"
-
-#, fuzzy
-#~ msgid "Display in navigation"
-#~ msgstr "招待を辞退する"
-
-#, fuzzy
-#~ msgid "Delete page"
-#~ msgstr "アカウント削除"
-
-#, fuzzy
-#~ msgid "Are you sure you want to revert to live?"
-#~ msgstr "ログアウトしてよろしいですか？"
-
-#, fuzzy
-#~ msgid "Advanced options"
-#~ msgstr "アクション"
-
-#, fuzzy
-#~ msgid "Page type"
-#~ msgstr "タイプ"
-
-#, fuzzy
-#~ msgid "Menu Title"
-#~ msgstr "題目"
-
-#, fuzzy
-#~ msgid "Page Title"
-#~ msgstr "題目"
-
-#, fuzzy
-#~ msgid "Description meta tag"
-#~ msgstr "説明"
-
-#, fuzzy
-#~ msgid "Application"
-#~ msgstr "参加者"
-
-#, fuzzy
-#~ msgid "Redirects to this URL."
-#~ msgstr "CTEにリダイレクトしています・・・"
-
-#, fuzzy
-#~ msgid "Please select user or group first."
-#~ msgstr "名前をローマ字で入力してください。"
-
-#, fuzzy
-#~ msgid "Add"
-#~ msgstr "広告"
-
-#, fuzzy
-#~ msgid "Notify user"
-#~ msgstr "お気づきですか？"
-
-#, fuzzy
-#~ msgid "New password"
-#~ msgstr "パスワードを変更する"
-
-#, fuzzy
-#~ msgid "New password confirmation"
-#~ msgstr "パスワード変更"
-
-#, fuzzy
-#~ msgid "Advanced Settings"
-#~ msgstr "設定"
-
-#, fuzzy
-#~ msgid "Change Permissions"
-#~ msgstr "パスワードを変更する"
-
-#, fuzzy
-#~ msgid "Page moved"
-#~ msgstr "削除"
-
-#, fuzzy
-#~ msgid "View restriction"
-#~ msgstr "審査セクション"
-
-#, fuzzy
-#~ msgid "View restrictions"
-#~ msgstr "審査セクション"
-
-#, fuzzy
-#~ msgid "User details"
-#~ msgstr "ユーザーリスト"
-
-#, fuzzy
-#~ msgid "Add Another"
-#~ msgstr "別のスピーカーを追加する"
-
-#, fuzzy
-#~ msgid "created by"
-#~ msgstr "作成する"
-
-#, fuzzy
-#~ msgid "changed by"
-#~ msgstr "変更する"
-
-#, fuzzy
-#~ msgid "publication date"
-#~ msgstr "申請が完了しました"
-
-#, fuzzy
-#~ msgid "in navigation"
-#~ msgstr "招待を辞退する"
-
-#, fuzzy
-#~ msgid "application"
-#~ msgstr "応募者"
-
-#, fuzzy
-#~ msgid "application instance name"
-#~ msgstr "申請が完了しました"
-
-#, fuzzy
-#~ msgid "page"
-#~ msgstr "ページを編集する"
-
-#, fuzzy
-#~ msgid "Current page"
-#~ msgstr "現在のスピーカー"
-
-#, fuzzy
-#~ msgid "can delete"
-#~ msgstr "削除する"
-
-#, fuzzy
-#~ msgid "on page level"
-#~ msgstr "Python レベル"
-
-#, fuzzy
-#~ msgid "frontend view restriction"
-#~ msgstr "審査セクション"
-
-#, fuzzy
-#~ msgid "position"
-#~ msgstr "セクション"
-
-#, fuzzy
-#~ msgid "creation date"
-#~ msgstr "終了日"
-
-#, fuzzy
-#~ msgid "user setting"
-#~ msgstr "設定"
-
-#, fuzzy
-#~ msgid "user settings"
-#~ msgstr "設定"
-
-#~ msgid "title"
-#~ msgstr "題目"
-
-#~ msgid "description"
-#~ msgstr "説明"
-
-#, fuzzy
-#~ msgid "is published"
-#~ msgstr "公開されていません"
-
-#, fuzzy
-#~ msgid "Username:"
-#~ msgstr "名前"
-
-#, fuzzy
-#~ msgid "Change a page"
-#~ msgstr "パスワードを変更する"
-
-#, fuzzy
-#~ msgid "All permissions"
-#~ msgstr "セッション"
-
-#, fuzzy
-#~ msgid "User"
-#~ msgstr "ユーザーリスト"
-
-#, fuzzy
-#~ msgid "Can delete"
-#~ msgstr "削除する"
-
-#, fuzzy
-#~ msgid "Save as new"
-#~ msgstr "変更を保存する"
-
-#, fuzzy
-#~ msgid "Edit model"
-#~ msgstr "プロファイルを編集する"
-
-#, fuzzy
-#~ msgid "List of pages"
-#~ msgstr "ページを編集する"
-
-#, fuzzy
-#~ msgid "Successfully moved"
-#~ msgstr "プロファイルのアップロードが成功しました。"
-
-#, fuzzy
-#~ msgid "Are you sure you want to %%s this page?"
-#~ msgstr "ログアウトしてよろしいですか？"
-
-#, fuzzy
-#~ msgid "Choose copy options"
-#~ msgstr "対応を選択する"
-
-#, fuzzy
-#~ msgid "edit this page"
-#~ msgstr "ページを編集する"
-
-#, fuzzy
-#~ msgid "Unpublish"
-#~ msgstr "英語"
-
-#, fuzzy
-#~ msgid "Publish"
-#~ msgstr "公開"
-
-#, fuzzy
-#~ msgid "page settings"
-#~ msgstr "設定"
-
-#, fuzzy
-#~ msgid "Add Child"
-#~ msgstr "ファイルを追加する"
-
-#, fuzzy
-#~ msgid "add"
-#~ msgstr "追加された"
-
-#, fuzzy
-#~ msgid "cut"
-#~ msgstr "アカウント"
-
-#, fuzzy
-#~ msgid "info"
-#~ msgstr "追加情報"
-
-#, fuzzy
-#~ msgid "last change by"
-#~ msgstr "変更を保存する"
-
-#, fuzzy
-#~ msgid "Available plugins"
-#~ msgstr "参加可能なチーム"
-
-#, fuzzy
-#~ msgid "Are you sure you want to delete this plugin?"
-#~ msgstr "ログアウトしてよろしいですか？"
-
-#, fuzzy
-#~ msgid "Are you sure you want to publish this page?"
-#~ msgstr "ログアウトしてよろしいですか？"
-
-#, fuzzy
-#~ msgid "unpublished changes"
-#~ msgstr "公開されていません"
-
-#, fuzzy
-#~ msgid "published"
-#~ msgstr "公開されていません"
-
-#, fuzzy
-#~ msgid "unpublished parent"
-#~ msgstr "公開されていません"
-
-#, fuzzy
-#~ msgid "unpublished"
-#~ msgstr "公開されていません"
-
-#, fuzzy
-#~ msgid "no content"
-#~ msgstr "編集"
-
-#, fuzzy
-#~ msgid "Categories"
-#~ msgstr "カテゴリ"
-
-#, fuzzy
-#~ msgid "Add Category"
-#~ msgstr "カテゴリ"
-
-#, fuzzy
-#~ msgid "sample account page"
-#~ msgstr "アカウント削除"
-
-#, fuzzy
-#~ msgid "^account/$"
-#~ msgstr "アカウント"
-
-#, fuzzy
-#~ msgid "Change Category"
-#~ msgstr "カテゴリ"
-
-#, fuzzy
-#~ msgid "constances"
-#~ msgstr "カンファレンス"
-
-#, fuzzy
-#~ msgid "Is modified"
-#~ msgstr "お気づきですか？"
-
-#, fuzzy
-#~ msgid "British English"
-#~ msgstr "英語"
-
-#, fuzzy
-#~ msgid "Interlingua"
-#~ msgstr "国際"
-
-#, fuzzy
-#~ msgid "Polish"
-#~ msgstr "英語"
-
-#, fuzzy
-#~ msgid "Traditional Chinese"
-#~ msgstr "その他のメモ"
-
-#, fuzzy
-#~ msgid "Successfully deleted %(count)d %(items)s."
-#~ msgstr "プロファイルのアップロードが成功しました。"
-
-#, fuzzy
-#~ msgid "Any date"
-#~ msgstr "終了日"
-
-#, fuzzy
-#~ msgid "Action:"
-#~ msgstr "アクション"
-
-#, fuzzy
-#~ msgid "object id"
-#~ msgstr "目的"
-
-#, fuzzy
-#~ msgid "change message"
-#~ msgstr "メッセージを残す"
-
-#, fuzzy
-#~ msgid "Changed %s."
-#~ msgstr "変更する"
-
-#, fuzzy
-#~ msgid "Change %s"
-#~ msgstr "変更する"
-
-#, fuzzy
-#~ msgid "Change history: %s"
-#~ msgstr "パスワードを変更する"
-
-#, fuzzy
-#~ msgid "Site administration"
-#~ msgstr "招待を辞退する"
-
-#, fuzzy
-#~ msgid "Change:"
-#~ msgstr "変更する"
-
-#, fuzzy
-#~ msgid "Clear selection"
-#~ msgstr "セクション"
-
-#, fuzzy
-#~ msgid "%(name)s"
-#~ msgstr "名前"
-
-#, fuzzy
-#~ msgid "Documentation"
-#~ msgstr "時間枠"
-
-#, fuzzy
-#~ msgid "Recent Actions"
-#~ msgstr "審査セクション"
-
-#, fuzzy
-#~ msgid "My Actions"
-#~ msgstr "アクション"
-
-#, fuzzy
-#~ msgid "None available"
-#~ msgstr "スポンサー募集中"
-
-#, fuzzy
-#~ msgid "Unknown content"
-#~ msgstr "メインページへ戻る"
-
-#~ msgid "Remove"
-#~ msgstr "削除"
-
-#, fuzzy
-#~ msgid "Add another %(verbose_name)s"
-#~ msgstr "別のスピーカーを追加する"
-
-#, fuzzy
-#~ msgid "Delete?"
-#~ msgstr "削除する"
-
-#, fuzzy
-#~ msgid "Log in again"
-#~ msgstr "ログイン"
-
-#, fuzzy
-#~ msgid "Password change"
-#~ msgstr "パスワード:"
-
-#, fuzzy
-#~ msgid "Old password"
-#~ msgstr "パスワードを変更する"
-
-#, fuzzy
-#~ msgid "Change my password"
-#~ msgstr "パスワードを変更する"
-
-#, fuzzy
-#~ msgid "Enter new password"
-#~ msgstr "パスワードを変更する"
-
-#, fuzzy
-#~ msgid "New password:"
-#~ msgstr "パスワード:"
-
-#, fuzzy
-#~ msgid "Confirm password:"
-#~ msgstr "パスワードを変更する"
-
-#, fuzzy
-#~ msgid "Email address:"
-#~ msgstr "メールアドレス"
-
-#, fuzzy
-#~ msgid "view:"
-#~ msgstr "審査"
-
-#, fuzzy
-#~ msgid "Documentation for this page"
-#~ msgstr "このページを閲覧する権限がありません"
-
-#, fuzzy
-#~ msgid "Edit this object (current window)"
-#~ msgstr "このコメントを編集する"
-
-#, fuzzy
-#~ msgid "Edit this object (new window)"
-#~ msgstr "このコメントを編集する"
-
-#, fuzzy
-#~ msgid "Views"
-#~ msgstr "審査"
-
-#, fuzzy
-#~ msgid "Important dates"
-#~ msgstr "開始日"
-
-#, fuzzy
-#~ msgid "Change password: %s"
-#~ msgstr "パスワードを変更する"
-
-#, fuzzy
-#~ msgid "Password confirmation"
-#~ msgstr "関連付け"
-
-#, fuzzy
-#~ msgid "iterations"
-#~ msgstr "国際"
-
-#, fuzzy
-#~ msgid "checksum"
-#~ msgstr "小切手"
-
-#~ msgid "name"
-#~ msgstr "名前"
-
-#, fuzzy
-#~ msgid "codename"
-#~ msgstr "名前"
-
-#, fuzzy
-#~ msgid "permission"
-#~ msgstr "セッション"
-
-#, fuzzy
-#~ msgid "permissions"
-#~ msgstr "セッション"
-
-#, fuzzy
-#~ msgid "password"
-#~ msgstr "パスワード:"
-
-#, fuzzy
-#~ msgid "username"
-#~ msgstr "名前"
-
-#, fuzzy
-#~ msgid "first name"
-#~ msgstr "名前 (ローマ字)"
-
-#, fuzzy
-#~ msgid "last name"
-#~ msgstr "名字 (ローマ字)"
-
-#, fuzzy
-#~ msgid "Logged out"
-#~ msgstr "ログアウト"
-
-#, fuzzy
-#~ msgid "Password reset on %(site_name)s"
-#~ msgstr "%(site_name)s のメールアドレス確認"
-
-#, fuzzy
-#~ msgid "flagged"
-#~ msgid_plural "flagged"
-#~ msgstr[0] "ログインしています"
-
-#, fuzzy
-#~ msgid "Flag selected comments"
-#~ msgstr "選択したスポンサーへメールを送信"
-
-#, fuzzy
-#~ msgid "approved"
-#~ msgid_plural "approved"
-#~ msgstr[0] "承認済み"
-
-#, fuzzy
-#~ msgid "removed"
-#~ msgid_plural "removed"
-#~ msgstr[0] "削除"
-
-#, fuzzy
-#~ msgid "%(site_name)s comments"
-#~ msgstr "[%(site_name)s] パスワード再設定"
-
-#~ msgid "content type"
-#~ msgstr "content type"
-
-#, fuzzy
-#~ msgid "user's email address"
-#~ msgstr "メールアドレス"
-
-#, fuzzy
-#~ msgid "date/time submitted"
-#~ msgstr "申請が完了しました"
-
-#, fuzzy
-#~ msgid "is public"
-#~ msgstr "公開"
-
-#, fuzzy
-#~ msgid "is removed"
-#~ msgstr "削除"
-
-#, fuzzy
-#~ msgid "date"
-#~ msgstr "終了日"
-
-#, fuzzy
-#~ msgid "Approve"
-#~ msgstr "承認済み"
-
-#, fuzzy
-#~ msgid "Flag this comment"
-#~ msgstr "このコメントを編集する"
-
-#, fuzzy
-#~ msgid "Preview"
-#~ msgstr "審査"
-
-#, fuzzy
-#~ msgid "Please correct the error below"
-#~ msgid_plural "Please correct the errors below"
-#~ msgstr[0] "下のエラーを訂正して下さい。"
-
-#, fuzzy
-#~ msgid "or make changes"
-#~ msgstr "変更を保存する"
-
-#, fuzzy
-#~ msgid "content types"
-#~ msgstr "content type"
-
-#, fuzzy
-#~ msgid "content"
-#~ msgstr "content type"
-
-#, fuzzy
-#~ msgid "registration required"
-#~ msgstr "参加登録は受け付けていません"
-
-#, fuzzy
-#~ msgid "flat page"
-#~ msgstr "ページを編集する"
-
-#, fuzzy
-#~ msgid "flat pages"
-#~ msgstr "ページを編集する"
-
-#, fuzzy
-#~ msgid "first step"
-#~ msgstr "初参加です。"
-
-#, fuzzy
-#~ msgid "submit"
-#~ msgstr "提出する"
-
-#, fuzzy
-#~ msgid "st"
-#~ msgstr "第一回"
-
-#, fuzzy
-#~ msgid "nd"
-#~ msgstr "送信する"
-
-#, fuzzy
-#~ msgid "one"
-#~ msgstr "１"
-
-#, fuzzy
-#~ msgid "two"
-#~ msgstr "２"
-
-#, fuzzy
-#~ msgid "eight"
-#~ msgstr "宿泊日数"
-
-#, fuzzy
-#~ msgid "Alacant"
-#~ msgstr "参加者"
-
-#, fuzzy
-#~ msgid "Castile and Leon"
-#~ msgstr "アカウントを作成"
-
-#, fuzzy
-#~ msgid "Borders"
-#~ msgstr "発注"
-
-#, fuzzy
-#~ msgid "Down"
-#~ msgstr "ダウンロードする"
-
-#, fuzzy
-#~ msgid "Dublin"
-#~ msgstr "公開"
-
-#, fuzzy
-#~ msgid "Tottori"
-#~ msgstr "チュートリアル"
-
-#, fuzzy
-#~ msgid "Durango"
-#~ msgstr "時間枠"
-
-#, fuzzy
-#~ msgid "Morelos"
-#~ msgstr "追加情報"
-
-#, fuzzy
-#~ msgid "Lublin"
-#~ msgstr "公開"
-
-#, fuzzy
-#~ msgid "Greater Poland"
-#~ msgstr "ページを作成する"
-
-#, fuzzy
-#~ msgid "Blekinge"
-#~ msgstr "講演"
-
-#, fuzzy
-#~ msgid "Levice"
-#~ msgstr "初級"
-
-#, fuzzy
-#~ msgid "Namestovo"
-#~ msgstr "名前"
-
-#, fuzzy
-#~ msgid "Skalica"
-#~ msgstr "応募者"
-
-#, fuzzy
-#~ msgid "Trencin"
-#~ msgstr "フランス語"
-
-#, fuzzy
-#~ msgid "Presov region"
-#~ msgstr "プレゼンテーション"
-
-#, fuzzy
-#~ msgid "redirect to"
-#~ msgstr "CTEにリダイレクトしています・・・"
-
-#, fuzzy
-#~ msgid "session key"
-#~ msgstr "セッション番号"
-
-#, fuzzy
-#~ msgid "session data"
-#~ msgstr "セッションの詳細"
-
-#, fuzzy
-#~ msgid "expire date"
-#~ msgstr "終了日"
-
-#, fuzzy
-#~ msgid "session"
-#~ msgstr "セッション"
-
-#, fuzzy
-#~ msgid "sessions"
-#~ msgstr "セッション"
-
-#, fuzzy
-#~ msgid "display name"
-#~ msgstr "URLを表示する"
-
-#, fuzzy
-#~ msgid "Reset view"
-#~ msgstr "審査"
-
-#, fuzzy
-#~ msgid "Add child"
-#~ msgstr "ファイルを追加する"
-
-#, fuzzy
-#~ msgid "Successfully deleted %s items."
-#~ msgstr "プロファイルのアップロードが成功しました。"
-
-#, fuzzy
-#~ msgid "First child"
-#~ msgstr "初参加です。"
-
-#, fuzzy
-#~ msgid "An invalid position was given: %s."
-#~ msgstr "不正なフォームへの入力が行なわれました"
-
-#~ msgid "date created"
-#~ msgstr "作成日"
-
-#, fuzzy
-#~ msgid "This %(provider)s account is already in use."
-#~ msgstr "%(provider)s アカウント '%(uid)s'を削除しました。"
-
-#, fuzzy
-#~ msgid "Module level"
-#~ msgstr "レベル"
-
-#~ msgid "Overview"
-#~ msgstr "概要"
-
-#~ msgid "last updated"
-#~ msgstr "最終変更"
-
-#~ msgid "Search Page"
-#~ msgstr "検索ページ"
-
-#, fuzzy
-#~ msgid "Navigation"
-#~ msgstr "注釈"
-
-#, fuzzy
-#~ msgid "next chapter"
-#~ msgstr "最大文字数"
-
-#, fuzzy
-#~ msgid "Library changes"
-#~ msgstr "変更を保存する"
-
-#~ msgid "C API changes"
-#~ msgstr "C API変更"
-
-#, fuzzy
-#~ msgid "Other changes"
-#~ msgstr "変更を保存する"
-
-#, fuzzy
-#~ msgid "Contents"
-#~ msgstr "content type"
-
-#, fuzzy
-#~ msgid "Please provide a comma-separated list of tags."
-#~ msgstr "コンマ区切りのタグリスト"
-
-#, fuzzy
-#~ msgid "A comma-separated list of tags."
-#~ msgstr "コンマ区切りのタグリスト"
-
-#, fuzzy
-#~ msgid "Tag"
-#~ msgstr "タグ"
-
-#, fuzzy
-#~ msgid "Object id"
-#~ msgstr "目的"
-
-#, fuzzy
-#~ msgid "Content type"
-#~ msgstr "content type"
-
-#~ msgid "Basic settings"
-#~ msgstr "基本設定"
-
-#~ msgid "Access settings"
-#~ msgstr "アクセス設定"
-
-#, fuzzy
-#~ msgid "Additional settings"
-#~ msgstr "その他のメモ"
-
-#, fuzzy
-#~ msgid "Logged in only"
-#~ msgstr "ログインしています"
-
-#, fuzzy
-#~ msgid "Sort order"
-#~ msgstr "発注"
-
-#, fuzzy
-#~ msgid "Restricted"
-#~ msgstr "却下済み"
-
-#~ msgid "Applicant"
-#~ msgstr "参加者"
-
-#~ msgid "unreviewed"
-#~ msgstr "レビュー前"
-
-#~ msgid "rejected"
-#~ msgstr "却下済み"
-
-#~ msgid "(comma-separated addresses)"
-#~ msgstr "(コンマ区切りのアドレス)"
-
-#~ msgid "Web Logo"
-#~ msgstr "ウェブ用ロゴ"
-
-#~ msgid "Print Logo"
-#~ msgstr "印刷用ロゴ"
-
-#~ msgid "Ad"
-#~ msgstr "広告"
-
-#~ msgid "conference"
-#~ msgstr "カンファレンス"
-
-#~ msgid "order"
-#~ msgstr "発注"
-
-#~ msgid "cost"
-#~ msgstr "費用"
-
-#~ msgid "This is private."
-#~ msgstr "このページは非公開です。"
-
-#~ msgid "sponsor level"
-#~ msgstr "スポンサーレベル"
-
-#~ msgid "sponsor levels"
-#~ msgstr "スポンサーレベル"
-
-#~ msgid "Sponsor Name"
-#~ msgstr "スポンサー名"
-
-#~ msgid "display URL"
-#~ msgstr "URLを表示する"
-
-#~ msgid "external URL"
-#~ msgstr "外部URL"
-
-#~ msgid "annotation"
-#~ msgstr "注釈"
-
-#~ msgid "Contact Name"
-#~ msgstr "連絡先"
-
-#~ msgid "Contact Email"
-#~ msgstr "連絡先メールアドレス"
-
-#~ msgid "level"
-#~ msgstr "レベル"
-
-#~ msgid "added"
-#~ msgstr "追加された"
-
-#~ msgid "sponsor"
-#~ msgstr "スポンサー"
-
-#~ msgid "sponsors"
-#~ msgstr "スポンサー"
-
-#~ msgid "type"
-#~ msgstr "タイプ"
-
-#~ msgid "benefit"
-#~ msgstr "特典"
-
-#~ msgid "max words"
-#~ msgstr "最大文字数"
-
-#~ msgid "other limits"
-#~ msgstr "その他の制限"
-
-#~ msgid "max characters"
-#~ msgstr "最大文字数"
-
-#~ msgid "text"
-#~ msgstr "テキスト"
-
-#~ msgid "file"
-#~ msgstr "ファイル"
-
-#~ msgid "True - benefit complete; False - benefit incomplete; Null - n/a"
-#~ msgstr "真 - 利益を得られた; 偽 - 利益を得られなかった; 空 - N/A"
-
-#~ msgid "Sponsorship level only allows for %(max_words)s characters."
-#~ msgstr "%(max_words)s 文字以内で入力してください。"
-
-#~ msgid "Email selected sponsors"
-#~ msgstr "選択したスポンサーへメールを送信"
-
-#~ msgid "Email sent to sponsors"
-#~ msgstr "スポンサーへ送信したメール"
-
-#~ msgid "State of the Map Japan 2014 is over!"
-#~ msgstr "State of the Map Japan 2014は終了しました！"
-
-#~ msgid "Thanks to everyone for making it a great success!"
-#~ msgstr "ご来場・ご協力いただいた皆様、ありがとうございました。"
-
-#~ msgid "Session Detail"
-#~ msgstr "セッションの詳細"
-
-#~ msgid "Session Chair"
-#~ msgstr "司会者"
-
-#~ msgid ""
-#~ "<a href=\"%(profile_edit)s?next=%(request.path)s\">Click here to create a "
-#~ "volunteer profile</a> and enable volunteering for session roles."
-#~ msgstr ""
-#~ "ボランティア用プロファイルを作成してセッションをサポートするには、<a href="
-#~ "\"%(profile_edit)s?next=%(request.path)s\">ここをクリック</a>して下さい。"
-
-#~ msgid ""
-#~ "<a href=\"%(account_signup)s\">Sign up</a> and <a href="
-#~ "\"%(account_login)s?next=%(request.path)s\">log in</a> to volunteer to be "
-#~ "session chair."
-#~ msgstr ""
-#~ "セッションの司会になるには、<a href=\"%(account_signup)s\">参加登録</a> と"
-#~ "<a href=\"%(account_login)s?next=%(request.path)s\">ログイン</a> してくだ"
-#~ "さい。"
-
-#~ msgid "Session Runner"
-#~ msgstr "アシスタント"
-
-#~ msgid ""
-#~ "<a href=\"%(account_signup)s\">Sign up</a> and <a href="
-#~ "\"%(account_login)s?next=%(request.path)s\">log in</a> to volunteer to be "
-#~ "session runner."
-#~ msgstr ""
-#~ "セッション進行(Runner)のボランティアになるには、<a href="
-#~ "\"%(account_signup)s\">ユーザ登録</a>と <a href=\"%(account_login)s?next="
-#~ "%(request.path)s\">ログイン</a> してください。"
-
-#~ msgid "No slots in session."
-#~ msgstr "このセッションには時間枠がありません。"
-
-#~ msgid "Sessions"
-#~ msgstr "セッション"
-
-#~ msgid "Session #"
-#~ msgstr "セッション番号"
-
-#~ msgid "No volunteers signed up"
-#~ msgstr "登録されたボランティアはいません。"
-
-#~ msgid "Slots"
-#~ msgstr "時間枠"
-
-#~ msgid "No sessions defined."
-#~ msgstr "セッションが登録されていません"
-
-#~ msgid "Change language for this session"
-#~ msgstr "このセッションの言語を変更する"
-
-#~ msgid "start date"
-#~ msgstr "開始日"
-
-#~ msgid "end date"
-#~ msgstr "終了日"
-
-#~ msgid "conferences"
-#~ msgstr "カンファレンス"
-
-#~ msgid "section"
-#~ msgstr "セクション"
-
-#~ msgid "sections"
-#~ msgstr "セクション"
-
-#~ msgid ""
-#~ "You have submitted the Proposal author's email address. Please select "
-#~ "another email address."
-#~ msgstr ""
-#~ "すでにプロポーザルのメールアドレスに登録しています。他のメールアドレスを選"
-#~ "んでください。"
-
-#~ msgid "This email address has already been invited to your talk proposal"
-#~ msgstr "このメールアドレスは既にあなたのプロポーザルに招待されています。"
-
-#~ msgid "Comma-separated list of tags"
-#~ msgstr "コンマ区切りのタグリスト"
-
-#~ msgid "When submissions open"
-#~ msgstr "提出開始日時"
-
-#~ msgid "When submissions close"
-#~ msgstr "提出締め切り日時"
-
-#~ msgid ""
-#~ "If your talk is accepted this will be made public and printed in the "
-#~ "program. Should be one paragraph, maximum 400 characters."
-#~ msgstr ""
-#~ "講演が承認されたら、このテキストはプログラムに印刷され、公開されます。 最"
-#~ "大４００文字"
-
-#~ msgid "Detailed Abstract"
-#~ msgstr "詳細な説明"
-
-#~ msgid "Detailed description. Will be made public if your talk is accepted."
-#~ msgstr "詳細な説明はあなたの講演が承認された後で公開されます。"
-
-#~ msgid "Additional Notes"
-#~ msgstr "その他のメモ"
-
-#~ msgid ""
-#~ "Anything else you'd like the program committee to know when making their "
-#~ "selection: your past speaking experience, open source community "
-#~ "experience, etc."
-#~ msgstr ""
-#~ "選考について運営に伝えたいことは他にありますか。 例: 過去の講演経験、オー"
-#~ "プンソースコミュニティでの経験など"
-
-#~ msgid "Pending"
-#~ msgstr "保留"
-
-#~ msgid "Declined"
-#~ msgstr "辞退"
-
-#~ msgid ""
-#~ "If you've submitted multiple proposals, please let us know if you only "
-#~ "want to give one or if you'd like to give two talks."
-#~ msgstr ""
-#~ "複数のプロポーザルを提出している場合は、１回だけ講演したいかあるいは２回講"
-#~ "演したいのかお知らせ下さい。"
-
-#~ msgid "Please limit speaker biography to 100 words or less"
-#~ msgstr "スピーカーの略歴を100文字以内にして下さい。"
-
-#~ msgid "One"
-#~ msgstr "１"
-
-#~ msgid "Two"
-#~ msgstr "２"
-
-#~ msgid "As you would like it to appear in the conference program."
-#~ msgstr "会議プログラムに掲載されたい名前で記載してください。"
-
-#~ msgid ""
-#~ "A little bit about you. 100 words or less, please. This will be used in "
-#~ "print publications so please keep it simple, no links or formatting."
-#~ msgstr ""
-#~ "100文字以内で自己紹介をお願いします。この文章は印刷物に使用されますのでシ"
-#~ "ンプルにお願いします。リンクや書式の設定はできません。"
-
-#~ msgid "Your Twitter account"
-#~ msgstr "あなたのTwitterアカウント"
-
-#~ msgid ""
-#~ "If you've submitted multiple talk proposals, please let us know if you "
-#~ "only want to give one or if you'd like to give two talks.  For tutorials "
-#~ "and posters, state similar preferences in the additional notes section of "
-#~ "your proposals."
-#~ msgstr ""
-#~ "複数のプロポーザルを提出している場合は、１回だけ講演したいかあるいは２回講"
-#~ "演したいのかお知らせ下さい。チュートリアルとポスターの場合は、プロポーザル"
-#~ "のメモ欄にsimilar preferencesを記入して下さい。"
-
-#~ msgid "contact_name"
-#~ msgstr "連絡先名"
-
-#~ msgid "Contact e‑mail"
-#~ msgstr "連絡先メールアドレス"
-
-#~ msgid "logo"
-#~ msgstr "ロゴ"
-
-#~ msgid "Sponsorship available."
-#~ msgstr "スポンサー募集中"
-
-#~ msgid "Sign in with another account:"
-#~ msgstr "他のアカウントでログイン"
-
-#~ msgid "Sign in with OpenID"
-#~ msgstr "OpenIDでログインする"
-
-#~ msgid "Sign in"
-#~ msgstr "ログイン"
-
-#~ msgid "Don't have an account? "
-#~ msgstr "アカウントをお持ちですか。"
-
-#~ msgid "Associations"
-#~ msgstr "関連付け"
-
-#~ msgid "Upload File"
-#~ msgstr "ファイルをアップロードする"
-
-#~ msgid "Uploaded Files"
-#~ msgstr "アップロードされたファイル"
-
-#~ msgid "Uploaded"
-#~ msgstr "アップロードされました"
-
-#~ msgid "No uploaded files."
-#~ msgstr "アップロードされたファイルはありません。"
-
-#~ msgid "Add File"
-#~ msgstr "ファイルを追加する"
-
-#~ msgid "Edit page at:"
-#~ msgstr "次のページを編集する："
-
-#~ msgid "Registration and Housing"
-#~ msgstr "参加登録と収容計画"
-
-#~ msgid "Audience level:"
-#~ msgstr "対象レベル："
-
-#~ msgid "%(schedule.section)s Schedule"
-#~ msgstr "%(schedule.section)s スケジュール"
-
-#~ msgid "Schedule Edit"
-#~ msgstr "スケジュールを編集する"
-
-#~ msgid "Presentation Listing"
-#~ msgstr "プレゼンテーションのリスト"
-
-#~ msgid ""
-#~ "Sign up and <a href=\"%(account_login)s?next=%(request.path)s\">log in</"
-#~ "a> to volunteer to be session chair."
-#~ msgstr ""
-#~ "司会者のボランティアをするには登録して <a href=\"%(account_login)s?next="
-#~ "%(request.path)s\">ログイン</a> して下さい。"
-
-#~ msgid ""
-#~ "Sign up and <a href=\"%(account_login)s?next=%(request.path)s\">log in</"
-#~ "a> to volunteer to be session runner."
-#~ msgstr ""
-#~ "アシスタントをするには登録して<a href=\"%(account_login)s?next=%(request."
-#~ "path)s\">ログイン</a>して下さい。"
-
-#~ msgid "You don't have any social accounts associated."
-#~ msgstr "関連付けられているソーシャルアカウントがありません。"
-
-#~ msgid "Annual OpenStreetMap Conference in JAPAN!"
-#~ msgstr "年次OpenStreetMap会議 in JAPAN！"
-
-#~ msgid "REGISTER"
-#~ msgstr "参加登録"
-
-#~ msgid "Travel plans are required if requesting a travel grant."
-#~ msgstr "交通費の助成が必要な場合は、旅行計画の提出が必要です。"
-
-#~ msgid "Female"
-#~ msgstr "女性"
-
-#~ msgid "Male"
-#~ msgstr "男性"
-
-#~ msgid "Information needed"
-#~ msgstr "情報が必要"
-
-#~ msgid "Offered"
-#~ msgstr "オファー済み"
-
-#~ msgid "Cash"
-#~ msgstr "現金"
-
-#~ msgid "PyLadies grant"
-#~ msgstr "PyLadies助成金"
-
-#~ msgid "Would you like to be considered for a PyLadies grant? (Women only.)"
-#~ msgstr "PyLadies助成金の選考対象に入りたいですか。(女性のみ)"
-
-#~ msgid "Will you need assistance with the Conference Registration?"
-#~ msgstr "カンファレンスに登録する際に補助が必要ですか。"
-
-#~ msgid "Hotel grant"
-#~ msgstr "宿泊費補助"
-
-#~ msgid "Will you need assistance with a Hotel Room?"
-#~ msgstr "ホテルの宿泊に関してサポートが必要ですか？"
-
-#~ msgid "Please approximate how many nights you will be staying at the hotel."
-#~ msgstr "ホテルに宿泊する大まかな日数を教えて下さい。"
-
-#~ msgid "Sex"
-#~ msgstr "性別"
-
-#~ msgid ""
-#~ "(Your sex will be used only to help assign roommates for those requesting "
-#~ "hotel assistance)"
-#~ msgstr ""
-#~ "(あなたの性別はホテルでの援助を依頼された方へルームメイトを指定する際にの"
-#~ "み使用されます。)"
-
-#~ msgid "Travel grant"
-#~ msgstr "旅費補助"
-
-#~ msgid "Will you need assistance with Travel Costs?"
-#~ msgstr "旅費の補助は必要ですか。"
-
-#~ msgid "Will you be traveling internationally?"
-#~ msgstr "海外から渡航される予定ですか。"
-
-#~ msgid "Travel amount"
-#~ msgstr "旅費"
-
-#~ msgid ""
-#~ "Please enter the amount of travel assistance you need, in US dollars."
-#~ msgstr "USドルで必要な旅費への補助額を入力して下さい。"
-
-#~ msgid "Travel plans"
-#~ msgstr "旅行計画"
-
-#~ msgid "Please describe your travel plans"
-#~ msgstr "旅行計画を記入して下さい。"
-
-#~ msgid "Will you need assistance with tutorials?"
-#~ msgstr "チュートリアルの際に補助は必要ですか。"
-
-#~ msgid "What is it that you do"
-#~ msgstr "お仕事は何ですか。"
-
-#~ msgid "Involvement"
-#~ msgstr "関与"
-
-#~ msgid "Describe your involvement in any open source projects or community."
-#~ msgstr ""
-#~ "あなたが関わっている全てのオープンソースプロジェクトあるいはコミュニティを"
-#~ "記入して下さい。"
-
-#~ msgid "What do you want to get out of attending PyCon?"
-#~ msgstr "PyConに参加して何を得たいですか。"
-
-#~ msgid "What is it that you're hoping to learn?"
-#~ msgstr "PyConから何を学びたいですか。"
-
-#~ msgid "Portfolios"
-#~ msgstr "参加プロジェクト一覧"
-
-#~ msgid ""
-#~ "Please provide links to any portfolios you have that contain Python work. "
-#~ "(e.g. Github, Bitbucket, etc.)"
-#~ msgstr ""
-#~ "あなたが関わったのプロジェクトでPythonが使用されたものがあればそのリンクを"
-#~ "入力して下さい。(Github、Bitbucket、etc)"
-
-#~ msgid "Use of Python"
-#~ msgstr "Pythonの利用方法"
-
-#~ msgid "Describe your use of Python"
-#~ msgstr "Pythonをどのように利用していますか。"
-
-#~ msgid "Beginner resources"
-#~ msgstr "初心者用資料"
-
-#~ msgid ""
-#~ "If you're a beginner, describe the resources you're using to learn Python."
-#~ msgstr ""
-#~ "もしあなたが初級者なら、Pythonを学習するのに利用している情報源を教えて下さ"
-#~ "い。"
-
-#~ msgid ""
-#~ "Will you be speaking, hosting a poster session, or otherwise presenting "
-#~ "at PyCon?"
-#~ msgstr ""
-#~ "プレゼンテーションのスピーカー、ポスターセッションのプレゼンター、あるいは"
-#~ "その他の発表をする予定はありますか。"
-
-#~ msgid "Python experience level"
-#~ msgstr "Pythonの経験レベル"
-
-#~ msgid "What is your experience level with Python?"
-#~ msgstr "Pythonの経験レベルを教えて下さい。"
-
-#~ msgid "Is this your first time attending PyCon?"
-#~ msgstr "PyConに参加するのは初めてですか。"
-
-#~ msgid "Have you spoken at PyCon in the past?"
-#~ msgstr "今までにPyConで講演したことがありますか。"
-
-#~ msgid "Whether message is visible to applicant"
-#~ msgstr "申込者にメッセージを見せるかどうか"
-
-#~ msgid "Financial aid applications are not open at this time"
-#~ msgstr "費用補助申請は現在できません。"
-
-#~ msgid "Please select at least one application"
-#~ msgstr "最低一つの申請を選んでください"
-
-#~ msgid "You have not applied for financial aid"
-#~ msgstr "あなたは費用援助に申し込んでいません"
-
-#~ msgid "Financial Aid"
-#~ msgstr "費用補助"
-
-#~ msgid "Apply for financial aid"
-#~ msgstr "費用補助を申請する"
-
-#~ msgid "Edit financial aid application"
-#~ msgstr "費用補助の申請を編集"
-
-#~ msgid "Financial aid application status"
-#~ msgstr "費用補助申請のステータス"
-
-#~ msgid "Review applications"
-#~ msgstr "申請をレビュー"
-
-#~ msgid "Download applications"
-#~ msgstr "申請をダウンロード"
-
-#~ msgid "Sprints"
-#~ msgstr "スプリント"
-
-#~ msgid "PyCon JP 2014 is over!"
-#~ msgstr "PyCon JP 2014 は盛況のうちに終了しました。"
-
-#~ msgid "Sign up now!"
-#~ msgstr "今すぐ会員登録する"
-
-#~ msgid "Delete Account"
-#~ msgstr "アカウント削除"
-
-#~ msgid ""
-#~ "If you go ahead and delete your account, your information will be "
-#~ "<b>expunged within %(ACCOUNT_DELETION_EXPUNGE_HOURS)s hours</b>."
-#~ msgstr ""
-#~ "ここでアカウントを削除を削除したら、情報"
-#~ "は%(ACCOUNT_DELETION_EXPUNGE_HOURS)s時間内に完全に削除されます。"
-
-#~ msgid "Delete My Account"
-#~ msgstr "アカウントを削除する"
-
-#~ msgid "Sign Up"
-#~ msgstr "会員登録"
-
-#~ msgid ""
-#~ "This is the email notification to confirm your password has been changed "
-#~ "on %(now)s."
-#~ msgstr "あなたのパスワードは%(now)sに変更されました。"
-
-#~ msgid ""
-#~ "\n"
-#~ "                   Content is processed using <a href=\"%(helplink)s\" "
-#~ "target=\"_blank\">Markdown</a>\n"
-#~ "                 "
-#~ msgstr ""
-#~ "\n"
-#~ "<a href=\"%(helplink)s\"target=\"_blank\"> Markdown</a> を使用してコンテン"
-#~ "ツは処理されます。"
-
-#~ msgid "Create/Edit Page"
-#~ msgstr "ページを作成し編集する"
-
-#~ msgid "Edit:"
-#~ msgstr "編集："
-
-#~ msgid "STATUS"
-#~ msgstr "ステータス"
-
-#~ msgid "Submitted:"
-#~ msgstr "登録済み"
-
-#~ msgid "Hotel nights:"
-#~ msgstr "宿泊日数"
-
-#~ msgid "Sex:"
-#~ msgstr "性別"
-
-#~ msgid "International travel?"
-#~ msgstr "海外からの渡航ですか。"
-
-#~ msgid "What are your travel plans?"
-#~ msgstr "旅行計画について教えて下さい。"
-
-#~ msgid "What do you want to learn?"
-#~ msgstr "何を学びたいですか。"
-
-#~ msgid "Experience level"
-#~ msgstr "経験レベル"
-
-#~ msgid "Presented at PyCon before:"
-#~ msgstr "PyConに参加したことがある："
-
-#~ msgid "First time at PyCon:"
-#~ msgstr "PyConに参加するのは初めてです："
-
-#~ msgid "Apply for Financial Aid"
-#~ msgstr "金銭的支援を申請する"
-
-#~ msgid "Edit Financial Aid Application"
-#~ msgstr "金銭的支援の項目を編集する"
-
-#~ msgid "Send emails to applicants"
-#~ msgstr "申請者にメールを送る"
-
-#~ msgid "(Use admin to add email templates.)"
-#~ msgstr "(メールのテンプレートを加えるにはadminになってください)"
-
-#~ msgid "Financial Aid Application Message"
-#~ msgstr "費用補助申請メッセージ"
-
-#~ msgid "Back to list of applications"
-#~ msgstr "申請リストに戻る"
-
-#~ msgid "Financial Aid Application Status"
-#~ msgstr "費用補助申請の状態"
-
-#~ msgid "Update your volunteer profile"
-#~ msgstr "ボランティア用プロファイルを編集する"
-
-#~ msgid "A profile is required to volunteer with PyCon."
-#~ msgstr "PyConでボランティアをするためにはプロファイルが必要です。"
-
-#~ msgid ""
-#~ "\n"
-#~ "                    You will be able to edit your proposal after it has "
-#~ "been submitted.\n"
-#~ "                    The program committee may ask questions, provide "
-#~ "feedback,\n"
-#~ "                    and even suggest changes to your proposal as part of "
-#~ "the review processes.\n"
-#~ "                  "
-#~ msgstr ""
-#~ "\n"
-#~ "プロポーザルは提出した後でも編集できます。\n"
-#~ "審査の過程で運営委員会は提出されたプロポーザルへの質問やフィードバック、変"
-#~ "更依頼をすることがあります。"
-
-#~ msgid "Email selected PyCon Sponsors"
-#~ msgstr "選択したスポンサーへメールを送信する"
-
-#~ msgid "Sponsors we're about to email:"
-#~ msgstr "メールを送信するスポンサー："
-
-#~ msgid "Learn how to become a sponsor "
-#~ msgstr "スポンサーになる方法を見る"
-
-#~ msgid "You are a <em>%(state)s</em> of %(name)s"
-#~ msgstr "あなたは %(name)s において <em>%(state)s</em> です"
-
-#~ msgid "JOIN"
-#~ msgstr "参加"
-
-#~ msgid "LEAVE"
-#~ msgstr "抜ける"
-
-#~ msgid "APPLY"
-#~ msgstr "参加"
-
-#~ msgid "you"
-#~ msgstr "あなた"
-
-#~ msgid "DEMOTE"
-#~ msgstr "降格"
-
-#~ msgid "Hotels"
-#~ msgstr "ホテル"
