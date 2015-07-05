@@ -24,3 +24,7 @@ class Profile(models.Model):
     @property
     def display_name(self):
         return " ".join([self.first_name, self.last_name])
+
+    class Meta:
+        verbose_name = _("profile")
+        verbose_name_plural = _("profiles")

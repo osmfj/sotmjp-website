@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pyconjp-website\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-05 10:16+0900\n"
-"PO-Revision-Date: 2015-07-05 10:32+0900\n"
+"POT-Creation-Date: 2015-07-06 07:48+0900\n"
+"PO-Revision-Date: 2015-07-06 07:50+0900\n"
 "Last-Translator: Hiroshi Miura <miurahr@linux.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -68,6 +68,44 @@ msgstr "名字 (ローマ字)"
 msgid "Please enter your last name."
 msgstr "名字をローマ字で入力してください"
 
+#: sotmjp/profile/models.py:10
+#| msgid "User List"
+msgid "User"
+msgstr "ユーザー"
+
+#: sotmjp/profile/models.py:11
+#| msgid "First Name"
+msgid "First name"
+msgstr "名前 (ローマ字)"
+
+#: sotmjp/profile/models.py:12
+#| msgid "Last Name"
+msgid "Last name"
+msgstr "名字 (ローマ字)"
+
+#: sotmjp/profile/models.py:13
+msgid "Phone"
+msgstr "電話"
+
+#: sotmjp/profile/models.py:14
+#| msgid "First Name (Japanese)"
+msgid "First name (Japanese)"
+msgstr "名前"
+
+#: sotmjp/profile/models.py:15
+#| msgid "Last Name (Japanese)"
+msgid "Last name (Japanese)"
+msgstr "名字"
+
+#: sotmjp/profile/models.py:29
+#| msgid "Speaker Profile?"
+msgid "profile"
+msgstr "プロフィール"
+
+#: sotmjp/profile/models.py:30
+msgid "profiles"
+msgstr "プロフィール"
+
 #: sotmjp/profile/views.py:48
 msgid "Successfully updated profile."
 msgstr "プロファイルのアップロードが成功しました。"
@@ -76,46 +114,39 @@ msgstr "プロファイルのアップロードが成功しました。"
 msgid "The description must be less than 400 characters"
 msgstr "400文字以内で記入して下さい。"
 
-#: sotmjp/proposals/models.py:16
-#| msgid "Proposal Locked"
+#: sotmjp/proposals/models.py:18
 msgid "proposal category"
 msgstr "提案カテゴリ"
 
-#: sotmjp/proposals/models.py:17
-#| msgid "Proposal Details"
+#: sotmjp/proposals/models.py:19
 msgid "proposal categories"
 msgstr "提案カテゴリ"
 
-#: sotmjp/proposals/models.py:27
+#: sotmjp/proposals/models.py:29
 msgid "Novice"
 msgstr "初級"
 
-#: sotmjp/proposals/models.py:28
+#: sotmjp/proposals/models.py:30
 msgid "Intermediate"
 msgstr "中級"
 
-#: sotmjp/proposals/models.py:29
+#: sotmjp/proposals/models.py:31
 msgid "Experienced"
 msgstr "上級"
 
-#: sotmjp/proposals/models.py:34
+#: sotmjp/proposals/models.py:36
 msgid "Level of audience expertise."
 msgstr "対象者に期待する知識レベル"
 
-#: sotmjp/proposals/models.py:35
+#: sotmjp/proposals/models.py:37
 msgid "Skill level"
 msgstr "レベル"
 
-#: sotmjp/proposals/models.py:37
+#: sotmjp/proposals/models.py:39
 msgid "Recording Release"
 msgstr "録画許可"
 
-#: sotmjp/proposals/models.py:39
-#| msgid ""
-#| "By submitting your talk proposal, you agree to give permission to the "
-#| "SotM JP Management Team to record, edit, and release audio and/or video "
-#| "of your presentation. If you do not agree to this, please uncheck this "
-#| "box."
+#: sotmjp/proposals/models.py:41
 msgid ""
 "By submitting your talk proposal, you agree to give permission to the "
 "Organization Team to record, edit, and release audio and/or video of your "
@@ -125,71 +156,74 @@ msgstr ""
 "の録音またはビデオあるいはその両方を頒布することに同意したとみなします。もし"
 "これに同意しない場合はチェックボックスをオフにして下さい。"
 
-#: sotmjp/proposals/models.py:50
+#: sotmjp/proposals/models.py:52
 msgid "Not Yet Reviewed"
 msgstr "レビュー前"
 
-#: sotmjp/proposals/models.py:51
+#: sotmjp/proposals/models.py:53
 #: sotmjp/templates/proposals/_pending_proposal_row.html:15
 #: sotmjp/templates/proposals/_proposal_row.html:15
 msgid "Accepted"
 msgstr "受託済み"
 
-#: sotmjp/proposals/models.py:52
-#| msgid "rejected"
+#: sotmjp/proposals/models.py:54
 msgid "Rejected"
 msgstr "却下"
 
-#: sotmjp/proposals/models.py:55
+#: sotmjp/proposals/models.py:57
 #: sotmjp/templates/proposals/_proposal_fields.html:12
 #: sotmjp/templates/reviews/_review_table.html:8
 #: sotmjp/templates/reviews/result_notification.html:47
 msgid "Category"
 msgstr "カテゴリ"
 
-#: sotmjp/proposals/models.py:59
+#: sotmjp/proposals/models.py:61
 msgid "The status of the proposal."
 msgstr "プロポーザルのステータス"
 
-#: sotmjp/proposals/models.py:69
-#| msgid "When submissions close"
+#: sotmjp/proposals/models.py:62
+#| msgid "Overall Status"
+msgid "Overall status"
+msgstr "全体の状況"
+
+#: sotmjp/proposals/models.py:72
 msgid "Suggest re-submission as poster."
 msgstr "ポスターとして再提案することを勧める"
 
-#: sotmjp/proposals/models.py:70
+#: sotmjp/proposals/models.py:73
 msgid "Suggest lightening talk."
 msgstr "ライトニングトークを勧める。"
 
-#: sotmjp/proposals/models.py:71
+#: sotmjp/proposals/models.py:74
 msgid "Re-submitted under appropriate category."
 msgstr "適切なカテゴリで再提案を勧める。"
 
-#: sotmjp/proposals/models.py:72
-#| msgid "applicant"
+#: sotmjp/proposals/models.py:75
 msgid "Duplicate"
 msgstr "重複"
 
-#: sotmjp/proposals/models.py:73
+#: sotmjp/proposals/models.py:76
 msgid "Administrative Action (Other)"
 msgstr "管理者の対応（その他）"
 
-#: sotmjp/proposals/models.py:74
+#: sotmjp/proposals/models.py:77
 msgid "No really: rejected. It's just plain bad."
 msgstr "だめ：却下。単に悪い。"
 
-#: sotmjp/proposals/models.py:81
+#: sotmjp/proposals/models.py:84
 msgid "The reason the proposal was rejected."
 msgstr "プロポーザルが却下された理由"
 
-#: sotmjp/proposals/models.py:84
+#: sotmjp/proposals/models.py:85
+#| msgid "Rejection Status"
+msgid "Rejection status"
+msgstr "却下状態"
+
+#: sotmjp/proposals/models.py:88
 msgid "Additional requirements"
 msgstr "追加必要事項"
 
-#: sotmjp/proposals/models.py:86
-#| msgid ""
-#| "Please let us know if you have any specific needs (A/V requirements, "
-#| "multiple microphones, a table, etc).  Note for example that 'audio out' "
-#| "is not provided for your computer unless you tell us in advance."
+#: sotmjp/proposals/models.py:90
 msgid ""
 "Please let us know if you have any specific needs(A/V requirements, multiple "
 "microphones, a table, etc).Note for example that 'audio out' is not "
@@ -199,45 +233,85 @@ msgstr ""
 "て、コンピュータからの「音声出力」は事前にお知らせ頂いていない場合は提供でき"
 "ないことに注意して下さい。"
 
-#: sotmjp/proposals/models.py:99
+#: sotmjp/proposals/models.py:103
 msgid "No preference"
 msgstr "希望なし"
 
-#: sotmjp/proposals/models.py:100
+#: sotmjp/proposals/models.py:104
 msgid "15min"
 msgstr "15分間"
 
-#: sotmjp/proposals/models.py:101
+#: sotmjp/proposals/models.py:105
 msgid "20min"
 msgstr "20分間"
 
-#: sotmjp/proposals/models.py:105
+#: sotmjp/proposals/models.py:109
 #: sotmjp/templates/proposals/_proposal_fields.html:33
 msgid "Duration"
 msgstr "時間枠"
 
-#: sotmjp/proposals/models.py:108
+#: sotmjp/proposals/models.py:112
 #: sotmjp/templates/proposals/_proposal_fields.html:66
 msgid "Outline"
 msgstr "アウトライン"
 
-#: sotmjp/proposals/models.py:112
+#: sotmjp/proposals/models.py:116
 #: sotmjp/templates/proposals/_proposal_fields.html:25
 msgid "Audience"
 msgstr "対象者"
 
-#: sotmjp/proposals/models.py:113
+#: sotmjp/proposals/models.py:117
 msgid "Who is the intended audience for your talk?"
 msgstr "講演の聴講者の想定はどんな人ですか。"
 
-#: sotmjp/proposals/models.py:116
+#: sotmjp/proposals/models.py:120
 #: sotmjp/templates/proposals/_proposal_fields.html:28
 msgid "Objectives"
 msgstr "目的"
 
-#: sotmjp/proposals/models.py:118
+#: sotmjp/proposals/models.py:122
 msgid "What will attendees get out of your talk?"
 msgstr "講演を聴講すると何が得られますか？"
+
+#: sotmjp/proposals/models.py:126
+#| msgid "Cancel Proposal"
+msgid "Talk proposal"
+msgstr "講演提案"
+
+#: sotmjp/proposals/models.py:127
+#| msgid "Cancel Proposal"
+msgid "Talk proposals"
+msgstr "講演提案"
+
+#: sotmjp/proposals/models.py:134
+#| msgid "Edit this proposal"
+msgid "Lightning talk proposal"
+msgstr "ライトニングトーク提案"
+
+#: sotmjp/proposals/models.py:135
+#| msgid "Edit this proposal"
+msgid "Lightning talk proposals"
+msgstr "ライトニングトーク提案"
+
+#: sotmjp/proposals/models.py:140
+#| msgid "Edit proposal"
+msgid "Poster proposal"
+msgstr "ポスター提案"
+
+#: sotmjp/proposals/models.py:141
+#| msgid "Your Proposals"
+msgid "Poster proposals"
+msgstr "ポスター提案"
+
+#: sotmjp/proposals/models.py:146
+#| msgid "Cancel Proposal"
+msgid "Open Space proposal"
+msgstr "オープンスペース提案"
+
+#: sotmjp/proposals/models.py:147
+#| msgid "Cancel Proposal"
+msgid "Open Space proposals"
+msgstr "オープンスペース提案"
 
 #: sotmjp/settings/base.py:79
 msgid "English"
@@ -252,7 +326,6 @@ msgid "Japanese"
 msgstr "日本語"
 
 #: sotmjp/settings/base.py:284
-#| msgid "Your Presentations"
 msgid "URL for registration"
 msgstr "参加登録用のURL"
 
@@ -269,27 +342,22 @@ msgstr ""
 "'over'のいずれかです。"
 
 #: sotmjp/settings/base.py:290
-#| msgid "Conference Schedule"
 msgid "Conference name (long)"
 msgstr "カンファレンス名称（長い）"
 
 #: sotmjp/settings/base.py:291
-#| msgid "Conference Schedule Edit"
 msgid "Conference year (4-digit)"
 msgstr "会議年（４桁）"
 
 #: sotmjp/settings/base.py:292
-#| msgid "Conference Schedule Edit"
 msgid "Conference year (2-digit)"
 msgstr "会議年（２桁）"
 
 #: sotmjp/settings/base.py:293
-#| msgid "Conference"
 msgid "Conference name (short)"
 msgstr "カンファレンス名称（短い）"
 
 #: sotmjp/settings/base.py:294
-#| msgid "Conference Schedule"
 msgid "Conference locality place"
 msgstr "カンファレンスの開催地"
 
@@ -298,17 +366,14 @@ msgid "Conference locality country"
 msgstr "会議の開催される国"
 
 #: sotmjp/settings/base.py:296
-#| msgid "Conference Schedule"
 msgid "Conference start date"
 msgstr "カンファレンスの開始日"
 
 #: sotmjp/settings/base.py:297
-#| msgid "Conference Schedule Edit"
 msgid "Conference end date"
 msgstr "カンファレンスの終了日"
 
 #: sotmjp/settings/base.py:298
-#| msgid "Conference"
 msgid "Conference duration"
 msgstr "カンファレンス会期"
 
@@ -325,12 +390,10 @@ msgid "Tutorial program name"
 msgstr "チュートリアルの会議での名称"
 
 #: sotmjp/settings/base.py:302
-#| msgid "start date"
 msgid "Tutorial start date"
 msgstr "チュートリアル開始日"
 
 #: sotmjp/settings/base.py:303
-#| msgid "end date"
 msgid "Tutorial end date"
 msgstr "チュートリアル終了日"
 
@@ -347,7 +410,6 @@ msgid "Hackathon program name"
 msgstr "ハッカソンの会議での名称"
 
 #: sotmjp/settings/base.py:307
-#| msgid "start date"
 msgid "Hackathon start date"
 msgstr "ハッカソン開始日"
 
@@ -742,11 +804,6 @@ msgstr "参加登録は受け付けていません"
 
 #: sotmjp/templates/homepage.html:42
 #, python-format
-#| msgid ""
-#| "\n"
-#| "                              <p class=\"post_dateline\">by <span class="
-#| "\"author\">%(author)s</span></p>\n"
-#| "                            "
 msgid ""
 "\n"
 "                               %(confname)s %(confyear)sin %(locality)s\n"
@@ -1268,13 +1325,6 @@ msgid "SPONSORS"
 msgstr "スポンサー"
 
 #: sotmjp/templates/site_base.html:161
-#| msgid ""
-#| "\n"
-#| "                    State of the Map Japan 2014 in Tokyo is a production "
-#| "of the \n"
-#| "                    <a href=\"http://osmf.jp/\">OpenStreetMap Foundation "
-#| "Japan</a>.\n"
-#| "                  "
 msgid ""
 "\n"
 "                    State of the Map Japan is a production of the\n"

@@ -1,16 +1,17 @@
 from __future__ import unicode_literals
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from django.utils.encoding import python_2_unicode_compatible
 
 from symposion.proposals.models import ProposalBase
 
-
+@python_2_unicode_compatible
 class ProposalCategory(models.Model):
 
     name = models.CharField(max_length=100)
     slug = models.SlugField()
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
     class Meta:
@@ -57,7 +58,8 @@ class Proposal(ProposalBase):
     overall_status = models.IntegerField(
         choices=STATUS_OPTIONS,
         default=STATUS_UNREVIEWED,
-        help_text=_('The status of the proposal.'))
+        help_text=_('The status of the proposal.'),
+        verbose_name=_("Overall status"))
 
     REJECTION_POSTER = 1
     REJECTION_LIGHTNING = 2
@@ -79,7 +81,8 @@ class Proposal(ProposalBase):
         blank=True,
         null=True,
         choices=REJECTION_OPTIONS,
-        help_text=_(u'The reason the proposal was rejected.'))
+        help_text=_('The reason the proposal was rejected.'),
+        verbose_name=_("Rejection status"))
 
     additional_requirements = models.TextField(
         _("Additional requirements"),
@@ -90,7 +93,7 @@ class Proposal(ProposalBase):
                     "for your computer unless you tell us in advance.")
     )
 
-    class Meta:
+   class Meta:
         abstract = True
 
 
@@ -120,20 +123,25 @@ class TalkProposal(Proposal):
     )
 
     class Meta:
-        verbose_name = "Talk proposal"
+        verbose_name = _("Talk proposal")
+        verbose_name_plural = _("Talk proposals")
+
 
 
 class LightningTalkProposal(Proposal):
 
     class Meta:
-        verbose_name = "Lightning talk proposal"
+        verbose_name = _("Lightning talk proposal")
+        verbose_name_plural = _("Lightning talk proposals")
 
 
 class PosterProposal(Proposal):
     class Meta:
-        verbose_name = "Poster proposal"
+        verbose_name = _("Poster proposal")
+        verbose_name_plural = _("Poster proposals")
 
 
 class OpenSpaceProposal(Proposal):
     class Meta:
-        verbose_name = "Open Space proposal"
+        verbose_name = _("Open Space proposal")
+        verbose_name_plural = _("Open Space proposals")
