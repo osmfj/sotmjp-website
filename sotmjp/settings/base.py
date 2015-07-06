@@ -189,7 +189,6 @@ INSTALLED_APPS = [
     # external
     "account",
     "compressor",
-    "mailer",
     "timezones",
     "metron",
     "easy_thumbnails",
