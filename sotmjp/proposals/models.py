@@ -5,6 +5,7 @@ from django.utils.encoding import python_2_unicode_compatible
 
 from symposion.proposals.models import ProposalBase
 
+
 @python_2_unicode_compatible
 class ProposalCategory(models.Model):
 
@@ -93,7 +94,7 @@ class Proposal(ProposalBase):
                     "for your computer unless you tell us in advance.")
     )
 
-   class Meta:
+    class Meta:
         abstract = True
 
 
@@ -125,7 +126,6 @@ class TalkProposal(Proposal):
     class Meta:
         verbose_name = _("Talk proposal")
         verbose_name_plural = _("Talk proposals")
-
 
 
 class LightningTalkProposal(Proposal):
