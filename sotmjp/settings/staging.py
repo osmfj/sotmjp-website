@@ -10,5 +10,6 @@ SERVER_EMAIL = DEFAULT_FROM_EMAIL
 LOGGING['filters']['static_fields']['fields']['environment'] = 'staging'
 
 ALLOWED_HOSTS = [
+    'stateofthemap.jp',
     'staging.stateofthemap.jp',
 ]

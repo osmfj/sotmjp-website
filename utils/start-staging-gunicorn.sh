@@ -14,8 +14,8 @@ DB_NAME=sotmjp2015_staging
 DB_HOST=localhost
 DB_PORT=5432
 DB_USER=ubuntu
-DB_PASSWORD=fugafuga
-SECRET_KEY=u'hogehoge'
+DB_PASSWORD=osmfj
+SECRET_KEY='hogehogefugafuga'
 
 export DEBUG DB_ENGINE DB_NAME DB_HOST DB_PORT DB_USER DB_PASSWORD SECRET_KEY
 
@@ -24,6 +24,6 @@ exec ${BASEDIR}/env/${VENV}/bin/gunicorn --chdir=${BASEDIR} \
       --workers=2 \
       --threads=1 \
       --env DJANGO_SETTINGS_MODULE="sotmjp.settings.staging" \
-      --pid=/var/run/gunicorn-staging.pid \
+      --pid=/tmp/gunicorn-staging.pid \
       sotmjp.wsgi:application
 
