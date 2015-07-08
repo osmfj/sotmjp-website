@@ -4,6 +4,5 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class ProposalsConfig(AppConfig):
-    name = "proposals"
+    name = "sotmjp.proposals"
     verbose_name = _("Proposals")
-    label = "proposals"
