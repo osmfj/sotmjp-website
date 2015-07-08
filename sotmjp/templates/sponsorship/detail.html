@@ -1,6 +1,6 @@
 {% extends "auth_base.html" %}
 
-{% load bootstrap_tags %}
+{% load bootstrap %}
 {% load i18n %}
 
 {% block head_title %}{{ sponsor }}{% endblock %}
@@ -18,7 +18,7 @@
     <form enctype="multipart/form-data" method="POST" action="" class="form-horizontal">
         {% csrf_token %}
         <fieldset>
-            {{ form|as_bootstrap }}
+            {{ form|bootstrap }}
         </fieldset>
 
         <h3>{% blocktrans %}{{ sponsor.level }} Sponsor Benefits{% endblocktrans %}</h3>

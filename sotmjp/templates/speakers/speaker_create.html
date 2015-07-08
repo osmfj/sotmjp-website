@@ -1,6 +1,6 @@
 {% extends "auth_base.html" %}
 
-{% load bootstrap_tags %}
+{% load bootstrap %}
 {% load i18n %}
 {% load boxes_tags %}
 
@@ -25,7 +25,7 @@
             {% csrf_token %}
             <legend>{% trans "Create Speaker Profile" %}</legend>
             <fieldset>
-                {{ form|as_bootstrap }}
+                {{ form|bootstrap }}
             </fieldset>
             <div class="form-actions">
                 <input class="btn btn-primary" type="submit" value="{% trans "Save" %}"/>

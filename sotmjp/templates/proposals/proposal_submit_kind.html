@@ -1,6 +1,6 @@
 {% extends "auth_base.html" %}
 
-{% load bootstrap_tags %}
+{% load bootstrap %}
 {% load boxes_tags %}
 {% load i18n %}
 
@@ -12,7 +12,7 @@
     <form method="POST" action="" enctype="multipart/form-data" class="form-horizontal">
         {% csrf_token %}
         <fieldset>
-            {{ form|as_bootstrap }}
+            {{ form|bootstrap }}
         </fieldset>
         <div class="form-actions">
             <p>

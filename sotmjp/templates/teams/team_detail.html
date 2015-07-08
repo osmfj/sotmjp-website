@@ -1,6 +1,6 @@
 {% extends "site_base.html" %}
 
-{% load bootstrap_tags %}
+{% load bootstrap %}
 {% load i18n %}
 
 {% block head_title %}{{ team.name }}{% endblock %}
@@ -92,7 +92,7 @@
                     <form method="POST" action="" class="form-horizontal">
                         {% csrf_token %}
                         <legend>{% trans "Invite User to Team" %}</legend>
-                        {{ invite_form|as_bootstrap }}
+                        {{ invite_form|bootstrap }}
                         <div class="form-actions">
                             <input class="btn btn-primary" type="submit" value="{% trans "Invite" %}" />
                         </div>

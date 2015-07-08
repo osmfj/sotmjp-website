@@ -1,6 +1,6 @@
 {% extends "site_base.html" %}
 
-{% load bootstrap_tags %}
+{% load bootstrap %}
 {% load i18n %}
 {% load boxes_tags %}
 
@@ -15,7 +15,7 @@
     <form method="POST" action="" class="form-horizontal">
         {% csrf_token %}
         <legend>{% trans "Apply to be a Sponsor" %}</legend>
-        {{ form|as_bootstrap }}
+        {{ form|bootstrap }}
         <div class="form-actions">
             <input class="btn btn-primary" type="submit" value="{% trans "Apply" %}" />
             <p class="help-block">
