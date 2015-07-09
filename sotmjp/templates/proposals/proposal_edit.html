@@ -8,6 +8,13 @@
 
 {% block body %}
     <h1>{{ proposal.title }}</h1>
+
+    <div class="span12">
+        {% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}
+        {% box "proposals-"|add:lang %}
+        {% endwith %}
+    </div>
+
     <p><a href="{% url 'proposal_speaker_manage' proposal.pk %}">{% trans "Manage speakers" %}</a></p>
     <form method="POST" action="" enctype="multipart/form-data" class="form-horizontal">
         {% csrf_token %}

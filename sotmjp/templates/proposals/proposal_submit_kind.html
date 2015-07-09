@@ -7,20 +7,26 @@
 {% block page_title %}{% blocktrans with name=kind.name %}Submit a Proposal for a {{ name }}{% endblocktrans %}{% endblock %}
 
 {% block body %}
-    {% box "example_proposal" %}
+    <div class="span12">
+        {% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}
+        {% box "proposal-"|add:lang %}
+        {% endwith %}
 
-    <form method="POST" action="" enctype="multipart/form-data" class="form-horizontal">
-        {% csrf_token %}
-        <fieldset>
-            {{ form|bootstrap }}
-        </fieldset>
-        <div class="form-actions">
-            <p>
-                {% trans "You will be able to edit your proposal after it has been submitted. The program committee may ask questions, provide feedback, and even suggest changes to your proposal as part of the review processes." %}
-            </p>
-            <input class="btn btn-primary" type="submit" name="finish" value="{% trans "Save" %}" />
-            <!-- <span style="float: right; padding: 4px 6px">or</span> -->
-            <input class="btn" type="submit" name="add-speakers" value="{% trans "Save and Add Additional Speakers" %}" />
-        </div>
-    </form>
+        <form method="POST" action="" enctype="multipart/form-data" class="form-horizontal">
+            {% csrf_token %}
+            <legend>{% trans "Edit Proposal" %}</legend>
+            <fieldset>
+                {{ form|bootstrap }}
+            </fieldset>
+            <div class="form-actions">
+                <p>
+                    {% trans "You will be able to edit your proposal after it has been submitted. The program committee may ask questions, provide feedback, and even suggest changes to your proposal as part of the review processes." %}
+                </p>
+                <input class="btn btn-primary" type="submit" name="finish" value="{% trans "Save" %}" />
+                <!-- <span style="float: right; padding: 4px 6px">or</span> -->
+                <input class="btn" type="submit" name="add-speakers" value="{% trans "Save and Add Additional Speakers" %}" />
+                <a class="btn" href="{% url 'dashboard' %}">{% trans "Cancel" %}</a>
+            </div>
+        </form>
+    </div>
 {% endblock %}
