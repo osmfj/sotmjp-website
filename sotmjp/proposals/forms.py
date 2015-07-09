@@ -31,7 +31,6 @@ class TalkProposalForm(ProposalForm):
         fields = [
             "title",
             "category",
-            "language",
             "duration",
             "description",
             "audience",

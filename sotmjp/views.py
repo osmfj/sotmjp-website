@@ -3,7 +3,11 @@ from StringIO import StringIO
 from uuid import uuid4
 from zipfile import ZipFile
 
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
+from django.shortcuts import render, redirect
+
+from symposion.proposals.models import ProposalSection
 
 from sotmjp.program_export import export
 
@@ -22,3 +26,15 @@ def program_export(request):
                             content_type='application/x-zip-compressed')
     response['Content-Disposition'] = 'attachment; filename=program_export.zip'
     return response
+
+
+@login_required
+def dashboard(request):
+    if request.session.get("pending-token"):
+        return redirect("speaker_create_token",
+                        request.session["pending-token"])
+    context = {'proposals_are_open': bool(ProposalSection.available()), }
+    return render(
+        request, "dashboard.html",
+        context,
+    )
