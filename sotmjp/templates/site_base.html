@@ -33,6 +33,7 @@
 {% endblock %}
 
 {% block extra_head_base %}
+    <script src="{% block jquery_src %}{% static "jquery/js/jquery-2.1.3.min.js" %}{% endblock %}"></script>
     <link href="{{ STATIC_URL }}img/favicon.ico" rel="shortcut icon" />
     {% block extra_head %}{% endblock %}
     {% if config.GOOGLE_SITE_VERIFICATION_CODE %}
@@ -179,7 +180,6 @@
 {% endblock %}
 
 {% block script_base %}
-    <script src="{% block jquery_src %}{% static "jquery/js/jquery-2.1.3.min.js" %}{% endblock %}"></script>
     {% include "markedit/includes/markedit-js.html" %}
     <script src="{% static "js/bootstrap.min.js" %}"></script>
     <script src="{% static "pinax/js/theme.js" %}"></script>
