@@ -44,7 +44,7 @@ git+https://bitbucket.org/miurahr/django-restcms.git#egg=restcms
 sphinx-intl
 
 ## UI
-markedit==0.2.dev4
+markedit==0.3.0
 requests==2.6.0
 Markdown==2.6.1
 simplejson==3.7.3
