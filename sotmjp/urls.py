@@ -30,7 +30,7 @@ urlpatterns = patterns(
         url(r"^account/social/", include("social_auth.urls")),
         url(r"^account/associations/", include("social_auth.urls")),
         url(r"^account/", include("account.urls")),
-        url(r"^dashboard/", symposion.views.dashboard, name="dashboard"),
+        url(r"^dashboard/", sotmjp.views.dashboard, name="dashboard"),
         url(r"^blog/", include("pinax.blog.urls")),
         url(r"^registration/", include("sotmjp.registration.urls")),
         url(r"^venue/$",
