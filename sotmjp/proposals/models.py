@@ -102,7 +102,7 @@ class TalkProposal(Proposal):
 
     DURATION_CHOICES = [
         (0, _("No preference")),
-        (1, _("15min")),
+        (1, _("10min")),
         (2, _("20min")),
     ]
 
