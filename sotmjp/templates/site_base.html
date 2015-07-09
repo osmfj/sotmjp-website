@@ -41,6 +41,7 @@
 {% endblock %}
 
 {% block extra_body_base %}
+  <script src="{% block jquery_src %}{% static "jquery/js/jquery-2.1.3.min.js" %}{% endblock %}"></script>
   {% if config.GOOGLE_ANALYTICS_TRACKING_ID %}
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -179,7 +180,6 @@
 {% endblock %}
 
 {% block script_base %}
-    <script src="{% block jquery_src %}{% static "jquery/js/jquery-2.1.3.min.js" %}{% endblock %}"></script>
     {% include "markedit/includes/markedit-js.html" %}
     <script src="{% static "js/bootstrap.min.js" %}"></script>
     <script src="{% static "pinax/js/theme.js" %}"></script>
