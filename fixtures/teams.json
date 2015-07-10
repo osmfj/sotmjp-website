@@ -1,27 +1,27 @@
 [
 {
-    "pk": 1, 
-    "model": "teams.team", 
+    "pk": 1,
+    "model": "symposion_teams.team",
     "fields": {
-        "description": "\u30dc\u30e9\u30f3\u30c6\u30a3\u30a2\u3059\u308b\u4eba\u306e\u96c6\u307e\u308a", 
-        "created": "2013-01-08T18:41:25.238", 
-        "manager_permissions": [], 
-        "name": "\u30dc\u30e9\u30f3\u30c6\u30a3\u30a2", 
-        "access": "application", 
-        "slug": "volunteers", 
+        "description": "\u30dc\u30e9\u30f3\u30c6\u30a3\u30a2\u3059\u308b\u4eba\u306e\u96c6\u307e\u308a",
+        "created": "2013-01-08T18:41:25.238",
+        "manager_permissions": [],
+        "name": "\u30dc\u30e9\u30f3\u30c6\u30a3\u30a2",
+        "access": "application",
+        "slug": "volunteers",
         "permissions": []
     }
 },
 {
     "pk": 2,
-    "model": "teams.team", 
+    "model": "symposion_teams.team", 
     "fields": {
-        "description": "", 
-        "created": "2013-07-09T11:34:02.444", 
+        "description": "",
+        "created": "2013-07-09T11:34:02.444",
         "manager_permissions": [],
-        "name": "\u8b1b\u6f14\u30ec\u30d3\u30e5\u30a2\u30fc", 
-        "access": "application", 
-        "slug": "talk-reviewers", 
+        "name": "\u8b1b\u6f14\u30ec\u30d3\u30e5\u30a2\u30fc",
+        "access": "application",
+        "slug": "talk-reviewers",
         "permissions": []
     }
 }
