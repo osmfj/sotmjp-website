@@ -206,6 +206,7 @@ INSTALLED_APPS = [
     "selectable",
 
     # symposion
+    "symposion",
     "symposion.conference",
     # "symposion.cms", # use restcms
     "symposion.boxes",
