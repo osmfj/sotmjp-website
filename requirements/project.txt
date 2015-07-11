@@ -16,10 +16,10 @@ pinax-blog==4.0.2
 git+git://github.com/shvechikov/python-rtfng.git#egg=python-rtfng
 
 # Social Login
-python-social-auth==0.2.11
+oauth2==1.5.211
+django-social-auth==0.7.28
 python-openid==2.2.5
 django-secure==1.0
-oauthlib==0.7.2
 
 raven==3.3.7
 
@@ -55,7 +55,7 @@ django-uni-form==0.9.0
 ## Admin UI
 git+https://github.com/liberation/django-admin-tabs.git#egg=django-admin-tabs
 git+https://github.com/django-admin-tools/django-admin-tools.git#egg=django-admin-tools
-feedparser==5.2.0
+feedparser==5.2.0.post1
 
 ## Hosting
 gondor==1.2.5
