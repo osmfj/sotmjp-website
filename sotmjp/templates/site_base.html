@@ -140,45 +140,43 @@
         {% endblock %}
     </div>
 
-    <footer>
-        <div class="container">
-        {% block footer %}
-            <a href="{%  url 'home' %}" class="logo">
-                <img src="{{ STATIC_URL }}img/sotmjapan-footer.png" alt="State of the Map Japan">
-            </a>
-            {% comment %}
-            <a href="http://www.csis.u-tokyo.ac.jp/japanese/index.html" class="logo">
-                <img src="{{ STATIC_URL }}img/csis-logo.png" alt="Center for Spatial Information Science The University of Tokyo">
-            </a>
-            {% endcomment %}
-            <a href="http://osmf.jp/" class="logo">
-              <img src="{{ STATIC_URL }}img/osmfj_logo.png" alt="OpenStreetMap Foundation Japan"></a>
-            <div class="footer-content">
-                <p class="sns">
-                    <a href="https://www.facebook.com/SotMJP"><img src="{{ STATIC_URL }}img/icon-facebook.png"></a>
-                    <a href="https://twitter.com/sotmjp"><img src="{{ STATIC_URL }}img/icon-twitter.png"></a>
-                </p>
-                <p>
-                  {% blocktrans %}
-                    State of the Map Japan is a production of the
-                    <a href="http://osmf.jp/">OpenStreetMap Foundation Japan</a>.
-                  {% endblocktrans %}
-                </p>
-                <p>
-                  {% blocktrans %}
-                    Site forked from the <a href="http://pycon.jp/2014">PyCon JP 2014</a> site built by <a href="http://caktusgroup.com">Caktus Consulting Group, LLC.</a> using <a href="http://eldarion.com/symposion/" title="Symposion — An Open Platform for Conference Websites">Symposion</a>.
-                  {% endblocktrans %}
-                </p>
-                <p>
-                  {% blocktrans %}
-                    Questions? Comments? Contact <a href="mailto:info@osmf.jp">info@osmf.jp</a>
-                  {% endblocktrans %}
-                </p>
-            </div>
-        {% endblock %}
-        </div>
-    </footer>
 {% endblock %}
+
+{% block footer %}
+    <a href="{%  url 'home' %}" class="logo">
+        <img src="{{ STATIC_URL }}img/sotmjapan-footer.png" alt="State of the Map Japan">
+    </a>
+    {% comment %}
+    <a href="http://www.csis.u-tokyo.ac.jp/japanese/index.html" class="logo">
+        <img src="{{ STATIC_URL }}img/csis-logo.png" alt="Center for Spatial Information Science The University of Tokyo">
+    </a>
+    {% endcomment %}
+    <a href="http://osmf.jp/" class="logo">
+      <img src="{{ STATIC_URL }}img/osmfj_logo.png" alt="OpenStreetMap Foundation Japan"></a>
+    <div class="footer-content">
+        <p class="sns">
+            <a href="https://www.facebook.com/SotMJP"><img src="{{ STATIC_URL }}img/icon-facebook.png"></a>
+            <a href="https://twitter.com/sotmjp"><img src="{{ STATIC_URL }}img/icon-twitter.png"></a>
+        </p>
+        <p>
+          {% blocktrans %}
+            State of the Map Japan is a production of the
+            <a href="http://osmf.jp/">OpenStreetMap Foundation Japan</a>.
+          {% endblocktrans %}
+        </p>
+        <p>
+          {% blocktrans %}
+            Site forked from the <a href="http://pycon.jp/2014">PyCon JP 2014</a> site built by <a href="http://caktusgroup.com">Caktus Consulting Group, LLC.</a> using <a href="http://eldarion.com/symposion/" title="Symposion — An Open Platform for Conference Websites">Symposion</a>.
+          {% endblocktrans %}
+        </p>
+        <p>
+          {% blocktrans %}
+            Questions? Comments? Contact <a href="mailto:info@osmf.jp">info@osmf.jp</a>
+          {% endblocktrans %}
+        </p>
+    </div>
+{% endblock %}
+
 
 {% block script_base %}
     <script src="{% static "js/bootstrap.min.js" %}"></script>
