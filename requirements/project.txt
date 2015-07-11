@@ -55,7 +55,7 @@ django-uni-form==0.9.0
 ## Admin UI
 git+https://github.com/liberation/django-admin-tabs.git#egg=django-admin-tabs
 git+https://github.com/django-admin-tools/django-admin-tools.git#egg=django-admin-tools
-feedparser==5.2.0
+feedparser==5.2.0.post1
 
 ## Hosting
 gondor==1.2.5
