@@ -217,7 +217,6 @@ INSTALLED_APPS = [
     "sotmjp",
     "sotmjp.proposals",
     "restcms",
-    "sotmjp.registration",
     "sotmjp.profile",
     "leaflet",
     "osm_field",
