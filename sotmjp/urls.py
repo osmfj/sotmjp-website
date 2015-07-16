@@ -11,7 +11,6 @@ admin.autodiscover()
 
 import symposion.views
 import sotmjp.views
-import sotmjp.profile.views
 
 URL_PREFIX = settings.CONFERENCE_URL_PREFIXES[settings.CONFERENCE_ID]
 
@@ -23,7 +22,7 @@ urlpatterns = patterns(
             name="home"),
         url(r"^admin/", include(admin.site.urls)),
         url(r'^admin_tools/', include('admin_tools.urls')),
-        url(r"^account/signup/$", sotmjp.profile.views.SignupView.as_view(),
+        url(r"^account/signup/$", symposion.views.SignupView.as_view(),
             name="account_signup"),
         url(r"^account/login/$", symposion.views.LoginView.as_view(),
             name="account_login"),
@@ -35,7 +34,6 @@ urlpatterns = patterns(
         url(r"^venue/$",
             TemplateView.as_view(template_name="venue/detail.html"),
             name="venue_detail"),
-        url(r"^profile/", include("sotmjp.profile.urls")),
         url(r"^speaker/", include("symposion.speakers.urls")),
         url(r"^proposals/", include("symposion.proposals.urls")),
         url(r"^reviews/", include("symposion.reviews.urls")),
