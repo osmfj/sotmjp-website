@@ -43,7 +43,7 @@
 @gray:                  #555;
 @grayLight:             #999;
 @grayLighter:           #eee;
-
+@blueDark:    #2871ba;
 
 body {
   //min-height: 2000px;
@@ -203,4 +203,24 @@ div.leaflet-container {  /* all maps */
 
 footer {
   text-align: center;
+}
+
+.page-head {
+  padding: 10px 0 20px 0;
+  min-height: 55px;
+  background-color: @blueDark;
+//  background-image: url('../img/pagehead-bkg.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+
+  h1 {
+    text-transform:uppercase;
+    //font-size: @baseFontSize + 18;
+    margin: 9px 0 0 0;
+    span {
+      //font-size:@baseFontSize + 1;
+      display:block;
+      line-height:15px;
+    }
+  }
 }
