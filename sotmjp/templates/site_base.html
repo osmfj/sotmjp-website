@@ -105,13 +105,13 @@
                 <div class="container">
 
                     <div class="row">
-                        <div class="span9">
+                        <div class="col-md-12 col-sm-12">
                             {% block edit_page %}{% endblock %}
                             <div class="box">
                                 <div class="box-content">{% block body %}{% endblock %}</div>
                             </div>
                         </div>
-                        <aside class="span3">
+                        <alide class="col-md-12 col-sm-12">
                             {% block sidebar %}
                             {% cache 600 "sidebar" %}
                                 {% sponsors as all_sponsors %}
