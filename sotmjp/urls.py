@@ -32,7 +32,6 @@ urlpatterns = patterns(
         url(r"^account/", include("account.urls")),
         url(r"^dashboard/", sotmjp.views.dashboard, name="dashboard"),
         url(r"^blog/", include("pinax.blog.urls")),
-        url(r"^registration/", include("sotmjp.registration.urls")),
         url(r"^venue/$",
             TemplateView.as_view(template_name="venue/detail.html"),
             name="venue_detail"),
