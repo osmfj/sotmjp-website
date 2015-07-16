@@ -21,71 +21,90 @@
 {% endblock %}
 
 {% block banner %}
-    <div class="banner">
-        <div class="dark" itemscope itemtype="http://data-vocabulary.org/Event">
-            <div class="container">
-                <div class="row">
-                    <div class="span12">
-                        {% if config.REGISTRATION_STATUS != 'open' %}
-                            <div class="promo no-link">
-                                {% if config.REGISTRATION_STATUS == 'soon' %}
-                                <p>{% trans "Coming soon!" %}{{ config.CONFERENCE_NAME_SHORT }}</p>
-                                {% elif config.REGISTRATION_STATUS == 'closed' %}
-                                    <p class="small">{% trans "Registration Closed" %}</p>
-                                {% else %}
-                                    <p>&nbsp;<br />&nbsp;</p>
-                                {% endif %}
-                            </div>
-                        {% endif %}
-                        <div itemprop="summary" class="logo">{{ config.CONFERENCE_NAME }}</div>
-                        <div itemprop="summary" class="headline">
-                          {% blocktrans with confname=config.CONFERENCE_NAME confyear=config.CONFERENCE_YEAR locality=config.CONFERENCE_LOCALITY %}
-                               {{ confname }} {{ confyear }}in {{ locality }}
-                          {% endblocktrans %}
-                        </div>
-                        <div class="details">
-                          <span itemprop="locality">{{ config.CONFERENCE_LOCALITY }}</span>,
-                          <span itemprop="country-name">{{ config.CONFERENCE_COUNTRY }}</span>,
-                          <time itemprop="startDate" datetime="{{ config.CONFERENCE_START_DATE }}">{{ config.CONFERENCE_START_DATE }}</time>&ndash;
-                          <time itemprop="endDate" datetime="{{ config.CONFERENCE_END_DATE }}">{{ config.CONFERENCE_END_DATE }}</time>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="schedule span12">
-                        <ul>
-                          <li><strong>{% trans "Conference" %}</strong><br/>{{ config.CONFERENCE_DURATION }}</li>
-			  {% if config.HAVE_TUTORIAL == "Yes" %}
-			  <li><strong>{% trans "Tutorial" %}</strong><br/>{{ config.TUTORIAL_DURATION }}</li>
-			  {% endif %}
-			  {% if config.HAVE_HACKATHON == "Yes" %}
-			  <li><strong>{% trans "Hackathon" %}</strong><br/>{{ config.HACKATHON_DURATION }}</li>
-			  {% endif %}
-                        </ul>
-                    </div>
-                </div>
-                {% if config.REGISTRATION_STATUS == 'over' %}
-                    <div class="row" style="position: relative;text-align: center;z-index:1000;padding:0 10px;font-size: 32px;line-height: 40px;">
-                        {% blocktrans with confname=config.CONFERENCE_NAME %}
-                        {{ confname }} is over! <br>
-                        Thanks to everyone for making it a great success!" <br>
-                        {% endblocktrans %}
-                    </div>
-                {% elif config.REGISTRATION_STATUS == 'open' %}
-                    <div class="promo" itemprop="tickets" itemscope itemtype="http://data-vocabulary.org/Offer">
-                      <a href="{{ config.REGISTRATION_URL }}">{% trans "REGISTER" %}</a>
-                    </div>
-                {% endif %}
-            </div>
-        </div>
-        <div class="city">
-            <div class="container">
-                <div class="hamamatsu">
-                </div>
-            </div>
-        </div>
+  <div class="banner contaniner" itemscope itemtype="http://data-vocabulary.org/Event">
+    <div class="row">
+      <div class="col-sm-12 col-md-3">
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div itemprop="summary" class="logo">{{ config.CONFERENCE_NAME }}</div>
+      </div>
+      <div class="col-sm-12 col-md-3">
+        {% if config.REGISTRATION_STATUS != 'open' %}
+          <div class="promo no-link">
+              {% if config.REGISTRATION_STATUS == 'soon' %}
+                <p>{% trans "Coming soon!" %}{{ config.CONFERENCE_NAME_SHORT }}</p>
+              {% elif config.REGISTRATION_STATUS == 'closed' %}
+                <p class="small">{% trans "Registration Closed" %}</p>
+              {% else %}
+                <p>&nbsp;<br />&nbsp;</p>
+              {% endif %}
+          </div>
+        {% endif %}
+      </div>
     </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div itemprop="summary" class="headline">
+          {% blocktrans with confname=config.CONFERENCE_NAME confyear=config.CONFERENCE_YEAR locality=config.CONFERENCE_LOCALITY %}
+            {{ confname }} {{ confyear }} in {{ locality }}
+          {% endblocktrans %}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="details">
+          <span itemprop="locality">{{ config.CONFERENCE_LOCALITY }}</span>,
+          <span itemprop="country-name">{{ config.CONFERENCE_COUNTRY }}</span>,
+          <time itemprop="startDate" datetime="{{ config.CONFERENCE_START_DATE }}">{{ config.CONFERENCE_START_DATE }}</time>&ndash;
+          <time itemprop="endDate" datetime="{{ config.CONFERENCE_END_DATE }}">{{ config.CONFERENCE_END_DATE }}</time>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="schedule">
+        <ul>
+          <li><strong>{% trans "Conference" %}</strong><br/>{{ config.CONFERENCE_DURATION }}</li>
+          {% if config.HAVE_TUTORIAL == "Yes" %}
+            <li><strong>{% trans "Tutorial" %}</strong><br/>{{ config.TUTORIAL_DURATION }}</li>
+          {% endif %}
+          {% if config.HAVE_HACKATHON == "Yes" %}
+            <li><strong>{% trans "Hackathon" %}</strong><br/>{{ config.HACKATHON_DURATION }}</li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+    {% if config.REGISTRATION_STATUS == 'over' %}
+      <div class="row">
+        <div class="col-sm-12">
+          <div style="position: relative;text-align: center;z-index:1000;padding:0 10px;font-size: 32px;line-height: 40px;">
+            {% blocktrans with confname=config.CONFERENCE_NAME %}
+              {{ confname }} is over! <br>
+              Thanks to everyone for making it a great success!" <br>
+            {% endblocktrans %}
+          </div>
+        </div>
+      </div>
+    {% elif config.REGISTRATION_STATUS == 'open' %}
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="promo" itemprop="tickets" itemscope itemtype="http://data-vocabulary.org/Offer">
+            <a href="{{ config.REGISTRATION_URL }}">{% trans "REGISTER" %}</a>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="city">
+          <div class="container">
+            <div class="hamamatsu">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}
 
 {% block body_outer %}
@@ -155,7 +174,7 @@
         {% endwith %}
 
         <div class="span4">
-          {# homepage-about for each language #} 
+          {# homepage-about for each language #}
           {% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}
           {% box "homepage-about-"|add:lang %}
           {% endwith %}
