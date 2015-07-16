@@ -60,8 +60,8 @@
 {% block topbar_base %}
     {% include "_messages.html" %}
     {% block main_nav %}
-      <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
+      <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
               <span class="sr-only">Toggle navigation</span>
@@ -74,19 +74,17 @@
             </a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              {% block topbar %}
-                  {% block nav %}
-                  {% with lang=LANGUAGE_CODE|default:"ja"|slice:":2" %}
+            {% block topbar %}
+              {% block nav %}
+                {% with lang=LANGUAGE_CODE|default:"ja"|slice:":2" %}
                   {% sitetree_menu from "main-"|add:lang include "trunk" %}
-                  {% endwith %}
-                  {% endblock %}
+                {% endwith %}
               {% endblock %}
-            </ul>
+            {% endblock %}
             {% block account_bar %}
               {% include "_account_bar.html" %}
             {% endblock %}
-            </div><!--/.nav-collapse -->
+          </div><!--/.nav-collapse -->
         </div>
       </nav>
     {% endblock %}
