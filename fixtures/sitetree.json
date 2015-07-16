@@ -49,7 +49,7 @@
         "description": "",
         "insitetree": true,
         "hint": "",
-        "url": "venue",
+        "url": "venue_detail",
         "inbreadcrumbs": true,
         "title": "\u958b\u50ac\u5834\u6240",
         "tree": 1,
@@ -59,7 +59,7 @@
         "inmenu": true,
         "access_loggedin": false,
         "hidden": false,
-        "urlaspattern": false,
+        "urlaspattern": true,
         "access_guest": false
     }
 },
@@ -385,7 +385,7 @@
         "description": "",
         "insitetree": true,
         "hint": "",
-        "url": "venue",
+        "url": "venue_detail",
         "inbreadcrumbs": true,
         "title": "Venue",
         "tree": 2,
@@ -395,7 +395,7 @@
         "inmenu": true,
         "access_loggedin": false,
         "hidden": false,
-        "urlaspattern": false,
+        "urlaspattern": true,
         "access_guest": false
     }
 },
