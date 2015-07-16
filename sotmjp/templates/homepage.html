@@ -108,50 +108,46 @@
 {% endblock %}
 
 {% block body_outer %}
-<div class="container">
+  <div class="container">
     {% cache 600 "homepage-sponsor-slider" %}
     {% sponsors as all_sponsors %}
     {% if all_sponsors %}
-    <div class="row">
-        <div class="span12 sponsor-crawl">
-            <h2 class="scroll-title">{% trans "Sponsors" %}</h2>
-            <div id="sponsorslider" class="carousel slide">
-                <!-- Carousel items -->
-                <div class="carousel-inner">
-                    {# sponsors without levels, 12 per each slide #}
-                    {% for sponsor in all_sponsors %}
-                        {% if forloop.first or forloop.counter0|divisibleby:"12" %}
-                            <div class="item {% if forloop.first %}active{% endif %}" style="margin: auto;">
-                        {% endif %}
-
-                        <a href="{{ sponsor.external_url }}" title="{{ sponsor.name }}">
-                            <div class="sponsor-scroll-item" style="background-image: url('{% thumbnail sponsor.website_logo '300x300' %}')" data-background-2x="{% thumbnail sponsor.website_logo '500x500' %}"></div>
-                        </a>
-                        {% if forloop.counter|divisibleby:"12" or forloop.last %}</div>{% endif %}
-                    {% endfor %}
-                </div>
-
-
-                {% if all_sponsors.count > 12 %}
-                  <!-- Carousel nav -->
-                  <nav id="slider-nav">
-                    {% for sponsor in all_sponsors %}
-                        {% if forloop.first or forloop.counter0|divisibleby:"12" %}
-                            <a href="#" class="{% if forloop.first %}activeSlide{% endif %}"></a>
-                        {% endif %}
-                    {% endfor %}
-                  </nav>
+      <div class="row">
+        <div class="col-md-12 sponsor-crawl">
+          <h2 class="scroll-title">{% trans "Sponsors" %}</h2>
+          <div id="sponsorslider" class="carousel slide">
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+              {# sponsors without levels, 12 per each slide #}
+              {% for sponsor in all_sponsors %}
+                {% if forloop.first or forloop.counter0|divisibleby:"12" %}
+                  <div class="item {% if forloop.first %}active{% endif %}" style="margin: auto;">
                 {% endif %}
+                <a href="{{ sponsor.external_url }}" title="{{ sponsor.name }}">
+                  <div class="sponsor-scroll-item" style="background-image: url('{% thumbnail sponsor.website_logo '300x300' %}')" data-background-2x="{% thumbnail sponsor.website_logo '500x500' %}"></div>
+                </a>
+                {% if forloop.counter|divisibleby:"12" or forloop.last %}</div>{% endif %}
+              {% endfor %}
             </div>
+            {% if all_sponsors.count > 12 %}
+              <!-- Carousel nav -->
+              <nav id="slider-nav">
+                {% for sponsor in all_sponsors %}
+                  {% if forloop.first or forloop.counter0|divisibleby:"12" %}
+                    <a href="#" class="{% if forloop.first %}activeSlide{% endif %}"></a>
+                  {% endif %}
+                {% endfor %}
+              </nav>
+            {% endif %}
+          </div>
         </div>
-    </div>
+      </div>
     {% endif %}
     {% endcache %}
-
     <div class="row homepage-content">
         {% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}
         {% latest_section_posts lang as posts %}
-        <div class="span8">
+        <div class="col-md-8 col-sm-12">
             <h3>{% trans "Announcements" %}</h3>
                 {% for post in posts %}
                     <div class="blog-post">
@@ -173,7 +169,7 @@
         </div>
         {% endwith %}
 
-        <div class="span4">
+        <div class="col-md-4 col-sm-12">
           {# homepage-about for each language #}
           {% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}
           {% box "homepage-about-"|add:lang %}
