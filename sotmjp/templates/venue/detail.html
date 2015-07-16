@@ -1,4 +1,4 @@
-{% extends "venue/base.html" %}
+{% extends "site_base.html" %}
 
 {% load i18n %}
 {% load sitetree %}
@@ -6,34 +6,39 @@
 
 {% block head_title %}{% trans "Venue Details" %}{% endblock %}
 {% block extra_head %}
-   {% leaflet_css %}
-   {% leaflet_js %}
-   <script type="text/javascript">
+  {% leaflet_css %}
+  {% leaflet_js %}
+  <script type="text/javascript">
     function map_init_basic (map, options) {
         L.marker([34.70676, 137.73871]).addTo(map);
     }
-   </script>
+  </script>
 {% endblock %}
 {% block page_title %}{% trans "Venue Details" %}{% endblock %}
 
 {% block body_class %}venue{% endblock %}
 
 {% block body %}
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>アクトシティ 研修交流センター</h1>
+        <p>62研修交流室</br>
+        〒430-7790　静岡県浜松市中区板屋町111-1 (<a href="http://www.actcity.jp/about/access.php">交通アクセス</a>)
+        </p>
 
-<h1>アクトシティ 研修交流センター</h1>
-<p>62研修交流室</br>
-〒430-7790　静岡県浜松市中区板屋町111-1 (<a href="http://www.actcity.jp/about/access.php">交通アクセス</a>)
-</p>
+        <img class="venue_direction" src="http://www.actcity.jp/floor/seminar/images/access/img_accessmap.gif"/>
 
-<img class="venue_direction" src="http://www.actcity.jp/floor/seminar/images/access/img_accessmap.gif"/>
+        <p>浜松駅からのアクセス方法は上記地図及び<a href="http://www.actcity.jp/floor/seminar/access.php">研修交流センター入り口までのご案内</a>をごらんください。</p>
 
-<p>浜松駅からのアクセス方法は上記地図及び<a href="http://www.actcity.jp/floor/seminar/access.php">研修交流センター入り口までのご案内</a>をごらんください。</p>
+        <p class="intro">イベントおよび懇親会はすべて、この会場で実施します。</p>
 
-<p class="intro">イベントおよび懇親会はすべて、この会場で実施します。</p>
-
-{% leaflet_map "venue_map" callback="window.map_init_basic" %}
-{% comment %}
-<small><a href="https://openstreetmap.jp/map/#zoom=19&lat=35.66112&lon=139.67755&layers=B00" target="_blank">大きな地図で見る</a></small>
-{% endcomment %}
-<small><a href="http://www.openstreetmap.org/?mlat=34.70676&mlon=137.73871#map=17/34.70676/137.73871" target="_blank">大きな地図で見る</a></small>
+        {% leaflet_map "venue_map" callback="window.map_init_basic" %}
+        {% comment %}
+          <small><a href="https://openstreetmap.jp/map/#zoom=19&lat=35.66112&lon=139.67755&layers=B00" target="_blank">大きな地図で見る</a></small>
+        {% endcomment %}
+        <small><a href="http://www.openstreetmap.org/?mlat=34.70676&mlon=137.73871#map=17/34.70676/137.73871" target="_blank">大きな地図で見る</a></small>
+      </div>
+    </div>
+  </div>
 {% endblock %}

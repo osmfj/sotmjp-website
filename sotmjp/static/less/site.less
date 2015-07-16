@@ -55,6 +55,23 @@
 
 @danger:      #cd0000;
 
+@breakDesktopLarge:			1200px;
+@breakDesktop:				979px;
+@breakTablet:				767px;
+@breakMobileLandscape:		480px;
+@breakMobile:				320px;
+
+img {
+  @media (max-width: @breakTablet) {
+    max-width: 100%;
+  }
+  @media (max-width: @breakMobileLandscape) {
+    max-width: 100%;
+  }
+  @media (max-width: @breakMobile) {
+    max-width: 100%;
+  }
+}
 
 body {
   //min-height: 2000px;
@@ -66,8 +83,20 @@ body {
 }
 // Leaflet
 div.leaflet-container {  /* all maps */
-    width:  700px;
-    height: 900px;
+  width:  700px;
+  height: 900px;
+  @media (max-width: @breakTablet) {
+    width: 100%;
+    height: 600px;
+  }
+  @media (max-width: @breakMobileLandscape) {
+    width: 100%;
+    height: 300px;
+  }
+  @media (max-width: @breakMobile) {
+    width: 100%;
+    height: 200px;
+  }
 }
 
 // promo
