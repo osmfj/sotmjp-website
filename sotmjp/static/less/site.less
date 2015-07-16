@@ -44,6 +44,17 @@
 @grayLight:             #999;
 @grayLighter:           #eee;
 @blueDark:    #2871ba;
+@blueLight:   #55b6d9;
+@blueDark:    #2871ba;
+@blueSky:     #d2f6ff;
+
+@greenLight:  #76c34d;
+// #62a83d
+@greenDark:   #346B17;
+@yellowBeak:  #f6b34a;
+
+@danger:      #cd0000;
+
 
 body {
   //min-height: 2000px;
@@ -222,5 +233,27 @@ footer {
       display:block;
       line-height:15px;
     }
+  }
+}
+
+ul.breadcrumb {
+ background: transparent;
+ margin: 0;
+ padding: 0;
+ > li {
+   text-shadow: none;
+ }
+ > .active, > .divider {
+   color: lighten(@gray, 20%);
+ }
+}
+
+a {
+  color: @blueDark;
+  cursor: pointer;
+  &:hover {
+    color: @blueLight;
+    .transition(0.25s);
+    text-decoration: none;
   }
 }
