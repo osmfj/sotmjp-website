@@ -59,7 +59,7 @@ class LightningTalkProposalForm(ProposalForm):
 class PosterProposalForm(ProposalForm):
 
     def __init__(self, *args, **kwargs):
-        super(LightningTalkProposalForm, self).__init__(*args, **kwargs)
+        super(PosterProposalForm, self).__init__(*args, **kwargs)
         self.fields['additional_requirement'].widget = forms.HiddenInput()
 
     class Meta:
