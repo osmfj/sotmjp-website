@@ -175,11 +175,9 @@ initdb () {
   python ${INSTALL_DIR}/manage.py loaddata \
     ${INSTALL_DIR}/fixtures/auth_user.json \
     ${INSTALL_DIR}/fixtures/conference.json \
-    ${INSTALL_DIR}/fixtures/database_constance.json \
     ${INSTALL_DIR}/fixtures/boxes.json \
     ${INSTALL_DIR}/fixtures/proposals.json \
     ${INSTALL_DIR}/fixtures/sitetree.json \
-    ${INSTALL_DIR}/fixtures/sotmjp.json \
     ${INSTALL_DIR}/fixtures/sponsorship.json \
     ${INSTALL_DIR}/fixtures/schedule.json \
     ${INSTALL_DIR}/fixtures/teams.json \

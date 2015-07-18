@@ -19,11 +19,9 @@ python ${BASEDIR}/manage.py migrate
 python ${BASEDIR}/manage.py loaddata \
   ${BASEDIR}/fixtures/auth_user.json \
   ${BASEDIR}/fixtures/conference.json \
-  ${BASEDIR}/fixtures/database_constance.json \
   ${BASEDIR}/fixtures/boxes.json \
   ${BASEDIR}/fixtures/proposals.json \
   ${BASEDIR}/fixtures/sitetree.json \
-  ${BASEDIR}/fixtures/sotmjp.json \
   ${BASEDIR}/fixtures/sponsorship.json \
   ${BASEDIR}/fixtures/schedule.json \
   ${BASEDIR}/fixtures/teams.json \
