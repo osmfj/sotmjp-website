@@ -145,10 +145,9 @@
     {% endif %}
     {% endcache %}
     <div class="row homepage-content">
-        {% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}
-        {% latest_section_posts lang as posts %}
         <div class="col-md-8 col-sm-12">
             <h3>{% trans "Announcements" %}</h3>
+                {% latest_blog_posts as posts %}
                 {% for post in posts %}
                     <div class="blog-post">
                         <div class="date">
@@ -167,7 +166,6 @@
                     <p>{% trans "No announcements have been published." %}</p>
                 {% endfor %}
         </div>
-        {% endwith %}
 
         <div class="col-md-4 col-sm-12">
           {# homepage-about for each language #}
