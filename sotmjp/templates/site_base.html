@@ -18,7 +18,7 @@
     {% endcompress %}
     {% if debug %}
         <link rel="stylesheet/less" type="text/css" media="all" href="{{ STATIC_URL }}less/site.less" />
-        <script src="{{ STATIC_URL }}js/less-1.3.3.min.js"></script>
+        <script src="{{ STATIC_URL }}js/less.min.js"></script>
     {% else %}
         {% compress css %}
             <link rel="stylesheet" type="text/less" media="all" href="{{ STATIC_URL }}less/site.less" />
@@ -59,34 +59,35 @@
 
 {% block topbar_base %}
     {% include "_messages.html" %}
-    <header class="main">
-        <a id="skip" href="#content">{% trans "Skip to main content" %}</a>
+    {% block main_nav %}
+      <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
-        <div class="account-bar{% if user.is_authenticated %} {% trans "loggedin" %}{% endif %}">
-            {% block account_bar %}
-            {% include "_account_bar.html" %}
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{% url 'home' %}">
+              <img src="http://staging.stateofthemap.jp/2015/site_media/static/less/../img/sotmjapan-sub.png" height="28px">
+            </a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            {% block topbar %}
+              {% block nav %}
+                {% with lang=LANGUAGE_CODE|default:"ja"|slice:":2" %}
+                  {% sitetree_menu from "main-"|add:lang include "trunk" %}
+                {% endwith %}
+              {% endblock %}
             {% endblock %}
+            {% block account_bar %}
+              {% include "_account_bar.html" %}
+            {% endblock %}
+          </div><!--/.nav-collapse -->
         </div>
-        {% block main_nav %}
-            <nav>
-                <div class="container">
-                  <a class="logo-small" href="{% url 'home' %}">{{ config.CONFIG_CONFERENCE_NAME }}</a>
-                    <div class="navbar navbar-inverse">
-                        <div class="navbar-inner">
-                            {% block topbar %}
-                                {% block nav %}
-                                {% with lang=LANGUAGE_CODE|default:"ja"|slice:":2" %}
-                                {% sitetree_menu from "main-"|add:lang include "trunk" %}
-                                {% endwith %}
-                                {% endblock %}
-                            {% endblock %}
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        {% endblock %}
-        </div>
-    </header>
+      </nav>
+    {% endblock %}
     {% block banner %}{% endblock %}
 {% endblock %}
 
@@ -104,13 +105,13 @@
                 <div class="container">
 
                     <div class="row">
-                        <div class="span9">
+                        <div class="col-md-12 col-sm-12">
                             {% block edit_page %}{% endblock %}
                             <div class="box">
                                 <div class="box-content">{% block body %}{% endblock %}</div>
                             </div>
                         </div>
-                        <aside class="span3">
+                        <alide class="col-md-12 col-sm-12">
                             {% block sidebar %}
                             {% cache 600 "sidebar" %}
                                 {% sponsors as all_sponsors %}

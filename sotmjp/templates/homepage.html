@@ -21,118 +21,133 @@
 {% endblock %}
 
 {% block banner %}
-    <div class="banner">
-        <div class="dark" itemscope itemtype="http://data-vocabulary.org/Event">
-            <div class="container">
-                <div class="row">
-                    <div class="span12">
-                        {% if config.REGISTRATION_STATUS != 'open' %}
-                            <div class="promo no-link">
-                                {% if config.REGISTRATION_STATUS == 'soon' %}
-                                <p>{% trans "Coming soon!" %}{{ config.CONFERENCE_NAME_SHORT }}</p>
-                                {% elif config.REGISTRATION_STATUS == 'closed' %}
-                                    <p class="small">{% trans "Registration Closed" %}</p>
-                                {% else %}
-                                    <p>&nbsp;<br />&nbsp;</p>
-                                {% endif %}
-                            </div>
-                        {% endif %}
-                        <div itemprop="summary" class="logo">{{ config.CONFERENCE_NAME }}</div>
-                        <div itemprop="summary" class="headline">
-                          {% blocktrans with confname=config.CONFERENCE_NAME confyear=config.CONFERENCE_YEAR locality=config.CONFERENCE_LOCALITY %}
-                               {{ confname }} {{ confyear }}in {{ locality }}
-                          {% endblocktrans %}
-                        </div>
-                        <div class="details">
-                          <span itemprop="locality">{{ config.CONFERENCE_LOCALITY }}</span>,
-                          <span itemprop="country-name">{{ config.CONFERENCE_COUNTRY }}</span>,
-                          <time itemprop="startDate" datetime="{{ config.CONFERENCE_START_DATE }}">{{ config.CONFERENCE_START_DATE }}</time>&ndash;
-                          <time itemprop="endDate" datetime="{{ config.CONFERENCE_END_DATE }}">{{ config.CONFERENCE_END_DATE }}</time>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="schedule span12">
-                        <ul>
-                          <li><strong>{% trans "Conference" %}</strong><br/>{{ config.CONFERENCE_DURATION }}</li>
-			  {% if config.HAVE_TUTORIAL == "Yes" %}
-			  <li><strong>{% trans "Tutorial" %}</strong><br/>{{ config.TUTORIAL_DURATION }}</li>
-			  {% endif %}
-			  {% if config.HAVE_HACKATHON == "Yes" %}
-			  <li><strong>{% trans "Hackathon" %}</strong><br/>{{ config.HACKATHON_DURATION }}</li>
-			  {% endif %}
-                        </ul>
-                    </div>
-                </div>
-                {% if config.REGISTRATION_STATUS == 'over' %}
-                    <div class="row" style="position: relative;text-align: center;z-index:1000;padding:0 10px;font-size: 32px;line-height: 40px;">
-                        {% blocktrans with confname=config.CONFERENCE_NAME %}
-                        {{ confname }} is over! <br>
-                        Thanks to everyone for making it a great success!" <br>
-                        {% endblocktrans %}
-                    </div>
-                {% elif config.REGISTRATION_STATUS == 'open' %}
-                    <div class="promo" itemprop="tickets" itemscope itemtype="http://data-vocabulary.org/Offer">
-                      <a href="{{ config.REGISTRATION_URL }}">{% trans "REGISTER" %}</a>
-                    </div>
-                {% endif %}
-            </div>
-        </div>
-        <div class="city">
-            <div class="container">
-                <div class="hamamatsu">
-                </div>
-            </div>
-        </div>
+  <div class="banner contaniner" itemscope itemtype="http://data-vocabulary.org/Event">
+    <div class="row">
+      <div class="col-sm-12 col-md-3">
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div itemprop="summary" class="logo">{{ config.CONFERENCE_NAME }}</div>
+      </div>
+      <div class="col-sm-12 col-md-3">
+        {% if config.REGISTRATION_STATUS != 'open' %}
+          <div class="promo no-link">
+              {% if config.REGISTRATION_STATUS == 'soon' %}
+                <p>{% trans "Coming soon!" %}{{ config.CONFERENCE_NAME_SHORT }}</p>
+              {% elif config.REGISTRATION_STATUS == 'closed' %}
+                <p class="small">{% trans "Registration Closed" %}</p>
+              {% else %}
+                <p>&nbsp;<br />&nbsp;</p>
+              {% endif %}
+          </div>
+        {% endif %}
+      </div>
     </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div itemprop="summary" class="headline">
+          {% blocktrans with confname=config.CONFERENCE_NAME confyear=config.CONFERENCE_YEAR locality=config.CONFERENCE_LOCALITY %}
+            {{ confname }} {{ confyear }} in {{ locality }}
+          {% endblocktrans %}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="details">
+          <span itemprop="locality">{{ config.CONFERENCE_LOCALITY }}</span>,
+          <span itemprop="country-name">{{ config.CONFERENCE_COUNTRY }}</span>,
+          <time itemprop="startDate" datetime="{{ config.CONFERENCE_START_DATE }}">{{ config.CONFERENCE_START_DATE }}</time>&ndash;
+          <time itemprop="endDate" datetime="{{ config.CONFERENCE_END_DATE }}">{{ config.CONFERENCE_END_DATE }}</time>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="schedule">
+        <ul>
+          <li><strong>{% trans "Conference" %}</strong><br/>{{ config.CONFERENCE_DURATION }}</li>
+          {% if config.HAVE_TUTORIAL == "Yes" %}
+            <li><strong>{% trans "Tutorial" %}</strong><br/>{{ config.TUTORIAL_DURATION }}</li>
+          {% endif %}
+          {% if config.HAVE_HACKATHON == "Yes" %}
+            <li><strong>{% trans "Hackathon" %}</strong><br/>{{ config.HACKATHON_DURATION }}</li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+    {% if config.REGISTRATION_STATUS == 'over' %}
+      <div class="row">
+        <div class="col-sm-12">
+          <div style="position: relative;text-align: center;z-index:1000;padding:0 10px;font-size: 32px;line-height: 40px;">
+            {% blocktrans with confname=config.CONFERENCE_NAME %}
+              {{ confname }} is over! <br>
+              Thanks to everyone for making it a great success!" <br>
+            {% endblocktrans %}
+          </div>
+        </div>
+      </div>
+    {% elif config.REGISTRATION_STATUS == 'open' %}
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="promo" itemprop="tickets" itemscope itemtype="http://data-vocabulary.org/Offer">
+            <a href="{{ config.REGISTRATION_URL }}">{% trans "REGISTER" %}</a>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="city">
+          <div class="container">
+            <div class="hamamatsu">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}
 
 {% block body_outer %}
-<div class="container">
+  <div class="container">
     {% cache 600 "homepage-sponsor-slider" %}
     {% sponsors as all_sponsors %}
     {% if all_sponsors %}
-    <div class="row">
-        <div class="span12 sponsor-crawl">
-            <h2 class="scroll-title">{% trans "Sponsors" %}</h2>
-            <div id="sponsorslider" class="carousel slide">
-                <!-- Carousel items -->
-                <div class="carousel-inner">
-                    {# sponsors without levels, 12 per each slide #}
-                    {% for sponsor in all_sponsors %}
-                        {% if forloop.first or forloop.counter0|divisibleby:"12" %}
-                            <div class="item {% if forloop.first %}active{% endif %}" style="margin: auto;">
-                        {% endif %}
-
-                        <a href="{{ sponsor.external_url }}" title="{{ sponsor.name }}">
-                            <div class="sponsor-scroll-item" style="background-image: url('{% thumbnail sponsor.website_logo '300x300' %}')" data-background-2x="{% thumbnail sponsor.website_logo '500x500' %}"></div>
-                        </a>
-                        {% if forloop.counter|divisibleby:"12" or forloop.last %}</div>{% endif %}
-                    {% endfor %}
-                </div>
-
-
-                {% if all_sponsors.count > 12 %}
-                  <!-- Carousel nav -->
-                  <nav id="slider-nav">
-                    {% for sponsor in all_sponsors %}
-                        {% if forloop.first or forloop.counter0|divisibleby:"12" %}
-                            <a href="#" class="{% if forloop.first %}activeSlide{% endif %}"></a>
-                        {% endif %}
-                    {% endfor %}
-                  </nav>
+      <div class="row">
+        <div class="col-md-12 sponsor-crawl">
+          <h2 class="scroll-title">{% trans "Sponsors" %}</h2>
+          <div id="sponsorslider" class="carousel slide">
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+              {# sponsors without levels, 12 per each slide #}
+              {% for sponsor in all_sponsors %}
+                {% if forloop.first or forloop.counter0|divisibleby:"12" %}
+                  <div class="item {% if forloop.first %}active{% endif %}" style="margin: auto;">
                 {% endif %}
+                <a href="{{ sponsor.external_url }}" title="{{ sponsor.name }}">
+                  <div class="sponsor-scroll-item" style="background-image: url('{% thumbnail sponsor.website_logo '300x300' %}')" data-background-2x="{% thumbnail sponsor.website_logo '500x500' %}"></div>
+                </a>
+                {% if forloop.counter|divisibleby:"12" or forloop.last %}</div>{% endif %}
+              {% endfor %}
             </div>
+            {% if all_sponsors.count > 12 %}
+              <!-- Carousel nav -->
+              <nav id="slider-nav">
+                {% for sponsor in all_sponsors %}
+                  {% if forloop.first or forloop.counter0|divisibleby:"12" %}
+                    <a href="#" class="{% if forloop.first %}activeSlide{% endif %}"></a>
+                  {% endif %}
+                {% endfor %}
+              </nav>
+            {% endif %}
+          </div>
         </div>
-    </div>
+      </div>
     {% endif %}
     {% endcache %}
-
     <div class="row homepage-content">
         {% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}
         {% latest_section_posts lang as posts %}
-        <div class="span8">
+        <div class="col-md-8 col-sm-12">
             <h3>{% trans "Announcements" %}</h3>
                 {% for post in posts %}
                     <div class="blog-post">
@@ -154,8 +169,8 @@
         </div>
         {% endwith %}
 
-        <div class="span4">
-          {# homepage-about for each language #} 
+        <div class="col-md-4 col-sm-12">
+          {# homepage-about for each language #}
           {% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}
           {% box "homepage-about-"|add:lang %}
           {% endwith %}
