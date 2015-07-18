@@ -55,7 +55,10 @@
                     <span class="widget-label">{% trans "Edit your speaker profile" %}</span>
                   </a>
                   {% if proposals_are_open %}
-                    <a href="{% url 'proposal_submit' %}" class="action">
+                  {% comment %}
+                      <a href="{% url 'proposal_submit' %}" class="action">
+                  {% endcomment %}
+                      <a href="{% url 'proposal_submit_kind' 'talk' %}" class="action">
                       <i class="glyphicon glyphicon-bullhorn"></i>
                       <span class="widget-label">{% trans "Submit a new proposal" %}</span>
                     </a>
