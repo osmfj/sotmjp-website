@@ -3,17 +3,12 @@ from django.utils.translation import ugettext_lazy as _
 
 from markedit.widgets import MarkEdit
 
-from .models import (ProposalCategory, TalkProposal,
+from .models import (TalkProposal,
                      PosterProposal, LightningTalkProposal,
                      OpenSpaceProposal)
 
 
 class ProposalForm(forms.ModelForm):
-
-    def __init__(self, *args, **kwargs):
-        super(ProposalForm, self).__init__(*args, **kwargs)
-        queryset = ProposalCategory.objects.order_by("name")
-        self.fields["category"].queryset = queryset
 
     def clean_description(self):
         value = self.cleaned_data["description"]
