@@ -11,72 +11,12 @@
     }
 },
 {
-    "pk": 2, 
-    "model": "symposion_proposals.proposalsection", 
-    "fields": {
-        "start": null, 
-        "section": 2, 
-        "end": null, 
-        "closed": null, 
-        "published": null
-    }
-},
-{
-    "pk": 3, 
-    "model": "symposion_proposals.proposalsection", 
-    "fields": {
-        "start": null, 
-        "section": 3, 
-        "end": null, 
-        "closed": null, 
-        "published": null
-    }
-},
-{
-    "pk": 4, 
-    "model": "symposion_proposals.proposalsection", 
-    "fields": {
-        "start": null, 
-        "section": 4, 
-        "end": null, 
-        "closed": null, 
-        "published": null
-    }
-},
-{
     "pk": 1, 
     "model": "symposion_proposals.proposalkind", 
     "fields": {
         "section": 1, 
-        "name": "tutorial", 
-        "slug": "tutorial"
-    }
-},
-{
-    "pk": 2, 
-    "model": "symposion_proposals.proposalkind", 
-    "fields": {
-        "section": 2, 
-        "name": "talk", 
+        "name": "\u8b1b\u6f14",
         "slug": "talk"
-    }
-},
-{
-    "pk": 3, 
-    "model": "symposion_proposals.proposalkind", 
-    "fields": {
-        "section": 3, 
-        "name": "poster", 
-        "slug": "poster"
-    }
-},
-{
-    "pk": 4, 
-    "model": "symposion_proposals.proposalkind", 
-    "fields": {
-        "section": 4, 
-        "name": "lightning talk", 
-        "slug": "lightning-talk"
     }
 }
 ]
