@@ -23,7 +23,6 @@ python ${BASEDIR}/manage.py loaddata \
   ${BASEDIR}/fixtures/boxes.json \
   ${BASEDIR}/fixtures/proposals.json \
   ${BASEDIR}/fixtures/sitetree.json \
-  ${BASEDIR}/fixtures/sotmjp.json \
   ${BASEDIR}/fixtures/sponsorship.json \
   ${BASEDIR}/fixtures/schedule.json \
   ${BASEDIR}/fixtures/teams.json \
