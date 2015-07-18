@@ -203,7 +203,6 @@ INSTALLED_APPS = [
     # symposion
     "symposion",
     "symposion.conference",
-    # "symposion.cms", # use restcms
     "symposion.boxes",
     "symposion.speakers",
     "symposion.proposals",
@@ -351,3 +350,22 @@ LEAFLET_CONFIG = {
     'MIN_ZOOM': 15,
     'MAX_ZOOM': 19,
 }
+
+# Reorder admin screen
+ADMIN_REORDER = (
+    ("blog", ("posts", "images")),
+    ("auth", ("groups", "users")),
+    ("symposion_speakers", ("speaker")),
+    ("teams", ("team", "membership")),
+    ("symposion_schedule", ("schedule", "day", "room", "slotkind", "slotroom", "slot", "presentation")),
+    ("proposals", ("talkproposal", "lighteningtalkproposal", "posterproposal", "openspaceproposal")),
+    ("symposion_sponsorship", ("sponsor", "sponsorlevel", "sponsorbenefit", "benefit")),
+    ("symposion_reviews", ("proposalresult", "notificationtemplate")),
+    ("account", ("accounts", "email")),
+    ("constance", ("config")),
+    ("sitetree", ("tree")),
+    ("sites", ("sites")),
+    ("boxes", ("boxes")),
+    ("restcms", ("pages", "files")),
+    ("symposion_conference", ("conference", "section")),
+)
