@@ -277,7 +277,7 @@
         {% if user.memberships.exists or available_teams %}
           <div class="panel panel-default">
             <div class="panel-heading">
-              <h3 class="panel-title"><i class="glyphicon glyphicon-user"></i>{% trans "Teams" %}</h3>
+              <h3 class="panel-title"><i class="glyphicon glyphicon-user"></i> {% trans "Teams" %}</h3>
             </div>
             <div class="panel-body">
               {% if user.memberships.exists %}
@@ -290,7 +290,7 @@
                         {% if membership.team.description %}<br>{{ membership.team.description }}{% endif %}
                       </td>
                       <td>
-                        <span class="label{% if membership.state == 'invited' %} label-info{% endif %}">{{ membership.get_state_display }}</span>
+                        <span class="label {% if membership.state == 'invited' %} label-info{% else %}label-default{% endif %}">{{ membership.get_state_display }}</span>
                       </td>
                       <td>
                         {% if membership.state == "manager" or user.is_staff %}
@@ -311,7 +311,7 @@
                         {% if team.description %}<br>{{ team.description }}{% endif %}
                       </td>
                       <td>
-                        <span class="label">{{ team.get_access_display }}</span>
+                        <span class="label label-default">{{ team.get_access_display }}</span>
                       </td>
                     </tr>
 
