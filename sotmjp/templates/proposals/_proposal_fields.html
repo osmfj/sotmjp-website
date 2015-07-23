@@ -3,11 +3,12 @@
 <dl class="dl-horizontal">
     <dt>{% trans "Submitted by" %}</dt>
     <dd>{{ proposal.speaker }}</dd>
-
+    {% comment %}
     {% if is_reviewer %}
         <dt>{% trans "Tags" %}</dt>
         <dd>{{ proposal.get_tags_display }}&nbsp;</dd>
     {% endif %}
+    {% endcomment %}
 
     <dt>{% trans "Category" %}</dt>
     <dd>{{ proposal.category }}&nbsp;</dd>
