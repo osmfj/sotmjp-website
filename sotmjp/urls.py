@@ -33,7 +33,6 @@ urlpatterns = patterns(
             name="venue_detail"),
         url(r"^speaker/", include("symposion.speakers.urls")),
         url(r"^proposals/", include("symposion.proposals.urls")),
-        url(r"^reviews/", include("symposion.reviews.urls")),
         url(r"^teams/", include("symposion.teams.urls")),
         url(r"^schedule/", include("symposion.schedule.urls")),
         url(r"^conference/", include("symposion.conference.urls")),
