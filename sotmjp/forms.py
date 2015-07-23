@@ -3,9 +3,7 @@ from django.utils.translation import ugettext_lazy as _
 
 from markedit.widgets import MarkEdit
 
-from .models import (TalkProposal,
-                     PosterProposal, LightningTalkProposal,
-                     OpenSpaceProposal)
+from symposion.proposals.models import ProposalBase
 
 
 class ProposalForm(forms.ModelForm):
@@ -22,7 +20,7 @@ class ProposalForm(forms.ModelForm):
 class TalkProposalForm(ProposalForm):
 
     class Meta:
-        model = TalkProposal
+        model = ProposalBase
         fields = [
             "title",
             "duration",
@@ -44,7 +42,7 @@ class TalkProposalForm(ProposalForm):
 class LightningTalkProposalForm(ProposalForm):
 
     class Meta:
-        model = LightningTalkProposal
+        model = ProposalBase
         fields = [
             "title",
             "additional_notes",
@@ -63,7 +61,7 @@ class PosterProposalForm(ProposalForm):
         self.fields['additional_requirement'].widget = forms.HiddenInput()
 
     class Meta:
-        model = PosterProposal
+        model = ProposalBase
         fields = [
             "title",
             "description",
@@ -82,7 +80,7 @@ class PosterProposalForm(ProposalForm):
 class OpenSpaceProposalForm(ProposalForm):
 
     class Meta:
-        model = OpenSpaceProposal
+        model = ProposalBase
         fields = [
             "title",
             "description",

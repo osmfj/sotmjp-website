@@ -214,7 +214,6 @@ INSTALLED_APPS = [
     # custom
     "markedit",
     "sotmjp",
-    "sotmjp.proposals",
     "restcms",
     "leaflet",
     "osm_field",
@@ -305,10 +304,10 @@ CONSTANCE_CONFIG = {
 SYMPOSION_PAGE_REGEX = r"(([\w-]{1,})(/[\w-]{1,})*)/$"
 
 PROPOSAL_FORMS = {
-    "talk": "sotmjp.proposals.forms.TalkProposalForm",
-    "poster": "sotmjp.proposals.forms.PosterProposalForm",
-    "lightning-talk": "sotmjp.proposals.forms.LightningTalkProposalForm",
-    "open-space": "sotmjp.proposals.forms.OpenSpaceProposalForm",
+    "talk": "sotmjp.forms.TalkProposalForm",
+    "poster": "sotmjp.forms.PosterProposalForm",
+    "lightning-talk": "sotmjp.forms.LightningTalkProposalForm",
+    "open-space": "sotmjp.forms.OpenSpaceProposalForm",
 }
 
 
