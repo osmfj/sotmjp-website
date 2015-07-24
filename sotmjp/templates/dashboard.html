@@ -2,7 +2,6 @@
 
 {% load i18n %}
 {% load proposal_tags %}
-{% load review_tags %}
 {% load teams_tags %}
 {% load boxes_tags %}
 
@@ -213,6 +212,7 @@
           </div>
         </div>
 
+{% comment %}
         {% if review_sections %}
           <div class="panel panel-default">
             <div class="panel-heading">
@@ -249,7 +249,6 @@
                 </tbody>
               </table>
 
-              {% comment %}
                 <h4>My Assignments</h4>
                 <table class="table">
                   <thead>
@@ -267,11 +266,11 @@
                     </tr>
                   </tbody>
                 </table>
-              {% endcomment %}
 
             </div>
           </div>
         {% endif %}
+{% endcomment %}
 
         {% available_teams as available_teams %}
         {% if user.memberships.exists or available_teams %}

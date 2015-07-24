@@ -160,7 +160,6 @@ TEMPLATE_CONTEXT_PROCESSORS = [
     "django.contrib.messages.context_processors.messages",
     "pinax_theme_bootstrap.context_processors.theme",
     "account.context_processors.account",
-    "symposion.reviews.context_processors.reviews",
     "constance.context_processors.config",
 ]
 
@@ -206,7 +205,6 @@ INSTALLED_APPS = [
     "symposion.boxes",
     "symposion.speakers",
     "symposion.proposals",
-    "symposion.reviews",
     "symposion.teams",
     "symposion.schedule",
     "symposion.sponsorship",
@@ -356,10 +354,9 @@ ADMIN_REORDER = (
     ("auth", ("groups", "users")),
     ("symposion_speakers", ("speaker")),
     ("teams", ("team", "membership")),
+    ("symposion_proposals", ("proposalbase", "proposalkind", "proposalsection")),
     ("symposion_schedule", ("schedule", "day", "room", "slotkind", "slotroom", "slot", "presentation")),
-    ("proposals", ("talkproposal", "lighteningtalkproposal", "posterproposal", "openspaceproposal")),
     ("symposion_sponsorship", ("sponsor", "sponsorlevel", "sponsorbenefit", "benefit")),
-    ("symposion_reviews", ("proposalresult", "notificationtemplate")),
     ("account", ("accounts", "email")),
     ("constance", ("config")),
     ("sitetree", ("tree")),
