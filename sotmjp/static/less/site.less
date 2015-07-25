@@ -3,22 +3,11 @@
 // -- Imports
 // -- Fonts
 // -- Variables
-// -- Mixins
 // -- Generic
-// -- Buttons
-// -- Homepage
-// -- Sponsors
-// -- Venue
-// -- CMS Page
-// -- Retina styles
-// -- Auth pages
-// -- Boxes
-// -- Sign Up + Login
-// -- Team
-// -- Speaker profile
-// -- Reviews
-// -- Job fair
 // -- Leaflet
+// -- Promo
+// -- Boxes
+// -- Calendar
 
 /* Imports
 ==================== */
@@ -61,6 +50,8 @@
 @breakMobileLandscape:		480px;
 @breakMobile:				320px;
 
+/* Generic
+================== */
 img {
   @media (max-width: @breakTablet) {
     max-width: 100%;
@@ -81,7 +72,9 @@ body {
 .navbar-static-top {
   margin-bottom: 0px;
 }
-// Leaflet
+
+/* Leaflet
+ =================== */
 div.leaflet-container {  /* all maps */
   width:  700px;
   height: 900px;
@@ -99,7 +92,8 @@ div.leaflet-container {  /* all maps */
   }
 }
 
-// promo
+/* Promo
+ =================== */
 .home {
   .banner {
     padding-top: 50px;
@@ -315,5 +309,29 @@ a {
 
     .action:hover {
         background: #E8E8E8;
+    }
+}
+
+/* Calendar
+ ========================= */
+
+.calendar {
+    font-size: 16pt;
+    table-layout: fixed;
+    width: 100%;
+    color: #FFF;
+    th {
+        font-size: 20pt;
+        background: #27590A;
+    }
+    .odd {
+      td {
+        background: #FD5555;
+      }
+    }
+    .even {
+      td {
+        background: #27590A;
+      }
     }
 }
