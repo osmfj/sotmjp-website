@@ -355,7 +355,7 @@ ADMIN_REORDER = (
     ("auth", ("groups", "users")),
     ("symposion_speakers", ("speaker")),
     ("teams", ("team", "membership")),
-    ("symposion_proposals", ("proposalbase", "proposalkind", "proposalsection")),
+    ("proposals", ("talkproposal", "lightningtalkproposal")),
     ("symposion_schedule", ("schedule", "day", "room", "slotkind", "slotroom", "slot", "presentation")),
     ("symposion_sponsorship", ("sponsor", "sponsorlevel", "sponsorbenefit", "benefit")),
     ("account", ("accounts", "email")),
@@ -364,5 +364,6 @@ ADMIN_REORDER = (
     ("sites", ("sites")),
     ("boxes", ("boxes")),
     ("restcms", ("pages", "files")),
+    ("symposion_proposals", ("proposalkind", "proposalsection")),
     ("symposion_conference", ("conference", "section")),
 )
