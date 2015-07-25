@@ -12,7 +12,7 @@
     <script type="text/javascript">
         $(function () {
             var converter = new Attacklab.showdown.converter();
-            var ids = '#abstract,#outline,#more_info,#additional-notes,#bio';
+            var ids = '#abstract,#additional-notes,#bio';
             $(ids).each(function() {
                 $(this).html(converter.makeHtml($(this).html()));
             })
