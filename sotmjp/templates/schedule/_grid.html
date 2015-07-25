@@ -9,7 +9,7 @@
     </thead>
     <tbody>
         {% for row in timetable %}
-            <tr>
+            <tr class="{% cycle 'odd' 'even' %}">
                 <td class="time">{{ row.time|date:"h:iA" }}</td>
                 {% for slot in row.slots %}
                     <td class="slot slot-{{ slot.kind.label }}" colspan="{{ slot.colspan }}" rowspan="{{ slot.rowspan }}">
