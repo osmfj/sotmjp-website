@@ -23,13 +23,19 @@ class TalkProposalForm(ProposalForm):
         model = ProposalBase
         fields = [
             "title",
+            "duration",
             "description",
             "abstract",
+            "additional_notes",
+            "additional_requirements",
+            "recording_release",
         ]
         widgets = {
             "title": forms.TextInput(attrs={'class': 'fullwidth-input'}),
             "description": forms.Textarea(attrs={'rows': '3'}),
             "abstract": MarkEdit(),
+            "additional_notes": MarkEdit(attrs={'rows': '3'}),
+            "additional_requirements": forms.Textarea(attrs={'rows': '3'}),
         }
 
 
@@ -39,9 +45,12 @@ class LightningTalkProposalForm(ProposalForm):
         model = ProposalBase
         fields = [
             "title",
+            "additional_notes",
+            "recording_release",
         ]
         widgets = {
             "title": forms.TextInput(attrs={'class': 'fullwidth-input'}),
+            "additional_notes": MarkEdit(attrs={'rows': '3'}),
         }
 
 
@@ -57,11 +66,14 @@ class PosterProposalForm(ProposalForm):
             "title",
             "description",
             "abstract",
+            "additional_notes",
+            "recording_release",
         ]
         widgets = {
             "title": forms.TextInput(attrs={'class': 'fullwidth-input'}),
             "description": forms.Textarea(attrs={'rows': '3'}),
             "abstract": MarkEdit(),
+            "additional_notes": MarkEdit(attrs={'rows': '3'}),
         }
 
 
@@ -72,8 +84,10 @@ class OpenSpaceProposalForm(ProposalForm):
         fields = [
             "title",
             "description",
+            "additional_notes",
         ]
         widgets = {
             "title": forms.TextInput(attrs={'class': 'fullwidth-input'}),
             "description": forms.Textarea(attrs={'rows': '3'}),
+            "additional_notes": MarkEdit(attrs={'rows': '3'}),
         }
