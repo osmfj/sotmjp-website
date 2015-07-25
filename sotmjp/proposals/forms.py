@@ -3,7 +3,9 @@ from django.utils.translation import ugettext_lazy as _
 
 from markedit.widgets import MarkEdit
 
-from symposion.proposals.models import ProposalBase
+from .models import (TalkProposal,
+                     PosterProposal, LightningTalkProposal,
+                     OpenSpaceProposal)
 
 
 class ProposalForm(forms.ModelForm):
@@ -20,28 +22,37 @@ class ProposalForm(forms.ModelForm):
 class TalkProposalForm(ProposalForm):
 
     class Meta:
-        model = ProposalBase
+        model = TalkProposal
         fields = [
             "title",
+            "duration",
             "description",
             "abstract",
+            "additional_notes",
+            "additional_requirements",
+            "recording_release",
         ]
         widgets = {
             "title": forms.TextInput(attrs={'class': 'fullwidth-input'}),
             "description": forms.Textarea(attrs={'rows': '3'}),
             "abstract": MarkEdit(),
+            "additional_notes": MarkEdit(attrs={'rows': '3'}),
+            "additional_requirements": forms.Textarea(attrs={'rows': '3'}),
         }
 
 
 class LightningTalkProposalForm(ProposalForm):
 
     class Meta:
-        model = ProposalBase
+        model = LightningTalkProposal
         fields = [
             "title",
+            "additional_notes",
+            "recording_release",
         ]
         widgets = {
             "title": forms.TextInput(attrs={'class': 'fullwidth-input'}),
+            "additional_notes": MarkEdit(attrs={'rows': '3'}),
         }
 
 
@@ -52,28 +63,33 @@ class PosterProposalForm(ProposalForm):
         self.fields['additional_requirement'].widget = forms.HiddenInput()
 
     class Meta:
-        model = ProposalBase
+        model = PosterProposal
         fields = [
             "title",
             "description",
             "abstract",
+            "additional_notes",
+            "recording_release",
         ]
         widgets = {
             "title": forms.TextInput(attrs={'class': 'fullwidth-input'}),
             "description": forms.Textarea(attrs={'rows': '3'}),
             "abstract": MarkEdit(),
+            "additional_notes": MarkEdit(attrs={'rows': '3'}),
         }
 
 
 class OpenSpaceProposalForm(ProposalForm):
 
     class Meta:
-        model = ProposalBase
+        model = OpenSpaceProposal
         fields = [
             "title",
             "description",
+            "additional_notes",
         ]
         widgets = {
             "title": forms.TextInput(attrs={'class': 'fullwidth-input'}),
             "description": forms.Textarea(attrs={'rows': '3'}),
+            "additional_notes": MarkEdit(attrs={'rows': '3'}),
         }

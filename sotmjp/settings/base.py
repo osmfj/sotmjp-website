@@ -212,6 +212,7 @@ INSTALLED_APPS = [
     # custom
     "markedit",
     "sotmjp",
+    "sotmjp.proposals",
     "restcms",
     "leaflet",
     "osm_field",
@@ -302,10 +303,10 @@ CONSTANCE_CONFIG = {
 SYMPOSION_PAGE_REGEX = r"(([\w-]{1,})(/[\w-]{1,})*)/$"
 
 PROPOSAL_FORMS = {
-    "talk": "sotmjp.forms.TalkProposalForm",
-    "poster": "sotmjp.forms.PosterProposalForm",
-    "lightning-talk": "sotmjp.forms.LightningTalkProposalForm",
-    "open-space": "sotmjp.forms.OpenSpaceProposalForm",
+    "talk": "sotmjp.proposals.forms.TalkProposalForm",
+    "poster": "sotmjp.proposals.forms.PosterProposalForm",
+    "lightning-talk": "sotmjp.proposals.forms.LightningTalkProposalForm",
+    "open-space": "sotmjp.proposals.forms.OpenSpaceProposalForm",
 }
 
 
@@ -354,7 +355,7 @@ ADMIN_REORDER = (
     ("auth", ("groups", "users")),
     ("symposion_speakers", ("speaker")),
     ("teams", ("team", "membership")),
-    ("symposion_proposals", ("proposalbase", "proposalkind", "proposalsection")),
+    ("proposals", ("talkproposal", "lightningtalkproposal")),
     ("symposion_schedule", ("schedule", "day", "room", "slotkind", "slotroom", "slot", "presentation")),
     ("symposion_sponsorship", ("sponsor", "sponsorlevel", "sponsorbenefit", "benefit")),
     ("account", ("accounts", "email")),
@@ -363,5 +364,6 @@ ADMIN_REORDER = (
     ("sites", ("sites")),
     ("boxes", ("boxes")),
     ("restcms", ("pages", "files")),
+    ("symposion_proposals", ("proposalkind", "proposalsection")),
     ("symposion_conference", ("conference", "section")),
 )
