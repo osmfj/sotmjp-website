@@ -1,1 +1,1 @@
-New State of the Map Japan Sponsor Application
+{% load i18n %}{% trans "New Sponsor Application" %}
