@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pyconjp-website\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-20 12:33+0900\n"
-"PO-Revision-Date: 2015-07-22 09:53+0900\n"
+"POT-Creation-Date: 2015-07-26 13:26+0900\n"
+"PO-Revision-Date: 2015-07-26 13:29+0900\n"
 "Last-Translator: Hiroshi Miura <miurahr@linux.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -27,7 +27,6 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 
 #: sotmjp/proposals/apps.py:8
-#| msgid "Proposal:"
 msgid "Proposals"
 msgstr "提案："
 
@@ -68,7 +67,6 @@ msgid "No preference"
 msgstr "希望なし"
 
 #: sotmjp/proposals/models.py:35
-#| msgid "20min"
 msgid "10min"
 msgstr "10分間"
 
@@ -77,7 +75,7 @@ msgid "20min"
 msgstr "20分間"
 
 #: sotmjp/proposals/models.py:40
-#: sotmjp/templates/proposals/_proposal_fields.html:33
+#: sotmjp/templates/proposals/_proposal_fields.html:15
 msgid "Duration"
 msgstr "時間枠"
 
@@ -125,15 +123,15 @@ msgstr "フランス語"
 msgid "Japanese"
 msgstr "日本語"
 
-#: sotmjp/settings/base.py:276
+#: sotmjp/settings/base.py:274
 msgid "URL for registration"
 msgstr "参加登録用のURL"
 
-#: sotmjp/settings/base.py:277
+#: sotmjp/settings/base.py:275
 msgid "From address for emails to sponsors"
 msgstr "スポンサーへメール連絡するときの、送信者メールアドレス"
 
-#: sotmjp/settings/base.py:278
+#: sotmjp/settings/base.py:276
 msgid ""
 "Used in the home page template. Valid values are 'soon', 'open', 'closed' "
 "and 'over'"
@@ -141,87 +139,87 @@ msgstr ""
 "ホームページテンプレートに使われます。適切な値は、'soon', 'open' 'closed' "
 "'over'のいずれかです。"
 
-#: sotmjp/settings/base.py:282
+#: sotmjp/settings/base.py:280
 msgid "Conference name (long)"
 msgstr "カンファレンス名称（長い）"
 
-#: sotmjp/settings/base.py:283
+#: sotmjp/settings/base.py:281
 msgid "Conference year (4-digit)"
 msgstr "会議年（４桁）"
 
-#: sotmjp/settings/base.py:284
+#: sotmjp/settings/base.py:282
 msgid "Conference year (2-digit)"
 msgstr "会議年（２桁）"
 
-#: sotmjp/settings/base.py:285
+#: sotmjp/settings/base.py:283
 msgid "Conference name (short)"
 msgstr "カンファレンス名称（短い）"
 
-#: sotmjp/settings/base.py:286
+#: sotmjp/settings/base.py:284
 msgid "Conference locality place"
 msgstr "カンファレンスの開催地"
 
-#: sotmjp/settings/base.py:287
+#: sotmjp/settings/base.py:285
 msgid "Conference locality country"
 msgstr "会議の開催される国"
 
-#: sotmjp/settings/base.py:288
+#: sotmjp/settings/base.py:286
 msgid "Conference start date"
 msgstr "カンファレンスの開始日"
 
-#: sotmjp/settings/base.py:289
+#: sotmjp/settings/base.py:287
 msgid "Conference end date"
 msgstr "カンファレンスの終了日"
 
-#: sotmjp/settings/base.py:290
+#: sotmjp/settings/base.py:288
 msgid "Conference duration"
 msgstr "カンファレンス会期"
 
-#: sotmjp/settings/base.py:291
+#: sotmjp/settings/base.py:289
 msgid "How much days for conference(day number)?"
 msgstr "何日間の会議ですか（会期日数）"
 
-#: sotmjp/settings/base.py:292
+#: sotmjp/settings/base.py:290
 msgid "Conference has tutorial program?(Yes/No)"
 msgstr "会議ではチュートリアルが開催されますか？（Yes/No)"
 
-#: sotmjp/settings/base.py:293
+#: sotmjp/settings/base.py:291
 msgid "Tutorial program name"
 msgstr "チュートリアルの会議での名称"
 
-#: sotmjp/settings/base.py:294
+#: sotmjp/settings/base.py:292
 msgid "Tutorial start date"
 msgstr "チュートリアル開始日"
 
-#: sotmjp/settings/base.py:295
+#: sotmjp/settings/base.py:293
 msgid "Tutorial end date"
 msgstr "チュートリアル終了日"
 
-#: sotmjp/settings/base.py:296
+#: sotmjp/settings/base.py:294
 msgid "Tutorail duration"
 msgstr "チュートリアルの会期"
 
-#: sotmjp/settings/base.py:297
+#: sotmjp/settings/base.py:295
 msgid "Conference has hackathon program?(Yes/No)"
 msgstr "会議では、ハッカソンが予定されていますか？（Yes/No)"
 
-#: sotmjp/settings/base.py:298
+#: sotmjp/settings/base.py:296
 msgid "Hackathon program name"
 msgstr "ハッカソンの会議での名称"
 
-#: sotmjp/settings/base.py:299
+#: sotmjp/settings/base.py:297
 msgid "Hackathon start date"
 msgstr "ハッカソン開始日"
 
-#: sotmjp/settings/base.py:300
+#: sotmjp/settings/base.py:298
 msgid "Hackathon end date"
 msgstr "ハッカソン終了日"
 
-#: sotmjp/settings/base.py:301
+#: sotmjp/settings/base.py:299
 msgid "Hackathon duration"
 msgstr "ハッカソンの会期"
 
-#: sotmjp/settings/base.py:302
+#: sotmjp/settings/base.py:300
 msgid "Google site verification code"
 msgstr "Googleサイト認証のコード"
 
@@ -236,7 +234,7 @@ msgid "Admin"
 msgstr "管理画面"
 
 #: sotmjp/templates/_account_bar.html:18 sotmjp/templates/auth_base.html:8
-#: sotmjp/templates/dashboard.html:9 sotmjp/templates/dashboard.html.py:13
+#: sotmjp/templates/dashboard.html:8 sotmjp/templates/dashboard.html.py:12
 msgid "Dashboard"
 msgstr "ダッシュボード"
 
@@ -290,7 +288,6 @@ msgstr "アカウント削除"
 
 #: sotmjp/templates/account/delete.html:7
 #: sotmjp/templates/account/delete.html:10
-#| msgid "Delete account"
 msgid "Delete Account"
 msgstr "アカウント削除"
 
@@ -304,7 +301,6 @@ msgstr ""
 "%(ACCOUNT_DELETION_EXPUNGE_HOURS)s 時間以内に削除されます。</b>"
 
 #: sotmjp/templates/account/delete.html:16
-#| msgid "Delete account"
 msgid "Delete My Account"
 msgstr "アカウント削除"
 
@@ -330,7 +326,6 @@ msgstr "%(site_name)sのメールアドレスの再確認"
 
 #: sotmjp/templates/account/email/invite_user.txt:1
 #, python-format
-#| msgid "You have been invited to join \"%(team)s\""
 msgid ""
 "You have been invited to sign up at %(name)s.\n"
 "\n"
@@ -342,7 +337,6 @@ msgstr ""
 
 #: sotmjp/templates/account/email/invite_user_subject.txt:1
 #, python-format
-#| msgid "Create an account"
 msgid "Create an account on %(name)s"
 msgstr "%(name)s でアカウントを作成"
 
@@ -356,7 +350,6 @@ msgstr ""
 "した。"
 
 #: sotmjp/templates/account/email/password_change_subject.txt:1
-#| msgid "Change password"
 msgid "Change password email notification"
 msgstr "パスワード変更の電子メール通知を変更する。"
 
@@ -393,13 +386,11 @@ msgid "Confirm email address <b>%(email)s</b>?"
 msgstr "電子メールアドレス<b>%(email)s</b>を確認しますか?"
 
 #: sotmjp/templates/account/email_confirm.html:15
-#| msgid "Confirm Email"
 msgid "Confirm"
 msgstr "確認する"
 
 #: sotmjp/templates/account/email_confirmation_sent.html:5
 #: sotmjp/templates/account/email_confirmation_sent.html:8
-#| msgid "Confirm Email"
 msgid "Confirm your email address"
 msgstr "電子メールアドレスの確認"
 
@@ -447,7 +438,6 @@ msgid "Forgot your password?"
 msgstr "パスワードをお忘れですか？"
 
 #: sotmjp/templates/account/logout.html:14
-#| msgid "Are you sure you want to cancel <b>%(title)s</b>?"
 msgid "Are you sure you want to log out?"
 msgstr "本当にログアウトしてよろしいですか？"
 
@@ -464,7 +454,6 @@ msgstr "保存"
 
 #: sotmjp/templates/account/password_reset.html:7
 #: sotmjp/templates/account/password_reset.html:15
-#| msgid "Password:"
 msgid "Password reset"
 msgstr "パスワードリセット"
 
@@ -477,7 +466,6 @@ msgstr ""
 "パスワードを再設定する方法を示した電子メールを送付します。"
 
 #: sotmjp/templates/account/password_reset.html:22
-#| msgid "Forgot your password?"
 msgid "Reset my password"
 msgstr "パスワードの再設定"
 
@@ -523,7 +511,6 @@ msgstr ""
 
 #: sotmjp/templates/account/password_reset_token.html:6
 #: sotmjp/templates/account/password_reset_token.html:12
-#| msgid "Forgot your password?"
 msgid "Set your new password"
 msgstr "新しいパスワードの設定"
 
@@ -566,7 +553,6 @@ msgid "Django site admin"
 msgstr "Djangoサイト管理"
 
 #: sotmjp/templates/admin/base_site.html:8
-#| msgid "Decline invitation"
 msgid "Django administration"
 msgstr "Django管理"
 
@@ -628,159 +614,293 @@ msgstr "スピーカーのプロファイル?"
 msgid "create"
 msgstr "作成する"
 
-#: sotmjp/templates/dashboard.html:31
-#: sotmjp/templates/proposals/_proposal_fields.html:16
-#: sotmjp/templates/reviews/_review_table.html:9
+#: sotmjp/templates/dashboard.html:30
 msgid "Language"
 msgstr "言語"
 
-#: sotmjp/templates/dashboard.html:39
+#: sotmjp/templates/dashboard.html:38
 msgid "Change"
 msgstr "変更する"
 
-#: sotmjp/templates/dashboard.html:48 sotmjp/templates/dashboard.html:140
+#: sotmjp/templates/dashboard.html:47 sotmjp/templates/dashboard.html:139
 msgid "Speaking"
 msgstr "講演"
 
-#: sotmjp/templates/dashboard.html:55 sotmjp/templates/dashboard.html:144
+#: sotmjp/templates/dashboard.html:54 sotmjp/templates/dashboard.html:143
 msgid "Edit your speaker profile"
 msgstr "スピーカー用プロファイルを編集する"
 
-#: sotmjp/templates/dashboard.html:64
+#: sotmjp/templates/dashboard.html:63
 msgid "Submit a new proposal"
 msgstr "新しいプロポーザルを提出する"
 
-#: sotmjp/templates/dashboard.html:70
+#: sotmjp/templates/dashboard.html:69
 msgid "Your Proposals"
 msgstr "あなたのプロポーザル"
 
-#: sotmjp/templates/dashboard.html:74 sotmjp/templates/dashboard.html.py:94
-#: sotmjp/templates/dashboard.html:112 sotmjp/templates/dashboard.html:155
+#: sotmjp/templates/dashboard.html:73 sotmjp/templates/dashboard.html.py:93
+#: sotmjp/templates/dashboard.html:111 sotmjp/templates/dashboard.html:154
 msgid "Title"
 msgstr "題目"
 
-#: sotmjp/templates/dashboard.html:75 sotmjp/templates/dashboard.html.py:95
-#: sotmjp/templates/dashboard.html:113
+#: sotmjp/templates/dashboard.html:74 sotmjp/templates/dashboard.html.py:94
+#: sotmjp/templates/dashboard.html:112
 msgid "Session type"
 msgstr "セッションのタイプ"
 
-#: sotmjp/templates/dashboard.html:76 sotmjp/templates/dashboard.html.py:96
-#: sotmjp/templates/dashboard.html:114
-#: sotmjp/templates/reviews/result_notification.html:48
+#: sotmjp/templates/dashboard.html:75 sotmjp/templates/dashboard.html.py:95
+#: sotmjp/templates/dashboard.html:113
 msgid "Status"
 msgstr "ステータス"
 
-#: sotmjp/templates/dashboard.html:77 sotmjp/templates/dashboard.html.py:97
-#: sotmjp/templates/dashboard.html:115
+#: sotmjp/templates/dashboard.html:76 sotmjp/templates/dashboard.html.py:96
+#: sotmjp/templates/dashboard.html:114
 msgid "Actions"
 msgstr "アクション"
 
-#: sotmjp/templates/dashboard.html:84
+#: sotmjp/templates/dashboard.html:83
 msgid "No proposals submitted yet."
 msgstr "提出されたプロポーザルはありません。"
 
-#: sotmjp/templates/dashboard.html:91
+#: sotmjp/templates/dashboard.html:90
 msgid "Proposals you have joined as an additional speaker"
 msgstr "追加スピーカーとしてあなたが参加したプロポーザル"
 
-#: sotmjp/templates/dashboard.html:109
+#: sotmjp/templates/dashboard.html:108
 msgid "Proposals you have been invited to join"
 msgstr "招待されているプロポーザル"
 
-#: sotmjp/templates/dashboard.html:125
+#: sotmjp/templates/dashboard.html:124
 msgid "To submit a proposal, first create a speaker profile."
 msgstr "プロポーザルを提出するにはスピーカー用プロファイルが必要です。"
 
-#: sotmjp/templates/dashboard.html:129
+#: sotmjp/templates/dashboard.html:128
 msgid "Create a speaker profile"
 msgstr "スピーカー用プロファイルを作成する"
 
-#: sotmjp/templates/dashboard.html:150
+#: sotmjp/templates/dashboard.html:149
 msgid "Your Presentations"
 msgstr "あなたのプレゼンテーション"
 
-#: sotmjp/templates/dashboard.html:154
+#: sotmjp/templates/dashboard.html:153
 msgid "Session Type"
 msgstr "セッションのタイプ"
 
-#: sotmjp/templates/dashboard.html:156
+#: sotmjp/templates/dashboard.html:155
 msgid "Slot"
 msgstr "時間枠"
 
-#: sotmjp/templates/dashboard.html:176
+#: sotmjp/templates/dashboard.html:175
 #: sotmjp/templates/sponsorship/detail.html:8
 msgid "Sponsorship"
 msgstr "スポンサーシップ"
 
-#: sotmjp/templates/dashboard.html:182
+#: sotmjp/templates/dashboard.html:181
 msgid "Learn about sponsorship"
 msgstr "スポンサーシップについて詳しく見る"
 
-#: sotmjp/templates/dashboard.html:187
+#: sotmjp/templates/dashboard.html:186
 msgid "Apply to be a sponsor"
 msgstr "スポンサーに応募する"
 
-#: sotmjp/templates/dashboard.html:193
+#: sotmjp/templates/dashboard.html:192
 msgid "Download sponsor logos"
 msgstr "スポンサーロゴのダウンロード"
 
-#: sotmjp/templates/dashboard.html:200
+#: sotmjp/templates/dashboard.html:199
 msgid "Your Sponsorship"
 msgstr "あなたのスポンサー情報"
 
-#: sotmjp/templates/dashboard.html:207
+#: sotmjp/templates/dashboard.html:206
 msgid "awaiting approval"
 msgstr "承認待ち"
 
-#: sotmjp/templates/dashboard.html:220 sotmjp/templates/reviews/base.html:85
-msgid "Reviews"
-msgstr "審査"
-
-#: sotmjp/templates/dashboard.html:223
-msgid "Review Sections"
-msgstr "審査セクション"
-
-#: sotmjp/templates/dashboard.html:231
-msgid "Proposals you have reviewed"
-msgstr "プロポーザルは審査されました"
-
-#: sotmjp/templates/dashboard.html:235
-#: sotmjp/templates/reviews/_review_table.html:7
-#: sotmjp/templates/reviews/result_notification.html:46
-msgid "Speaker / Title"
-msgstr "スピーカー / タイトル"
-
-#: sotmjp/templates/dashboard.html:236
-msgid "Your Vote"
-msgstr "あなたの投票"
-
-#: sotmjp/templates/dashboard.html:282
+#: sotmjp/templates/dashboard.html:280
 msgid "Teams"
 msgstr "チーム"
 
-#: sotmjp/templates/dashboard.html:286
+#: sotmjp/templates/dashboard.html:284
 msgid "Your Teams"
 msgstr "あなたのチーム"
 
-#: sotmjp/templates/dashboard.html:299
+#: sotmjp/templates/dashboard.html:297
 msgid "applicant"
 msgstr "応募者"
 
-#: sotmjp/templates/dashboard.html:307
+#: sotmjp/templates/dashboard.html:305
 msgid "Available Teams"
 msgstr "参加可能なチーム"
 
-#: sotmjp/templates/dashboard.html:330
+#: sotmjp/templates/dashboard.html:328
 msgid "Program Export"
 msgstr "プログラムエクスポート"
 
-#: sotmjp/templates/dashboard.html:333
+#: sotmjp/templates/dashboard.html:331
 msgid "Export Program Data"
 msgstr "プログラムデータをエクスポート"
 
-#: sotmjp/templates/dashboard.html:334
+#: sotmjp/templates/dashboard.html:332
 msgid "This action may take up to a minute to complete."
 msgstr "この手続きは、１分程度の時間で出来ます。"
+
+#: sotmjp/templates/emails/proposal_new_message/message.html:5
+#, python-format
+msgid "<b>%(user)s</b> has added a message on <b>%(title)s</b>."
+msgstr "<b>%(user)s</b> は、 <b>%(title)s</b>のメッセージを追加しました。"
+
+#: sotmjp/templates/emails/proposal_new_message/message.html:12
+#, python-format
+msgid ""
+" Respond online at <a href=\"http://%(current_site)s%(detail_url)s#proposal-"
+"feedback\">http://%(current_site)s%(detail_url)s#proposal-feedback</a>"
+msgstr ""
+"オンラインの<a href=\"http://%(current_site)s%(detail_url)s#proposal-feedback"
+"\">http://%(current_site)s%(detail_url)s#proposal-feedback</a>で、回答をおね"
+"がいします。"
+
+#: sotmjp/templates/emails/proposal_new_message/subject.txt:1
+#, python-format
+msgid "New message on \"%(title)s\" from %(user)s"
+msgstr "%(user)sから \"%(title)s\"の新規メッセージがあります"
+
+#: sotmjp/templates/emails/proposal_updated/message.html:5
+#, python-format
+msgid ""
+"<b>%(username)s</b> has made changes to <b>%(title)s</b> which you have "
+"previously reviewed or commented on."
+msgstr ""
+"<b>%(username)s</b> は、あなたが以前コメントしたか、レビューした <b>"
+"%(title)s</b> を変更しました。"
+
+#: sotmjp/templates/emails/proposal_updated/message.html:9
+#, python-format
+msgid ""
+"View the latest version of the proposal online at <a href=\"http://"
+"%(current_site)s%(detail_url)s\">http://%(current_site)s%(detail_url)s</a>"
+msgstr ""
+"<a href=\"http://%(current_site)s%(detail_url)s\">http://%(current_site)s"
+"%(detail_url)s</a>にて、最新の提案バージョンを確認できます。"
+
+#: sotmjp/templates/emails/proposal_updated/subject.txt:1
+#, python-format
+msgid "\"%(title)s\" has been updated by %(username)s"
+msgstr "%(username)sにより\"%(title)s\"は更新されました"
+
+#: sotmjp/templates/emails/speaker_addition/message.html:3
+#, python-format
+msgid ""
+"\n"
+"<p>%(username)s attached you as an additional speaker to a\n"
+"    talk proposal for %(site_name)s entitled \"%(title)s\".</p>\n"
+"\n"
+"<p>For more details, visit the %(site_name)s speaker dashboard:\n"
+"    <a href=\"http://%(current_site)s%(dashboard_url)s\">http://"
+"%(current_site)s{{ dashboard_url ]}</a>\n"
+"</p>\n"
+msgstr ""
+"\n"
+"<p>%(username)s は、%(site_name)s の \"%(title)s\"という講演提案に対して、あ"
+"なたを追加講演者として指名しました。.</p>\n"
+"\n"
+"<p>詳細については、 %(site_name)s のダッシュボード:\n"
+"    <a href=\"http://%(current_site)s%(dashboard_url)s\">http://"
+"%(current_site)s{{ dashboard_url ]}</a>\n"
+"に訪問して確認してください。</p>\n"
+
+#: sotmjp/templates/emails/speaker_addition/subject.txt:1
+#: sotmjp/templates/emails/speaker_invite/subject.txt:1
+#: sotmjp/templates/emails/speaker_no_profile/subject.txt:1
+#, python-format
+msgid "%(name)s has invited you to join as a speaker on %(title)s"
+msgstr "ユーザー \"%(name)s\"が%(title)sの共同講演者として招待しています"
+
+#: sotmjp/templates/emails/speaker_invite/message.html:3
+#, python-format
+msgid ""
+"\n"
+"<p>%(invitator)s attached you as an additional speaker to a\n"
+"    talk proposal for %(site_name)s entitled \"%(title)s\".</p>\n"
+"\n"
+"<p>Go to</p>\n"
+"\n"
+"<p><a href=\"http://%(current_site)s%(token_url)s\">http://%(current_site)s"
+"%(token_url)s</a></p>\n"
+"\n"
+"<p>to confirm.</p>\n"
+"\n"
+"<p>If you don't have account on the website, you will be asked to create one."
+"</p>\n"
+msgstr ""
+"\n"
+"<p>%(invitator)s はあなたを、%(site_name)s の\"%(title)s\"と題された講演提案"
+"の\n"
+"追加講演者として追加しました。\n"
+"</p>\n"
+"\n"
+"\n"
+"\n"
+"<p><a href=\"http://%(current_site)s%(token_url)s\">http://%(current_site)s"
+"%(token_url)s</a></p>\n"
+"\n"
+"<p>にすすみ、確認して下さい。</p>\n"
+"\n"
+"<p>もし、Webサイトにアカウントを持っていない場合は、アカウント作成が促されま"
+"す。</p>\n"
+
+#: sotmjp/templates/emails/speaker_no_profile/message.html:3
+#, python-format
+msgid ""
+"\n"
+"<p>%(username)s attached you as an additional speaker to a\n"
+"    talk proposal for %(site_name)s entitled \"%(title)s\".</p>\n"
+"\n"
+"<p>Go to</p>\n"
+"\n"
+"<p><a href=\"http://%(current_site)s%(token_url)s\">http://%(current_site)s"
+"%(token_url)s</a></p>\n"
+"\n"
+"<p>to confirm and fill out your speaker profile.</p>\n"
+msgstr ""
+"\n"
+"<p>%(username)s が、%(site_name)s の \"%(title)s\"という講演提案の\n"
+"追加講演者として指名しました。\n"
+"</p>\n"
+"\n"
+"\n"
+"\n"
+"<p><a href=\"http://%(current_site)s%(token_url)s\">http://%(current_site)s"
+"%(token_url)s</a></p>\n"
+"\n"
+"<p>に進んで、確認すると共に、講演者プロフィールを入力してください。</p>\n"
+
+#: sotmjp/templates/emails/sponsor_signup/message.html:2
+#, python-format
+msgid ""
+"\n"
+"<p>%(sponsor_name)s has applied to be a sponsor.</p>\n"
+"\n"
+"<ul>\n"
+"    <li><b>Applicant</b>: %(applicant)s</li>\n"
+"    <li><b>Sponsor Name</b>: %(sponsor_name)s</li>\n"
+"    <li><b>Sponsor Contact</b>: %(contact)s</li>\n"
+"    <li><b>Sponsor Contact Email</b>: %(email)s</li>\n"
+"    <li><b>Sponsorship Level</b>: %(level)s</li>\n"
+"</ul>\n"
+msgstr ""
+"\n"
+"<p>%(sponsor_name)s が、スポンサーへ応募しました。</p>\n"
+"\n"
+"<ul>\n"
+"    <li><b>申請者</b>: %(applicant)s</li>\n"
+"    <li><b>スポンサー名</b>: %(sponsor_name)s</li>\n"
+"    <li><b>連絡先</b>: %(contact)s</li>\n"
+"    <li><b>連絡先Email</b>: %(email)s</li>\n"
+"    <li><b>スポンサーグレード</b>: %(level)s</li>\n"
+"</ul>\n"
+
+#: sotmjp/templates/emails/sponsor_signup/subject.txt:1
+msgid "New Sponsor Application"
+msgstr "新規スポンサー申請"
 
 #: sotmjp/templates/emails/teams_user_applied/message.html:3
 #, python-format
@@ -870,10 +990,6 @@ msgstr "参加登録は受け付けていません"
 
 #: sotmjp/templates/homepage.html:48
 #, python-format
-#| msgid ""
-#| "\n"
-#| "                               %(confname)s %(confyear)sin %(locality)s\n"
-#| "                          "
 msgid ""
 "\n"
 "            %(confname)s %(confyear)s in %(locality)s\n"
@@ -897,12 +1013,6 @@ msgstr "ハッカソン"
 
 #: sotmjp/templates/homepage.html:81
 #, python-format
-#| msgid ""
-#| "\n"
-#| "                        %(confname)s is over! <br>\n"
-#| "                        Thanks to everyone for making it a great success!"
-#| "\" <br>\n"
-#| "                        "
 msgid ""
 "\n"
 "              %(confname)s is over! <br>\n"
@@ -997,96 +1107,48 @@ msgstr "招待を辞退する"
 msgid "Submitted by"
 msgstr "提出者"
 
-#: sotmjp/templates/proposals/_proposal_fields.html:8
-#: sotmjp/templates/reviews/_review_table.html:10
-msgid "Tags"
-msgstr "タグ"
-
-#: sotmjp/templates/proposals/_proposal_fields.html:12
-#: sotmjp/templates/reviews/_review_table.html:8
-#: sotmjp/templates/reviews/result_notification.html:47
-msgid "Category"
-msgstr "カテゴリ"
-
 #: sotmjp/templates/proposals/_proposal_fields.html:20
-msgid "Python Level"
-msgstr "Python レベル"
-
-#: sotmjp/templates/proposals/_proposal_fields.html:25
-msgid "Audience"
-msgstr "対象者"
-
-#: sotmjp/templates/proposals/_proposal_fields.html:28
-msgid "Objectives"
-msgstr "目的"
-
-#: sotmjp/templates/proposals/_proposal_fields.html:38
-msgid "Domain Level"
-msgstr "受講者のレベル"
-
-#: sotmjp/templates/proposals/_proposal_fields.html:43
 msgid "Additional Speakers"
 msgstr "追加スピーカー"
 
-#: sotmjp/templates/proposals/_proposal_fields.html:50
+#: sotmjp/templates/proposals/_proposal_fields.html:27
 msgid "Invitation Sent"
 msgstr "送信された招待状"
 
-#: sotmjp/templates/proposals/_proposal_fields.html:57
+#: sotmjp/templates/proposals/_proposal_fields.html:34
 #: sotmjp/templates/schedule/presentation_detail.html:55
 msgid "Description"
 msgstr "説明"
 
-#: sotmjp/templates/proposals/_proposal_fields.html:61
+#: sotmjp/templates/proposals/_proposal_fields.html:38
 #: sotmjp/templates/schedule/presentation_detail.html:60
 msgid "Abstract"
 msgstr "概要"
 
-#: sotmjp/templates/proposals/_proposal_fields.html:66
-msgid "Outline"
-msgstr "アウトライン"
-
-#: sotmjp/templates/proposals/_proposal_fields.html:69
-msgid "More info"
-msgstr "追加情報"
-
-#: sotmjp/templates/proposals/_proposal_fields.html:73
+#: sotmjp/templates/proposals/_proposal_fields.html:42
 msgid "Notes"
 msgstr "メモ"
 
-#: sotmjp/templates/proposals/_proposal_fields.html:76
+#: sotmjp/templates/proposals/_proposal_fields.html:45
 msgid "Speaker Bio"
 msgstr "スピーカー略歴"
 
-#: sotmjp/templates/proposals/_proposal_fields.html:79
+#: sotmjp/templates/proposals/_proposal_fields.html:48
 msgid "Additional Requirements"
 msgstr "追加の必要事項"
 
-#: sotmjp/templates/proposals/_proposal_fields.html:84
-#: sotmjp/templates/schedule/presentation_detail.html:67
-msgid "Student Handout"
-msgstr "参加者用ハンドアウト"
-
-#: sotmjp/templates/proposals/_proposal_fields.html:87
-msgid "Download"
-msgstr "ダウンロードする"
-
-#: sotmjp/templates/proposals/_proposal_fields.html:89
-msgid "No handout attached to this proposal."
-msgstr "このプロポーザルに付属するハンドアウトはありません。"
-
-#: sotmjp/templates/proposals/_proposal_fields.html:94
+#: sotmjp/templates/proposals/_proposal_fields.html:51
 #: sotmjp/templates/proposals/proposal_detail.html:58
 #: sotmjp/templates/proposals/proposal_detail.html:70
 msgid "Supporting Documents"
 msgstr "補足資料"
 
-#: sotmjp/templates/proposals/_proposal_fields.html:104
+#: sotmjp/templates/proposals/_proposal_fields.html:61
 #: sotmjp/templates/proposals/proposal_detail.html:80
 msgid "delete"
 msgstr "削除する"
 
-#: sotmjp/templates/proposals/_proposal_fields.html:111
+#: sotmjp/templates/proposals/_proposal_fields.html:68
 #: sotmjp/templates/proposals/proposal_detail.html:87
 msgid "No supporting documents attached to this proposal."
 msgstr "このプロポーザルに付属する補助資料はありません。"
@@ -1279,42 +1341,6 @@ msgstr ""
 msgid "Save and Add Additional Speakers"
 msgstr "スピーカーを追加して保存する"
 
-#: sotmjp/templates/reviews/_review_table.html:16
-msgid "Online Result Status"
-msgstr "オンライン結果の状況"
-
-#: sotmjp/templates/reviews/_review_table.html:17
-msgid "Overall Status"
-msgstr "全体の状況"
-
-#: sotmjp/templates/reviews/_review_table.html:19
-msgid "Update Overall Status"
-msgstr "全体の状況を更新"
-
-#: sotmjp/templates/reviews/_review_table.html:22
-msgid "Rejection Status"
-msgstr "却下状態"
-
-#: sotmjp/templates/reviews/_review_table.html:23
-msgid "Damage Score"
-msgstr "ダメージスコア"
-
-#: sotmjp/templates/reviews/base.html:98
-msgid "Voting Status"
-msgstr "投票の状態"
-
-#: sotmjp/templates/reviews/base.html:103
-msgid "Result Notification"
-msgstr "結果通知"
-
-#: sotmjp/templates/reviews/result_notification.html:49
-msgid "Notified?"
-msgstr "お気づきですか？"
-
-#: sotmjp/templates/reviews/review_list.html:6
-msgid "Use Search to filter by speaker, category, tags, etc."
-msgstr "スピーカーやカテゴリ、タグなどで絞り込む"
-
 #: sotmjp/templates/schedule/_slot_edit.html:6
 msgid "Edit Slot"
 msgstr "時間枠を編集する"
@@ -1326,6 +1352,10 @@ msgstr "プレゼンテーション："
 #: sotmjp/templates/schedule/presentation_detail.html:50
 msgid "Category:"
 msgstr "カテゴリ："
+
+#: sotmjp/templates/schedule/presentation_detail.html:67
+msgid "Student Handout"
+msgstr "参加者用ハンドアウト"
 
 #: sotmjp/templates/schedule/presentation_detail.html:72
 msgid "No handouts have been provided yet for this tutorial"
@@ -1383,12 +1413,6 @@ msgid "SPONSORS"
 msgstr "スポンサー"
 
 #: sotmjp/templates/site_base.html:164
-#| msgid ""
-#| "\n"
-#| "                    State of the Map Japan is a production of the\n"
-#| "                    <a href=\"http://osmf.jp/\">OpenStreetMap Foundation "
-#| "Japan</a>.\n"
-#| "                  "
 msgid ""
 "\n"
 "            State of the Map Japan is a production of the\n"
@@ -1402,14 +1426,6 @@ msgstr ""
 "                  "
 
 #: sotmjp/templates/site_base.html:170
-#| msgid ""
-#| "\n"
-#| "                    Site forked from the <a href=\"http://pycon."
-#| "jp/2014\">PyCon JP 2014</a> site built by <a href=\"http://caktusgroup.com"
-#| "\">Caktus Consulting Group, LLC.</a> using <a href=\"http://eldarion.com/"
-#| "symposion/\" title=\"Symposion — An Open Platform for Conference Websites"
-#| "\">Symposion</a>.\n"
-#| "                  "
 msgid ""
 "\n"
 "            Site forked from the <a href=\"http://pycon.jp/2014\">PyCon JP "
@@ -1427,11 +1443,6 @@ msgstr ""
 "                  "
 
 #: sotmjp/templates/site_base.html:175
-#| msgid ""
-#| "\n"
-#| "                    Questions? Comments? Contact <a href=\"mailto:"
-#| "info@osmf.jp\">info@osmf.jp</a>\n"
-#| "                  "
 msgid ""
 "\n"
 "            Questions? Comments? Contact <a href=\"mailto:info@osmf.jp"
@@ -1558,7 +1569,6 @@ msgid "leave"
 msgstr "グループを退出する"
 
 #: sotmjp/templates/teams/team_detail.html:43
-#| msgid "Apply"
 msgid "apply"
 msgstr "適用"
 
@@ -1609,6 +1619,78 @@ msgstr "開催地情報"
 #: sotmjp/templates/venue/detail.html:7 sotmjp/templates/venue/detail.html:17
 msgid "Venue Details"
 msgstr "開催地詳細"
+
+#~ msgid "Reviews"
+#~ msgstr "審査"
+
+#~ msgid "Review Sections"
+#~ msgstr "審査セクション"
+
+#~ msgid "Proposals you have reviewed"
+#~ msgstr "プロポーザルは審査されました"
+
+#~ msgid "Speaker / Title"
+#~ msgstr "スピーカー / タイトル"
+
+#~ msgid "Your Vote"
+#~ msgstr "あなたの投票"
+
+#~ msgid "Tags"
+#~ msgstr "タグ"
+
+#~ msgid "Category"
+#~ msgstr "カテゴリ"
+
+#~ msgid "Python Level"
+#~ msgstr "Python レベル"
+
+#~ msgid "Audience"
+#~ msgstr "対象者"
+
+#~ msgid "Objectives"
+#~ msgstr "目的"
+
+#~ msgid "Domain Level"
+#~ msgstr "受講者のレベル"
+
+#~ msgid "Outline"
+#~ msgstr "アウトライン"
+
+#~ msgid "More info"
+#~ msgstr "追加情報"
+
+#~ msgid "Download"
+#~ msgstr "ダウンロードする"
+
+#~ msgid "No handout attached to this proposal."
+#~ msgstr "このプロポーザルに付属するハンドアウトはありません。"
+
+#~ msgid "Online Result Status"
+#~ msgstr "オンライン結果の状況"
+
+#~ msgid "Overall Status"
+#~ msgstr "全体の状況"
+
+#~ msgid "Update Overall Status"
+#~ msgstr "全体の状況を更新"
+
+#~ msgid "Rejection Status"
+#~ msgstr "却下状態"
+
+#~ msgid "Damage Score"
+#~ msgstr "ダメージスコア"
+
+#~ msgid "Voting Status"
+#~ msgstr "投票の状態"
+
+#~ msgid "Result Notification"
+#~ msgstr "結果通知"
+
+#~ msgid "Notified?"
+#~ msgstr "お気づきですか？"
+
+#~ msgid "Use Search to filter by speaker, category, tags, etc."
+#~ msgstr "スピーカーやカテゴリ、タグなどで絞り込む"
 
 #~ msgid "First Name (Japanese)"
 #~ msgstr "名前"
