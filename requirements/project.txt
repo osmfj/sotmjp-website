@@ -12,7 +12,7 @@ django-debug-toolbar==1.3.2
 django-model-utils==2.2
 
 django_compressor==1.5
--e git+git://github.com/miurahr/pinax-blog.git#pinax-blog
+-e git+git://github.com/miurahr/pinax-blog.git#egg=pinax-blog
 git+git://github.com/shvechikov/python-rtfng.git#egg=python-rtfng
 
 # Social Login
