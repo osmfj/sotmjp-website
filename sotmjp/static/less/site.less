@@ -340,3 +340,133 @@ a {
       }
     }
 }
+
+/* Sponsor slideshow
+==================== */
+.sponsor-crawl {
+  position: relative;
+  padding: 20px 0;
+  width: 100%;
+  border-bottom: 1px solid @grayLighter;
+  .sponsorship-link {
+    position: absolute;
+    right: 20px;
+    top: 78px;
+    z-index: 999;
+    a {
+      .btn;
+      .btn-success;
+    }
+  }
+}
+ul#slider {
+  display: block;
+  width: 100%;
+  height:120px; /* 260px - actual height */
+  overflow: hidden;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin-left:-19px;
+    display:none;
+  }
+
+  li.first {
+    display:block;
+  }
+
+  a {
+    display:block;
+    float:left;
+
+    .sp-logo {
+      display:block;
+      height:70px;
+    }
+
+    img {
+      margin:0 0 10px 19px;
+    }
+
+    .level {
+      display:block;
+      margin:0 0 10px 19px;
+      padding:5px 0 0 0;
+      width:100px;
+      text-align:center;
+      text-transform:uppercase;
+      color:#666;
+      font-size:11px;
+    }
+  }
+}
+
+.scroll-title {
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 900;
+}
+
+.carousel-inner {
+  div.item {
+    width: 100%;
+    padding: 10px 0 40px 0;
+    // height: 150px;
+  }
+}
+
+.sponsor-scroll-item {
+  cursor: pointer;
+  float:left;
+  width: 400px;
+  height: 200px;
+  background: none center center no-repeat;
+  -webkit-background-size: 195px auto;
+  -moz-background-size: 195px auto;
+  background-size: 195px auto;
+}
+
+.carousel {
+  margin-bottom: 0;
+  .item {
+    .transition(.7s ease-in-out opacity);
+    left: 0 !important;
+  }
+
+  .next.left, .prev.right {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .active.left, .active.right {
+    opacity: 0;
+    z-index: 2;
+  }
+
+}
+
+/* Slideshow nav
+==================== */
+nav#slider-nav {
+  position: relative;
+  margin-left: 50%;
+  a {
+    text-indent: -9999px;
+    display: block;
+    float: left;
+    width: 9px;
+    height: 9px;
+    margin-right: 5px;
+    background: @grayLight;
+    border-radius: 100%;
+    &:hover {
+      background: @blueLight;
+    }
+    &.activeSlide {
+      background: @blueDark;
+    }
+  }
+}
