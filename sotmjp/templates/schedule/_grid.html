@@ -14,8 +14,8 @@
                 {% for slot in row.slots %}
                     <td class="slot slot-{{ slot.kind.label }}" colspan="{{ slot.colspan }}" rowspan="{{ slot.rowspan }}">
                         {% if not slot.content %}
-                            {% if slot.content_override.raw %}
-                                {{ slot.content_override.rendered|safe }}
+                            {% if slot.content_override %}
+                                {{ slot.content_override|safe }}
                             {% else %}
                                 {{ slot.kind.label }}
                             {% endif %}
