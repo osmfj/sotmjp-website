@@ -195,7 +195,7 @@
                 var retina = window.devicePixelRatio > 1.5 ? true : false;
                 if (retina) {
                     $("div.sponsor-scroll-item").each(function() {
-                        var retinaimage = $(this).data("background-2x");
+                        var retinaimage = $(this).attr("data-background-2x");
                         $(this).css("background-image", "url("+retinaimage+")");
                         // preload image
                         $('<img/>')[0].src = retinaimage;
