@@ -195,6 +195,7 @@ setup () {
 }
 
 appStart () {
+  export LANG=en-US.UTF-8
   /usr/local/bin/gunicorn --chdir=${INSTALL_DIR} \
       --bind=0.0.0.0:8000 \
       --workers=5 \
@@ -210,6 +211,7 @@ INSTALLED_APPS += ['debug_toolbar']
 MIDDLEWARE_CLASSES += ["debug_toolbar.middleware.DebugToolbarMiddleware"]
 __EOL__
 
+  export LANG=en-US.UTF-8
   /usr/local/bin/gunicorn --chdir=${INSTALL_DIR} \
       --bind=0.0.0.0:8000 \
       --workers=1 \
@@ -240,6 +242,7 @@ __EOL__
 }
 
 appDebug () {
+  export LANG=en-US.UTF-8
   exec /usr/bin/python manage.py runserver 0.0.0.0:8000
 }
 
